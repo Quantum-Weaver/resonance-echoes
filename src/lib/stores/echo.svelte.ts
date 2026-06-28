@@ -36,20 +36,24 @@ function rowToEcho(row: Record<string, unknown>): Echo {
 
 async function initDB() {
 	if (!browser || db) return;
+	console.log('[initDB] starting... browser=' + browser + ' db=' + (db !== null));
 	try {
-		console.log('[echoStore] connecting to SQLite...');
 		db = await Database.load('sqlite:echoes.db');
-		console.log('[echoStore] DB connected, loading echoes...');
+		console.log('[initDB] db loaded:', db !== null);
 		await loadEchoes();
-		console.log('[echoStore] ready — ' + echoes.length + ' echoes loaded');
+		console.log('[initDB] echoes loaded, count:', echoes.length);
 	} catch (e) {
-		dbError = e instanceof Error ? e.message : String(e);
-		console.error('[echoStore] initDB failed:', e);
+		const msg = e instanceof Error ? e.message : String(e);
+		dbError = msg;
+		console.error('[initDB] FAILED:', msg, e);
 	}
 }
 
 async function loadEchoes(limit = 200, offset = 0) {
-	if (!db) return;
+	if (!db) {
+		console.log('[loadEchoes] skipped — db is null');
+		return;
+	}
 	loading = true;
 	try {
 		const rows = await db.select<Record<string, unknown>[]>(
@@ -62,21 +66,37 @@ async function loadEchoes(limit = 200, offset = 0) {
 		);
 		totalCount = (countRows[0]?.count as number) || 0;
 	} catch (e) {
-		console.error('[echoStore] loadEchoes failed:', e);
+		console.error('[loadEchoes] FAILED:', e);
 	} finally {
 		loading = false;
 	}
 }
 
 async function addEcho(echo: Omit<Echo, 'id' | 'createdAt'>) {
-	if (!db) throw new Error('Database not ready — close and reopen the app.');
+	console.log('[addEcho] called with:', JSON.stringify(echo));
+	console.log('[addEcho] db is null?', db === null);
+	if (!db) {
+		console.error('[addEcho] FAILED — db is null. initDB may not have completed or failed.');
+		throw new Error('Database not ready — close and reopen the app.');
+	}
 	const id = generateId();
 	const createdAt = Date.now();
-	await db.execute(
-		'INSERT INTO echoes (id, name, sense, subcategory, emoji, note, intensity, timestamp, created_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)',
-		[id, echo.name, echo.sense, echo.subcategory, echo.emoji, echo.note ?? null, echo.intensity, echo.timestamp, createdAt]
-	);
+	console.log('[addEcho] generated id:', id, 'createdAt:', createdAt);
+	console.log('[addEcho] attempting INSERT...');
+	try {
+		await db.execute(
+			'INSERT INTO echoes (id, name, sense, subcategory, emoji, note, intensity, timestamp, created_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)',
+			[id, echo.name, echo.sense, echo.subcategory, echo.emoji, echo.note ?? null, echo.intensity, echo.timestamp, createdAt]
+		);
+		console.log('[addEcho] INSERT complete');
+	} catch (e) {
+		const msg = e instanceof Error ? e.message : String(e);
+		console.error('[addEcho] INSERT FAILED:', msg, e);
+		throw e;
+	}
+	console.log('[addEcho] calling loadEchoes...');
 	await loadEchoes();
+	console.log('[addEcho] done. total echoes now:', echoes.length);
 }
 
 async function getEchoesBySense(senseId: string): Promise<Echo[]> {

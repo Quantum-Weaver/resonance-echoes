@@ -45,22 +45,31 @@
 	}
 
 	async function save() {
-		if (!name.trim() || saving) return;
+		console.log('[save] called');
+		if (!name.trim() || saving) {
+			console.log('[save] blocked — name empty or already saving', { nameEmpty: !name.trim(), saving });
+			return;
+		}
 		saving = true;
 		saveError = '';
+		const payload = {
+			name: name.trim(),
+			sense: selectedSense,
+			subcategory: getFinalSubcategory(),
+			emoji: selectedEmoji || '✨',
+			note: note.trim() || undefined,
+			intensity,
+			timestamp: getTimestamp()
+		};
+		console.log('[save] payload:', JSON.stringify(payload));
 		try {
-			await echoStore.addEcho({
-				name: name.trim(),
-				sense: selectedSense,
-				subcategory: getFinalSubcategory(),
-				emoji: selectedEmoji || '✨',
-				note: note.trim() || undefined,
-				intensity,
-				timestamp: getTimestamp()
-			});
+			await echoStore.addEcho(payload);
+			console.log('[save] addEcho returned — navigating home');
 			goto('/');
 		} catch (e) {
-			saveError = e instanceof Error ? e.message : 'Save failed. Try again.';
+			const msg = e instanceof Error ? e.message : String(e);
+			console.error('[save] FAILED:', msg, e);
+			saveError = msg;
 		} finally {
 			saving = false;
 		}
