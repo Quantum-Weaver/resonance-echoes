@@ -46,4 +46,12 @@ docs/
 - Every atom has a sensory lexicon entry
 - Every emoji has a definition that bridges neurotypes
 - The Grammar is the single source of truth
+
+## Android: Tauri v2 Capabilities (CRITICAL)
+
+- `src-tauri/capabilities/default.json` must include explicit `sql:allow-*` permissions — `sql:default` alone grants zero operation access
+- Required for SQLite: `sql:allow-load`, `sql:allow-execute`, `sql:allow-select`, `sql:allow-close`
+- Every new Tauri plugin needs its own `allow-*` entries in capabilities, not just `plugin:default`
+- SQLite databases use internal app storage — no Android manifest permissions needed for database access
+- Never use non-ASCII characters (emoji, special symbols) as DEFAULT values in SQL migration strings — they can fail silently through the Rust JNI bridge on Android
 ```
