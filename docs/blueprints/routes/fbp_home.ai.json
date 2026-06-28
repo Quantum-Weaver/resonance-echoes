@@ -1,7 +1,7 @@
 {
   "route_name": "home",
   "source_file": "src\\routes\\+page.svelte",
-  "scan_timestamp": "2026-06-28T11:58:21.306639 | in sovereign time",
+  "scan_timestamp": "2026-06-28T12:28:04.799010 | in sovereign time",
   "analysis": {
     "imports": {
       "components": [],
