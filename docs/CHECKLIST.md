@@ -48,10 +48,15 @@
 - [x] All empty states are invitations, not failures
 - [x] **Tested:** ✅
 
-### Phase 4: Onboarding ⬜
-- [ ] Welcome screen
-- [ ] Vessel name input
-- [ ] Theme selection
+### Phase 4: Onboarding ✅
+- [x] Welcome screen — 🧭 sigil with GradientPulse, title, subtitle
+- [x] Vessel name input (optional) — saves to localStorage resonance-echoes-vessel-name
+- [x] How it works — 3 mini cards (log, patterns, sovereignty)
+- [x] Theme selection — Dark / Warm / Ocean with live preview + accent swatch
+- [x] Progress indicator — 3 dots, active elongated, done dimmed
+- [x] Layout gate — first launch redirects to /onboarding; Sidebar + ComfortBar hidden
+- [x] onboarding_complete flag — set on "Enter Echoes"; prevents re-showing
+- [x] ComfortBar greeting reads vessel_name after onboarding
 - [ ] **Tested:** ⬜
 
 ### Phase 5: Data Sovereignty ⬜
@@ -88,3 +93,4 @@
 | 2026-06-28 | Android debug session. Fixed three blocking bugs: SQLite ACL permissions (capabilities/default.json), migration emoji encoding (v3 migration), silent null-db failure. Added dense logcat diagnostics. Hamburger moved to bottom thumb zone. |
 | 2026-06-28 | Phase 2 complete. Search (150ms debounce), sense filter chips, emoji filter chips (top 8), sort (newest/oldest/intensity), combined filtering, filter status bar, empty-state-per-filter. All client-side over in-memory echoes. npm run check: 0 errors. |
 | 2026-06-28 | Phase 3 complete. Insights page: Top Emojis (frequency-sized cloud), By Sense (sorted list), Streak (consecutive day counter), Time of Day (4-period grid, accent on dominant), Recent Mood (7-day row), Intensity Trend (week comparison). All $derived.by client-side, no new DB queries. npm run check: 0 errors. |
+| 2026-06-28 | Phase 4 complete. Onboarding: 3-screen linear flow (Welcome → How it works → Theme), 🧭 GradientPulse sigil, vessel name saved to localStorage, live theme switching in Screen 3, layout gate (goto /onboarding on first launch), Sidebar/ComfortBar hidden during flow. npm run check: 0 errors. |
