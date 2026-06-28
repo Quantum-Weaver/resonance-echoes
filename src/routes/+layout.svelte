@@ -1,5 +1,7 @@
 <script lang="ts">
 	import '../app.css';
+	import { page } from '$app/state';
+	import { goto } from '$app/navigation';
 	import { themeStore } from '$lib/stores/theme.svelte';
 	import { echoStore } from '$lib/stores/echo.svelte';
 	import { getThemeColors } from '$lib/theme/theme';
@@ -9,9 +11,16 @@
 
 	let { children } = $props();
 
+	// Hide chrome during the immersive onboarding flow
+	const isOnboarding = $derived(page.url.pathname === '/onboarding');
+
 	onMount(async () => {
 		themeStore.loadTheme();
 		await echoStore.initDB();
+		const done = localStorage.getItem('onboarding_complete');
+		if (!done && page.url.pathname !== '/onboarding') {
+			goto('/onboarding');
+		}
 	});
 
 	const config = $derived(themeStore.config);
@@ -34,13 +43,17 @@
 		font-size: {fontSize};
 	"
 >
-	<Sidebar />
+	{#if !isOnboarding}
+		<Sidebar />
+	{/if}
 
-	<main class="main-content">
+	<main class="main-content" class:full-screen={isOnboarding}>
 		{@render children()}
 	</main>
 
-	<ComfortBar />
+	{#if !isOnboarding}
+		<ComfortBar />
+	{/if}
 </div>
 
 <style>
@@ -56,5 +69,9 @@
 		flex: 1;
 		overflow-y: auto;
 		padding-bottom: calc(48px + env(safe-area-inset-bottom, 0px));
+	}
+
+	.main-content.full-screen {
+		padding-bottom: 0;
 	}
 </style>
