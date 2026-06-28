@@ -9,9 +9,9 @@
 
 	let { children } = $props();
 
-	onMount(() => {
+	onMount(async () => {
 		themeStore.loadTheme();
-		echoStore.initDB();
+		await echoStore.initDB();
 	});
 
 	const config = $derived(themeStore.config);

@@ -6,6 +6,19 @@ let db: Database | null = null;
 let echoes = $state<Echo[]>([]);
 let totalCount = $state(0);
 let loading = $state(false);
+let dbError = $state<string | null>(null);
+
+function generateId(): string {
+	if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
+		return crypto.randomUUID();
+	}
+	// Fallback for Android WebViews that predate randomUUID
+	return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+		const r = (Math.random() * 16) | 0;
+		const v = c === 'x' ? r : (r & 0x3) | 0x8;
+		return v.toString(16);
+	});
+}
 
 function rowToEcho(row: Record<string, unknown>): Echo {
 	return {
@@ -23,8 +36,16 @@ function rowToEcho(row: Record<string, unknown>): Echo {
 
 async function initDB() {
 	if (!browser || db) return;
-	db = await Database.load('sqlite:echoes.db');
-	await loadEchoes();
+	try {
+		console.log('[echoStore] connecting to SQLite...');
+		db = await Database.load('sqlite:echoes.db');
+		console.log('[echoStore] DB connected, loading echoes...');
+		await loadEchoes();
+		console.log('[echoStore] ready — ' + echoes.length + ' echoes loaded');
+	} catch (e) {
+		dbError = e instanceof Error ? e.message : String(e);
+		console.error('[echoStore] initDB failed:', e);
+	}
 }
 
 async function loadEchoes(limit = 200, offset = 0) {
@@ -39,15 +60,17 @@ async function loadEchoes(limit = 200, offset = 0) {
 		const countRows = await db.select<Record<string, unknown>[]>(
 			'SELECT COUNT(*) as count FROM echoes'
 		);
-		totalCount = ((countRows[0]?.count as number) || 0);
+		totalCount = (countRows[0]?.count as number) || 0;
+	} catch (e) {
+		console.error('[echoStore] loadEchoes failed:', e);
 	} finally {
 		loading = false;
 	}
 }
 
 async function addEcho(echo: Omit<Echo, 'id' | 'createdAt'>) {
-	if (!db) return;
-	const id = crypto.randomUUID();
+	if (!db) throw new Error('Database not ready — close and reopen the app.');
+	const id = generateId();
 	const createdAt = Date.now();
 	await db.execute(
 		'INSERT INTO echoes (id, name, sense, subcategory, emoji, note, intensity, timestamp, created_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)',
@@ -88,6 +111,7 @@ export const echoStore = {
 	get echoes() { return echoes; },
 	get totalCount() { return totalCount; },
 	get loading() { return loading; },
+	get dbError() { return dbError; },
 	initDB,
 	addEcho,
 	loadEchoes,

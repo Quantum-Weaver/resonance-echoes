@@ -19,6 +19,7 @@
 	let useCustomTime = $state(false);
 	let customTimestamp = $state(toLocalISO(new Date()));
 	let saving = $state(false);
+	let saveError = $state('');
 
 	const currentSense = $derived(SENSES.find((s) => s.id === selectedSense));
 
@@ -46,6 +47,7 @@
 	async function save() {
 		if (!name.trim() || saving) return;
 		saving = true;
+		saveError = '';
 		try {
 			await echoStore.addEcho({
 				name: name.trim(),
@@ -57,6 +59,8 @@
 				timestamp: getTimestamp()
 			});
 			goto('/');
+		} catch (e) {
+			saveError = e instanceof Error ? e.message : 'Save failed. Try again.';
 		} finally {
 			saving = false;
 		}
@@ -70,6 +74,13 @@
 	</header>
 
 	<div class="form">
+		<!-- DB error banner -->
+		{#if echoStore.dbError}
+			<div class="db-error-banner">
+				⚠️ Database not ready: {echoStore.dbError}
+			</div>
+		{/if}
+
 		<!-- Name -->
 		<section class="form-section">
 			<input
@@ -188,11 +199,14 @@
 			<button
 				class="save-btn"
 				onclick={save}
-				disabled={!name.trim() || saving}
+				disabled={!name.trim() || saving || !!echoStore.dbError}
 			>
 				{saving ? 'Saving…' : 'Save Echo'}
 			</button>
 		</section>
+		{#if saveError}
+			<p class="save-error">{saveError}</p>
+		{/if}
 	</div>
 </div>
 
@@ -200,6 +214,23 @@
 	.add-page {
 		min-height: 100%;
 		padding-top: env(safe-area-inset-top, 0px);
+	}
+
+	.db-error-banner {
+		margin: 1rem 0 0;
+		padding: 0.75rem 1rem;
+		background: color-mix(in srgb, #e74c3c 15%, transparent);
+		border: 1px solid #e74c3c;
+		border-radius: 8px;
+		color: #e74c3c;
+		font-size: 0.85rem;
+	}
+
+	.save-error {
+		margin: 0.5rem 0 0;
+		font-size: 0.82rem;
+		color: #e74c3c;
+		text-align: center;
 	}
 
 	.add-header {

@@ -71,7 +71,7 @@
 <style>
 	.hamburger {
 		position: fixed;
-		top: calc(2.75rem + env(safe-area-inset-top, 0px));
+		bottom: calc(56px + env(safe-area-inset-bottom, 0px));
 		left: 1rem;
 		z-index: 120;
 		background-color: var(--bg-surface);
