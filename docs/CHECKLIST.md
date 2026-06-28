@@ -36,14 +36,16 @@
 - [x] Filter status bar: "12 echoes in 👁️ Seen · 😌" + Clear all
 - [x] Empty state per filter with inline Clear link
 - [x] Load more (50 per page)
-- [ ] **Tested:** ⬜
+- [x] **Tested:** ✅
 
-### Phase 3: Gentle Insights ⬜
-- [ ] Top Emojis
-- [ ] By Sense distribution
-- [ ] Streak count
-- [ ] Time of Day observation
-- [ ] Recent Mood row
+### Phase 3: Gentle Insights ✅
+- [x] Top Emojis — frequency-sized cloud, top 8, warm "most felt" label
+- [x] By Sense — distribution list ordered by count, muted at 0
+- [x] Streak — consecutive calendar days, resets quietly (no negativity)
+- [x] Time of Day — 4-period grid (morning/afternoon/evening/night), accent on dominant
+- [x] Recent Mood — 7-day emoji row (today→left), most intense echo per day, · for empty days
+- [x] Intensity Trend — compare last 7 vs prior 7 days
+- [x] All empty states are invitations, not failures
 - [ ] **Tested:** ⬜
 
 ### Phase 4: Onboarding ⬜
@@ -85,3 +87,4 @@
 | 2026-06-28 | Phase 1 complete. echoStore (Svelte 5 $state + SQLite), Echo interface updated, DB migration v2, /add form (sense, subcategory, emoji, note, intensity, timestamp), home timeline with EchoCards. Pending human test. |
 | 2026-06-28 | Android debug session. Fixed three blocking bugs: SQLite ACL permissions (capabilities/default.json), migration emoji encoding (v3 migration), silent null-db failure. Added dense logcat diagnostics. Hamburger moved to bottom thumb zone. |
 | 2026-06-28 | Phase 2 complete. Search (150ms debounce), sense filter chips, emoji filter chips (top 8), sort (newest/oldest/intensity), combined filtering, filter status bar, empty-state-per-filter. All client-side over in-memory echoes. npm run check: 0 errors. |
+| 2026-06-28 | Phase 3 complete. Insights page: Top Emojis (frequency-sized cloud), By Sense (sorted list), Streak (consecutive day counter), Time of Day (4-period grid, accent on dominant), Recent Mood (7-day row), Intensity Trend (week comparison). All $derived.by client-side, no new DB queries. npm run check: 0 errors. |
