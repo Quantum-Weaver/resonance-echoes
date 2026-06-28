@@ -34,15 +34,5 @@ export interface Subcategory {
   description: string;
 }
 
-// Emoji definition — the sensory lexicon atom
-export interface EmojiDefinition {
-  emoji: string;
-  label: string;
-  category: string;
-  keywords: string[];
-  color?: string;
-  sound?: string;
-  texture?: string;
-  temperature?: string;
-  definition?: string;
-}
+// Emoji definition — the sensory lexicon atom (canonical shape lives in emojis.ts)
+export type { EmojiDef as EmojiDefinition } from '$lib/data/emojis';
