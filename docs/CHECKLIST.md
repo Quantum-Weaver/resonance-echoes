@@ -27,12 +27,15 @@
 - [x] Home timeline with EchoCard (emoji, name, sense badge, relative time, intensity dots, note preview)
 - [x] **Tested:** ✅
 
-### Phase 2: Browse & Filter ⬜
-- [ ] Debounced search
-- [ ] Filter by sense
-- [ ] Filter by emoji
-- [ ] Sort options
-- [ ] Load more
+### Phase 2: Browse & Filter ✅
+- [x] Debounced search (150ms, name + note fields, real-time)
+- [x] Filter by sense (8 chips, horizontal scroll, accent glow)
+- [x] Filter by emoji (top 8 most-used, dynamic)
+- [x] Sort: Newest / Oldest / Intensity ↓
+- [x] Combined filtering — search + sense + emoji + sort all stack
+- [x] Filter status bar: "12 echoes in 👁️ Seen · 😌" + Clear all
+- [x] Empty state per filter with inline Clear link
+- [x] Load more (50 per page)
 - [ ] **Tested:** ⬜
 
 ### Phase 3: Gentle Insights ⬜
@@ -81,3 +84,4 @@
 | 2026-06-28 | Phase 0 complete. ComfortBar, Sidebar, GradientPulse, theme store, senses data, icon set. npm run check: 0 errors. cargo build: clean. Pending human test on Android. |
 | 2026-06-28 | Phase 1 complete. echoStore (Svelte 5 $state + SQLite), Echo interface updated, DB migration v2, /add form (sense, subcategory, emoji, note, intensity, timestamp), home timeline with EchoCards. Pending human test. |
 | 2026-06-28 | Android debug session. Fixed three blocking bugs: SQLite ACL permissions (capabilities/default.json), migration emoji encoding (v3 migration), silent null-db failure. Added dense logcat diagnostics. Hamburger moved to bottom thumb zone. |
+| 2026-06-28 | Phase 2 complete. Search (150ms debounce), sense filter chips, emoji filter chips (top 8), sort (newest/oldest/intensity), combined filtering, filter status bar, empty-state-per-filter. All client-side over in-memory echoes. npm run check: 0 errors. |
