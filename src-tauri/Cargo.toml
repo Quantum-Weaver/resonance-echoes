@@ -1,12 +1,12 @@
 [package]
-name = "resonance-compass"
+name = "resonance-echoes"
 version = "0.1.0"
-description = "Resonance Compass — sovereign local-first music player from the AudHDities Sanctuary"
-authors = ["Aethelred and Quantum Weaver"]
+description = "A sovereign journal for logging anything with feeling"
+authors = ["Quantum Weaver"]
 edition = "2021"
 
 [lib]
-name = "resonance_compass_lib"
+name = "resonance_echoes_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]
@@ -20,16 +20,8 @@ tauri-plugin-fs = "2"
 tauri-plugin-sql = { version = "2", features = ["sqlite"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-rodio = { version = "0.20", features = ["symphonia-all"] }
-lofty = "0.22"
-base64 = "0.22"
-crossbeam-channel = "0.5"
-rustfft = "6"
-serde_repr = "0.1.20"
-reqwest = { version = "0.12", features = ["json", "rustls-tls"], default-features = false }
 
 [profile.release]
 strip = true
 opt-level = "s"
 lto = "thin"
-

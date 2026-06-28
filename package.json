@@ -1,7 +1,7 @@
 {
-  "name": "resonance-compass",
+  "name": "resonance-echoes",
   "version": "0.1.0",
-  "description": "Find your frequency. Navigate by resonance. The sovereign music player from the AudHDities Sanctuary.",
+  "description": "A sovereign journal for logging anything with feeling",
   "type": "module",
   "scripts": {
     "dev": "vite dev",

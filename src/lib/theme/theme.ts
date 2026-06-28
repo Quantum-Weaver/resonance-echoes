@@ -7,42 +7,36 @@ export const PRESET_THEMES: Record<string, ThemeConfig> = {
     accentColor: QUANTUM_COLORS['quantum.purple'],
     presetName: 'Dark',
     fontSize: 'medium',
-    albumArtShape: 'rounded',
   },
   warm: {
     mode: 'dark',
     accentColor: QUANTUM_COLORS['hearth.gold'],
     presetName: 'Warm',
     fontSize: 'medium',
-    albumArtShape: 'rounded',
   },
   ocean: {
     mode: 'dark',
     accentColor: QUANTUM_COLORS['cosmic.blue'],
     presetName: 'Ocean',
     fontSize: 'medium',
-    albumArtShape: 'rounded',
   },
   forest: {
     mode: 'dark',
     accentColor: QUANTUM_COLORS['sanctuary.green'],
     presetName: 'Forest',
     fontSize: 'medium',
-    albumArtShape: 'rounded',
   },
   sunset: {
     mode: 'dark',
     accentColor: QUANTUM_COLORS['fire.base'],
     presetName: 'Sunset',
     fontSize: 'medium',
-    albumArtShape: 'rounded',
   },
   amoled: {
     mode: 'amoled',
     accentColor: QUANTUM_COLORS['quantum.purple'],
     presetName: 'AMOLED Black',
     fontSize: 'medium',
-    albumArtShape: 'rounded',
   },
 };
 
