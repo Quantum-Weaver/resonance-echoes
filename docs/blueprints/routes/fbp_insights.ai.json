@@ -1,0 +1,99 @@
+{
+  "route_name": "insights",
+  "source_file": "src\\routes\\insights\\+page.svelte",
+  "scan_timestamp": "2026-06-28T17:15:28.618775 | in sovereign time",
+  "analysis": {
+    "imports": {
+      "components": [],
+      "stores": [],
+      "types": [
+        "types"
+      ],
+      "navigation": [],
+      "data": [
+        "senses"
+      ],
+      "cosmic": [],
+      "theme": []
+    },
+    "reactive_state": [
+      {
+        "name": "echoes",
+        "rune": "$derived",
+        "source": "echoStore.echoes"
+      },
+      {
+        "name": "maxCount",
+        "rune": "$derived",
+        "source": "topEmojis[0]?.count ?? 1"
+      },
+      {
+        "name": "topSense",
+        "rune": "$derived",
+        "source": "bySense.find(s => s.count > 0"
+      },
+      {
+        "name": "hasThisWeek",
+        "rune": "$derived",
+        "source": "recentMood.some(d => d.count > 0"
+      }
+    ],
+    "functions": [
+      {
+        "name": "dayKey",
+        "params": "d: Date"
+      },
+      {
+        "name": "emojiSize",
+        "params": "count: number"
+      },
+      {
+        "name": "dayLabel",
+        "params": "date: Date, index: number"
+      }
+    ],
+    "goto_navigation": [],
+    "css_classes": [
+      "insights-header",
+      "insights-title",
+      "mood-lbl",
+      "tod-cell",
+      "card",
+      "tod-lbl",
+      "card-empty",
+      "tod-icon",
+      "card-insight",
+      "card-label",
+      "emoji-cloud",
+      "insights",
+      "sense-list",
+      "cards",
+      "sense-nm",
+      "cloud-emoji",
+      "streak-unit",
+      "card-note",
+      "sense-row",
+      "sense-ct",
+      "streak-display",
+      "sense-em",
+      "mood-emoji",
+      "tod-grid",
+      "tod-count",
+      "streak-num",
+      "mood-day",
+      "mood-row"
+    ],
+    "has_style_block": true,
+    "script_lines": 159,
+    "template_lines": 129,
+    "uses_runes": {
+      "state": false,
+      "derived": true,
+      "effect": false
+    },
+    "z_indices": [],
+    "has_ondestroy": false
+  },
+  "phase": 99,
+  "status": "complete"
+}

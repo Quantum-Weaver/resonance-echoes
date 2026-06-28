@@ -46,7 +46,7 @@
 - [x] Recent Mood — 7-day emoji row (today→left), most intense echo per day, · for empty days
 - [x] Intensity Trend — compare last 7 vs prior 7 days
 - [x] All empty states are invitations, not failures
-- [ ] **Tested:** ⬜
+- [x] **Tested:** ✅
 
 ### Phase 4: Onboarding ⬜
 - [ ] Welcome screen

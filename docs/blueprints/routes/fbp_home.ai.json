@@ -1,7 +1,7 @@
 {
   "route_name": "home",
   "source_file": "src\\routes\\+page.svelte",
-  "scan_timestamp": "2026-06-28T14:43:58.034101 | in sovereign time",
+  "scan_timestamp": "2026-06-28T17:15:28.613016 | in sovereign time",
   "analysis": {
     "imports": {
       "components": [],
@@ -16,32 +16,63 @@
     },
     "reactive_state": [
       {
+        "name": "searchInput",
+        "rune": "$state",
+        "source": "''"
+      },
+      {
+        "name": "searchQuery",
+        "rune": "$state",
+        "source": "''"
+      },
+      {
+        "name": "activeSense",
+        "rune": "$state",
+        "source": "''"
+      },
+      {
+        "name": "activeEmoji",
+        "rune": "$state",
+        "source": "''"
+      },
+      {
         "name": "displayCount",
         "rune": "$state",
         "source": "50"
       },
       {
-        "name": "echoes",
-        "rune": "$derived",
-        "source": "echoStore.echoes"
-      },
-      {
         "name": "visible",
         "rune": "$derived",
-        "source": "echoes.slice(0, displayCount"
+        "source": "filteredEchoes.slice(0, displayCount"
       },
       {
         "name": "hasMore",
         "rune": "$derived",
-        "source": "echoes.length > displayCount"
+        "source": "filteredEchoes.length > displayCount"
       },
       {
-        "name": "total",
+        "name": "hasFilters",
         "rune": "$derived",
-        "source": "echoStore.totalCount"
+        "source": "!!(activeSense || activeEmoji || searchQuery.trim("
       }
     ],
     "functions": [
+      {
+        "name": "setSense",
+        "params": "id: string"
+      },
+      {
+        "name": "setEmoji",
+        "params": "emoji: string"
+      },
+      {
+        "name": "setSort",
+        "params": "order: 'newest' | 'oldest' | 'intensity'"
+      },
+      {
+        "name": "clearAll",
+        "params": ""
+      },
       {
         "name": "getSense",
         "params": "senseId: string"
@@ -53,38 +84,51 @@
     ],
     "goto_navigation": [],
     "css_classes": [
-      "echo-list",
-      "empty-icon",
-      "echo-time",
-      "empty-sub",
-      "home",
-      "count-badge",
-      "sense-badge",
-      "empty-state",
-      "home-title",
       "echo-name",
-      "echo-card",
-      "echo-note",
-      "load-more",
-      "echo-header",
-      "echo-body",
-      "dot",
+      "search-input",
       "echo-meta",
-      "echo-emoji",
+      "search-clear",
+      "echo-body",
+      "empty-sub",
+      "count-badge",
+      "emoji-chip",
+      "echo-list",
+      "dot",
+      "inline-link",
+      "echo-time",
+      "filter-status",
+      "echo-header",
+      "empty-state",
+      "sense-badge",
       "echo-intensity",
+      "empty-icon",
+      "clear-btn",
+      "home",
+      "sort-row",
+      "echo-card",
+      "load-more",
+      "empty-heading",
+      "chip-scroll",
+      "chip",
+      "echo-emoji",
+      "sort-btn",
       "home-header",
-      "empty-heading"
+      "search-icon",
+      "home-title",
+      "search-wrap",
+      "browse",
+      "echo-note"
     ],
     "has_style_block": true,
-    "script_lines": 26,
-    "template_lines": 53,
+    "script_lines": 119,
+    "template_lines": 142,
     "uses_runes": {
       "state": true,
       "derived": true,
-      "effect": false
+      "effect": true
     },
     "z_indices": [],
-    "has_ondestroy": false
+    "has_ondestroy": true
   },
   "phase": 9,
   "status": "complete"
