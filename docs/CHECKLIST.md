@@ -69,7 +69,9 @@
 
 | ID | Description | Status |
 |----|-------------|--------|
-| — | — | — |
+| B1 | SQLite ACL error on Android: "command plugin:sql\|execute not allowed by ACL" | ✅ Fixed — added `sql:allow-load`, `sql:allow-execute`, `sql:allow-select`, `sql:allow-close` to `capabilities/default.json` |
+| B2 | Migration v2 used emoji `'✨'` as SQL DEFAULT value — breaks JNI encoding on Android SQLite | ✅ Fixed — changed to `DEFAULT ''` in migration v2; migration v3 ensures clean schema |
+| B3 | `addEcho()` silently returned null instead of throwing when db was null | ✅ Fixed — now throws descriptive error; dbError banner shown in add form |
 
 ## SESSION LOG
 
@@ -78,3 +80,4 @@
 | 2026-06-28 | Repo created. Foundation files. Config refined. Scaffold builds clean. |
 | 2026-06-28 | Phase 0 complete. ComfortBar, Sidebar, GradientPulse, theme store, senses data, icon set. npm run check: 0 errors. cargo build: clean. Pending human test on Android. |
 | 2026-06-28 | Phase 1 complete. echoStore (Svelte 5 $state + SQLite), Echo interface updated, DB migration v2, /add form (sense, subcategory, emoji, note, intensity, timestamp), home timeline with EchoCards. Pending human test. |
+| 2026-06-28 | Android debug session. Fixed three blocking bugs: SQLite ACL permissions (capabilities/default.json), migration emoji encoding (v3 migration), silent null-db failure. Added dense logcat diagnostics. Hamburger moved to bottom thumb zone. |
