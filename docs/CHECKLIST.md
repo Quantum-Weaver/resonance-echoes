@@ -18,14 +18,14 @@
 - [x] Collapsible sidebar (20vw, hamburger below status bar)
 - [x] COSMIC theme system
 - [x] Mobile-safe areas
-- [ ] **Tested:** ⬜
+- [x] **Tested:** ✅
 
 ### Phase 1: The Echo ✅
 - [x] Echo form (name, sense, subcategory, emoji, note, intensity, timestamp)
 - [x] echoStore with reactive state (Svelte 5 $state, SQLite via tauri-plugin-sql)
 - [x] DB migration v2 (correct schema: name, sense, subcategory, note, timestamp)
 - [x] Home timeline with EchoCard (emoji, name, sense badge, relative time, intensity dots, note preview)
-- [ ] **Tested:** ⬜
+- [x] **Tested:** ✅
 
 ### Phase 2: Browse & Filter ⬜
 - [ ] Debounced search

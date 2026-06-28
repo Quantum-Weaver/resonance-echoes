@@ -7,8 +7,17 @@
       "navigates_to": [],
       "imports_stores": [],
       "imports_components": []
+    },
+    "add": {
+      "file": "src\\routes\\add\\+page.svelte",
+      "phase": 99,
+      "navigates_to": [
+        "/"
+      ],
+      "imports_stores": [],
+      "imports_components": []
     }
   },
-  "total_routes": 1,
-  "scan_timestamp": "2026-06-28T13:02:29.270318 | in sovereign time"
+  "total_routes": 2,
+  "scan_timestamp": "2026-06-28T14:43:58.037826 | in sovereign time"
 }

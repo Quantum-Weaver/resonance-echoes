@@ -11,21 +11,27 @@
   "enums": [],
   "usage": {
     "Sense": [
-      "src\\lib\\data\\senses.ts"
+      "src\\lib\\data\\senses.ts",
+      "src\\lib\\stores\\echo.svelte.ts",
+      "src\\routes\\+page.svelte",
+      "src\\routes\\add\\+page.svelte"
     ],
     "Subcategory": [
-      "src\\lib\\data\\senses.ts"
+      "src\\lib\\data\\senses.ts",
+      "src\\routes\\add\\+page.svelte"
+    ],
+    "Echo": [
+      "src\\lib\\stores\\echo.svelte.ts",
+      "src\\routes\\+page.svelte",
+      "src\\routes\\add\\+page.svelte",
+      "src\\lib\\components\\Sidebar.svelte"
     ],
     "ThemeConfig": [
       "src\\lib\\stores\\theme.svelte.ts",
       "src\\lib\\theme\\theme.ts"
-    ],
-    "Echo": [
-      "src\\routes\\+page.svelte",
-      "src\\lib\\components\\Sidebar.svelte"
     ]
   },
   "unused": [],
   "duplicates_found": [],
-  "scan_timestamp": "2026-06-28T13:02:29.304045 | in sovereign time"
+  "scan_timestamp": "2026-06-28T14:43:58.078248 | in sovereign time"
 }

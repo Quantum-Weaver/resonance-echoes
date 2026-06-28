@@ -1,6 +1,29 @@
 {
   "layer": "stores",
   "stores": {
+    "echo": {
+      "file": "src\\lib\\stores\\echo.svelte.ts",
+      "lines": 98,
+      "reactive_state": [
+        "echoes",
+        "totalCount",
+        "loading"
+      ],
+      "exports": [
+        "rowToEcho",
+        "initDB",
+        "loadEchoes",
+        "addEcho",
+        "getEchoesBySense",
+        "getEchoesByEmoji",
+        "searchEchoes"
+      ],
+      "tauri_invoke_calls": [],
+      "events_listened": [],
+      "localStorage_keys": [],
+      "has_init_function": true,
+      "has_load_function": true
+    },
     "theme": {
       "file": "src\\lib\\stores\\theme.svelte.ts",
       "lines": 43,
@@ -18,5 +41,5 @@
     }
   },
   "cross_dependencies": {},
-  "scan_timestamp": "2026-06-28T13:02:29.275335 | in sovereign time"
+  "scan_timestamp": "2026-06-28T14:43:58.043226 | in sovereign time"
 }
