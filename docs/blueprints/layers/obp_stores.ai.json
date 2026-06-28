@@ -1,6 +1,22 @@
 {
   "layer": "stores",
-  "stores": {},
+  "stores": {
+    "theme": {
+      "file": "src\\lib\\stores\\theme.svelte.ts",
+      "lines": 43,
+      "reactive_state": [
+        "config"
+      ],
+      "exports": [
+        "persist"
+      ],
+      "tauri_invoke_calls": [],
+      "events_listened": [],
+      "localStorage_keys": [],
+      "has_init_function": false,
+      "has_load_function": true
+    }
+  },
   "cross_dependencies": {},
-  "scan_timestamp": "2026-06-28T12:28:04.805131 | in sovereign time"
+  "scan_timestamp": "2026-06-28T13:02:29.275335 | in sovereign time"
 }
