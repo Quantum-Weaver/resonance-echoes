@@ -1,29 +1,86 @@
 {
   "route_name": "home",
   "source_file": "src\\routes\\+page.svelte",
-  "scan_timestamp": "2026-06-28T13:02:29.269069 | in sovereign time",
+  "scan_timestamp": "2026-06-28T14:43:58.034101 | in sovereign time",
   "analysis": {
     "imports": {
       "components": [],
       "stores": [],
       "types": [],
       "navigation": [],
-      "data": [],
+      "data": [
+        "senses"
+      ],
       "cosmic": [],
       "theme": []
     },
-    "reactive_state": [],
-    "functions": [],
+    "reactive_state": [
+      {
+        "name": "displayCount",
+        "rune": "$state",
+        "source": "50"
+      },
+      {
+        "name": "echoes",
+        "rune": "$derived",
+        "source": "echoStore.echoes"
+      },
+      {
+        "name": "visible",
+        "rune": "$derived",
+        "source": "echoes.slice(0, displayCount"
+      },
+      {
+        "name": "hasMore",
+        "rune": "$derived",
+        "source": "echoes.length > displayCount"
+      },
+      {
+        "name": "total",
+        "rune": "$derived",
+        "source": "echoStore.totalCount"
+      }
+    ],
+    "functions": [
+      {
+        "name": "getSense",
+        "params": "senseId: string"
+      },
+      {
+        "name": "relativeTime",
+        "params": "timestamp: number"
+      }
+    ],
     "goto_navigation": [],
     "css_classes": [
-      "home"
+      "echo-list",
+      "empty-icon",
+      "echo-time",
+      "empty-sub",
+      "home",
+      "count-badge",
+      "sense-badge",
+      "empty-state",
+      "home-title",
+      "echo-name",
+      "echo-card",
+      "echo-note",
+      "load-more",
+      "echo-header",
+      "echo-body",
+      "dot",
+      "echo-meta",
+      "echo-emoji",
+      "echo-intensity",
+      "home-header",
+      "empty-heading"
     ],
     "has_style_block": true,
-    "script_lines": 0,
-    "template_lines": 7,
+    "script_lines": 26,
+    "template_lines": 53,
     "uses_runes": {
-      "state": false,
-      "derived": false,
+      "state": true,
+      "derived": true,
       "effect": false
     },
     "z_indices": [],
