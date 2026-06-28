@@ -1,0 +1,28 @@
+{
+  "layer": "types",
+  "file": "src\\lib\\types\\types.ts",
+  "interfaces": [
+    "ThemeConfig",
+    "Echo",
+    "Sense",
+    "Subcategory",
+    "EmojiDefinition"
+  ],
+  "types": [],
+  "enums": [],
+  "usage": {
+    "ThemeConfig": [
+      "src\\lib\\theme\\theme.ts"
+    ],
+    "Echo": [
+      "src\\routes\\+page.svelte"
+    ]
+  },
+  "unused": [
+    "Sense",
+    "Subcategory",
+    "EmojiDefinition"
+  ],
+  "duplicates_found": [],
+  "scan_timestamp": "2026-06-28T11:58:21.333304 | in sovereign time"
+}

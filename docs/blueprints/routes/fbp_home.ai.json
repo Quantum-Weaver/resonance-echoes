@@ -1,0 +1,34 @@
+{
+  "route_name": "home",
+  "source_file": "src\\routes\\+page.svelte",
+  "scan_timestamp": "2026-06-28T11:58:21.306639 | in sovereign time",
+  "analysis": {
+    "imports": {
+      "components": [],
+      "stores": [],
+      "types": [],
+      "navigation": [],
+      "data": [],
+      "cosmic": [],
+      "theme": []
+    },
+    "reactive_state": [],
+    "functions": [],
+    "goto_navigation": [],
+    "css_classes": [
+      "page"
+    ],
+    "has_style_block": true,
+    "script_lines": 0,
+    "template_lines": 7,
+    "uses_runes": {
+      "state": false,
+      "derived": false,
+      "effect": false
+    },
+    "z_indices": [],
+    "has_ondestroy": false
+  },
+  "phase": 9,
+  "status": "complete"
+}

@@ -1,0 +1,57 @@
+{
+  "layer": "rust_backend",
+  "files": {
+    "lib": {
+      "file": "src-tauri\\src\\lib.rs",
+      "lines": 43,
+      "commands": [
+        "greet"
+      ],
+      "command_signatures": [
+        {
+          "name": "greet",
+          "params": "name: &str"
+        }
+      ],
+      "structs": [],
+      "imports": [
+        "tauri_plugin_sql::"
+      ],
+      "mod_declarations": [],
+      "migrations": [
+        1
+      ],
+      "plugins": [
+        "fs",
+        "sql",
+        "dialog",
+        "opener"
+      ]
+    },
+    "main": {
+      "file": "src-tauri\\src\\main.rs",
+      "lines": 7,
+      "commands": [],
+      "command_signatures": [],
+      "structs": [],
+      "imports": [],
+      "mod_declarations": [],
+      "migrations": [],
+      "plugins": []
+    }
+  },
+  "all_commands": [
+    "greet"
+  ],
+  "total_commands": 1,
+  "db_migrations": [
+    1
+  ],
+  "registered_plugins": [
+    "dialog",
+    "fs",
+    "opener",
+    "sql"
+  ],
+  "scan_timestamp": "2026-06-28T11:58:21.320430 | in sovereign time"
+}

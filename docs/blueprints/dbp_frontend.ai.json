@@ -1,0 +1,20 @@
+{
+  "stack": "frontend",
+  "route_map": {
+    "home": {
+      "file": "src\\routes\\+page.svelte",
+      "phase": 9,
+      "status": "complete",
+      "navigates_to": []
+    }
+  },
+  "total_routes": 1,
+  "store_count": 0,
+  "store_dependencies": {},
+  "component_count": 0,
+  "icon_component_count": 0,
+  "known_bugs": [
+    "| \u2014 | \u2014 | \u2014 |"
+  ],
+  "scan_timestamp": "2026-06-28T11:58:21.440429 | in sovereign time"
+}
