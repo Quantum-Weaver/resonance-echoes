@@ -29,7 +29,9 @@
       },
       "z_indices": [],
       "has_cleanup": false,
-      "imported_by": []
+      "imported_by": [
+        "src\\routes\\onboarding\\+page.svelte"
+      ]
     },
     "Sidebar": {
       "file": "src\\lib\\components\\Sidebar.svelte",
@@ -53,5 +55,5 @@
   },
   "total_components": 3,
   "icon_components": [],
-  "scan_timestamp": "2026-06-28T17:15:28.645769 | in sovereign time"
+  "scan_timestamp": "2026-06-28T18:25:36.307495 | in sovereign time"
 }

@@ -57,7 +57,7 @@
 - [x] Layout gate — first launch redirects to /onboarding; Sidebar + ComfortBar hidden
 - [x] onboarding_complete flag — set on "Enter Echoes"; prevents re-showing
 - [x] ComfortBar greeting reads vessel_name after onboarding
-- [ ] **Tested:** ⬜
+- [x] **Tested:** ✅
 
 ### Phase 5: Data Sovereignty ⬜
 - [ ] Export JSON
