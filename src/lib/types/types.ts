@@ -9,13 +9,14 @@ export interface ThemeConfig {
 // Echo — a single journal entry
 export interface Echo {
   id: string;
-  body: string;
-  senseId: string;
-  subcategoryId: string | null;
-  emoji: string | null;
+  name: string;
+  sense: string;
+  subcategory: string;
+  emoji: string;
+  note?: string;
   intensity: number;
+  timestamp: number;
   createdAt: number;
-  updatedAt: number;
 }
 
 // Sense — top-level perception category (Seen, Heard, Felt, Thought, etc.)
