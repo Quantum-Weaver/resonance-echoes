@@ -3,13 +3,15 @@
   "stores": {
     "echo": {
       "file": "src\\lib\\stores\\echo.svelte.ts",
-      "lines": 98,
+      "lines": 142,
       "reactive_state": [
         "echoes",
         "totalCount",
-        "loading"
+        "loading",
+        "dbError"
       ],
       "exports": [
+        "generateId",
         "rowToEcho",
         "initDB",
         "loadEchoes",
@@ -41,5 +43,5 @@
     }
   },
   "cross_dependencies": {},
-  "scan_timestamp": "2026-06-28T14:43:58.043226 | in sovereign time"
+  "scan_timestamp": "2026-06-28T17:15:28.626861 | in sovereign time"
 }

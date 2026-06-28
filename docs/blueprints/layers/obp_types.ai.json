@@ -14,7 +14,8 @@
       "src\\lib\\data\\senses.ts",
       "src\\lib\\stores\\echo.svelte.ts",
       "src\\routes\\+page.svelte",
-      "src\\routes\\add\\+page.svelte"
+      "src\\routes\\add\\+page.svelte",
+      "src\\routes\\insights\\+page.svelte"
     ],
     "Subcategory": [
       "src\\lib\\data\\senses.ts",
@@ -24,6 +25,7 @@
       "src\\lib\\stores\\echo.svelte.ts",
       "src\\routes\\+page.svelte",
       "src\\routes\\add\\+page.svelte",
+      "src\\routes\\insights\\+page.svelte",
       "src\\lib\\components\\Sidebar.svelte"
     ],
     "ThemeConfig": [
@@ -33,5 +35,5 @@
   },
   "unused": [],
   "duplicates_found": [],
-  "scan_timestamp": "2026-06-28T14:43:58.078248 | in sovereign time"
+  "scan_timestamp": "2026-06-28T17:15:28.662061 | in sovereign time"
 }
