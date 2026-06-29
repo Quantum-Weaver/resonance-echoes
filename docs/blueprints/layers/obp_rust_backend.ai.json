@@ -24,10 +24,10 @@
         3
       ],
       "plugins": [
-        "sql",
-        "fs",
+        "opener",
         "dialog",
-        "opener"
+        "sql",
+        "fs"
       ]
     },
     "main": {
@@ -57,5 +57,5 @@
     "opener",
     "sql"
   ],
-  "scan_timestamp": "2026-06-28T18:25:36.311307 | in sovereign time"
+  "scan_timestamp": "2026-06-28T20:00:03.824913 | in sovereign time"
 }
