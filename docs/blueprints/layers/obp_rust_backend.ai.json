@@ -3,7 +3,7 @@
   "files": {
     "lib": {
       "file": "src-tauri\\src\\lib.rs",
-      "lines": 43,
+      "lines": 81,
       "commands": [
         "greet"
       ],
@@ -19,13 +19,15 @@
       ],
       "mod_declarations": [],
       "migrations": [
-        1
+        1,
+        2,
+        3
       ],
       "plugins": [
-        "fs",
+        "opener",
         "sql",
-        "dialog",
-        "opener"
+        "fs",
+        "dialog"
       ]
     },
     "main": {
@@ -45,7 +47,9 @@
   ],
   "total_commands": 1,
   "db_migrations": [
-    1
+    1,
+    2,
+    3
   ],
   "registered_plugins": [
     "dialog",
@@ -53,5 +57,5 @@
     "opener",
     "sql"
   ],
-  "scan_timestamp": "2026-06-28T11:58:21.320430 | in sovereign time"
+  "scan_timestamp": "2026-06-28T20:28:45.100487 | in sovereign time"
 }

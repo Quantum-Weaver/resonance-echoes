@@ -13,6 +13,7 @@ Each phase on its own branch from main. Human test before merge. Zero errors on 
 - Mobile-safe areas (safe-area-inset-top, safe-area-inset-bottom)
 - Window identifier: `com.audhd.resonance-echoes`
 - **Test:** App opens on Android. Sidebar works. ComfortBar visible. Theme applies. No crashes.
+- **Pre-build check:** `src-tauri/capabilities/default.json` must include `sql:allow-load`, `sql:allow-execute`, `sql:allow-select`, `sql:allow-close` — `sql:default` alone is not enough. Verify before every Android build.
 
 ## Phase 1: The Echo
 **Branch:** `resonance-echoes/echo`

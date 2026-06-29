@@ -7,7 +7,9 @@
   ],
   "total_commands": 1,
   "db_migrations": [
-    1
+    1,
+    2,
+    3
   ],
   "registered_plugins": [
     "dialog",
@@ -19,5 +21,5 @@
     "lib",
     "main"
   ],
-  "scan_timestamp": "2026-06-28T11:58:21.441496 | in sovereign time"
+  "scan_timestamp": "2026-06-28T20:28:45.143921 | in sovereign time"
 }

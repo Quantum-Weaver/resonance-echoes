@@ -5,24 +5,37 @@
     "ThemeConfig",
     "Echo",
     "Sense",
-    "Subcategory",
-    "EmojiDefinition"
+    "Subcategory"
   ],
   "types": [],
   "enums": [],
   "usage": {
-    "ThemeConfig": [
-      "src\\lib\\theme\\theme.ts"
+    "Sense": [
+      "src\\lib\\data\\senses.ts",
+      "src\\lib\\stores\\echo.svelte.ts",
+      "src\\routes\\+page.svelte",
+      "src\\routes\\add\\+page.svelte",
+      "src\\routes\\insights\\+page.svelte"
+    ],
+    "Subcategory": [
+      "src\\lib\\data\\senses.ts",
+      "src\\routes\\add\\+page.svelte"
     ],
     "Echo": [
-      "src\\routes\\+page.svelte"
+      "src\\lib\\stores\\echo.svelte.ts",
+      "src\\routes\\+page.svelte",
+      "src\\routes\\add\\+page.svelte",
+      "src\\routes\\insights\\+page.svelte",
+      "src\\routes\\onboarding\\+page.svelte",
+      "src\\routes\\settings\\+page.svelte",
+      "src\\lib\\components\\Sidebar.svelte"
+    ],
+    "ThemeConfig": [
+      "src\\lib\\stores\\theme.svelte.ts",
+      "src\\lib\\theme\\theme.ts"
     ]
   },
-  "unused": [
-    "Sense",
-    "Subcategory",
-    "EmojiDefinition"
-  ],
+  "unused": [],
   "duplicates_found": [],
-  "scan_timestamp": "2026-06-28T11:58:21.333304 | in sovereign time"
+  "scan_timestamp": "2026-06-28T20:28:45.117228 | in sovereign time"
 }
