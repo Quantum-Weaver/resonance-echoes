@@ -67,7 +67,7 @@
 - [x] purgeAll() added to echoStore — DELETE FROM echoes, clears reactive state
 - [x] Theme cards in settings match onboarding, apply live via themeStore.setPreset()
 - [x] Font size selector: Small / Medium / Large
-- [ ] **Tested:** ⬜
+- [x] **Tested:** ✅
 
 ### Phase 6: Mobile Ship ⬜
 - [ ] Android testing
