@@ -30,6 +30,7 @@
 	// purgeState controls the double-confirmation flow for both purge paths
 	let purgeState = $state<'idle' | 'confirm1' | 'confirm2'>('idle');
 	let pendingExport = $state(false);
+	let showUninstallGuide = $state(false);
 
 	function exportData() {
 		const json = JSON.stringify(echoStore.echoes, null, 2);
@@ -159,6 +160,24 @@
 						<button class="btn-neutral" onclick={cancelPurge}>Cancel</button>
 						<button class="btn-danger-filled" onclick={executePurge}>Delete Everything</button>
 					</div>
+				</div>
+			{/if}
+		</div>
+
+		<div class="uninstall-section">
+			{#if !showUninstallGuide}
+				<button class="btn-uninstall" onclick={() => (showUninstallGuide = true)}>
+					Uninstall App
+				</button>
+			{:else}
+				<div class="uninstall-guide">
+					<p class="uninstall-intro">Resonance Echoes stores all data on your device. To completely remove the app and all data:</p>
+					<ol class="uninstall-steps">
+						<li>Export your data if you want to keep it</li>
+						<li>Go to Android Settings → Apps → Resonance Echoes → Uninstall</li>
+					</ol>
+					<p class="uninstall-note">This ensures Android removes all app data.</p>
+					<button class="btn-neutral" onclick={() => (showUninstallGuide = false)}>Got it</button>
 				</div>
 			{/if}
 		</div>
@@ -444,6 +463,53 @@
 		font-size: 0.78rem;
 		color: var(--text-muted);
 		margin: 0;
+		line-height: 1.5;
+	}
+
+	/* ── Uninstall Guide ── */
+	.uninstall-section {
+		padding-top: 0.75rem;
+		border-top: 1px solid var(--border-color);
+	}
+
+	.btn-uninstall {
+		width: 100%;
+		padding: 0.75rem 1rem;
+		background: var(--bg-surface);
+		border: 1.5px solid var(--border-color);
+		border-radius: 10px;
+		color: var(--text-muted);
+		font-size: 0.9rem;
+		font-weight: 500;
+		cursor: pointer;
+		text-align: left;
+		transition: border-color 0.15s, color 0.15s;
+	}
+	.btn-uninstall:hover { border-color: var(--text-muted); color: var(--text-secondary); }
+
+	.uninstall-guide {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.uninstall-intro, .uninstall-note {
+		font-size: 0.875rem;
+		color: var(--text-secondary);
+		margin: 0;
+		line-height: 1.55;
+	}
+
+	.uninstall-steps {
+		margin: 0;
+		padding-left: 1.25rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
+	}
+	.uninstall-steps li {
+		font-size: 0.875rem;
+		color: var(--text-secondary);
 		line-height: 1.5;
 	}
 </style>

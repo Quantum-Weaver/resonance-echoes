@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { echoStore } from '$lib/stores/echo.svelte';
-	import { SENSES } from '$lib/data/senses';
+	import { SENSES, type Sense } from '$lib/data/senses';
 	import { EMOJI_DEFS } from '$lib/data/emojis';
 
 	function toLocalISO(date: Date): string {
@@ -22,16 +22,48 @@
 	let saveError = $state('');
 	let saveSuccess = $state(false);
 
+	// Progressive disclosure: hide advanced fields until 10 echoes
+	let showAdvanced = $state(false);
+	const isSimplified = $derived(!showAdvanced && echoStore.totalCount < 10);
+
+	// Emoji nudge: show "no pressure" after 5s with no emoji selected
+	let showEmojiNudge = $state(false);
+	$effect(() => {
+		if (selectedEmoji) { showEmojiNudge = false; return; }
+		const t = setTimeout(() => { showEmojiNudge = true; }, 5000);
+		return () => clearTimeout(t);
+	});
+
+	// Disambiguation: track dismissal per emoji to avoid reshowing for same choice
+	let disambigDismissedForEmoji = $state<string | null>(null);
+
+	const disambiguationSenses = $derived.by((): Sense[] => {
+		if (!selectedEmoji || selectedEmoji === disambigDismissedForEmoji) return [];
+		const priorUses = echoStore.echoes.filter(
+			(e) => e.emoji === selectedEmoji && e.sense !== 'not_sure'
+		);
+		if (priorUses.length === 0) return [];
+		const sensesUsed = [...new Set(priorUses.map((e) => e.sense))];
+		if (sensesUsed.length < 2) return [];
+		return sensesUsed
+			.map((id) => SENSES.find((s) => s.id === id))
+			.filter((s): s is Sense => !!s)
+			.slice(0, 3);
+	});
+
 	const currentSense = $derived(SENSES.find((s) => s.id === selectedSense));
 
 	function selectSense(senseId: string) {
 		selectedSense = senseId;
-		const sense = SENSES.find((s) => s.id === senseId);
-		selectedSubcategory = sense?.subcategories[0]?.id ?? 'custom';
+		if (senseId !== 'not_sure') {
+			const sense = SENSES.find((s) => s.id === senseId);
+			selectedSubcategory = sense?.subcategories[0]?.id ?? 'custom';
+		}
 		customSubcategoryText = '';
 	}
 
 	function getFinalSubcategory(): string {
+		if (selectedSense === 'not_sure') return '';
 		if (selectedSubcategory === 'custom' && customSubcategoryText.trim()) {
 			return customSubcategoryText.trim();
 		}
@@ -118,11 +150,19 @@
 						<span class="sense-name">{sense.name}</span>
 					</button>
 				{/each}
+				<button
+					class="sense-btn not-sure-btn"
+					class:selected={selectedSense === 'not_sure'}
+					onclick={() => selectSense('not_sure')}
+				>
+					<span class="sense-emoji">❓</span>
+					<span class="sense-name">Not Sure</span>
+				</button>
 			</div>
 		</section>
 
 		<!-- Subcategory chips -->
-		{#if currentSense && currentSense.subcategories.length > 0}
+		{#if !isSimplified && currentSense && currentSense.subcategories.length > 0}
 			<section class="form-section">
 				<div class="section-label">Subcategory</div>
 				<div class="chip-row">
@@ -165,14 +205,52 @@
 					</button>
 				{/each}
 			</div>
-			{#if selectedEmoji}
+			<div class="emoji-skip-row">
+				<button
+					class="emoji-skip-btn"
+					class:active={selectedEmoji === '❓'}
+					onclick={() => (selectedEmoji = selectedEmoji === '❓' ? '' : '❓')}
+					aria-pressed={selectedEmoji === '❓'}
+				>— skip / not sure</button>
+				{#if showEmojiNudge && !selectedEmoji}
+					<span class="emoji-nudge">No pressure. You can skip this.</span>
+				{/if}
+			</div>
+			{#if selectedEmoji && selectedEmoji !== '❓'}
 				{@const def = EMOJI_DEFS.find((d) => d.emoji === selectedEmoji)}
 				{#if def}
 					<p class="emoji-def">{def.definition}</p>
 				{/if}
 			{/if}
+			{#if disambiguationSenses.length > 0}
+				<div class="disambig">
+					<p class="disambig-text">
+						You've used {selectedEmoji} across different senses before. Is this more about...
+					</p>
+					<div class="disambig-chips">
+						{#each disambiguationSenses as sense}
+							<button
+								class="disambig-chip"
+								onclick={() => { selectSense(sense.id); disambigDismissedForEmoji = selectedEmoji; }}
+							>{sense.emoji} {sense.name}</button>
+						{/each}
+						<button
+							class="disambig-chip chip-muted"
+							onclick={() => { disambigDismissedForEmoji = selectedEmoji; }}
+						>✨ Something else</button>
+					</div>
+				</div>
+			{/if}
 		</section>
 
+		{#if isSimplified}
+			<div class="disclosure-hint">
+				<span class="disclosure-text">More options unlock after 10 echoes.</span>
+				<button class="disclosure-toggle" onclick={() => (showAdvanced = true)}>Advanced</button>
+			</div>
+		{/if}
+
+		{#if !isSimplified}
 		<!-- Note -->
 		<section class="form-section">
 			<div class="section-label">Anything else? <span class="optional">(optional)</span></div>
@@ -210,6 +288,7 @@
 				<input type="datetime-local" bind:value={customTimestamp} class="datetime-input" />
 			{/if}
 		</section>
+		{/if}
 
 		<!-- Actions -->
 		<section class="form-section actions">
@@ -538,6 +617,109 @@
 		background: #27ae60;
 		opacity: 1;
 	}
+
+	/* Not Sure sense button */
+	.not-sure-btn { border-style: dashed; }
+	.not-sure-btn.selected { border-style: solid; }
+
+	/* Progressive disclosure hint */
+	.disclosure-hint {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 1.25rem;
+		padding: 0.5rem 0.75rem;
+		background: color-mix(in srgb, var(--accent) 5%, transparent);
+		border-radius: 8px;
+	}
+
+	.disclosure-text {
+		font-size: 0.78rem;
+		color: var(--text-muted);
+	}
+
+	.disclosure-toggle {
+		background: none;
+		border: none;
+		color: var(--accent);
+		font-size: 0.78rem;
+		cursor: pointer;
+		padding: 0;
+		text-decoration: underline;
+		white-space: nowrap;
+	}
+
+	/* Emoji skip row */
+	.emoji-skip-row {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin-top: 0.4rem;
+	}
+
+	.emoji-skip-btn {
+		background: none;
+		border: none;
+		color: var(--text-muted);
+		font-size: 0.78rem;
+		cursor: pointer;
+		padding: 0;
+		transition: color 0.15s;
+		white-space: nowrap;
+	}
+	.emoji-skip-btn:hover { color: var(--text-secondary); }
+	.emoji-skip-btn.active { color: var(--accent); font-weight: 600; }
+
+	.emoji-nudge {
+		font-size: 0.78rem;
+		color: var(--text-muted);
+		font-style: italic;
+		margin: 0;
+		animation: fade-in 0.4s ease;
+	}
+
+	/* Disambiguation prompt */
+	.disambig {
+		margin-top: 0.6rem;
+		padding: 0.6rem 0.75rem;
+		background: color-mix(in srgb, var(--accent) 6%, transparent);
+		border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		animation: fade-in 0.2s ease;
+	}
+
+	.disambig-text {
+		font-size: 0.8rem;
+		color: var(--text-secondary);
+		margin: 0;
+		line-height: 1.4;
+	}
+
+	.disambig-chips {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+	}
+
+	.disambig-chip {
+		padding: 0.28rem 0.65rem;
+		background: var(--bg-surface);
+		border: 1.5px solid var(--accent);
+		border-radius: 20px;
+		color: var(--accent);
+		font-size: 0.8rem;
+		cursor: pointer;
+		transition: background 0.15s;
+	}
+	.disambig-chip:hover { background: color-mix(in srgb, var(--accent) 15%, transparent); }
+	.disambig-chip.chip-muted {
+		border-color: var(--border-color);
+		color: var(--text-muted);
+	}
+	.disambig-chip.chip-muted:hover { color: var(--text-secondary); }
 
 	.emoji-def {
 		margin: 0.5rem 0 0;

@@ -103,6 +103,7 @@
 	);
 
 	function getSense(senseId: string) {
+		if (senseId === 'not_sure') return { name: 'Not Sure', emoji: '❓' };
 		return SENSES.find((s) => s.id === senseId) ?? { name: senseId, emoji: '✨' };
 	}
 
@@ -269,7 +270,7 @@
 							<span class="echo-time">{relativeTime(echo.timestamp)}</span>
 						</div>
 						<div class="echo-meta">
-							<span class="sense-badge">{sense.emoji} {sense.name} · {echo.subcategory}</span>
+							<span class="sense-badge">{sense.emoji} {sense.name}{echo.subcategory ? ` · ${echo.subcategory}` : ''}</span>
 						</div>
 						<div class="echo-intensity">
 							{#each [1, 2, 3, 4, 5] as n}
