@@ -48,5 +48,5 @@
     "| B2 | Migration v2 used emoji `'\u2728'` as SQL DEFAULT value \u2014 breaks JNI encoding on Android SQLite | \u2705 Fixed \u2014 changed to `DEFAULT ''` in migration v2; migration v3 ensures clean schema |",
     "| B3 | `addEcho()` silently returned null instead of throwing when db was null | \u2705 Fixed \u2014 now throws descriptive error; dbError banner shown in add form |"
   ],
-  "scan_timestamp": "2026-06-28T20:00:03.861011 | in sovereign time"
+  "scan_timestamp": "2026-06-28T20:28:45.142269 | in sovereign time"
 }

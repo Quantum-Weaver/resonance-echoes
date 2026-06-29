@@ -3,7 +3,7 @@
   "stores": {
     "echo": {
       "file": "src\\lib\\stores\\echo.svelte.ts",
-      "lines": 150,
+      "lines": 163,
       "reactive_state": [
         "echoes",
         "totalCount",
@@ -19,6 +19,7 @@
         "getEchoesBySense",
         "getEchoesByEmoji",
         "searchEchoes",
+        "updateEcho",
         "purgeAll"
       ],
       "tauri_invoke_calls": [],
@@ -44,5 +45,5 @@
     }
   },
   "cross_dependencies": {},
-  "scan_timestamp": "2026-06-28T20:00:03.801838 | in sovereign time"
+  "scan_timestamp": "2026-06-28T20:28:45.064348 | in sovereign time"
 }
