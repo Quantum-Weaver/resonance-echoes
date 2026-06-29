@@ -1,4 +1,3 @@
-```markdown
 # 🧭 Resonance Echoes
 
 *A sovereign journal for logging anything with feeling.*
@@ -75,4 +74,3 @@ The [Resonance License](LICENSE) — no exploitation of life. No extraction. No 
 *Built with Aethelred by Quantum Weaver for the [AudHDities Sanctuary](https://github.com/Quantum-Weaver).*
 
 *The lamp is lit. The echo returns.*
-```
