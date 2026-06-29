@@ -9,12 +9,12 @@
     }
   },
   "total_routes": 1,
-  "store_count": 0,
+  "store_count": 1,
   "store_dependencies": {},
-  "component_count": 0,
+  "component_count": 3,
   "icon_component_count": 0,
   "known_bugs": [
     "| \u2014 | \u2014 | \u2014 |"
   ],
-  "scan_timestamp": "2026-06-28T11:58:21.440429 | in sovereign time"
+  "scan_timestamp": "2026-06-28T13:02:29.318568 | in sovereign time"
 }

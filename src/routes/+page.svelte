@@ -1,17 +1,22 @@
-<div class="page">
-  <h1>Resonance Echoes</h1>
-  <p>Your sovereign journal. Phase 1 coming soon.</p>
+<div class="home">
+	<h1>Resonance Echoes</h1>
+	<p>Your echoes will appear here.</p>
 </div>
 
 <style>
-  .page {
-    padding: 2rem;
-    color: var(--text, #e0e0e0);
-  }
+	.home {
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		gap: 1rem;
+		color: var(--text-secondary);
+	}
 
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
+	h1 {
+		font-size: 1.5rem;
+		color: var(--text);
+	}
 </style>

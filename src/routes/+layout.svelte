@@ -1,6 +1,58 @@
 <script lang="ts">
-  import '../app.css';
-  let { children } = $props();
+	import '../app.css';
+	import { themeStore } from '$lib/stores/theme.svelte';
+	import { getThemeColors } from '$lib/theme/theme';
+	import { onMount } from 'svelte';
+	import Sidebar from '$lib/components/Sidebar.svelte';
+	import ComfortBar from '$lib/components/ComfortBar.svelte';
+
+	let { children } = $props();
+
+	onMount(() => {
+		themeStore.loadTheme();
+	});
+
+	const config = $derived(themeStore.config);
+	const colors = $derived(getThemeColors(config));
+	const fontSize = $derived(
+		config.fontSize === 'small' ? '14px' : config.fontSize === 'large' ? '18px' : '16px'
+	);
 </script>
 
-{@render children()}
+<div
+	class="app-shell"
+	style="
+		--bg: {colors.background};
+		--accent: {colors.accent};
+		--text: {colors.text};
+		--text-secondary: {colors.textSecondary};
+		--text-muted: {colors.textMuted};
+		--bg-surface: {colors.surface};
+		--border-color: {colors.border};
+		font-size: {fontSize};
+	"
+>
+	<Sidebar />
+
+	<main class="main-content">
+		{@render children()}
+	</main>
+
+	<ComfortBar />
+</div>
+
+<style>
+	.app-shell {
+		display: flex;
+		height: 100vh;
+		overflow: hidden;
+		background-color: var(--bg);
+		color: var(--text);
+	}
+
+	.main-content {
+		flex: 1;
+		overflow-y: auto;
+		padding-bottom: calc(48px + env(safe-area-inset-bottom, 0px));
+	}
+</style>

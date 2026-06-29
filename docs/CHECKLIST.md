@@ -13,11 +13,11 @@
 
 ## PHASE STATUS
 
-### Phase 0: Shell ⬜
-- [ ] App layout with ComfortBar footer
-- [ ] Collapsible sidebar (20vw, hamburger below status bar)
-- [ ] COSMIC theme system
-- [ ] Mobile-safe areas
+### Phase 0: Shell ✅
+- [x] App layout with ComfortBar footer
+- [x] Collapsible sidebar (20vw, hamburger below status bar)
+- [x] COSMIC theme system
+- [x] Mobile-safe areas
 - [ ] **Tested:** ⬜
 
 ### Phase 1: The Echo ⬜
@@ -76,3 +76,4 @@
 | Date | What Was Done |
 |------|---------------|
 | 2026-06-28 | Repo created. Foundation files. Config refined. Scaffold builds clean. |
+| 2026-06-28 | Phase 0 complete. ComfortBar, Sidebar, GradientPulse, theme store, senses data, icon set. npm run check: 0 errors. cargo build: clean. Pending human test on Android. |
