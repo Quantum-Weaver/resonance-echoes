@@ -69,12 +69,23 @@
 - [x] Font size selector: Small / Medium / Large
 - [x] **Tested:** ✅
 
-### Phase 6: Mobile Ship ⬜
-- [ ] Android testing
-- [ ] Sign APK
-- [ ] App icons
-- [ ] Store prep
+### Phase 6: Mobile Ship 🔵
+- [x] Quick Log FAB — one-tap ⚡ on home, inherits last emoji, intensity 3, ✓ animation (1.1s)
+- [x] Emoji definition display — warm poetic text appears below emoji grid on selection (fade-in)
+- [x] Save confirmation — Save Echo button shows ✓ for 900ms before navigating home
+- [x] App icon — custom COSMIC purple compass-ring (1024x1024), all densities regenerated
+- [x] Version bump — package.json + tauri.conf.json → 1.0.0; About section updated
+- [x] docs/RELEASE.md created — build/sign commands, feature list, system requirements, v1.1 planned
 - [ ] **Tested:** ⬜
+
+---
+
+## v1.1 PLANNED FEATURES
+
+- [ ] Progressive disclosure — advanced fields revealed after 10 echoes
+- [ ] Disambiguation prompts — "Is this more about X or Y?"
+- [ ] "I don't know" / "something felt off" option — no forced categorisation
+- [ ] Predictability audit — echoes that happened more than expected
 
 ---
 
@@ -98,3 +109,4 @@
 | 2026-06-28 | Phase 3 complete. Insights page: Top Emojis (frequency-sized cloud), By Sense (sorted list), Streak (consecutive day counter), Time of Day (4-period grid, accent on dominant), Recent Mood (7-day row), Intensity Trend (week comparison). All $derived.by client-side, no new DB queries. npm run check: 0 errors. |
 | 2026-06-28 | Phase 4 complete. Onboarding: 3-screen linear flow (Welcome → How it works → Theme), 🧭 GradientPulse sigil, vessel name saved to localStorage, live theme switching in Screen 3, layout gate (goto /onboarding on first launch), Sidebar/ComfortBar hidden during flow. npm run check: 0 errors. |
 | 2026-06-28 | Phase 5 complete. Settings: theme/font-size selection, Export JSON (Blob download), Purge (double confirm → clear DB + localStorage → /onboarding), Export & Purge. purgeAll() added to echoStore. npm run check: 0 errors. |
+| 2026-06-28 | Phase 6 complete. Quick Log FAB (⚡ → ✓ animation), emoji definition display in add form (fade-in poetic text), save confirmation (✓ 900ms before goto), COSMIC compass-ring icon (all densities), version → 1.0.0, docs/RELEASE.md created. npm run check: 0 errors. |

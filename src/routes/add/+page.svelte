@@ -20,6 +20,7 @@
 	let customTimestamp = $state(toLocalISO(new Date()));
 	let saving = $state(false);
 	let saveError = $state('');
+	let saveSuccess = $state(false);
 
 	const currentSense = $derived(SENSES.find((s) => s.id === selectedSense));
 
@@ -64,7 +65,9 @@
 		console.log('[save] payload:', JSON.stringify(payload));
 		try {
 			await echoStore.addEcho(payload);
-			console.log('[save] addEcho returned — navigating home');
+			console.log('[save] addEcho returned — showing confirmation');
+			saveSuccess = true;
+			await new Promise((r) => setTimeout(r, 900));
 			goto('/');
 		} catch (e) {
 			const msg = e instanceof Error ? e.message : String(e);
@@ -162,6 +165,12 @@
 					</button>
 				{/each}
 			</div>
+			{#if selectedEmoji}
+				{@const def = EMOJI_DEFS.find((d) => d.emoji === selectedEmoji)}
+				{#if def}
+					<p class="emoji-def">{def.definition}</p>
+				{/if}
+			{/if}
 		</section>
 
 		<!-- Note -->
@@ -207,10 +216,11 @@
 			<button class="cancel-btn" onclick={() => goto('/')}>Cancel</button>
 			<button
 				class="save-btn"
+				class:success={saveSuccess}
 				onclick={save}
-				disabled={!name.trim() || saving || !!echoStore.dbError}
+				disabled={!name.trim() || saving || !!echoStore.dbError || saveSuccess}
 			>
-				{saving ? 'Saving…' : 'Save Echo'}
+				{saveSuccess ? '✓' : saving ? 'Saving…' : 'Save Echo'}
 			</button>
 		</section>
 		{#if saveError}
@@ -524,4 +534,25 @@
 		cursor: not-allowed;
 	}
 	.save-btn:not(:disabled):active { transform: scale(0.98); }
+	.save-btn.success {
+		background: #27ae60;
+		opacity: 1;
+	}
+
+	.emoji-def {
+		margin: 0.5rem 0 0;
+		padding: 0.5rem 0.75rem;
+		font-size: 0.82rem;
+		color: var(--text-muted);
+		line-height: 1.55;
+		background: color-mix(in srgb, var(--accent) 6%, transparent);
+		border-radius: 8px;
+		border-left: 2px solid color-mix(in srgb, var(--accent) 40%, transparent);
+		animation: fade-in 0.2s ease;
+	}
+
+	@keyframes fade-in {
+		from { opacity: 0; transform: translateY(-4px); }
+		to   { opacity: 1; transform: translateY(0); }
+	}
 </style>
