@@ -127,6 +127,13 @@ async function searchEchoes(query: string, limit = 50): Promise<Echo[]> {
 	return rows.map(rowToEcho);
 }
 
+async function purgeAll() {
+	if (!db) return;
+	await db.execute('DELETE FROM echoes');
+	echoes = [];
+	totalCount = 0;
+}
+
 export const echoStore = {
 	get echoes() { return echoes; },
 	get totalCount() { return totalCount; },
@@ -138,4 +145,5 @@ export const echoStore = {
 	getEchoesBySense,
 	getEchoesByEmoji,
 	searchEchoes,
+	purgeAll,
 };

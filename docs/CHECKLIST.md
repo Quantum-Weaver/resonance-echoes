@@ -59,12 +59,15 @@
 - [x] ComfortBar greeting reads vessel_name after onboarding
 - [x] **Tested:** ✅
 
-### Phase 5: Data Sovereignty ⬜
-- [ ] Export JSON
-- [ ] Purge with double confirm
-- [ ] Export & Purge
-- [ ] Settings page
-- [ ] **Tested:** ⬜
+### Phase 5: Data Sovereignty ✅
+- [x] Settings page — Theme, Font size, Data Sovereignty, About sections
+- [x] Export JSON — Blob download, filename resonance-echoes-export-YYYY-MM-DD.json
+- [x] Purge All Data — double confirmation flow (confirm1 → confirm2 → execute)
+- [x] Export & Purge — exports first, same double-confirm, redirects to onboarding
+- [x] purgeAll() added to echoStore — DELETE FROM echoes, clears reactive state
+- [x] Theme cards in settings match onboarding, apply live via themeStore.setPreset()
+- [x] Font size selector: Small / Medium / Large
+- [x] **Tested:** ✅
 
 ### Phase 6: Mobile Ship ⬜
 - [ ] Android testing
@@ -94,3 +97,4 @@
 | 2026-06-28 | Phase 2 complete. Search (150ms debounce), sense filter chips, emoji filter chips (top 8), sort (newest/oldest/intensity), combined filtering, filter status bar, empty-state-per-filter. All client-side over in-memory echoes. npm run check: 0 errors. |
 | 2026-06-28 | Phase 3 complete. Insights page: Top Emojis (frequency-sized cloud), By Sense (sorted list), Streak (consecutive day counter), Time of Day (4-period grid, accent on dominant), Recent Mood (7-day row), Intensity Trend (week comparison). All $derived.by client-side, no new DB queries. npm run check: 0 errors. |
 | 2026-06-28 | Phase 4 complete. Onboarding: 3-screen linear flow (Welcome → How it works → Theme), 🧭 GradientPulse sigil, vessel name saved to localStorage, live theme switching in Screen 3, layout gate (goto /onboarding on first launch), Sidebar/ComfortBar hidden during flow. npm run check: 0 errors. |
+| 2026-06-28 | Phase 5 complete. Settings: theme/font-size selection, Export JSON (Blob download), Purge (double confirm → clear DB + localStorage → /onboarding), Export & Purge. purgeAll() added to echoStore. npm run check: 0 errors. |
