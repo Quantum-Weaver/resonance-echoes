@@ -98,6 +98,12 @@ See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for the build methodology and [BUILD
 
 ---
 
+## Development Standards
+
+This project follows the [Sanctuary Standards](https://github.com/Quantum-Weaver/sanctuary-standards).
+
+---
+
 ## LICENSE
 
 Code: [MIT](LICENSE) — use it, modify it, share it.
