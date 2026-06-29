@@ -1,4 +1,4 @@
-# 🧭 Resonance Echoes
+# ≽༏≼ Resonance Echoes
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.1.0-brightgreen.svg)]()
