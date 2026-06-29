@@ -171,7 +171,7 @@
 		<div class="about-card">
 			<div class="about-app">
 				<span class="about-name">Resonance Echoes</span>
-				<span class="about-version">v0.1.0</span>
+				<span class="about-version">v1.0.0</span>
 			</div>
 			<p class="about-tag">A sovereign journal for logging anything with feeling.</p>
 			<p class="about-built">Built with Aethelred by Quantum Weaver for the AudHDities Sanctuary.</p>

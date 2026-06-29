@@ -106,6 +106,33 @@
 		return SENSES.find((s) => s.id === senseId) ?? { name: senseId, emoji: '✨' };
 	}
 
+	// --- Quick Log ---
+	let quickLogging = $state(false);
+	let quickLogSuccess = $state(false);
+
+	async function quickLog() {
+		if (quickLogging) return;
+		quickLogging = true;
+		try {
+			const emoji = echoStore.echoes[0]?.emoji || '😌';
+			await echoStore.addEcho({
+				name: 'Quick log',
+				sense: 'other',
+				subcategory: 'custom',
+				emoji,
+				intensity: 3,
+				timestamp: Date.now()
+			});
+			quickLogSuccess = true;
+			setTimeout(() => {
+				quickLogSuccess = false;
+				quickLogging = false;
+			}, 1100);
+		} catch {
+			quickLogging = false;
+		}
+	}
+
 	function relativeTime(timestamp: number): string {
 		const diff = Date.now() - timestamp;
 		if (diff < 60_000) return 'just now';
@@ -205,6 +232,15 @@
 			{/if}
 		</div>
 	{/if}
+
+	<!-- Quick Log FAB -->
+	<button
+		class="quick-log-fab"
+		class:success={quickLogSuccess}
+		onclick={quickLog}
+		disabled={quickLogging}
+		aria-label={quickLogSuccess ? 'Logged!' : 'Quick log'}
+	>{quickLogSuccess ? '✓' : '⚡'}</button>
 
 	<!-- Content -->
 	{#if filteredEchoes.length === 0}
@@ -536,6 +572,34 @@
 		line-clamp: 2;
 		overflow: hidden;
 	}
+
+	/* Quick Log FAB */
+	.quick-log-fab {
+		position: fixed;
+		bottom: calc(56px + env(safe-area-inset-bottom, 0px) + 0.75rem);
+		right: 1rem;
+		z-index: 100;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: var(--bg-surface);
+		border: 2px solid var(--accent);
+		color: var(--accent);
+		font-size: 1.25rem;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 2px 14px color-mix(in srgb, var(--accent) 35%, transparent);
+		transition: transform 0.15s, background 0.2s, color 0.2s, border-color 0.2s;
+	}
+	.quick-log-fab:not(:disabled):active { transform: scale(0.9); }
+	.quick-log-fab.success {
+		background: #27ae60;
+		border-color: #27ae60;
+		color: #fff;
+	}
+	.quick-log-fab:disabled { opacity: 0.7; cursor: default; }
 
 	/* Load more */
 	.load-more {
