@@ -138,6 +138,10 @@
 
 	const hasThisWeek = $derived(recentMood.some(d => d.count > 0));
 
+	// ── Not Sure count (Feature 4) ─────────────────────────────────────────────
+
+	const notSureCount = $derived(echoes.filter((e) => e.sense === 'not_sure').length);
+
 	// ── 6. Intensity Trend ─────────────────────────────────────────────────────
 
 	const intensityTrend = $derived.by((): 'increasing' | 'decreasing' | 'stable' | 'insufficient' => {
@@ -155,6 +159,47 @@
 		if (diff > 0.3) return 'increasing';
 		if (diff < -0.3) return 'decreasing';
 		return 'stable';
+	});
+
+	// ── 7. Patterns (Feature 5) ─────────────────────────────────────────────────
+
+	interface PatternEntry {
+		senseId: string;
+		senseName: string;
+		senseEmoji: string;
+		emoji: string;
+		count: number;
+		senseTotal: number;
+	}
+
+	const patterns = $derived.by((): PatternEntry[] | null => {
+		if (echoes.length < 20) return null;
+		const senseCounts: Record<string, number> = {};
+		const combinations: Record<string, { senseId: string; emoji: string; count: number }> = {};
+		for (const e of echoes) {
+			if (!e.emoji || e.emoji === '❓' || e.sense === 'not_sure') continue;
+			senseCounts[e.sense] = (senseCounts[e.sense] ?? 0) + 1;
+			const key = `${e.sense}::${e.emoji}`;
+			if (!combinations[key]) combinations[key] = { senseId: e.sense, emoji: e.emoji, count: 0 };
+			combinations[key].count++;
+		}
+		return Object.values(combinations)
+			.filter((c) => {
+				const total = senseCounts[c.senseId] ?? 0;
+				return total >= 3 && c.count >= 3 && c.count / total > 0.3;
+			})
+			.map((c) => {
+				const sense = SENSES.find((s) => s.id === c.senseId);
+				return {
+					senseId: c.senseId,
+					senseName: sense?.name ?? c.senseId,
+					senseEmoji: sense?.emoji ?? '✨',
+					emoji: c.emoji,
+					count: c.count,
+					senseTotal: senseCounts[c.senseId] ?? 0
+				};
+			})
+			.sort((a, b) => b.count / b.senseTotal - a.count / a.senseTotal);
 	});
 </script>
 
@@ -203,6 +248,9 @@
 				<p class="card-note">You feel most through {topSense.emoji} {topSense.name}.</p>
 			{:else}
 				<p class="card-empty">Log an echo to see sense distribution.</p>
+			{/if}
+			{#if notSureCount > 0}
+				<p class="card-note">+ {notSureCount} {notSureCount === 1 ? 'echo' : 'echoes'} you weren't sure how to categorize.</p>
 			{/if}
 		</div>
 
@@ -279,6 +327,22 @@
 				{/if}
 			</p>
 		</div>
+
+		<!-- 7. Patterns -->
+		{#if echoes.length >= 20}
+		<div class="card">
+			<div class="card-label">Patterns</div>
+			{#if patterns && patterns.length > 0}
+				{#each patterns as p}
+					<p class="card-insight">
+						{p.senseEmoji} {p.senseName} with {p.emoji} appears a lot — {p.count} of your {p.senseTotal} {p.senseName} echoes feel this way.
+					</p>
+				{/each}
+			{:else}
+				<p class="card-insight">Your echoes are varied. No strong patterns yet.</p>
+			{/if}
+		</div>
+		{/if}
 
 	</div>
 </div>

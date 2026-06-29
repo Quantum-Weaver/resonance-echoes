@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { echoStore } from '$lib/stores/echo.svelte';
 	import { SENSES } from '$lib/data/senses';
 
@@ -103,6 +104,7 @@
 	);
 
 	function getSense(senseId: string) {
+		if (senseId === 'not_sure') return { name: 'Not Sure', emoji: '❓' };
 		return SENSES.find((s) => s.id === senseId) ?? { name: senseId, emoji: '✨' };
 	}
 
@@ -234,6 +236,9 @@
 	{/if}
 
 	<!-- Quick Log FAB -->
+	{#if quickLogSuccess}
+		<p class="quick-log-hint">Tap the echo to edit</p>
+	{/if}
 	<button
 		class="quick-log-fab"
 		class:success={quickLogSuccess}
@@ -261,7 +266,7 @@
 		<div class="echo-list">
 			{#each visible as echo (echo.id)}
 				{@const sense = getSense(echo.sense)}
-				<div class="echo-card">
+				<button class="echo-card" type="button" onclick={() => goto(`/add?edit=${echo.id}`)}>
 					<div class="echo-emoji">{echo.emoji}</div>
 					<div class="echo-body">
 						<div class="echo-header">
@@ -269,7 +274,7 @@
 							<span class="echo-time">{relativeTime(echo.timestamp)}</span>
 						</div>
 						<div class="echo-meta">
-							<span class="sense-badge">{sense.emoji} {sense.name} · {echo.subcategory}</span>
+							<span class="sense-badge">{sense.emoji} {sense.name}{echo.subcategory ? ` · ${echo.subcategory}` : ''}</span>
 						</div>
 						<div class="echo-intensity">
 							{#each [1, 2, 3, 4, 5] as n}
@@ -280,7 +285,7 @@
 							<p class="echo-note">{echo.note}</p>
 						{/if}
 					</div>
-				</div>
+				</button>
 			{/each}
 
 			{#if hasMore}
@@ -492,9 +497,16 @@
 		background: var(--bg-surface);
 		border: 1px solid var(--border-color);
 		border-radius: 12px;
-		transition: border-color 0.15s;
+		cursor: pointer;
+		transition: border-color 0.15s, transform 0.1s;
+		text-align: left;
+		width: 100%;
+		font: inherit;
+		color: inherit;
+		box-sizing: border-box;
 	}
 	.echo-card:hover { border-color: color-mix(in srgb, var(--accent) 40%, var(--border-color)); }
+	.echo-card:active { transform: scale(0.99); }
 
 	.echo-emoji {
 		font-size: 2rem;
@@ -571,6 +583,26 @@
 		-webkit-box-orient: vertical;
 		line-clamp: 2;
 		overflow: hidden;
+	}
+
+	/* Quick log hint */
+	.quick-log-hint {
+		position: fixed;
+		bottom: calc(56px + env(safe-area-inset-bottom, 0px) + 3.75rem);
+		right: 1rem;
+		font-size: 0.68rem;
+		color: var(--text-muted);
+		background: var(--bg-surface);
+		border: 1px solid var(--border-color);
+		border-radius: 6px;
+		padding: 0.2rem 0.5rem;
+		white-space: nowrap;
+		z-index: 99;
+		animation: hint-fade 0.2s ease;
+	}
+	@keyframes hint-fade {
+		from { opacity: 0; transform: translateY(4px); }
+		to   { opacity: 1; transform: translateY(0); }
 	}
 
 	/* Quick Log FAB */

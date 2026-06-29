@@ -1,7 +1,7 @@
 {
   "route_name": "add",
   "source_file": "src\\routes\\add\\+page.svelte",
-  "scan_timestamp": "2026-06-28T18:25:36.276980 | in sovereign time",
+  "scan_timestamp": "2026-06-28T20:28:45.047439 | in sovereign time",
   "analysis": {
     "imports": {
       "components": [],
@@ -74,6 +74,31 @@
         "source": "''"
       },
       {
+        "name": "saveSuccess",
+        "rune": "$state",
+        "source": "false"
+      },
+      {
+        "name": "isEditMode",
+        "rune": "$derived",
+        "source": "editId !== null"
+      },
+      {
+        "name": "showAdvanced",
+        "rune": "$state",
+        "source": "false"
+      },
+      {
+        "name": "isSimplified",
+        "rune": "$derived",
+        "source": "!showAdvanced && echoStore.totalCount < 10"
+      },
+      {
+        "name": "showEmojiNudge",
+        "rune": "$state",
+        "source": "false"
+      },
+      {
         "name": "currentSense",
         "rune": "$derived",
         "source": "SENSES.find((s"
@@ -105,47 +130,60 @@
       "/"
     ],
     "css_classes": [
-      "sense-scroll",
-      "note-input",
-      "optional",
-      "sense-name",
-      "add-page",
-      "datetime-input",
-      "db-error-banner",
-      "add-title",
-      "form",
-      "name-input",
-      "save-btn",
+      "emoji-btn",
+      "disclosure-text",
+      "emoji-skip-row",
       "emoji-grid",
+      "not-sure-btn",
+      "intensity-dot",
+      "chip",
+      "custom-sub-input",
+      "db-error-banner",
+      "chip-muted",
+      "section-label",
+      "name-input",
+      "disclosure-hint",
+      "actions",
+      "cancel-btn",
+      "sense-emoji",
+      "optional",
+      "back-btn",
+      "disambig-chip",
+      "time-toggle",
+      "disambig-chips",
+      "save-error",
+      "form",
+      "datetime-input",
+      "save-btn",
+      "sense-name",
+      "disambig-text",
+      "sense-scroll",
+      "disambig",
+      "add-header",
+      "disclosure-toggle",
       "intensity-row",
       "sense-btn",
-      "intensity-val",
-      "chip-row",
-      "time-toggle",
       "time-btn",
-      "add-header",
-      "intensity-dot",
+      "intensity-val",
+      "emoji-nudge",
+      "emoji-skip-btn",
+      "note-input",
+      "chip-row",
+      "emoji-def",
       "form-section",
-      "cancel-btn",
-      "custom-sub-input",
-      "save-error",
-      "actions",
-      "back-btn",
-      "emoji-btn",
-      "chip",
-      "section-label",
-      "sense-emoji"
+      "add-title",
+      "add-page"
     ],
     "has_style_block": true,
-    "script_lines": 77,
-    "template_lines": 147,
+    "script_lines": 149,
+    "template_lines": 201,
     "uses_runes": {
       "state": true,
       "derived": true,
-      "effect": false
+      "effect": true
     },
     "z_indices": [],
-    "has_ondestroy": false
+    "has_ondestroy": true
   },
   "phase": 99,
   "status": "complete"

@@ -32,8 +32,17 @@
       ],
       "imports_stores": [],
       "imports_components": []
+    },
+    "settings": {
+      "file": "src\\routes\\settings\\+page.svelte",
+      "phase": 10,
+      "navigates_to": [
+        "/onboarding"
+      ],
+      "imports_stores": [],
+      "imports_components": []
     }
   },
-  "total_routes": 4,
-  "scan_timestamp": "2026-06-28T18:25:36.284260 | in sovereign time"
+  "total_routes": 5,
+  "scan_timestamp": "2026-06-28T20:28:45.057647 | in sovereign time"
 }

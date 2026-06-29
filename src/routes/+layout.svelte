@@ -25,9 +25,13 @@
 
 	const config = $derived(themeStore.config);
 	const colors = $derived(getThemeColors(config));
-	const fontSize = $derived(
-		config.fontSize === 'small' ? '14px' : config.fontSize === 'large' ? '18px' : '16px'
-	);
+
+	// rem units are relative to <html>, not .app-shell — must update root font-size
+	$effect(() => {
+		const fs = themeStore.config.fontSize;
+		document.documentElement.style.fontSize =
+			fs === 'small' ? '14px' : fs === 'large' ? '18px' : '16px';
+	});
 </script>
 
 <div
@@ -40,7 +44,6 @@
 		--text-muted: {colors.textMuted};
 		--bg-surface: {colors.surface};
 		--border-color: {colors.border};
-		font-size: {fontSize};
 	"
 >
 	{#if !isOnboarding}

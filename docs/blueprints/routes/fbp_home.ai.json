@@ -1,13 +1,15 @@
 {
   "route_name": "home",
   "source_file": "src\\routes\\+page.svelte",
-  "scan_timestamp": "2026-06-28T18:25:36.274417 | in sovereign time",
+  "scan_timestamp": "2026-06-28T20:28:45.043849 | in sovereign time",
   "analysis": {
     "imports": {
       "components": [],
       "stores": [],
       "types": [],
-      "navigation": [],
+      "navigation": [
+        "from '$app/navigation'"
+      ],
       "data": [
         "senses"
       ],
@@ -54,6 +56,16 @@
         "name": "hasFilters",
         "rune": "$derived",
         "source": "!!(activeSense || activeEmoji || searchQuery.trim("
+      },
+      {
+        "name": "quickLogging",
+        "rune": "$state",
+        "source": "false"
+      },
+      {
+        "name": "quickLogSuccess",
+        "rune": "$state",
+        "source": "false"
       }
     ],
     "functions": [
@@ -78,56 +90,65 @@
         "params": "senseId: string"
       },
       {
+        "name": "quickLog",
+        "params": ""
+      },
+      {
         "name": "relativeTime",
         "params": "timestamp: number"
       }
     ],
     "goto_navigation": [],
     "css_classes": [
-      "echo-body",
-      "echo-list",
-      "dot",
-      "empty-heading",
-      "browse",
-      "emoji-chip",
-      "search-clear",
-      "load-more",
-      "sort-row",
-      "search-input",
-      "home-header",
-      "echo-name",
       "home-title",
-      "filter-status",
-      "echo-meta",
-      "echo-card",
-      "echo-emoji",
-      "empty-icon",
       "count-badge",
-      "inline-link",
-      "sort-btn",
-      "clear-btn",
-      "echo-header",
-      "search-wrap",
-      "echo-time",
-      "echo-note",
-      "home",
-      "chip-scroll",
-      "empty-state",
-      "echo-intensity",
-      "search-icon",
+      "sense-badge",
+      "echo-emoji",
       "chip",
+      "search-icon",
+      "load-more",
+      "echo-meta",
+      "home-header",
+      "sort-btn",
+      "empty-state",
+      "echo-list",
+      "sort-row",
+      "clear-btn",
+      "empty-heading",
+      "quick-log-hint",
+      "filter-status",
+      "echo-card",
+      "inline-link",
       "empty-sub",
-      "sense-badge"
+      "search-clear",
+      "echo-note",
+      "echo-body",
+      "empty-icon",
+      "echo-header",
+      "search-input",
+      "echo-intensity",
+      "dot",
+      "chip-scroll",
+      "echo-name",
+      "quick-log-fab",
+      "echo-time",
+      "browse",
+      "home",
+      "emoji-chip",
+      "search-wrap"
     ],
     "has_style_block": true,
-    "script_lines": 119,
-    "template_lines": 142,
+    "script_lines": 148,
+    "template_lines": 154,
     "uses_runes": {
       "state": true,
       "derived": true,
       "effect": true
     },
-    "z_indices": [],
+    "z_indices": [
+      "99",
+      "100"
+    ],
     "has_ondestroy": true
   },
   "phase": 9,
