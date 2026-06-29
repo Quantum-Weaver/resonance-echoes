@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
+	import { onMount } from 'svelte';
 	import { echoStore } from '$lib/stores/echo.svelte';
 	import { SENSES, type Sense } from '$lib/data/senses';
 	import { EMOJI_DEFS } from '$lib/data/emojis';
@@ -21,6 +23,36 @@
 	let saving = $state(false);
 	let saveError = $state('');
 	let saveSuccess = $state(false);
+
+	// Edit mode
+	let editId = $state<string | null>(null);
+	const isEditMode = $derived(editId !== null);
+	let prefilled = false; // plain var prevents re-fill on subsequent echoes updates
+
+	onMount(() => {
+		const id = page.url.searchParams.get('edit');
+		if (!id) return;
+		editId = id;
+		showAdvanced = true;
+	});
+
+	$effect(() => {
+		const allEchoes = echoStore.echoes;
+		const id = editId;
+		if (!id || prefilled || allEchoes.length === 0) return;
+		const echo = allEchoes.find((e) => e.id === id);
+		if (!echo) return;
+		name = echo.name;
+		selectedSense = echo.sense;
+		selectedSubcategory = echo.subcategory || 'custom';
+		customSubcategoryText = '';
+		selectedEmoji = echo.emoji;
+		note = echo.note ?? '';
+		intensity = echo.intensity;
+		useCustomTime = true;
+		customTimestamp = toLocalISO(new Date(echo.timestamp));
+		prefilled = true;
+	});
 
 	// Progressive disclosure: hide advanced fields until 10 echoes
 	let showAdvanced = $state(false);
@@ -96,8 +128,13 @@
 		};
 		console.log('[save] payload:', JSON.stringify(payload));
 		try {
-			await echoStore.addEcho(payload);
-			console.log('[save] addEcho returned — showing confirmation');
+			if (editId) {
+				await echoStore.updateEcho(editId, payload);
+				console.log('[save] updateEcho returned — showing confirmation');
+			} else {
+				await echoStore.addEcho(payload);
+				console.log('[save] addEcho returned — showing confirmation');
+			}
 			saveSuccess = true;
 			await new Promise((r) => setTimeout(r, 900));
 			goto('/');
@@ -114,7 +151,7 @@
 <div class="add-page">
 	<header class="add-header">
 		<button class="back-btn" onclick={() => goto('/')}>←</button>
-		<h1 class="add-title">New Echo</h1>
+		<h1 class="add-title">{isEditMode ? 'Edit Echo' : 'New Echo'}</h1>
 	</header>
 
 	<div class="form">
@@ -299,7 +336,7 @@
 				onclick={save}
 				disabled={!name.trim() || saving || !!echoStore.dbError || saveSuccess}
 			>
-				{saveSuccess ? '✓' : saving ? 'Saving…' : 'Save Echo'}
+				{saveSuccess ? '✓' : saving ? 'Saving…' : isEditMode ? 'Update' : 'Save Echo'}
 			</button>
 		</section>
 		{#if saveError}
