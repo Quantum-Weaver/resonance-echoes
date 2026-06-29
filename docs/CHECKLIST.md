@@ -69,25 +69,25 @@
 - [x] Font size selector: Small / Medium / Large
 - [x] **Tested:** ✅
 
-### Phase 6: Mobile Ship 🔵
+### Phase 6: Mobile Ship ✅
 - [x] Quick Log FAB — one-tap ⚡ on home, inherits last emoji, intensity 3, ✓ animation (1.1s)
 - [x] Emoji definition display — warm poetic text appears below emoji grid on selection (fade-in)
 - [x] Save confirmation — Save Echo button shows ✓ for 900ms before navigating home
 - [x] App icon — custom COSMIC purple compass-ring (1024x1024), all densities regenerated
 - [x] Version bump — package.json + tauri.conf.json → 1.0.0; About section updated
 - [x] docs/RELEASE.md created — build/sign commands, feature list, system requirements, v1.1 planned
-- [x] **Tested:** ⬜
+- [x] **Tested:** ✅
 
 ---
 
-### v1.1: Accessibility & Sovereignty ⬜
+### v1.1: Accessibility & Sovereignty ✅
 - [x] Progressive disclosure — form shows name/sense/emoji only until 10 echoes; "Advanced" toggle for early access
 - [x] Uninstall guide — neutral button in Data Sovereignty; shows Android uninstall instructions (no in-app action)
 - [x] Disambiguation prompts — emoji used with multiple past senses shows chip row; dismissed per-emoji via state
 - [x] "Not Sure" sense option — ❓ dashed button at end of sense row; saves sense='not_sure', subcategory=''; ❓ badge in timeline; counted separately in insights
 - [x] Emoji skip — "— skip / not sure" below grid saves emoji='❓'; 5s nudge "No pressure. You can skip this."
 - [x] Predictability audit — 7th insight card "Patterns"; visible after 20 echoes; 30% threshold + 3 minimum occurrences
-- [ ] **Tested:** ⬜
+- [x] **Tested:** ✅
 
 ---
 
