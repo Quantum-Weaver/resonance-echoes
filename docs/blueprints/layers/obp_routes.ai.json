@@ -16,8 +16,15 @@
       ],
       "imports_stores": [],
       "imports_components": []
+    },
+    "insights": {
+      "file": "src\\routes\\insights\\+page.svelte",
+      "phase": 99,
+      "navigates_to": [],
+      "imports_stores": [],
+      "imports_components": []
     }
   },
-  "total_routes": 2,
-  "scan_timestamp": "2026-06-28T14:43:58.037826 | in sovereign time"
+  "total_routes": 3,
+  "scan_timestamp": "2026-06-28T17:15:28.620081 | in sovereign time"
 }

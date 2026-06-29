@@ -2,12 +2,105 @@
 	import { echoStore } from '$lib/stores/echo.svelte';
 	import { SENSES } from '$lib/data/senses';
 
+	// --- Filter state ---
+	let searchInput = $state('');
+	let searchQuery = $state('');
+	let activeSense = $state('');
+	let activeEmoji = $state('');
+	let sortOrder = $state<'newest' | 'oldest' | 'intensity'>('newest');
 	let displayCount = $state(50);
 
-	const echoes = $derived(echoStore.echoes);
-	const visible = $derived(echoes.slice(0, displayCount));
-	const hasMore = $derived(echoes.length > displayCount);
-	const total = $derived(echoStore.totalCount);
+	// Debounce: update searchQuery 150ms after last keystroke
+	$effect(() => {
+		const val = searchInput;
+		const t = setTimeout(() => {
+			searchQuery = val;
+			displayCount = 50;
+		}, 150);
+		return () => clearTimeout(t);
+	});
+
+	function setSense(id: string) {
+		activeSense = activeSense === id ? '' : id;
+		displayCount = 50;
+	}
+
+	function setEmoji(emoji: string) {
+		activeEmoji = activeEmoji === emoji ? '' : emoji;
+		displayCount = 50;
+	}
+
+	function setSort(order: 'newest' | 'oldest' | 'intensity') {
+		sortOrder = order;
+		displayCount = 50;
+	}
+
+	function clearAll() {
+		searchInput = '';
+		searchQuery = '';
+		activeSense = '';
+		activeEmoji = '';
+		sortOrder = 'newest';
+		displayCount = 50;
+	}
+
+	// --- Derived ---
+
+	// Top 8 most-used emojis across all echoes
+	const topEmojis = $derived.by(() => {
+		const counts: Record<string, number> = {};
+		for (const echo of echoStore.echoes) {
+			if (echo.emoji) counts[echo.emoji] = (counts[echo.emoji] || 0) + 1;
+		}
+		return Object.entries(counts)
+			.sort((a, b) => b[1] - a[1])
+			.slice(0, 8)
+			.map(([e]) => e);
+	});
+
+	// Combined filter + sort — all client-side over the in-memory echoes array
+	const filteredEchoes = $derived.by(() => {
+		let r = echoStore.echoes;
+
+		if (activeSense) r = r.filter((e) => e.sense === activeSense);
+		if (activeEmoji) r = r.filter((e) => e.emoji === activeEmoji);
+
+		if (searchQuery.trim()) {
+			const q = searchQuery.toLowerCase();
+			r = r.filter(
+				(e) =>
+					e.name.toLowerCase().includes(q) ||
+					(e.note?.toLowerCase().includes(q) ?? false)
+			);
+		}
+
+		if (sortOrder === 'oldest') return [...r].sort((a, b) => a.timestamp - b.timestamp);
+		if (sortOrder === 'intensity') return [...r].sort((a, b) => b.intensity - a.intensity);
+		return r; // 'newest' — already DESC from the DB query
+	});
+
+	const visible = $derived(filteredEchoes.slice(0, displayCount));
+	const hasMore = $derived(filteredEchoes.length > displayCount);
+	const hasFilters = $derived(!!(activeSense || activeEmoji || searchQuery.trim()));
+
+	// Human-readable description of active filters
+	const filterLabel = $derived.by(() => {
+		const parts: string[] = [];
+		if (activeSense) {
+			const s = SENSES.find((s) => s.id === activeSense);
+			if (s) parts.push(`${s.emoji} ${s.name}`);
+		}
+		if (activeEmoji) parts.push(activeEmoji);
+		if (searchQuery.trim()) parts.push(`"${searchQuery.trim()}"`);
+		return parts.join(' · ');
+	});
+
+	// Empty-state emoji — reflects what's being filtered
+	const emptyIcon = $derived(
+		activeSense
+			? (SENSES.find((s) => s.id === activeSense)?.emoji ?? '✨')
+			: activeEmoji || '✨'
+	);
 
 	function getSense(senseId: string) {
 		return SENSES.find((s) => s.id === senseId) ?? { name: senseId, emoji: '✨' };
@@ -28,16 +121,105 @@
 <div class="home" style="padding-top: env(safe-area-inset-top, 0px);">
 	<header class="home-header">
 		<h1 class="home-title">Echoes</h1>
-		{#if total > 0}
-			<span class="count-badge">{total}</span>
+		{#if echoStore.totalCount > 0}
+			<span class="count-badge">{echoStore.totalCount}</span>
 		{/if}
 	</header>
 
-	{#if echoes.length === 0}
+	{#if echoStore.echoes.length > 0}
+		<div class="browse">
+			<!-- Search -->
+			<div class="search-wrap">
+				<span class="search-icon" aria-hidden="true">🔍</span>
+				<input
+					type="search"
+					bind:value={searchInput}
+					placeholder="Search echoes..."
+					class="search-input"
+					aria-label="Search echoes"
+				/>
+				{#if searchInput}
+					<button
+						class="search-clear"
+						onclick={() => { searchInput = ''; }}
+						aria-label="Clear search"
+					>✕</button>
+				{/if}
+			</div>
+
+			<!-- Sense chips -->
+			<div class="chip-scroll" role="group" aria-label="Filter by sense">
+				<button
+					class="chip"
+					class:active={!activeSense}
+					onclick={() => { activeSense = ''; displayCount = 50; }}
+				>All</button>
+				{#each SENSES as sense}
+					<button
+						class="chip"
+						class:active={activeSense === sense.id}
+						onclick={() => setSense(sense.id)}
+					>{sense.emoji} {sense.name}</button>
+				{/each}
+			</div>
+
+			<!-- Emoji chips (only when echoes have emojis) -->
+			{#if topEmojis.length > 0}
+				<div class="chip-scroll" role="group" aria-label="Filter by feeling">
+					<button
+						class="chip"
+						class:active={!activeEmoji}
+						onclick={() => { activeEmoji = ''; displayCount = 50; }}
+					>All</button>
+					{#each topEmojis as emoji}
+						<button
+							class="chip emoji-chip"
+							class:active={activeEmoji === emoji}
+							onclick={() => setEmoji(emoji)}
+							aria-label={emoji}
+							aria-pressed={activeEmoji === emoji}
+						>{emoji}</button>
+					{/each}
+				</div>
+			{/if}
+
+			<!-- Sort -->
+			<div class="sort-row" role="group" aria-label="Sort order">
+				<button class="sort-btn" class:active={sortOrder === 'newest'} onclick={() => setSort('newest')}>
+					Newest
+				</button>
+				<button class="sort-btn" class:active={sortOrder === 'oldest'} onclick={() => setSort('oldest')}>
+					Oldest
+				</button>
+				<button class="sort-btn" class:active={sortOrder === 'intensity'} onclick={() => setSort('intensity')}>
+					Intensity ↓
+				</button>
+			</div>
+
+			<!-- Filter status -->
+			{#if hasFilters}
+				<div class="filter-status">
+					<span>{filteredEchoes.length} {filteredEchoes.length === 1 ? 'echo' : 'echoes'}{filterLabel ? ` in ${filterLabel}` : ''}</span>
+					<button class="clear-btn" onclick={clearAll}>Clear all</button>
+				</div>
+			{/if}
+		</div>
+	{/if}
+
+	<!-- Content -->
+	{#if filteredEchoes.length === 0}
 		<div class="empty-state">
-			<div class="empty-icon">✨</div>
-			<p class="empty-heading">No echoes yet.</p>
-			<p class="empty-sub">Tap + to log your first felt moment.</p>
+			<div class="empty-icon">{emptyIcon}</div>
+			{#if hasFilters}
+				<p class="empty-heading">No echoes match.</p>
+				<p class="empty-sub">
+					Try different filters or
+					<button class="inline-link" onclick={clearAll}>clear all</button>.
+				</p>
+			{:else}
+				<p class="empty-heading">No echoes yet.</p>
+				<p class="empty-sub">Tap + to log your first felt moment.</p>
+			{/if}
 		</div>
 	{:else}
 		<div class="echo-list">
@@ -79,6 +261,7 @@
 		min-height: 100%;
 	}
 
+	/* Header */
 	.home-header {
 		display: flex;
 		align-items: center;
@@ -103,6 +286,136 @@
 		font-weight: 600;
 	}
 
+	/* Browse controls */
+	.browse {
+		padding: 0.75rem 1rem 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+	}
+
+	/* Search */
+	.search-wrap {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	.search-icon {
+		position: absolute;
+		left: 0.7rem;
+		font-size: 0.85rem;
+		pointer-events: none;
+		line-height: 1;
+	}
+
+	.search-input {
+		width: 100%;
+		padding: 0.55rem 2.25rem 0.55rem 2.1rem;
+		background: var(--bg-surface);
+		border: 1px solid var(--border-color);
+		border-radius: 20px;
+		color: var(--text);
+		font-size: 0.9rem;
+		outline: none;
+		box-sizing: border-box;
+		transition: border-color 0.15s;
+	}
+	.search-input:focus { border-color: var(--accent); }
+	.search-input::placeholder { color: var(--text-muted); }
+	.search-input[type='search']::-webkit-search-cancel-button { display: none; }
+
+	.search-clear {
+		position: absolute;
+		right: 0.5rem;
+		background: none;
+		border: none;
+		color: var(--text-muted);
+		cursor: pointer;
+		font-size: 0.7rem;
+		padding: 0.3rem;
+		line-height: 1;
+		transition: color 0.15s;
+	}
+	.search-clear:hover { color: var(--text); }
+
+	/* Chip rows */
+	.chip-scroll {
+		display: flex;
+		gap: 0.4rem;
+		overflow-x: auto;
+		scrollbar-width: none;
+		padding-bottom: 0.1rem;
+	}
+	.chip-scroll::-webkit-scrollbar { display: none; }
+
+	.chip {
+		padding: 0.3rem 0.75rem;
+		background: var(--bg-surface);
+		border: 1.5px solid var(--border-color);
+		border-radius: 20px;
+		color: var(--text-secondary);
+		font-size: 0.8rem;
+		white-space: nowrap;
+		flex-shrink: 0;
+		cursor: pointer;
+		transition: border-color 0.15s, color 0.15s, background 0.15s;
+	}
+	.chip.active {
+		border-color: var(--accent);
+		color: var(--accent);
+		background: color-mix(in srgb, var(--accent) 12%, transparent);
+	}
+	.chip:not(.active):hover { border-color: var(--text-muted); }
+
+	.emoji-chip {
+		font-size: 1.15rem;
+		padding: 0.2rem 0.5rem;
+	}
+
+	/* Sort */
+	.sort-row {
+		display: flex;
+		gap: 0.4rem;
+	}
+
+	.sort-btn {
+		padding: 0.28rem 0.7rem;
+		background: var(--bg-surface);
+		border: 1.5px solid var(--border-color);
+		border-radius: 20px;
+		color: var(--text-secondary);
+		font-size: 0.75rem;
+		white-space: nowrap;
+		cursor: pointer;
+		transition: border-color 0.15s, color 0.15s, background 0.15s;
+	}
+	.sort-btn.active {
+		border-color: var(--accent);
+		color: var(--accent);
+		background: color-mix(in srgb, var(--accent) 12%, transparent);
+	}
+	.sort-btn:not(.active):hover { border-color: var(--text-muted); }
+
+	/* Filter status */
+	.filter-status {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 0.75rem;
+		color: var(--text-muted);
+		padding: 0.1rem 0;
+	}
+
+	.clear-btn {
+		background: none;
+		border: none;
+		color: var(--accent);
+		font-size: 0.75rem;
+		cursor: pointer;
+		padding: 0;
+	}
+
 	/* Empty state */
 	.empty-state {
 		display: flex;
@@ -116,6 +429,16 @@
 	.empty-icon { font-size: 3rem; margin-bottom: 0.5rem; }
 	.empty-heading { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 0; }
 	.empty-sub { font-size: 0.9rem; color: var(--text-muted); margin: 0; }
+
+	.inline-link {
+		background: none;
+		border: none;
+		color: var(--accent);
+		font-size: inherit;
+		cursor: pointer;
+		padding: 0;
+		text-decoration: underline;
+	}
 
 	/* Echo list */
 	.echo-list {
@@ -177,10 +500,7 @@
 		padding-top: 0.1rem;
 	}
 
-	.echo-meta {
-		display: flex;
-		align-items: center;
-	}
+	.echo-meta { display: flex; align-items: center; }
 
 	.sense-badge {
 		font-size: 0.72rem;
