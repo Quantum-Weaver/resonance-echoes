@@ -76,16 +76,18 @@
 - [x] App icon — custom COSMIC purple compass-ring (1024x1024), all densities regenerated
 - [x] Version bump — package.json + tauri.conf.json → 1.0.0; About section updated
 - [x] docs/RELEASE.md created — build/sign commands, feature list, system requirements, v1.1 planned
-- [ ] **Tested:** ⬜
+- [x] **Tested:** ⬜
 
 ---
 
-## v1.1 PLANNED FEATURES
-
-- [ ] Progressive disclosure — advanced fields revealed after 10 echoes
-- [ ] Disambiguation prompts — "Is this more about X or Y?"
-- [ ] "I don't know" / "something felt off" option — no forced categorisation
-- [ ] Predictability audit — echoes that happened more than expected
+### v1.1: Accessibility & Sovereignty ⬜
+- [x] Progressive disclosure — form shows name/sense/emoji only until 10 echoes; "Advanced" toggle for early access
+- [x] Uninstall guide — neutral button in Data Sovereignty; shows Android uninstall instructions (no in-app action)
+- [x] Disambiguation prompts — emoji used with multiple past senses shows chip row; dismissed per-emoji via state
+- [x] "Not Sure" sense option — ❓ dashed button at end of sense row; saves sense='not_sure', subcategory=''; ❓ badge in timeline; counted separately in insights
+- [x] Emoji skip — "— skip / not sure" below grid saves emoji='❓'; 5s nudge "No pressure. You can skip this."
+- [x] Predictability audit — 7th insight card "Patterns"; visible after 20 echoes; 30% threshold + 3 minimum occurrences
+- [ ] **Tested:** ⬜
 
 ---
 
@@ -110,3 +112,4 @@
 | 2026-06-28 | Phase 4 complete. Onboarding: 3-screen linear flow (Welcome → How it works → Theme), 🧭 GradientPulse sigil, vessel name saved to localStorage, live theme switching in Screen 3, layout gate (goto /onboarding on first launch), Sidebar/ComfortBar hidden during flow. npm run check: 0 errors. |
 | 2026-06-28 | Phase 5 complete. Settings: theme/font-size selection, Export JSON (Blob download), Purge (double confirm → clear DB + localStorage → /onboarding), Export & Purge. purgeAll() added to echoStore. npm run check: 0 errors. |
 | 2026-06-28 | Phase 6 complete. Quick Log FAB (⚡ → ✓ animation), emoji definition display in add form (fade-in poetic text), save confirmation (✓ 900ms before goto), COSMIC compass-ring icon (all densities), version → 1.0.0, docs/RELEASE.md created. npm run check: 0 errors. |
+| 2026-06-28 | v1.1 complete. Progressive disclosure (10-echo gate), disambiguation prompts (emoji × sense), ❓ Not Sure sense option, emoji skip (5s nudge), Uninstall guide in settings, Patterns insight card (20-echo gate, 30% threshold). npm run check: 0 errors. |
