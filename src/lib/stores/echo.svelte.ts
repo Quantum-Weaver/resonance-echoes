@@ -127,6 +127,18 @@ async function searchEchoes(query: string, limit = 50): Promise<Echo[]> {
 	return rows.map(rowToEcho);
 }
 
+async function updateEcho(id: string, updates: Partial<Omit<Echo, 'id' | 'createdAt'>>) {
+	if (!db) return;
+	const echo = echoes.find(e => e.id === id);
+	if (!echo) return;
+	const updated = { ...echo, ...updates };
+	await db.execute(
+		'UPDATE echoes SET name=$1, sense=$2, subcategory=$3, emoji=$4, note=$5, intensity=$6, timestamp=$7 WHERE id=$8',
+		[updated.name, updated.sense, updated.subcategory, updated.emoji, updated.note ?? null, updated.intensity, updated.timestamp, id]
+	);
+	await loadEchoes();
+}
+
 async function purgeAll() {
 	if (!db) return;
 	await db.execute('DELETE FROM echoes');
@@ -141,6 +153,7 @@ export const echoStore = {
 	get dbError() { return dbError; },
 	initDB,
 	addEcho,
+	updateEcho,
 	loadEchoes,
 	getEchoesBySense,
 	getEchoesByEmoji,
