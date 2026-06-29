@@ -6,15 +6,23 @@
       "phase": 9,
       "status": "complete",
       "navigates_to": []
+    },
+    "add": {
+      "file": "src\\routes\\add\\+page.svelte",
+      "phase": 99,
+      "status": "complete",
+      "navigates_to": [
+        "/"
+      ]
     }
   },
-  "total_routes": 1,
-  "store_count": 1,
+  "total_routes": 2,
+  "store_count": 2,
   "store_dependencies": {},
   "component_count": 3,
   "icon_component_count": 0,
   "known_bugs": [
     "| \u2014 | \u2014 | \u2014 |"
   ],
-  "scan_timestamp": "2026-06-28T13:02:29.318568 | in sovereign time"
+  "scan_timestamp": "2026-06-28T14:43:58.095151 | in sovereign time"
 }

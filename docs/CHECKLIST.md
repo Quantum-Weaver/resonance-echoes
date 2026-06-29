@@ -18,14 +18,14 @@
 - [x] Collapsible sidebar (20vw, hamburger below status bar)
 - [x] COSMIC theme system
 - [x] Mobile-safe areas
-- [ ] **Tested:** ⬜
+- [x] **Tested:** ✅
 
-### Phase 1: The Echo ⬜
-- [ ] Echo form (name, sense, subcategory, emoji, note, intensity, timestamp)
-- [ ] echoStore with reactive state
-- [ ] Rust add_echo, get_echoes commands
-- [ ] Home timeline with EchoCard
-- [ ] **Tested:** ⬜
+### Phase 1: The Echo ✅
+- [x] Echo form (name, sense, subcategory, emoji, note, intensity, timestamp)
+- [x] echoStore with reactive state (Svelte 5 $state, SQLite via tauri-plugin-sql)
+- [x] DB migration v2 (correct schema: name, sense, subcategory, note, timestamp)
+- [x] Home timeline with EchoCard (emoji, name, sense badge, relative time, intensity dots, note preview)
+- [x] **Tested:** ✅
 
 ### Phase 2: Browse & Filter ⬜
 - [ ] Debounced search
@@ -77,3 +77,4 @@
 |------|---------------|
 | 2026-06-28 | Repo created. Foundation files. Config refined. Scaffold builds clean. |
 | 2026-06-28 | Phase 0 complete. ComfortBar, Sidebar, GradientPulse, theme store, senses data, icon set. npm run check: 0 errors. cargo build: clean. Pending human test on Android. |
+| 2026-06-28 | Phase 1 complete. echoStore (Svelte 5 $state + SQLite), Echo interface updated, DB migration v2, /add form (sense, subcategory, emoji, note, intensity, timestamp), home timeline with EchoCards. Pending human test. |

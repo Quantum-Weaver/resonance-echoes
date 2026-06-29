@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import { themeStore } from '$lib/stores/theme.svelte';
+	import { echoStore } from '$lib/stores/echo.svelte';
 	import { getThemeColors } from '$lib/theme/theme';
 	import { onMount } from 'svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
@@ -8,8 +9,9 @@
 
 	let { children } = $props();
 
-	onMount(() => {
+	onMount(async () => {
 		themeStore.loadTheme();
+		await echoStore.initDB();
 	});
 
 	const config = $derived(themeStore.config);
