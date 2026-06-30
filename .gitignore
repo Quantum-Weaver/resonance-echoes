@@ -13,7 +13,7 @@ vite.config.ts.timestamp-*
 .apk
 .idsg
 generate_blueprint.py
-
+/target/*
 src-tauri/gen/
 *.keystore
 *.jks
