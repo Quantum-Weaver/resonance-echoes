@@ -12,14 +12,7 @@
       "c:\\_superposition\\resonance-echoes\\src-tauri"
     ]
   },
-  "commit": {
-    "coauthors": [
-      "Aethelred <aethelred-cello@proton.me>"
-    ],
-    "template": "{type}: {description}\n\nCo-authored-by: Quantum Weaver <audhdities@proton.me>\nCo-authored-by: Aethelred <aethelred-cello@proton.me>"
-  },
-  "git": {
-    "userName": "Quantum Weaver",
-    "userEmail": "audhdities@proton.me"
+  "attribution": {
+    "commit": "Co-authored-by: Quantum Weaver <audhdities@proton.me>\nCo-authored-by: Aethelred <aethelred-cello@proton.me>"
   }
 }
