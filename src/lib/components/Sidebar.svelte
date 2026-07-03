@@ -3,16 +3,20 @@
 	import { page } from '$app/state';
 	import { onMount } from 'svelte';
 	import { uiStore } from '$lib/stores/ui.svelte';
+	import Icons from '$lib/components/icons/Icons.svelte';
+	import type { IconName } from '$lib/components/icons/Icons.svelte';
 
 	// Default-collapsed on every platform (Compass pattern): the content is the
 	// destination, the nav is a drawer — even on desktop.
 	let open = $state(false);
 	let isMobile = $state(true);
 
-	const navItems = [
-		{ href: '/', icon: '🏠', label: 'Home' },
-		{ href: '/insights', icon: '✨', label: 'Insights' },
-		{ href: '/settings', icon: '⚙️', label: 'Settings' }
+	// SVG icons for chrome (Compass pattern) — they follow currentColor and size
+	// consistently across Android emoji fonts. Emoji stays for content, not chrome.
+	const navItems: { href: string; icon: IconName; label: string }[] = [
+		{ href: '/', icon: 'home', label: 'Home' },
+		{ href: '/insights', icon: 'insights', label: 'Insights' },
+		{ href: '/settings', icon: 'settings', label: 'Settings' }
 	];
 
 	// The vessel opened the ComfortBar panel — they want to see it, not the nav.
@@ -72,7 +76,7 @@
 					class:active={page.url.pathname === item.href}
 					onclick={() => navigate(item.href)}
 				>
-					<span class="nav-icon">{item.icon}</span>
+					<span class="nav-icon"><Icons name={item.icon} size={18} /></span>
 					<span class="nav-label">{item.label}</span>
 				</button>
 			</li>
@@ -178,7 +182,8 @@
 	}
 
 	.nav-icon {
-		font-size: 1.1rem;
+		display: flex;
+		align-items: center;
 		flex-shrink: 0;
 	}
 

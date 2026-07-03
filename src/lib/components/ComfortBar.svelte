@@ -3,6 +3,7 @@
 	import { page } from '$app/state';
 	import { onMount } from 'svelte';
 	import { uiStore } from '$lib/stores/ui.svelte';
+	import { echoStore } from '$lib/stores/echo.svelte';
 
 	let expanded = $state(false);
 	let previousPath = $state(page.url.pathname);
@@ -31,6 +32,13 @@
 
 	const greeting = $derived(`${getGreeting()}, ${vesselName}`);
 
+	// Live, not a stale placeholder (Compass pattern: the panel reflects real state).
+	const statsLine = $derived.by(() => {
+		const n = echoStore.totalCount;
+		if (n === 0) return 'No echoes yet — your journey begins here.';
+		return `${n} ${n === 1 ? 'echo' : 'echoes'} gathered so far.`;
+	});
+
 	onMount(() => {
 		vesselName = localStorage.getItem('resonance-echoes-vessel-name') ?? 'there';
 	});
@@ -50,7 +58,7 @@
 		<div class="comfort-bar__expanded">
 			<button class="comfort-bar__collapse" onclick={toggleExpanded} aria-label="Collapse">⌄</button>
 			<div class="comfort-bar__greeting">{greeting}</div>
-			<div class="comfort-bar__stats">No echoes yet — your journey begins here.</div>
+			<div class="comfort-bar__stats">{statsLine}</div>
 			<div class="comfort-bar__actions">
 				<button class="cb-action primary" onclick={onQuickAdd}>+ Quick Add</button>
 				<button class="cb-action" onclick={() => goto('/insights')}>Insights</button>

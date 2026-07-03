@@ -2,11 +2,43 @@ import Database from '@tauri-apps/plugin-sql';
 import { browser } from '$app/environment';
 import type { Echo } from '$lib/types/types';
 
+// Personal emoji definitions — the folksonomy layer of the Resonance Grammar.
+// Same key convention as Compass so the pattern is defined once, everywhere.
+const PERSONAL_DEF_PREFIX = 'emoji_def_';
+
 let db: Database | null = null;
 let echoes = $state<Echo[]>([]);
 let totalCount = $state(0);
 let loading = $state(false);
 let dbError = $state<string | null>(null);
+let personalDefinitions = $state<Record<string, string>>({});
+
+function loadPersonalDefinitions() {
+	if (!browser) return;
+	const loaded: Record<string, string> = {};
+	try {
+		for (let i = 0; i < localStorage.length; i++) {
+			const key = localStorage.key(i);
+			if (key?.startsWith(PERSONAL_DEF_PREFIX)) {
+				const emoji = key.slice(PERSONAL_DEF_PREFIX.length);
+				const val = localStorage.getItem(key);
+				if (val) loaded[emoji] = val;
+			}
+		}
+	} catch {}
+	personalDefinitions = loaded;
+}
+
+function setPersonalDefinition(emoji: string, definition: string) {
+	try {
+		localStorage.setItem(`${PERSONAL_DEF_PREFIX}${emoji}`, definition);
+		personalDefinitions = { ...personalDefinitions, [emoji]: definition };
+	} catch {}
+}
+
+function getPersonalDefinition(emoji: string): string {
+	return personalDefinitions[emoji] ?? '';
+}
 
 function generateId(): string {
 	if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
@@ -36,24 +68,19 @@ function rowToEcho(row: Record<string, unknown>): Echo {
 
 async function initDB() {
 	if (!browser || db) return;
-	console.log('[initDB] starting... browser=' + browser + ' db=' + (db !== null));
 	try {
 		db = await Database.load('sqlite:echoes.db');
-		console.log('[initDB] db loaded:', db !== null);
 		await loadEchoes();
-		console.log('[initDB] echoes loaded, count:', echoes.length);
+		loadPersonalDefinitions();
 	} catch (e) {
 		const msg = e instanceof Error ? e.message : String(e);
 		dbError = msg;
-		console.error('[initDB] FAILED:', msg, e);
+		console.error('[echoStore] initDB failed:', e);
 	}
 }
 
 async function loadEchoes(limit = 200, offset = 0) {
-	if (!db) {
-		console.log('[loadEchoes] skipped — db is null');
-		return;
-	}
+	if (!db) return;
 	loading = true;
 	try {
 		const rows = await db.select<Record<string, unknown>[]>(
@@ -66,37 +93,28 @@ async function loadEchoes(limit = 200, offset = 0) {
 		);
 		totalCount = (countRows[0]?.count as number) || 0;
 	} catch (e) {
-		console.error('[loadEchoes] FAILED:', e);
+		console.error('[echoStore] loadEchoes failed:', e);
 	} finally {
 		loading = false;
 	}
 }
 
 async function addEcho(echo: Omit<Echo, 'id' | 'createdAt'>) {
-	console.log('[addEcho] called with:', JSON.stringify(echo));
-	console.log('[addEcho] db is null?', db === null);
 	if (!db) {
-		console.error('[addEcho] FAILED — db is null. initDB may not have completed or failed.');
 		throw new Error('Database not ready — close and reopen the app.');
 	}
 	const id = generateId();
 	const createdAt = Date.now();
-	console.log('[addEcho] generated id:', id, 'createdAt:', createdAt);
-	console.log('[addEcho] attempting INSERT...');
 	try {
 		await db.execute(
 			'INSERT INTO echoes (id, name, sense, subcategory, emoji, note, intensity, timestamp, created_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)',
 			[id, echo.name, echo.sense, echo.subcategory, echo.emoji, echo.note ?? null, echo.intensity, echo.timestamp, createdAt]
 		);
-		console.log('[addEcho] INSERT complete');
 	} catch (e) {
-		const msg = e instanceof Error ? e.message : String(e);
-		console.error('[addEcho] INSERT FAILED:', msg, e);
+		console.error('[echoStore] addEcho failed:', e);
 		throw e;
 	}
-	console.log('[addEcho] calling loadEchoes...');
 	await loadEchoes();
-	console.log('[addEcho] done. total echoes now:', echoes.length);
 }
 
 async function getEchoesBySense(senseId: string): Promise<Echo[]> {
@@ -153,6 +171,7 @@ export const echoStore = {
 	get totalCount() { return totalCount; },
 	get loading() { return loading; },
 	get dbError() { return dbError; },
+	get personalDefinitions() { return personalDefinitions; },
 	initDB,
 	addEcho,
 	updateEcho,
@@ -161,4 +180,7 @@ export const echoStore = {
 	getEchoesByEmoji,
 	searchEchoes,
 	purgeAll,
+	loadPersonalDefinitions,
+	setPersonalDefinition,
+	getPersonalDefinition,
 };

@@ -1,9 +1,31 @@
 <script lang="ts">
 	import { echoStore } from '$lib/stores/echo.svelte';
 	import { SENSES } from '$lib/data/senses';
+	import { EMOJI_DEFS } from '$lib/data/emojis';
 	import type { Echo } from '$lib/types/types';
 
 	const echoes = $derived(echoStore.echoes);
+
+	// ── Your Dictionary (folksonomy editor, Compass pattern) ──────────────────
+
+	let selectedDictEmoji = $state<string | null>(null);
+	let editingPersonalDef = $state('');
+
+	const selectedDef = $derived(EMOJI_DEFS.find((d) => d.emoji === selectedDictEmoji));
+
+	function selectDict(emoji: string) {
+		if (selectedDictEmoji === emoji) {
+			selectedDictEmoji = null;
+			return;
+		}
+		selectedDictEmoji = emoji;
+		editingPersonalDef = echoStore.getPersonalDefinition(emoji);
+	}
+
+	function savePersonalDef() {
+		if (!selectedDictEmoji) return;
+		echoStore.setPersonalDefinition(selectedDictEmoji, editingPersonalDef);
+	}
 
 	function dayKey(d: Date): string {
 		return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
@@ -344,6 +366,51 @@
 		</div>
 		{/if}
 
+		<!-- 8. Your Dictionary — the folksonomy layer (Compass pattern):
+		     the Sanctuary defines each emoji once; the vessel may redefine it. -->
+		<div class="card">
+			<div class="card-label">Your dictionary</div>
+			<div class="dict-grid">
+				{#each EMOJI_DEFS as def (def.emoji)}
+					<button
+						class="dict-btn"
+						class:selected={selectedDictEmoji === def.emoji}
+						style="--dict-btn-color: {def.color};"
+						onclick={() => selectDict(def.emoji)}
+						title={def.label}
+					>{def.emoji}</button>
+				{/each}
+			</div>
+			{#if selectedDef}
+				<div class="dict-expansion" style="--dict-color: {selectedDef.color};">
+					<div class="dict-header">
+						<span class="dict-emoji">{selectedDef.emoji}</span>
+						<span class="dict-label">{selectedDef.label}</span>
+					</div>
+					<div class="dict-columns">
+						<div class="dict-col">
+							<h4 class="dict-col-title">Sanctuary</h4>
+							<p class="dict-definition">{selectedDef.definition}</p>
+						</div>
+						<div class="dict-col">
+							<h4 class="dict-col-title">Yours</h4>
+							<textarea
+								class="personal-textarea"
+								placeholder="What does this feel like to you?"
+								rows={5}
+								bind:value={editingPersonalDef}
+								onblur={savePersonalDef}
+								onkeydown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); savePersonalDef(); } }}
+							></textarea>
+							<button class="personal-save-btn" onclick={savePersonalDef}>Save</button>
+						</div>
+					</div>
+				</div>
+			{:else}
+				<p class="card-note">Tap an emoji to see its meaning — or give it yours.</p>
+			{/if}
+		</div>
+
 	</div>
 </div>
 
@@ -532,5 +599,120 @@
 		color: var(--text-muted);
 		text-align: center;
 		white-space: nowrap;
+	}
+
+	/* ── 8. Your Dictionary (Compass pattern) ── */
+	/* Single-row carousel — all emojis reachable by horizontal scroll */
+	.dict-grid {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		scrollbar-width: thin;
+		gap: 0.5rem;
+		padding-bottom: 0.3rem;
+	}
+
+	.dict-btn {
+		flex-shrink: 0;
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		border: 2px solid transparent;
+		background: var(--bg);
+		cursor: pointer;
+		font-size: 1.3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+	}
+
+	.dict-btn:hover {
+		border-color: var(--dict-btn-color);
+	}
+
+	.dict-btn.selected {
+		border-color: var(--dict-btn-color);
+		background: color-mix(in srgb, var(--dict-btn-color) 25%, transparent);
+	}
+
+	.dict-expansion {
+		border: 1px solid var(--dict-color);
+		border-radius: 12px;
+		padding: 1rem;
+		background: color-mix(in srgb, var(--dict-color) 8%, transparent);
+	}
+
+	.dict-header {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		margin-bottom: 0.6rem;
+	}
+
+	.dict-emoji {
+		font-size: 1.8rem;
+	}
+
+	.dict-label {
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: var(--text);
+	}
+
+	.dict-definition {
+		font-size: 0.9rem;
+		color: var(--text-secondary);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.dict-columns {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		margin-top: 0.5rem;
+	}
+
+	.dict-col-title {
+		font-size: 0.7rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--text-muted);
+		margin: 0 0 0.5rem;
+	}
+
+	.personal-textarea {
+		width: 100%;
+		padding: 0.5rem 0.65rem;
+		border-radius: 8px;
+		border: 1px solid var(--border-color);
+		background: var(--bg);
+		color: var(--text);
+		font-size: 0.85rem;
+		font-family: inherit;
+		resize: vertical;
+		outline: none;
+		box-sizing: border-box;
+		line-height: 1.5;
+		transition: border-color 0.15s;
+	}
+
+	.personal-textarea:focus {
+		border-color: var(--accent);
+	}
+
+	.personal-save-btn {
+		margin-top: 0.5rem;
+		padding: 0.3rem 0.9rem;
+		border-radius: 14px;
+		border: none;
+		background: var(--accent);
+		color: #fff;
+		font-size: 0.8rem;
+		font-weight: 600;
+		cursor: pointer;
+		font-family: inherit;
 	}
 </style>

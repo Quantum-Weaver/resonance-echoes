@@ -110,11 +110,7 @@
 	}
 
 	async function save() {
-		console.log('[save] called');
-		if (!name.trim() || saving) {
-			console.log('[save] blocked — name empty or already saving', { nameEmpty: !name.trim(), saving });
-			return;
-		}
+		if (!name.trim() || saving) return;
 		saving = true;
 		saveError = '';
 		const payload = {
@@ -126,21 +122,18 @@
 			intensity,
 			timestamp: getTimestamp()
 		};
-		console.log('[save] payload:', JSON.stringify(payload));
 		try {
 			if (editId) {
 				await echoStore.updateEcho(editId, payload);
-				console.log('[save] updateEcho returned — showing confirmation');
 			} else {
 				await echoStore.addEcho(payload);
-				console.log('[save] addEcho returned — showing confirmation');
 			}
 			saveSuccess = true;
 			await new Promise((r) => setTimeout(r, 900));
 			goto('/');
 		} catch (e) {
 			const msg = e instanceof Error ? e.message : String(e);
-			console.error('[save] FAILED:', msg, e);
+			console.error('[add] save failed:', e);
 			saveError = msg;
 		} finally {
 			saving = false;
@@ -256,7 +249,8 @@
 			{#if selectedEmoji && selectedEmoji !== '❓'}
 				{@const def = EMOJI_DEFS.find((d) => d.emoji === selectedEmoji)}
 				{#if def}
-					<p class="emoji-def">{def.definition}</p>
+					<!-- The vessel's own definition outranks the Sanctuary's (folksonomy). -->
+					<p class="emoji-def">{echoStore.getPersonalDefinition(def.emoji) || def.definition}</p>
 				{/if}
 			{/if}
 			{#if disambiguationSenses.length > 0}
