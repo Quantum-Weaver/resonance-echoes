@@ -140,7 +140,9 @@ async function updateEcho(id: string, updates: Partial<Omit<Echo, 'id' | 'create
 }
 
 async function purgeAll() {
-	if (!db) return;
+	// Throws instead of returning silently so the purge UI can tell the vessel
+	// when nothing was actually deleted (Compass pattern).
+	if (!db) throw new Error('Database not ready — nothing was purged');
 	await db.execute('DELETE FROM echoes');
 	echoes = [];
 	totalCount = 0;

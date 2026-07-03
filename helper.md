@@ -12,7 +12,7 @@ npm run tauri android build
 Then sign and install:
 
 ```powershell
-& "C:\Users\audhd\AppData\Local\Android\Sdk\build-tools\37.0.0\apksigner.bat" sign --ks resonance-echoes.keystore --ks-key-alias resonance-echoes --out resonance-echoes-v0.1.0.apk src-tauri\gen\android\app\build\outputs\apk\universal\release\app-universal-release-unsigned.apk
+& "C:\Users\audhd\AppData\Local\Android\Sdk\build-tools\37.0.0\apksigner.bat" sign --ks resonance-echoes.keystore --ks-key-alias resonance-echoes --out resonance-echoes-v1.0.0.apk src-tauri\gen\android\app\build\outputs\apk\universal\release\app-universal-release-unsigned.apk
 
 & "C:\Users\audhd\AppData\Local\Android\Sdk\platform-tools\adb.exe" install -r resonance-echoes-v0.1.0.apk
 ```

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import { themeStore } from '$lib/stores/theme.svelte';
 	import { echoStore } from '$lib/stores/echo.svelte';
 	import { PRESET_THEMES } from '$lib/theme/theme';
@@ -9,13 +8,25 @@
 	const themeOptions = [
 		{ key: 'dark', icon: '🌙', name: 'Dark', accent: PRESET_THEMES.dark.accentColor },
 		{ key: 'warm', icon: '🔥', name: 'Warm', accent: PRESET_THEMES.warm.accentColor },
-		{ key: 'ocean', icon: '🌊', name: 'Ocean', accent: PRESET_THEMES.ocean.accentColor }
+		{ key: 'ocean', icon: '🌊', name: 'Ocean', accent: PRESET_THEMES.ocean.accentColor },
+		{ key: 'forest', icon: '🌲', name: 'Forest', accent: PRESET_THEMES.forest.accentColor },
+		{ key: 'sunset', icon: '🌅', name: 'Sunset', accent: PRESET_THEMES.sunset.accentColor },
+		{ key: 'amoled', icon: '⚫', name: 'AMOLED', accent: PRESET_THEMES.amoled.accentColor }
 	];
 
+	// Matched on presetName, not accent — Dark and AMOLED share an accent color.
 	const activePreset = $derived.by(() => {
-		const acc = themeStore.config.accentColor;
-		return themeOptions.find(o => o.accent === acc)?.key ?? 'dark';
+		const name = themeStore.config.presetName;
+		return (
+			Object.entries(PRESET_THEMES).find(([, p]) => p.presetName === name)?.[0] ?? 'dark'
+		);
 	});
+
+	const displayModes = [
+		{ key: 'light' as const, label: '☀️ Light' },
+		{ key: 'dark' as const, label: '🌙 Dark' },
+		{ key: 'amoled' as const, label: '⚫ AMOLED' }
+	];
 
 	const fontSizes = [
 		{ key: 'small' as const, label: 'Small' },
@@ -54,15 +65,26 @@
 	function cancelPurge() {
 		purgeState = 'idle';
 		pendingExport = false;
+		purgeError = null;
 	}
 
+	let purgeError = $state<string | null>(null);
+
 	async function executePurge() {
-		if (pendingExport) exportData();
-		await echoStore.purgeAll();
-		localStorage.removeItem('resonance-echoes-vessel-name');
-		localStorage.removeItem('resonance-echoes-theme');
-		localStorage.removeItem('onboarding_complete');
-		goto('/onboarding');
+		purgeError = null;
+		try {
+			if (pendingExport) exportData();
+			await echoStore.purgeAll();
+			// Clear everything, not a curated list — future keys must not
+			// survive a purge by omission (Compass pattern).
+			localStorage.clear();
+		} catch (err) {
+			// Stay on the confirm step and say what failed — a silent purge
+			// rejection looks like 'purge never purges'.
+			purgeError = err instanceof Error ? err.message : String(err);
+			return;
+		}
+		location.reload();
 	}
 </script>
 
@@ -89,6 +111,19 @@
 					<div class="theme-swatch" style="background: {opt.accent};"></div>
 				</button>
 			{/each}
+		</div>
+
+		<div class="font-row">
+			<span class="font-label">Display mode</span>
+			<div class="font-btns" role="group" aria-label="Display mode">
+				{#each displayModes as { key, label }}
+					<button
+						class="font-btn"
+						class:active={themeStore.config.mode === key}
+						onclick={() => themeStore.setMode(key)}
+					>{label}</button>
+				{/each}
+			</div>
 		</div>
 
 		<div class="font-row">
@@ -156,6 +191,9 @@
 							Are you absolutely sure? All echoes, insights, and settings will be removed.
 						{/if}
 					</p>
+					{#if purgeError}
+						<p class="purge-error" role="alert">Purge failed: {purgeError}</p>
+					{/if}
 					<div class="confirm-actions">
 						<button class="btn-neutral" onclick={cancelPurge}>Cancel</button>
 						<button class="btn-danger-filled" onclick={executePurge}>Delete Everything</button>
@@ -271,6 +309,9 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 0.75rem;
+		/* Label + three pill buttons exceed 320px — wrap instead of clipping
+		   (flex text children won't shrink below their content). */
+		flex-wrap: wrap;
 	}
 
 	.font-label {
@@ -412,6 +453,13 @@
 		color: var(--text-secondary);
 		line-height: 1.5;
 		margin: 0;
+	}
+
+	.purge-error {
+		font-size: 0.8rem;
+		color: #e74c3c;
+		margin: 0;
+		overflow-wrap: anywhere;
 	}
 
 	.confirm-actions {

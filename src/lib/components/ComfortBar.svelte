@@ -1,9 +1,26 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
 	import { onMount } from 'svelte';
+	import { uiStore } from '$lib/stores/ui.svelte';
 
 	let expanded = $state(false);
+	let previousPath = $state(page.url.pathname);
 	let vesselName = $state('there');
+
+	// Collapse on route change only — not on initial mount (previousPath === currentPath).
+	$effect(() => {
+		const currentPath = page.url.pathname;
+		if (currentPath !== previousPath && expanded) {
+			expanded = false;
+		}
+		previousPath = currentPath;
+	});
+
+	// Broadcast the panel state so the Sidebar can close itself when it opens.
+	$effect(() => {
+		uiStore.setComfortBarExpanded(expanded);
+	});
 
 	function getGreeting(): string {
 		const hour = new Date().getHours();
@@ -63,6 +80,10 @@
 		border-top: 1px solid var(--border-color);
 		padding-bottom: env(safe-area-inset-bottom, 0px);
 		transition: background-color 0.2s ease;
+		/* Own compositor layer: large relayouts elsewhere could leave a stale
+		   painted copy of this fixed bar in the Android WebView (the "ghost
+		   bar" artifact seen in Compass before the same fix). */
+		transform: translateZ(0);
 	}
 
 	/* Minimized */

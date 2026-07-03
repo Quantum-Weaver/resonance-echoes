@@ -2,7 +2,10 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import { onMount } from 'svelte';
+	import { uiStore } from '$lib/stores/ui.svelte';
 
+	// Default-collapsed on every platform (Compass pattern): the content is the
+	// destination, the nav is a drawer — even on desktop.
 	let open = $state(false);
 	let isMobile = $state(true);
 
@@ -12,14 +15,18 @@
 		{ href: '/settings', icon: '⚙️', label: 'Settings' }
 	];
 
+	// The vessel opened the ComfortBar panel — they want to see it, not the nav.
+	$effect(() => {
+		if (uiStore.comfortBarExpanded) open = false;
+	});
+
 	onMount(() => {
 		isMobile = window.innerWidth < 768;
-		open = !isMobile;
 	});
 
 	function navigate(href: string) {
 		goto(href);
-		if (isMobile) open = false;
+		open = false;
 	}
 
 	function toggle() {
@@ -37,11 +44,14 @@
 	{open ? '✕' : '☰'}
 </button>
 
-<!-- Mobile backdrop -->
-{#if open && isMobile}
+<!-- Backdrop — dismisses the sidebar on outside interaction whenever it's open,
+     desktop or mobile, since the hamburger toggle is always visible on both. -->
+{#if open}
+	<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 	<div
 		class="backdrop"
 		onclick={() => (open = false)}
+		onkeydown={(e) => { if (e.key === 'Escape') open = false; }}
 		role="presentation"
 	></div>
 {/if}
@@ -49,7 +59,9 @@
 <!-- Sidebar panel -->
 <nav class="sidebar" class:open aria-label="Main navigation">
 	<div class="sidebar__header">
-		<span class="sidebar__wordmark">Echoes</span>
+		<!-- cosmic-sparkle-text adds the animated glow; the scoped accent color
+		     below outranks its light-gray color so light mode stays readable. -->
+		<span class="sidebar__wordmark cosmic-sparkle-text">Echoes</span>
 	</div>
 
 	<ul class="sidebar__nav">
@@ -92,7 +104,9 @@
 		position: fixed;
 		inset: 0;
 		z-index: 49;
-		background-color: rgba(0, 0, 0, 0.5);
+		/* Transparent (Compass pattern): dismissal surface, not a dimmer —
+		   the drawer is small and the content should stay readable. */
+		background-color: transparent;
 	}
 
 	.sidebar {
