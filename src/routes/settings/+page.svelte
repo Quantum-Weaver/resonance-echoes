@@ -2,6 +2,30 @@
 	import { themeStore } from '$lib/stores/theme.svelte';
 	import { echoStore } from '$lib/stores/echo.svelte';
 	import { PRESET_THEMES } from '$lib/theme/theme';
+	import { openUrl } from '@tauri-apps/plugin-opener';
+	import { getVersion } from '@tauri-apps/api/app';
+
+	const PRIVACY_URL = 'https://audhdities.com/docs/privacy';
+	const SANCTUARY_URL = 'https://audhdities.com';
+	let privacyError = $state(false);
+	async function openPrivacy() {
+		try {
+			await openUrl(PRIVACY_URL);
+		} catch {
+			privacyError = true; // browser/dev fallback: show the URL itself
+		}
+	}
+	async function openSanctuary() {
+		try {
+			await openUrl(SANCTUARY_URL);
+		} catch {
+			/* browser/dev: no-op */
+		}
+	}
+
+	// Version comes from tauri.conf.json — never hardcoded again.
+	let appVersion = $state('');
+	getVersion().then((v) => (appVersion = v)).catch(() => (appVersion = ''));
 
 	// ── Theme section ──────────────────────────────────────────────────────────
 
@@ -159,6 +183,12 @@
 			</button>
 		</div>
 
+		<p class="privacy-line">
+			Your echoes never leave this device.
+			<button class="privacy-link" onclick={openPrivacy}>Privacy Policy</button>
+			{#if privacyError}<span class="privacy-url">{PRIVACY_URL}</span>{/if}
+		</p>
+
 		<div class="danger-zone">
 			<p class="danger-label">Danger zone</p>
 
@@ -228,11 +258,16 @@
 		<div class="about-card">
 			<div class="about-app">
 				<span class="about-name">Resonance Echoes</span>
-				<span class="about-version">v1.0.0</span>
+				{#if appVersion}<span class="about-version">v{appVersion}</span>{/if}
 			</div>
 			<p class="about-tag">A sovereign journal for logging anything with feeling.</p>
 			<p class="about-built">Built with Aethelred by Quantum Weaver for the AudHDities Sanctuary.</p>
 			<p class="about-license">All data belongs to the vessel. The Resonance Grammar governs.</p>
+			<div class="about-links">
+				<button class="privacy-link" onclick={openSanctuary}>audhdities.com — the Sanctuary</button>
+				<button class="privacy-link" onclick={openPrivacy}>Privacy Policy</button>
+			</div>
+			<p class="about-companion">Companion room: Resonance Compass — the Sanctuary's music player.</p>
 		</div>
 	</section>
 </div>
@@ -351,6 +386,40 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
+	}
+
+	.privacy-line {
+		font-size: 0.8rem;
+		color: var(--text-muted);
+		margin: 0;
+	}
+	.privacy-link {
+		background: none;
+		border: none;
+		padding: 0;
+		font-size: inherit;
+		color: var(--accent);
+		text-decoration: underline;
+		cursor: pointer;
+		text-align: left;
+	}
+	.privacy-url {
+		display: block;
+		font-size: 0.75rem;
+		color: var(--text-muted);
+		word-break: break-all;
+	}
+	.about-links {
+		display: flex;
+		flex-direction: column;
+		gap: 0.375rem;
+		margin-top: 0.5rem;
+		font-size: 0.85rem;
+	}
+	.about-companion {
+		font-size: 0.8rem;
+		color: var(--text-muted);
+		margin: 0.5rem 0 0;
 	}
 
 	.btn-data {
