@@ -1,6 +1,6 @@
 {
   "project": "resonance-echoes",
-  "analyzed_at": "2026-06-30T21:38:56.257132+00:00",
+  "analyzed_at": "2026-07-04T20:40:01.427839+00:00",
   "standards_compliance": {
     "readme": true,
     "license": true,
@@ -10,8 +10,8 @@
   },
   "vulnerabilities": [
     {
-      "severity": "medium",
-      "issue": ".gitignore is missing recommended patterns: node_modules/, __pycache__/"
+      "severity": "high",
+      "issue": "Keystore/credential file committed: resonance-echoes.keystore"
     }
   ],
   "gaps": [
@@ -19,14 +19,17 @@
     "Marked incomplete in docs/CHECKLIST.md: | 2026-06-28 | Phase 0 complete. ComfortBar, Sidebar, GradientPulse, theme store, senses data, icon set. npm run check: ",
     "Marked incomplete in docs/CHECKLIST.md: | 2026-06-28 | Phase 1 complete. echoStore (Svelte 5 $state + SQLite), Echo interface updated, DB migration v2, /add for",
     "Marked incomplete in docs/RESONANCE-GRAMMAR.md: you are becomes visible \u2014 not built, not generated, but illuminated.*",
-    "Marked incomplete in reports/2026-06-30-assessment-manual.md: 5. **The Resonance Grammar is referenced but not implemented.** README and `docs/RESONANCE-GRAMMAR.md` describe Echoes a",
+    "Possibly broken import in .svelte-kit/generated/client/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file",
+    "Possibly broken import in .svelte-kit/generated/client-optimized/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file",
+    "Possibly broken import in .svelte-kit/generated/server/internal.js: '../../../node_modules/@sveltejs/kit/src/runtime/shared-server.js' does not resolve to a known file",
+    "11 file(s) over 100KB were flagged by the reader and not fully read by the analyzer: .svelte-kit/output/client/tauri.svg, .svelte-kit/output/server/index.js, release/resonance-echoes-v1.0.0.apk.idsig, src-tauri/Cargo.lock, src-tauri/gen/schemas/acl-manifests.json, src-tauri/gen/schemas/android-schema.json, src-tauri/gen/schemas/desktop-schema.json, src-tauri/gen/schemas/mobile-schema.json, src-tauri/gen/schemas/windows-schema.json, src-tauri/icons/icon.icns, static/tauri.svg",
     "No CI/CD configuration found"
   ],
   "test_readiness": "0 test file(s) found. Detected framework(s): jest.",
   "recommendations": [
     {
       "priority": 1,
-      "action": "Address: .gitignore is missing recommended patterns: node_modules/, __pycache__/"
+      "action": "Fix vulnerability: Keystore/credential file committed: resonance-echoes.keystore"
     },
     {
       "priority": 2,
@@ -46,18 +49,30 @@
     },
     {
       "priority": 6,
-      "action": "Marked incomplete in reports/2026-06-30-assessment-manual.md: 5. **The Resonance Grammar is referenced but not implemented.** README and `docs/RESONANCE-GRAMMAR.md` describe Echoes a"
+      "action": "Possibly broken import in .svelte-kit/generated/client/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file"
     },
     {
       "priority": 7,
-      "action": "No CI/CD configuration found"
+      "action": "Possibly broken import in .svelte-kit/generated/client-optimized/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file"
     },
     {
       "priority": 8,
-      "action": "Establish a test suite"
+      "action": "Possibly broken import in .svelte-kit/generated/server/internal.js: '../../../node_modules/@sveltejs/kit/src/runtime/shared-server.js' does not resolve to a known file"
     },
     {
       "priority": 9,
+      "action": "11 file(s) over 100KB were flagged by the reader and not fully read by the analyzer: .svelte-kit/output/client/tauri.svg, .svelte-kit/output/server/index.js, release/resonance-echoes-v1.0.0.apk.idsig, src-tauri/Cargo.lock, src-tauri/gen/schemas/acl-manifests.json, src-tauri/gen/schemas/android-schema.json, src-tauri/gen/schemas/desktop-schema.json, src-tauri/gen/schemas/mobile-schema.json, src-tauri/gen/schemas/windows-schema.json, src-tauri/icons/icon.icns, static/tauri.svg"
+    },
+    {
+      "priority": 10,
+      "action": "No CI/CD configuration found"
+    },
+    {
+      "priority": 11,
+      "action": "Establish a test suite"
+    },
+    {
+      "priority": 12,
       "action": "Add CI/CD configuration"
     }
   ]
