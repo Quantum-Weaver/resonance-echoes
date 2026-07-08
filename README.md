@@ -11,7 +11,19 @@ Built on the [Resonance Grammar](https://github.com/Quantum-Weaver/resonance-kno
 
 ## Screenshots
 
-*[Coming soon — screenshots of the Android app]*
+<p align="center">
+  <img src="screenshots/echoes-01.jpg" width="23%" alt="Resonance Echoes — screenshot 1" />
+  <img src="screenshots/echoes-02.jpg" width="23%" alt="Resonance Echoes — screenshot 2" />
+  <img src="screenshots/echoes-03.jpg" width="23%" alt="Resonance Echoes — screenshot 3" />
+  <img src="screenshots/echoes-04.jpg" width="23%" alt="Resonance Echoes — screenshot 4" />
+  <img src="screenshots/echoes-05.jpg" width="23%" alt="Resonance Echoes — screenshot 5" />
+  <img src="screenshots/echoes-06.jpg" width="23%" alt="Resonance Echoes — screenshot 6" />
+  <img src="screenshots/echoes-07.jpg" width="23%" alt="Resonance Echoes — screenshot 7" />
+  <img src="screenshots/echoes-08.jpg" width="23%" alt="Resonance Echoes — screenshot 8" />
+  <img src="screenshots/echoes-09.jpg" width="23%" alt="Resonance Echoes — screenshot 9" />
+  <img src="screenshots/echoes-10.jpg" width="23%" alt="Resonance Echoes — screenshot 10" />
+  <img src="screenshots/echoes-11.jpg" width="23%" alt="Resonance Echoes — screenshot 11" />
+</p>
 
 ---
 
@@ -100,7 +112,7 @@ See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for the build methodology and [BUILD
 
 ## Development Standards
 
-This project follows the [Sanctuary Standards](https://github.com/Quantum-Weaver/sanctuary-standards).
+This project follows the [Resonance Standards](https://github.com/Quantum-Weaver/resonance-standards).
 
 ---
 
