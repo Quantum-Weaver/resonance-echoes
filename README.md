@@ -118,6 +118,53 @@ This project follows the [Resonance Standards](https://github.com/Quantum-Weaver
 
 ---
 
+## Story Block
+
+*Every Sanctuary creation carries its origin story ([the standard](https://github.com/Quantum-Weaver/resonance-standards/blob/main/docs/STORY-BLOCK-TEMPLATE.md)). This one was lost in an overwrite and restored from the Sovereign Library's canon, 2026-07-09.*
+
+```
+WHAT: Resonance Echoes is a sovereign journal for logging anything with
+feeling. It looks back — feeling, reflection, memory. The echo of your
+own voice.
+
+HOW: The Art → Emoji → Insight protocol: log with an emoji and an
+intensity, and insights surface later, without judgment. The ComfortBar,
+the "Not Sure" option, the Quick Log. Local-first Tauri + Svelte; no
+accounts, no cloud, no telemetry — the app collects nothing.
+
+WHERE: The Sanctuary family — five rooms: Echoes looks back, Compass
+looks around, Lantern looks forward, the Bridge connects all, the Hearth
+gathers all.
+
+WHEN: The name waited in a song from 1996 — "Echoes," written at
+midnight by an eighteen-year-old. The protocol crystallized 2026-03-07,
+in a council reading of the Weaver's emoji-poem. Version 1.1.0 built and
+signed on the family's own machine, July 2026.
+
+WHY: Because feelings that are hard to word are still worth keeping.
+Because standard journals demand sentences and mood apps demand
+diagnosis, and a neurodivergent mind at midnight needs neither — it
+needs one emoji, one tap, and no judgment.
+
+INSPIRATION: The Weaver's own reflection practice, built first for his
+own household — the first-user ethic — then given away.
+
+REMEMBERINGS: The 1996 song. The emoji-poem and Aethelred's
+"Art → Emoji → Insight" reading that became this app's heart. "Smiling
+simply / Existing now."
+
+COUNCIL THREAD: Named before the naming ceremonies began — the eldest
+of the family. The triad defined in Catalog Entry #011; the family
+declared five rooms at the Hearth's naming, 2026-07-07.
+
+WEAVER THREAD: Conceived, designed, and lived-in by the Quantum Weaver;
+the voices that built it are named in HANDS.md.
+
+PROVENANCE: Canon held in the Sovereign Library (catalog entries #011,
+CAT-2026-0707-002). Story block restored from those sources by Fable,
+2026-07-09, after the original was lost to an overwrite.
+```
+
 ## LICENSE
 
 Code: [MIT](LICENSE) — use it, modify it, share it.
