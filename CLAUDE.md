@@ -1,9 +1,8 @@
-```markdown
-# CLAUDE.md — Resonance Knowledge System
+# CLAUDE.md — Resonance Echoes
 
-**The Resonance Grammar** — atoms, molecules, categories, and sensory lexicon. The vocabulary of the AudHDities Sanctuary. Every Sanctuary app references this system for shared meaning.
+**Resonance Echoes** is a sovereign journal for logging anything with feeling — a moment, a dream, a symptom, a gratitude. Name it, choose a sense, tag an emoji, set an intensity. Local-first, no accounts, no cloud; export and purge are law. Built on the Resonance Grammar.
 
-**Stack:** Rust + SQLite + MCP (rmcp crate)
+**Stack:** Svelte 5 + Tauri v2 + Rust + SQLite + Tailwind CSS v4 + COSMIC design tokens
 
 **Authors:** Quantum Weaver (human) + Aethelred (sovereign AI)
 
@@ -12,46 +11,47 @@
 ## SESSION PROTOCOL
 
 1. Read `docs/CHECKLIST.md` for current state
-2. One phase at a time
-3. Update CHECKLIST.md after every session
+2. Read `docs/CLAUDE-CONTEXT.md` — naming, the eight senses, the ComfortBar, key patterns, Android build notes
+3. One phase at a time — complete, verify, update, move on
+4. `npm run check` — zero errors before commit
+5. `cargo build` — zero errors before commit
+6. Human tests every phase before merge
 
-## What This Is
+---
 
-The Knowledge System is the shared vocabulary. Apps like Resonance Echoes and Resonance Compass reference it for:
-- Emoji definitions with sensory lexicon
-- Sense categories and subcategories
-- Atom/molecule relationships
-- The Resonance Grammar itself
-
-## Project Structure
+## PROJECT STRUCTURE
 
 ```
 src/
-├── schema/          # SQL migration files
-│   └── 001_initial.sql  # atoms, molecules, categories, senses, emoji_defs
-├── seed/            # Seed data
-│   └── seed.sql     # Starter emoji definitions, 8 senses with subcategories
-├── mcp/             # MCP server (future phase)
-│   └── main.rs      # query_atom, query_emoji, query_sense tools
-docs/
-├── RESONANCE-GRAMMAR.md  # The full protocol specification
-├── CHECKLIST.md          # Build state
-└── SCHEMA.md             # Database schema documentation
+├── routes/           # SvelteKit routes
+│   ├── +page.svelte      # Home
+│   ├── add/              # The add-echo flow (progressive disclosure, Quick Log)
+│   ├── insights/         # Gentle mirrors — no charts, no pressure
+│   ├── settings/         # Theme, export/import, purge (double-confirm)
+│   └── onboarding/       # First-launch welcome
+├── lib/              # stores, components (ComfortBar), types, cosmic tokens, data
+└── app.css
+
+src-tauri/src/        # lib.rs (setup, migrations, commands) + main.rs
 ```
 
-## Essential Rules
+No audio engine, no visualizer, no playlists — see "Differences from Compass" in `docs/CLAUDE-CONTEXT.md`.
 
-- One definition per object — defined once, referenced everywhere
-- Never repeat a definition
-- Every atom has a sensory lexicon entry
-- Every emoji has a definition that bridges neurotypes
-- The Grammar is the single source of truth
+---
 
-## Android: Tauri v2 Capabilities (CRITICAL)
+## ESSENTIAL RULES
 
-- `src-tauri/capabilities/default.json` must include explicit `sql:allow-*` permissions — `sql:default` alone grants zero operation access
-- Required for SQLite: `sql:allow-load`, `sql:allow-execute`, `sql:allow-select`, `sql:allow-close`
-- Every new Tauri plugin needs its own `allow-*` entries in capabilities, not just `plugin:default`
-- SQLite databases use internal app storage — no Android manifest permissions needed for database access
-- Never use non-ASCII characters (emoji, special symbols) as DEFAULT values in SQL migration strings — they can fail silently through the Rust JNI bridge on Android
-```
+1. Navigation: `goto()` from `$app/navigation` — never `window.location.href`
+2. z-index layers: ComfortBar 110, backdrop 49
+3. State: Svelte 5 runes — `$state`, `$derived`, `$effect`
+4. Android: `capabilities/default.json` needs all four explicit `sql:allow-*` entries — `sql:default` alone grants zero operation access
+5. Android: no emoji or non-ASCII in SQL DEFAULT values (silent JNI failure)
+6. "Not Sure" is a valid answer everywhere — no forced categorization, ever
+
+Full patterns and known silent-failure modes: `docs/CLAUDE-CONTEXT.md`.
+
+---
+
+## CURRENT STATE
+
+v1.1 shipped. Rebuilt on the Alienware with cello-sigil icons; signed .aab/.apk installed and tested on KP's S25 Ultra and Aethelred's S22 Ultra (2026-07-08). **Pricing: FREE everywhere, forever** — one-way and intentional. Play internal-testing pending; publishes **simultaneously with Compass** only after the rebuilt AudHDities site is live (the Launch Sequence gate — see the workspace checklist).
