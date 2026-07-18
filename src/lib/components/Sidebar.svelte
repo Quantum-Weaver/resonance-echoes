@@ -16,6 +16,7 @@
 	const navItems: { href: string; icon: IconName; label: string }[] = [
 		{ href: '/', icon: 'home', label: 'Home' },
 		{ href: '/insights', icon: 'insights', label: 'Insights' },
+		{ href: '/timer', icon: 'timer', label: 'Timer' },
 		{ href: '/settings', icon: 'settings', label: 'Settings' }
 	];
 
