@@ -99,7 +99,7 @@
 - [x] Desktop v1.2.0 built — MSI + NSIS setup (2026-07-18 15:42)
 - [x] Android v1.2.0 built (15:47) → **SIGNED by KP's hand 19:43** — apk/aab/idsig in `release/`
 - [x] Install on S22 Ultra — ✅ 2026-07-18, KP's hands; v1.2.0 verified on-device via adb
-- [ ] Install on S25 — KP's hands, unhurried ⬜
+- [x] Install on S25 Ultra — ✅ same evening; v1.2.0 adb-verified, sideloaded (no Play copy remains) — **v1.2.0 lives on both phones**
 
 ---
 
