@@ -348,17 +348,17 @@
 	.db-error-banner {
 		margin: 1rem 0 0;
 		padding: 0.75rem 1rem;
-		background: color-mix(in srgb, #e74c3c 15%, transparent);
-		border: 1px solid #e74c3c;
+		background: color-mix(in srgb, var(--color-emergency-high) 15%, transparent);
+		border: 1px solid var(--color-emergency-high);
 		border-radius: 8px;
-		color: #e74c3c;
+		color: var(--color-emergency-high);
 		font-size: 0.85rem;
 	}
 
 	.save-error {
 		margin: 0.5rem 0 0;
 		font-size: 0.82rem;
-		color: #e74c3c;
+		color: var(--color-emergency-high);
 		text-align: center;
 	}
 
@@ -645,7 +645,7 @@
 	}
 	.save-btn:not(:disabled):active { transform: scale(0.98); }
 	.save-btn.success {
-		background: #27ae60;
+		background: var(--color-success);
 		opacity: 1;
 	}
 

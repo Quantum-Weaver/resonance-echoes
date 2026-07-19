@@ -627,8 +627,8 @@
 	}
 	.quick-log-fab:not(:disabled):active { transform: scale(0.9); }
 	.quick-log-fab.success {
-		background: #27ae60;
-		border-color: #27ae60;
+		background: var(--color-success);
+		border-color: var(--color-success);
 		color: #fff;
 	}
 	.quick-log-fab:disabled { opacity: 0.7; cursor: default; }

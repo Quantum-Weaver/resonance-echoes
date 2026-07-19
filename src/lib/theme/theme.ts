@@ -45,6 +45,9 @@ export const getThemeColors = (config: ThemeConfig) => {
   const isAmoled = config.mode === 'amoled';
 
   return {
+    // Deliberate non-token neutrals: AMOLED true-black and light-mode grays
+    // have no cosmic tokens by design (the system is dark-first); these are
+    // theme-mode physics, not drift. Declared at the 2026-07-19 cleanup.
     background: isAmoled ? '#000000' : isLight ? '#f5f5f5' : QUANTUM_COLORS['deepSpace'],
     surface: isAmoled ? '#0a0a0a' : isLight ? '#ffffff' : QUANTUM_COLORS['surface'],
     surfaceLight: isAmoled ? '#111111' : isLight ? '#e8e8e8' : '#2a2a5a',

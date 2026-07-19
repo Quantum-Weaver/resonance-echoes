@@ -440,11 +440,11 @@
 
 	.btn-data.warning {
 		border-color: rgba(243, 156, 18, 0.5);
-		color: #f39c12;
+		color: var(--color-warning);
 	}
 	.btn-data.warning:not(:disabled):hover {
-		background: color-mix(in srgb, #f39c12 10%, var(--bg-surface));
-		border-color: #f39c12;
+		background: color-mix(in srgb, var(--color-warning) 10%, var(--bg-surface));
+		border-color: var(--color-warning);
 	}
 
 	/* Danger zone */
@@ -452,7 +452,7 @@
 		border: 1px solid rgba(231, 76, 60, 0.3);
 		border-radius: 12px;
 		padding: 0.875rem 1rem;
-		background: color-mix(in srgb, #e74c3c 5%, transparent);
+		background: color-mix(in srgb, var(--color-emergency-high) 5%, transparent);
 		display: flex;
 		flex-direction: column;
 		gap: 0.75rem;
@@ -471,9 +471,9 @@
 		width: 100%;
 		padding: 0.75rem 1rem;
 		background: none;
-		border: 1.5px solid #e74c3c;
+		border: 1.5px solid var(--color-emergency-high);
 		border-radius: 10px;
-		color: #e74c3c;
+		color: var(--color-emergency-high);
 		font-size: 0.9rem;
 		font-weight: 500;
 		cursor: pointer;
@@ -485,7 +485,7 @@
 
 	.btn-danger-filled {
 		padding: 0.6rem 1rem;
-		background: #e74c3c;
+		background: var(--color-emergency-high);
 		border: none;
 		border-radius: 8px;
 		color: #fff;
@@ -515,7 +515,7 @@
 		gap: 0.75rem;
 	}
 
-	.confirm-card.final .confirm-text { color: #e74c3c; }
+	.confirm-card.final .confirm-text { color: var(--color-emergency-high); }
 
 	.confirm-text {
 		font-size: 0.875rem;
@@ -526,7 +526,7 @@
 
 	.purge-error {
 		font-size: 0.8rem;
-		color: #e74c3c;
+		color: var(--color-emergency-high);
 		margin: 0;
 		overflow-wrap: anywhere;
 	}

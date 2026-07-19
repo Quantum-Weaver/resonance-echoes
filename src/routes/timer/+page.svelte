@@ -276,7 +276,7 @@
 		border-radius: 20px;
 		font-weight: 600;
 		cursor: pointer;
-		background-color: #f39c12;
+		background-color: var(--color-warning);
 	}
 
 	/* Presets */

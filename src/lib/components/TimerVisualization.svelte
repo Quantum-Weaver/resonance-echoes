@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
+	import { QUANTUM_COLORS } from '$lib/cosmic';
 
 	let {
 		remainingSecs,
@@ -25,8 +26,11 @@
 	}
 
 	// ── SAND — The Keeper's Hourglass ──────────────────────────────────────────
+	// Canvas needs resolved strings: token-valued colors come from the cosmic
+	// constants mirror; the browns are the sand's own deliberate art palette
+	// (no earth tones exist in the token system — sand is sand, declared).
 
-	const SAND_COLORS = ['#FDCB6E', '#E17055', '#C49A6C', '#8B5A2B', '#D4A853', '#B8732A'] as const;
+	const SAND_COLORS = [QUANTUM_COLORS['hearth.gold'], QUANTUM_COLORS['fire.base'], '#C49A6C', '#8B5A2B', '#D4A853', '#B8732A'] as const;
 
 	interface StreamParticle {
 		x: number; y: number; vy: number; r: number;
@@ -172,7 +176,7 @@
 		}
 
 		ctx.save();
-		if (isFlowing) { ctx.shadowColor = '#FDCB6E'; ctx.shadowBlur = 14; }
+		if (isFlowing) { ctx.shadowColor = QUANTUM_COLORS['hearth.gold']; ctx.shadowBlur = 14; }
 		ctx.strokeStyle = '#8B6914';
 		ctx.lineWidth = 1.8;
 		ctx.stroke(hg);
@@ -182,7 +186,7 @@
 		const capW = topW + 9;
 		for (const capY of [frameT - capH, frameB]) {
 			ctx.save();
-			if (isFlowing) { ctx.shadowColor = '#FDCB6E'; ctx.shadowBlur = 8; }
+			if (isFlowing) { ctx.shadowColor = QUANTUM_COLORS['hearth.gold']; ctx.shadowBlur = 8; }
 			const wg = ctx.createLinearGradient(0, capY, 0, capY + capH);
 			wg.addColorStop(0, '#5C3A1A');
 			wg.addColorStop(0.5, '#3E260E');
@@ -272,7 +276,7 @@
 		const cx = w / 2;
 		const cy = h / 2;
 		const r = Math.min(w, h) * 0.155;
-		const COLS = ['#6C5CE7', '#0984E3', '#FDCB6E', '#E17055', '#A29BFE', '#00B894', '#6C5CE7'];
+		const COLS = [QUANTUM_COLORS['quantum.purple'], QUANTUM_COLORS['cosmic.blue'], QUANTUM_COLORS['hearth.gold'], QUANTUM_COLORS['fire.base'], QUANTUM_COLORS['mood.creative'], QUANTUM_COLORS['sanctuary.green'], QUANTUM_COLORS['quantum.purple']];
 		const centers: [number, number][] = [[cx, cy]];
 		for (let i = 0; i < 6; i++) {
 			centers.push([cx + r * Math.cos((i * Math.PI) / 3), cy + r * Math.sin((i * Math.PI) / 3)]);
@@ -324,7 +328,7 @@
 
 		ctx.lineWidth = 1.2;
 		for (let i = 0; i < centers.length; i++) {
-			const col = i === 0 ? '#6C5CE7' : i <= 6 ? '#FDCB6E' : '#0984E3';
+			const col = i === 0 ? QUANTUM_COLORS['quantum.purple'] : i <= 6 ? QUANTUM_COLORS['hearth.gold'] : QUANTUM_COLORS['cosmic.blue'];
 			ctx.strokeStyle = col;
 			ctx.shadowColor = col;
 			ctx.shadowBlur = 3;
