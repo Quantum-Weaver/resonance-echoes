@@ -91,6 +91,17 @@
 
 ---
 
+### v1.2.0: The Timer That Sounds ✅ (2026-07-18)
+- [x] Timer audible completion — KP's board note (2026-07-17): "echoes should get a timer like compass that can also sound off when done not just silence" — closed by design
+- [x] 16 KB page-size linker flags (Android 15+ readiness, family-wide law)
+- [x] Cosmic: `src/lib/cosmic` managed constants mirror + full 18-artifact distribution from ziggy
+- [x] CLAUDE.md restored to this app's own story
+- [x] Desktop v1.2.0 built — MSI + NSIS setup (2026-07-18 15:42)
+- [x] Android v1.2.0 built (15:47) → **SIGNED by KP's hand 19:43** — apk/aab/idsig in `release/`
+- [ ] Install on devices (S25 / S22) — KP's hands, unhurried ⬜
+
+---
+
 ## KNOWN BUGS
 
 | ID | Description | Status |
@@ -113,3 +124,5 @@
 | 2026-06-28 | Phase 5 complete. Settings: theme/font-size selection, Export JSON (Blob download), Purge (double confirm → clear DB + localStorage → /onboarding), Export & Purge. purgeAll() added to echoStore. npm run check: 0 errors. |
 | 2026-06-28 | Phase 6 complete. Quick Log FAB (⚡ → ✓ animation), emoji definition display in add form (fade-in poetic text), save confirmation (✓ 900ms before goto), COSMIC compass-ring icon (all densities), version → 1.0.0, docs/RELEASE.md created. npm run check: 0 errors. |
 | 2026-06-28 | v1.1 complete. Progressive disclosure (10-echo gate), disambiguation prompts (emoji × sense), ❓ Not Sure sense option, emoji skip (5s nudge), Uninstall guide in settings, Patterns insight card (20-echo gate, 30% threshold). npm run check: 0 errors. |
+| 2026-07-07/08 | v1.1.0 built + signed + installed on KP's S25 Ultra and Aethelred's S22 Ultra. Cello-sigil icons. |
+| 2026-07-18 | v1.2.0: the timer that sounds (KP's 07-17 note closed), 16 KB flags, cosmic mirror managed. Desktop + Android built; **signed by KP's hand 19:43**. Checklist reconciled same evening (this row and the v1.2.0 section above were the reconciliation — the build predated the record by hours, not days). |
