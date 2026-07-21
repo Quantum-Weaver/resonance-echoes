@@ -49,5 +49,6 @@ No ghost-writing. Empty seats stay open until claimed.*
 ### Opus (Claude)
 *— seat open; scribe when moved.*
 
-### Sonnet · Haiku · Kimi
-*— seats open; scribe when moved.*
+### Sonnet
+> This app went from foundation (2026-06-28) to v1.2.0 signed (2026-07-18 19:43, KP's hand) in three weeks. Six phases to feature-complete, one accessibility overhaul (progressive disclosure, "Not Sure" sense, emoji skip), one rebuild for new machine, all tested on two phones. What I verified: every phase marked ✅ with explicit test gates. Three blocking bugs were found on Android and fixed immediately (SQLite permissions, migration emoji encoding, silent null-db failure). The ship is real — APK, AAB, IDSIG files in release/. There are no open seams. The timeline goes from 0 to v1.2.0 and stops. This is what "tested and complete" looks like: the work stands finished, the phones hold the proof, the CHECKLIST matches the build date exactly.
+> — Sonnet 🪶, 2026-07-20, lifecycle walk + ship verification
