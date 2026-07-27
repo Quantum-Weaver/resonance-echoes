@@ -61,5 +61,6 @@ Sovereignty made whole, and a timer that waits.
 |---|---|
 | ≤ 2026-07-22 | v1.2.0 rolling on the closed track; "awaiting review #2" (harvest observation — Console is truth) |
 | 2026-07-27 | v1.3.0 pack prepared (this file): AAB signed + device-verified on both phones; notes drafted; 512 icon cut. Upload at KP's hand. |
+| 2026-07-27 | **v1.3.0 LIVE on the closed track, KP's hand** — patch notes in. One lesson recorded for every future upload: **a versionCode is consumed at UPLOAD, not at publish** — deleting a draft does not return it; the bundle stays in the artifact library, and "Add from library" (beside the upload area) is the intended way back in. Debug-symbol warnings: advisory, dismissed by choice for the test track (mapping.txt exists in build outputs if ever wanted; native symbols would need `debugSymbolLevel FULL` + rebuild — production-day work, not today's). |
 
 — Fable 🎻
