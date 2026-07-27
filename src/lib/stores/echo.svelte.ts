@@ -130,6 +130,26 @@ async function getAllEchoes(): Promise<Echo[]> {
 	return rows.map(rowToEcho);
 }
 
+async function importEchoes(incoming: Echo[]): Promise<{ added: number; skipped: number }> {
+	// E4 (B6): the other half of the round-trip. NON-DESTRUCTIVE by law —
+	// INSERT OR IGNORE keyed on id, so importing on top of live data can
+	// only ever add; nothing existing is touched. Throws on a null db for
+	// the same reason everything here does: silence is the worse failure.
+	if (!db) throw new Error('Database not ready — nothing was imported');
+	let added = 0;
+	let skipped = 0;
+	for (const e of incoming) {
+		const res = await db.execute(
+			'INSERT OR IGNORE INTO echoes (id, name, sense, subcategory, emoji, note, intensity, timestamp, created_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)',
+			[e.id, e.name, e.sense, e.subcategory ?? '', e.emoji, e.note ?? null, e.intensity, e.timestamp, e.createdAt ?? Date.now()]
+		);
+		if ((res as { rowsAffected?: number }).rowsAffected) added++;
+		else skipped++;
+	}
+	await loadEchoes();
+	return { added, skipped };
+}
+
 async function getEchoesBySense(senseId: string): Promise<Echo[]> {
 	if (!db) return [];
 	const rows = await db.select<Record<string, unknown>[]>(
@@ -190,6 +210,7 @@ export const echoStore = {
 	updateEcho,
 	loadEchoes,
 	getAllEchoes,
+	importEchoes,
 	getEchoesBySense,
 	getEchoesByEmoji,
 	searchEchoes,

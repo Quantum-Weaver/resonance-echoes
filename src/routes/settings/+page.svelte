@@ -101,6 +101,82 @@
 		URL.revokeObjectURL(url);
 	}
 
+	// ── Import (E4/B6) — the other half of the round-trip ────────────────────
+	let importInput = $state<HTMLInputElement | null>(null);
+	let importReport = $state<string | null>(null);
+	let importError = $state<string | null>(null);
+
+	function isImportableEcho(e: unknown): boolean {
+		const r = e as Record<string, unknown>;
+		return (
+			!!r &&
+			typeof r.id === 'string' &&
+			typeof r.name === 'string' &&
+			typeof r.sense === 'string' &&
+			typeof r.emoji === 'string' &&
+			typeof r.intensity === 'number' &&
+			typeof r.timestamp === 'number'
+		);
+	}
+
+	async function handleImportFile(ev: Event) {
+		const input = ev.target as HTMLInputElement;
+		const file = input.files?.[0];
+		input.value = '';
+		if (!file) return;
+		importError = null;
+		importReport = null;
+		try {
+			const parsed = JSON.parse(await file.text());
+			let echoesIn: unknown[] = [];
+			let folkIn: Record<string, unknown> = {};
+			if (Array.isArray(parsed)) {
+				// Legacy bare-array export (pre-envelope, ≤ v1.2.0) — still honored:
+				// a vessel's old backup must never be told it's worthless.
+				echoesIn = parsed;
+			} else if (parsed?.envelope === 'resonance-export' && parsed?.data) {
+				if (parsed.app !== 'resonance-echoes') {
+					throw new Error(
+						`This file belongs to ${parsed.app ?? 'another app'} — Echoes imports only its own envelopes.`
+					);
+				}
+				echoesIn = Array.isArray(parsed.data.echoes) ? parsed.data.echoes : [];
+				if (parsed.data.folksonomy && typeof parsed.data.folksonomy === 'object') {
+					folkIn = parsed.data.folksonomy as Record<string, unknown>;
+				}
+			} else {
+				throw new Error('Not a Resonance Echoes export file.');
+			}
+			const valid = echoesIn.filter(isImportableEcho) as Parameters<
+				typeof echoStore.importEchoes
+			>[0];
+			const malformed = echoesIn.length - valid.length;
+			const { added, skipped } = await echoStore.importEchoes(valid);
+			// Folksonomy merges non-destructively too: an existing definition is
+			// the vessel's current mind and is never overwritten by an older file.
+			let defsAdded = 0;
+			let defsKept = 0;
+			for (const [emoji, def] of Object.entries(folkIn)) {
+				if (typeof def !== 'string' || !def) continue;
+				if (echoStore.getPersonalDefinition(emoji)) defsKept++;
+				else {
+					echoStore.setPersonalDefinition(emoji, def);
+					defsAdded++;
+				}
+			}
+			const parts = [
+				`${added} ${added === 1 ? 'echo' : 'echoes'} imported`,
+				skipped ? `${skipped} already present` : '',
+				defsAdded ? `${defsAdded} definitions added` : '',
+				defsKept ? `${defsKept} definitions kept as yours` : '',
+				malformed ? `${malformed} entries unreadable` : ''
+			].filter(Boolean);
+			importReport = parts.join(' · ') + '.';
+		} catch (err) {
+			importError = err instanceof Error ? err.message : String(err);
+		}
+	}
+
 	function startPurge(withExport: boolean) {
 		pendingExport = withExport;
 		purgeState = 'confirm1';
@@ -200,10 +276,27 @@
 			<button class="btn-data" onclick={exportData} disabled={echoCount === 0}>
 				Export All Data
 			</button>
+			<button class="btn-data" onclick={() => importInput?.click()}>
+				Import Data
+			</button>
+			<input
+				type="file"
+				accept="application/json,.json"
+				hidden
+				bind:this={importInput}
+				onchange={handleImportFile}
+			/>
 			<button class="btn-data warning" onclick={() => startPurge(true)} disabled={echoCount === 0}>
 				Export &amp; Purge
 			</button>
 		</div>
+
+		{#if importReport}
+			<p class="import-report" role="status">{importReport}</p>
+		{/if}
+		{#if importError}
+			<p class="purge-error" role="alert">Import failed: {importError}</p>
+		{/if}
 
 		<p class="privacy-line">
 			Your echoes never leave this device.
@@ -549,6 +642,13 @@
 	.purge-error {
 		font-size: 0.8rem;
 		color: var(--color-emergency-high);
+		margin: 0;
+		overflow-wrap: anywhere;
+	}
+
+	.import-report {
+		font-size: 0.8rem;
+		color: var(--color-success, var(--accent));
 		margin: 0;
 		overflow-wrap: anywhere;
 	}
