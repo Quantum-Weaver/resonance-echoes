@@ -5,7 +5,7 @@
 
 *A sovereign journal for logging anything with feeling.*
 
-Built on the [Resonance Grammar](https://github.com/Quantum-Weaver/resonance-knowledge) — every fragment contains the whole.
+Built on the [Resonance Grammar](https://github.com/Quantum-Weaver/resonance-grammar) — every fragment contains the whole.
 
 ---
 
