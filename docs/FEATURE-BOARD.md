@@ -3,51 +3,36 @@
 reference implementation and is COMPLETE for its purpose — this board is
 short because the app is finished, not because it is neglected.*
 
-## 🔴 OPEN — TOP OF THE LIST (KP's word, 2026-07-21)
+## ✅ CLOSED IN CODE — 2026-07-26, sequentially at KP's word ("e1-4 we can do this sequentially")
 
-*Two data-sovereignty defects, found in a review at KP's asking and **verified in
-code, not inferred**. They are placed above the maintenance section deliberately:
-**this board's "fully green / deliberate rest" declaration below is suspended
-until these close.** It was true when written on 07-19. It is not true now, and a
-board that says finished while sovereignty leaks would be the worst kind of
-stale.*
+*All four rows closed in one sitting, one commit each, check clean at every
+step. **The suspension of the "fully green" declaration lifts at the code
+level; device verification rides the v1.3.0 build** — the board stays honest
+about that seam: fixed-in-code and proven-on-KP's-phone are different states,
+and only his hands close the second.*
 
-- [ ] **E1 · Export ships at most 200 echoes — and export-then-purge destroys the
-  rest.** `loadEchoes()` is only ever called with its defaults (`LIMIT 200 OFFSET
-  0`); there is no pagination anywhere and `echoes` is *replaced* on each load,
-  never accumulated. `exportData()` serialises that one page. Settings meanwhile
-  shows `echoStore.totalCount`, a true `SELECT COUNT(*)` — so a vessel with 300
-  echoes **sees 300 and exports 200**. The purge flow runs
-  `if (pendingExport) exportData()` and then deletes everything, so the
-  export-and-purge path **silently loses everything past the newest 200.**
-  Contradicts the README's *"Export everything as JSON with one tap"* and
-  Resonance License §7. *Not yet bitten — the app is three weeks old — which is
-  exactly why now.* **Fix: export queries the database directly; never the
-  loaded page.**
+- [x] **E1 · Export queries the database, never the loaded page** (`7719314`) —
+  `getAllEchoes()` walks the table unbounded, throws on a null db; the purge
+  flow now AWAITS the export, so export-then-purge can never destroy the
+  remainder.
+- [x] **E2+E3 · One versioned envelope, KP's one-breath ruling** (`a1154c6`) —
+  `envelope: resonance-export · envelopeVersion: 1 · app: resonance-echoes`,
+  data carrying BOTH echoes and folksonomy, counts written on the envelope so
+  the file shows what it carries. Purge and export now cover exactly the same
+  ground. **The shape is the family's to inherit** (the vessel-graphs cheap
+  win #2, made real here first).
+- [x] **E4 · Import exists** (`698c278`) — reads the v1 envelope AND the legacy
+  bare-array export; non-destructive by law (INSERT OR IGNORE on id; an
+  existing folksonomy definition is never overwritten by an older file);
+  reports plainly; refuses other apps' envelopes by name.
 
-- [ ] **E2 · The folksonomy is purgeable but not exportable.** Personal emoji
-  definitions live in `localStorage` under `emoji_def_*`. `exportData()`
-  serialises only the echoes table. Purge calls `localStorage.clear()`. So a
-  vessel's **own meanings can be destroyed but never carried out** — asymmetric
-  in the worst possible direction, and it is the one part of the data that is
-  irreplaceable: echoes can be re-lived, a private lexicon cannot be
-  reconstructed.
-
-- [ ] **E3 · One envelope — KP's ruling, same breath:** *"we need folksonomy and
-  echoes to export in the same manner."* Export becomes a single versioned
-  envelope carrying **both** — echoes *and* definitions — so the two can never
-  drift apart again, and so purge and export cover exactly the same ground.
-  *This is also the vessel-graphs seed's cheap win #2 (a common export envelope,
-  schema-versioned and app-namespaced) getting its first real instance — the
-  shape chosen here is the one the family should inherit, so choose it as though
-  Compass and Skapa are watching, because they are.*
-
-- [ ] **E4 · There is no import.** Verified: no `importData`, no file input, no
-  `readAsText` anywhere in `src/`. **CLAUDE.md's structure block advertises
-  "export/import."** Data can leave and never return. Not required by §7, which
-  asks only that data be exportable — but "the same manner" reads oddly when
-  only one direction exists, and a round-trip is what makes an envelope worth
-  versioning. *Scope is KP's call; noted rather than assumed.*
+## 🎐 The timer grew, same sitting (KP's commission, 2026-07-26) — `ec4f236`
+- [x] Pause / resume — the sand holds still; resume re-unlocks audio as a
+  fresh gesture.
+- [x] Four chime voices, all synthesized in the sensory-friendly idiom (Rise ·
+  Bell · Drop · Pulse), previewed in the tap that chooses them.
+- [x] Chime volume slider (0–100%, preview on release; zero is a chosen
+  silence). Persisted beside the sound toggle.
 
 ## Maintenance — ✅ ALL CLOSED 2026-07-19 (the day Echoes finished)
 - [x] Hex residue → cosmic: the three semantic drifts (#f39c12/#27ae60/

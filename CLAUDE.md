@@ -27,7 +27,7 @@ src/
 │   ├── +page.svelte      # Home
 │   ├── add/              # The add-echo flow (progressive disclosure, Quick Log)
 │   ├── insights/         # Gentle mirrors — no charts, no pressure
-│   ├── settings/         # Theme, export, purge (double-confirm); no import yet (E4 — scope is KP's call)
+│   ├── settings/         # Theme, export/import (versioned envelope, E1–E4 closed 2026-07-26), purge (double-confirm)
 │   └── onboarding/       # First-launch welcome
 ├── lib/              # stores, components (ComfortBar), types, cosmic tokens, data
 └── app.css
