@@ -117,6 +117,19 @@ async function addEcho(echo: Omit<Echo, 'id' | 'createdAt'>) {
 	await loadEchoes();
 }
 
+async function getAllEchoes(): Promise<Echo[]> {
+	// E1 (B4) fix: export must NEVER serialise the loaded page — `echoes`
+	// only ever holds one page (LIMIT 200), while Settings shows the true
+	// COUNT(*). This walks the database itself, unbounded, so the file
+	// carries everything the count promises. Throws rather than returning
+	// [] — a silent partial export is the exact wound this closes.
+	if (!db) throw new Error('Database not ready — nothing was exported');
+	const rows = await db.select<Record<string, unknown>[]>(
+		'SELECT * FROM echoes ORDER BY timestamp DESC'
+	);
+	return rows.map(rowToEcho);
+}
+
 async function getEchoesBySense(senseId: string): Promise<Echo[]> {
 	if (!db) return [];
 	const rows = await db.select<Record<string, unknown>[]>(
@@ -176,6 +189,7 @@ export const echoStore = {
 	addEcho,
 	updateEcho,
 	loadEchoes,
+	getAllEchoes,
 	getEchoesBySense,
 	getEchoesByEmoji,
 	searchEchoes,

@@ -67,8 +67,10 @@
 	let pendingExport = $state(false);
 	let showUninstallGuide = $state(false);
 
-	function exportData() {
-		const json = JSON.stringify(echoStore.echoes, null, 2);
+	async function exportData() {
+		// E1 (B4): straight from the database — never the loaded page.
+		const allEchoes = await echoStore.getAllEchoes();
+		const json = JSON.stringify(allEchoes, null, 2);
 		const blob = new Blob([json], { type: 'application/json' });
 		const url = URL.createObjectURL(blob);
 		const a = document.createElement('a');
@@ -97,7 +99,9 @@
 	async function executePurge() {
 		purgeError = null;
 		try {
-			if (pendingExport) exportData();
+			// Awaited: the export must be complete IN HAND before anything
+			// deletes — export-then-purge may never destroy the remainder (E1).
+			if (pendingExport) await exportData();
 			await echoStore.purgeAll();
 			// Clear everything, not a curated list — future keys must not
 			// survive a purge by omission (Compass pattern).
