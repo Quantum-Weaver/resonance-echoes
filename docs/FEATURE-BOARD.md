@@ -11,6 +11,11 @@ level; device verification rides the v1.3.0 build** — the board stays honest
 about that seam: fixed-in-code and proven-on-KP's-phone are different states,
 and only his hands close the second.*
 
+***✅ The second state closed 2026-07-27, KP's hands and eyes:** the four
+seams tested by his own exploring, and v1.3.0 installed + verified on the
+S22 the same morning — both phones, both states true. The suspension is
+fully lifted; the seam note above stands as the record of how it was held.*
+
 - [x] **E1 · Export queries the database, never the loaded page** (`7719314`) —
   `getAllEchoes()` walks the table unbounded, throws on a null db; the purge
   flow now AWAITS the export, so export-then-purge can never destroy the
