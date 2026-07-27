@@ -1,10 +1,16 @@
 <script lang="ts">
-	import { timerStore, prefersReducedMotion, type TimerMode } from '$lib/stores/timer.svelte';
+	import { timerStore, prefersReducedMotion, type TimerMode, type ChimeId } from '$lib/stores/timer.svelte';
 	import TimerVisualization from '$lib/components/TimerVisualization.svelte';
 
 	// General-purpose presets (Compass's are sleep-lengths; Echoes is a
 	// day-companion — shorter spans serve rests, focus stretches, and tea).
 	const PRESETS = [5, 10, 15, 25, 45, 60];
+	const CHIME_OPTIONS: Array<{ id: ChimeId; label: string; icon: string }> = [
+		{ id: 'rise', label: 'Rise', icon: '🎐' },
+		{ id: 'bell', label: 'Bell', icon: '🔔' },
+		{ id: 'drop', label: 'Drop', icon: '💧' },
+		{ id: 'pulse', label: 'Pulse', icon: '💓' },
+	];
 	const MODES: Array<{ id: TimerMode; label: string; icon: string }> = [
 		{ id: 'sand', label: 'Sand', icon: '⌛' },
 		{ id: 'breathing', label: 'Breathe', icon: '🫧' },
@@ -16,11 +22,14 @@
 	];
 
 	const isRunning = $derived(timerStore.isRunning);
+	const isPaused = $derived(timerStore.isPaused);
 	const completed = $derived(timerStore.completed);
 	const totalSecs = $derived(timerStore.totalSecs);
 	const remainingSecs = $derived(timerStore.remainingSecs);
 	const mode = $derived(timerStore.mode);
 	const soundOn = $derived(timerStore.soundOn);
+	const chime = $derived(timerStore.chime);
+	const chimeVolume = $derived(timerStore.chimeVolume);
 	const currentModeInfo = $derived(MODES.find((m) => m.id === mode));
 
 	let customMins = $state<number | null>(null);
@@ -70,9 +79,9 @@
 		</div>
 	{:else if isRunning}
 		<div class="active-timer">
-			<p class="timer-label">Time remaining</p>
+			<p class="timer-label">{isPaused ? 'Paused — the sand holds still' : 'Time remaining'}</p>
 
-			<div class="vis-wrap">
+			<div class="vis-wrap" class:paused={isPaused}>
 				<TimerVisualization {remainingSecs} {totalSecs} {mode} />
 			</div>
 
@@ -87,7 +96,14 @@
 				></div>
 			</div>
 
-			<button class="cancel-btn" onclick={() => timerStore.cancel()}>Cancel Timer</button>
+			<div class="run-actions">
+				{#if isPaused}
+					<button class="pause-btn" onclick={() => timerStore.resume()}>Resume</button>
+				{:else}
+					<button class="pause-btn" onclick={() => timerStore.pause()}>Pause</button>
+				{/if}
+				<button class="cancel-btn" onclick={() => timerStore.cancel()}>Cancel Timer</button>
+			</div>
 		</div>
 	{:else}
 		<p class="section-label">Select duration</p>
@@ -127,6 +143,39 @@
 				<span class="dot"></span>
 			</button>
 		</div>
+
+		{#if soundOn}
+			<div class="chime-section">
+				<div class="chime-options" role="group" aria-label="Chime sound">
+					{#each CHIME_OPTIONS as c (c.id)}
+						<button
+							class="chime-btn"
+							class:active={chime === c.id}
+							onclick={() => timerStore.setChime(c.id)}
+							aria-pressed={chime === c.id}
+							title="Tap to choose and hear it"
+						>
+							{c.icon} {c.label}
+						</button>
+					{/each}
+				</div>
+				<div class="volume-row">
+					<span class="volume-label">Chime volume</span>
+					<input
+						class="volume-slider"
+						type="range"
+						min="0"
+						max="100"
+						step="5"
+						value={Math.round(chimeVolume * 100)}
+						oninput={(e) => timerStore.setChimeVolume(Number(e.currentTarget.value) / 100)}
+						onchange={() => timerStore.previewChime()}
+						aria-label="Chime volume"
+					/>
+					<span class="volume-pct">{Math.round(chimeVolume * 100)}%</span>
+				</div>
+			</div>
+		{/if}
 	{/if}
 </div>
 
@@ -269,6 +318,27 @@
 		transition: width 1s linear;
 	}
 
+	.run-actions {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.pause-btn {
+		color: #fff;
+		border: none;
+		padding: 0.5rem 2rem;
+		border-radius: 20px;
+		font-weight: 600;
+		cursor: pointer;
+		background-color: var(--accent);
+	}
+
+	.vis-wrap.paused {
+		opacity: 0.55;
+		filter: saturate(0.6);
+		transition: opacity 0.3s, filter 0.3s;
+	}
+
 	.cancel-btn {
 		color: #fff;
 		border: none;
@@ -277,6 +347,62 @@
 		font-weight: 600;
 		cursor: pointer;
 		background-color: var(--color-warning);
+	}
+
+	/* Chime options */
+	.chime-section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding-top: 1rem;
+	}
+
+	.chime-options {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+	}
+
+	.chime-btn {
+		padding: 0.45rem 0.9rem;
+		background: var(--bg-surface);
+		border: 1.5px solid var(--border-color);
+		border-radius: 20px;
+		color: var(--text-secondary);
+		font-size: 0.82rem;
+		cursor: pointer;
+		transition: border-color 0.15s, color 0.15s, background 0.15s;
+	}
+	.chime-btn.active {
+		border-color: var(--accent);
+		color: var(--accent);
+		background: color-mix(in srgb, var(--accent) 12%, transparent);
+	}
+
+	.volume-row {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.volume-label {
+		font-size: 0.875rem;
+		color: var(--text-secondary);
+		white-space: nowrap;
+	}
+
+	.volume-slider {
+		flex: 1;
+		min-width: 0;
+		accent-color: var(--accent);
+	}
+
+	.volume-pct {
+		font-size: 0.8rem;
+		color: var(--text-muted);
+		font-variant-numeric: tabular-nums;
+		min-width: 2.6em;
+		text-align: right;
 	}
 
 	/* Presets */
