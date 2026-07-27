@@ -1,5 +1,34 @@
 # Resonance Echoes — Release Notes
 
+## v1.3.0 — 2026-07-26 · Sovereignty Whole + The Timer That Waits
+
+*Signed by KP's hand and verified on his device the same night.*
+
+**Data sovereignty, made whole (E1–E4, closed sequentially):**
+- Export now walks the **entire database** — never the loaded page. A
+  vessel with 300 echoes exports 300.
+- **One versioned envelope** (`resonance-export` v1) carries both the
+  echoes *and* your personal emoji definitions — the folksonomy, the one
+  irreplaceable part of your data, now leaves with you. Counts ride on
+  the envelope so the file shows what it carries.
+- **Import exists** — reads the new envelope and old bare-array backups
+  alike; only ever adds, never overwrites; reports plainly what happened.
+- Export-then-purge awaits the export before anything deletes.
+
+**The timer that waits (KP's commission):**
+- **Pause / resume** — the sand holds still; no drift, no penalty for
+  stepping away.
+- **Four chime voices**, all synthesized and gentle by design: Rise (the
+  original three-note), Bell, Drop, Pulse — previewed in the tap that
+  chooses them.
+- **Chime volume** — 0–100%, where zero is a chosen silence.
+
+*(v1.2.0, 2026-07-18 — the timer that sounds, 16 KB flags, cosmic
+mirror. v1.1.x — accessibility & sovereignty, cello-sigil rebuild.
+The full ledger lives in CHECKLIST.md.)*
+
+---
+
 ## v1.0.0 — 2026-06-28
 
 *First sovereign release.*

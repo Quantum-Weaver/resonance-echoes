@@ -1,7 +1,8 @@
 # Echoes — Galaxy Store listing pack
 *Drafted 2026-07-19 by Fable; KP blesses tone, then transcribes into the
 Seller Portal (account registered; finalization awaits the PO box).
-Artifact: `release/resonance-echoes-v1.2.0.apk` (signed).*
+Artifact: `release/resonance-echoes-v1.3.0.apk` (signed by KP's hand
+2026-07-26, verified on his device).*
 
 ## App name
 Resonance Echoes
@@ -21,14 +22,19 @@ Built neurodivergent-first:
 • A "Not Sure" option everywhere — uncertainty is a valid entry.
 • Progressive disclosure — the form starts tiny and grows only when you
   are ready.
-• A timer that can end in sound — and sits with you in visualizations
-  (an hourglass of sand, a breathing square, a mandala) while it runs.
+• A timer that waits with you — pause it and the sand holds still;
+  choose its chime (a rise, a bell, a drop, a pulse — all gentle by
+  design) and how softly it speaks; and it sits with you in
+  visualizations (an hourglass of sand, a breathing square, a mandala)
+  while it runs.
 
 Sovereign by architecture, not policy:
 • Data collected: none. No account, no cloud, no analytics, ever.
 • Everything lives in a local database on your device.
-• Export your entire journal as open JSON any time.
-• The purge truly purges — double-confirmed, complete, final.
+• Export your entire journal — echoes and your own emoji meanings
+  together — as one open JSON file, and import it back any time.
+• The purge truly purges — double-confirmed, complete, final, and it
+  covers exactly the same ground export does.
 
 From the AudHDities Sanctuary: tools built for one neurodivergent
 family first, then given freely, so that no one is exploited or
