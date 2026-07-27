@@ -35,7 +35,9 @@ Echoes is your space to log moments with feeling. A song that moved you. A dream
 
 **See patterns.** Gentle insights surface over time — your most-felt emojis, your steadiest senses, the rhythm of your days. No charts. No pressure. Just mirrors.
 
-**Your data stays yours.** Export everything as JSON with one tap. Purge everything with double confirmation. No accounts. No cloud. No extraction. When you uninstall, Android asks if you want to delete your data — and means it.
+**Your data stays yours.** Export as JSON with one tap. Purge everything with double confirmation. No accounts. No cloud. No extraction. When you uninstall, Android asks if you want to delete your data — and means it.
+
+*Status, honest (geode-verified 2026-07; tracked as E1–E4 on the FEATURE-BOARD, owed their fix): the current export caps at 200 echoes, and the emoji folksonomy is purgeable but not yet exportable — until those rows close, export-then-purge does not carry everything. The promise above is the law; the build is not yet fully compliant with it.*
 
 ---
 
