@@ -69,8 +69,26 @@
 
 	async function exportData() {
 		// E1 (B4): straight from the database — never the loaded page.
+		// E2+E3 (B5): ONE versioned envelope carrying BOTH the echoes and the
+		// folksonomy — KP's ruling, one breath: "we need folksonomy and echoes
+		// to export in the same manner." Purge and export now cover exactly
+		// the same ground, and the counts are written on the envelope so a
+		// vessel can see at a glance that the file carries what the app shows.
+		// This shape is the family's to inherit (schema-versioned,
+		// app-namespaced): envelope/envelopeVersion identify the format,
+		// `app` namespaces the payload, `data` carries the app's tables.
 		const allEchoes = await echoStore.getAllEchoes();
-		const json = JSON.stringify(allEchoes, null, 2);
+		const folksonomy = { ...echoStore.personalDefinitions };
+		const payload = {
+			envelope: 'resonance-export',
+			envelopeVersion: 1,
+			app: 'resonance-echoes',
+			appVersion: appVersion || 'unknown',
+			exportedAt: new Date().toISOString(),
+			counts: { echoes: allEchoes.length, folksonomy: Object.keys(folksonomy).length },
+			data: { echoes: allEchoes, folksonomy }
+		};
+		const json = JSON.stringify(payload, null, 2);
 		const blob = new Blob([json], { type: 'application/json' });
 		const url = URL.createObjectURL(blob);
 		const a = document.createElement('a');
