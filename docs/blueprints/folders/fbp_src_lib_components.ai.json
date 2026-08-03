@@ -1,0 +1,106 @@
+{
+  "folder_name": "components",
+  "folder_path": "src/lib/components",
+  "description": "4 files, 1 subfolders",
+  "scan_timestamp": "2026-08-03T16:44:24.183230 | in sovereign time",
+  "files": [
+    {
+      "path": "src/lib/components/ComfortBar.svelte",
+      "description": "surface, 5,123 bytes"
+    },
+    {
+      "path": "src/lib/components/GradientPulse.svelte",
+      "description": "surface, 1,005 bytes"
+    },
+    {
+      "path": "src/lib/components/Sidebar.svelte",
+      "description": "surface, 4,892 bytes"
+    },
+    {
+      "path": "src/lib/components/TimerVisualization.svelte",
+      "description": "surface, 18,223 bytes"
+    }
+  ],
+  "file_count": 4,
+  "subdirectories": [
+    "src/lib/components/icons"
+  ],
+  "code_analysis": {
+    "ComfortBar.svelte": {
+      "language": "svelte",
+      "lines": 208,
+      "uses_runes": [
+        "$derived",
+        "$effect",
+        "$state"
+      ],
+      "imports": [
+        "$app/navigation",
+        "$app/state",
+        "$lib/stores/echo.svelte",
+        "$lib/stores/ui.svelte",
+        "svelte"
+      ],
+      "invokes": [],
+      "navigations": [
+        "/add"
+      ],
+      "uses_window_location": false,
+      "has_style_block": true
+    },
+    "GradientPulse.svelte": {
+      "language": "svelte",
+      "lines": 55,
+      "uses_runes": [
+        "$props"
+      ],
+      "imports": [
+        "svelte"
+      ],
+      "invokes": [],
+      "navigations": [],
+      "uses_window_location": false,
+      "has_style_block": true
+    },
+    "Sidebar.svelte": {
+      "language": "svelte",
+      "lines": 197,
+      "uses_runes": [
+        "$effect",
+        "$state"
+      ],
+      "imports": [
+        "$app/navigation",
+        "$app/state",
+        "$lib/components/icons/Icons.svelte",
+        "$lib/stores/ui.svelte",
+        "svelte"
+      ],
+      "invokes": [],
+      "navigations": [],
+      "uses_window_location": false,
+      "has_style_block": true
+    },
+    "TimerVisualization.svelte": {
+      "language": "svelte",
+      "lines": 599,
+      "uses_runes": [
+        "$derived",
+        "$effect",
+        "$props",
+        "$state"
+      ],
+      "imports": [
+        "$lib/cosmic",
+        "svelte"
+      ],
+      "invokes": [],
+      "navigations": [],
+      "uses_window_location": false,
+      "has_style_block": true
+    }
+  },
+  "package_folders_excluded": [],
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address."
+}

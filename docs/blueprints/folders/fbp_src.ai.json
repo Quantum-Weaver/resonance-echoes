@@ -1,0 +1,33 @@
+{
+  "folder_name": "src",
+  "folder_path": "src",
+  "description": "the frontend \u2014 SvelteKit routes, stores, components, cosmic tokens",
+  "scan_timestamp": "2026-08-03T16:44:24.176659 | in sovereign time",
+  "files": [
+    {
+      "path": "src/app.css",
+      "description": "src/app.css"
+    },
+    {
+      "path": "src/app.html",
+      "description": "markup, 703 bytes"
+    }
+  ],
+  "file_count": 2,
+  "subdirectories": [
+    "src/lib",
+    "src/routes"
+  ],
+  "code_analysis": {
+    "app.css": {
+      "language": "css",
+      "lines": 112,
+      "classes_defined": 1,
+      "custom_properties": 0,
+      "z_indexes": []
+    }
+  },
+  "package_folders_excluded": [],
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address."
+}

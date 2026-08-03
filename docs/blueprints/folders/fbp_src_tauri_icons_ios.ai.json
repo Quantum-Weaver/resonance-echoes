@@ -1,0 +1,86 @@
+{
+  "folder_name": "ios",
+  "folder_path": "src-tauri/icons/ios",
+  "description": "18 files, 0 subfolders",
+  "scan_timestamp": "2026-08-03T16:44:24.268572 | in sovereign time",
+  "files": [
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@1x.png",
+      "description": "image, 1,166 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x-1.png",
+      "description": "image, 3,879 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@2x.png",
+      "description": "image, 3,879 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-20x20@3x.png",
+      "description": "image, 8,023 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@1x.png",
+      "description": "image, 2,197 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x-1.png",
+      "description": "image, 7,510 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@2x.png",
+      "description": "image, 7,510 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-29x29@3x.png",
+      "description": "image, 15,321 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@1x.png",
+      "description": "image, 3,879 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x-1.png",
+      "description": "image, 13,314 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@2x.png",
+      "description": "image, 13,314 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-40x40@3x.png",
+      "description": "image, 26,808 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-512@2x.png",
+      "description": "image, 879,754 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@2x.png",
+      "description": "image, 26,808 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-60x60@3x.png",
+      "description": "image, 53,106 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@1x.png",
+      "description": "image, 12,117 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-76x76@2x.png",
+      "description": "image, 40,030 bytes"
+    },
+    {
+      "path": "src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png",
+      "description": "image, 46,778 bytes"
+    }
+  ],
+  "file_count": 18,
+  "subdirectories": [],
+  "code_analysis": {},
+  "package_folders_excluded": [],
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address."
+}

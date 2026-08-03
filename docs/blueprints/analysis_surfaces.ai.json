@@ -1,0 +1,54 @@
+{
+  "analysis": "surfaces",
+  "scan_timestamp": "2026-08-03T16:44:25.770810 | in sovereign time",
+  "description": "the surfaces \u2014 every screen the hand reaches",
+  "total": 6,
+  "surfaces": [
+    {
+      "route": "/",
+      "file": "src/routes/+page.svelte",
+      "lines": 651,
+      "invokes": [],
+      "navigates_to": []
+    },
+    {
+      "route": "/add",
+      "file": "src/routes/add/+page.svelte",
+      "lines": 772,
+      "invokes": [],
+      "navigates_to": [
+        "/"
+      ]
+    },
+    {
+      "route": "/insights",
+      "file": "src/routes/insights/+page.svelte",
+      "lines": 719,
+      "invokes": [],
+      "navigates_to": []
+    },
+    {
+      "route": "/onboarding",
+      "file": "src/routes/onboarding/+page.svelte",
+      "lines": 393,
+      "invokes": [],
+      "navigates_to": [
+        "/"
+      ]
+    },
+    {
+      "route": "/settings",
+      "file": "src/routes/settings/+page.svelte",
+      "lines": 755,
+      "invokes": [],
+      "navigates_to": []
+    },
+    {
+      "route": "/timer",
+      "file": "src/routes/timer/+page.svelte",
+      "lines": 510,
+      "invokes": [],
+      "navigates_to": []
+    }
+  ]
+}

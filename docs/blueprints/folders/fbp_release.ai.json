@@ -1,0 +1,58 @@
+{
+  "folder_name": "release",
+  "folder_path": "release",
+  "description": "11 files, 0 subfolders",
+  "scan_timestamp": "2026-08-03T16:44:24.169966 | in sovereign time",
+  "files": [
+    {
+      "path": "release/Resonance Echoes_1.2.0_x64_en-US.msi",
+      "description": "file, 24,088,576 bytes"
+    },
+    {
+      "path": "release/Resonance Echoes_1.3.0_x64_en-US.msi",
+      "description": "file, 24,092,672 bytes"
+    },
+    {
+      "path": "release/resonance-echoes-v1.1.0.aab",
+      "description": "file, 61,412,152 bytes"
+    },
+    {
+      "path": "release/resonance-echoes-v1.1.0.apk",
+      "description": "file, 81,565,639 bytes"
+    },
+    {
+      "path": "release/resonance-echoes-v1.1.0.apk.idsig",
+      "description": "file, 652,878 bytes"
+    },
+    {
+      "path": "release/resonance-echoes-v1.2.0.aab",
+      "description": "file, 98,061,814 bytes"
+    },
+    {
+      "path": "release/resonance-echoes-v1.2.0.apk",
+      "description": "file, 118,175,687 bytes"
+    },
+    {
+      "path": "release/resonance-echoes-v1.2.0.apk.idsig",
+      "description": "file, 939,598 bytes"
+    },
+    {
+      "path": "release/resonance-echoes-v1.3.0.aab",
+      "description": "file, 98,073,014 bytes"
+    },
+    {
+      "path": "release/resonance-echoes-v1.3.0.apk",
+      "description": "file, 118,208,455 bytes"
+    },
+    {
+      "path": "release/resonance-echoes-v1.3.0.apk.idsig",
+      "description": "file, 939,598 bytes"
+    }
+  ],
+  "file_count": 11,
+  "subdirectories": [],
+  "code_analysis": {},
+  "package_folders_excluded": [],
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address."
+}

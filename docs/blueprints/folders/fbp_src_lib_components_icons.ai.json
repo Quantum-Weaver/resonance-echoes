@@ -1,0 +1,101 @@
+{
+  "folder_name": "icons",
+  "folder_path": "src/lib/components/icons",
+  "description": "5 files, 0 subfolders",
+  "scan_timestamp": "2026-08-03T16:44:24.186406 | in sovereign time",
+  "files": [
+    {
+      "path": "src/lib/components/icons/IconHome.svelte",
+      "description": "surface, 374 bytes"
+    },
+    {
+      "path": "src/lib/components/icons/IconInsights.svelte",
+      "description": "surface, 539 bytes"
+    },
+    {
+      "path": "src/lib/components/icons/Icons.svelte",
+      "description": "surface, 729 bytes"
+    },
+    {
+      "path": "src/lib/components/icons/IconSettings.svelte",
+      "description": "surface, 963 bytes"
+    },
+    {
+      "path": "src/lib/components/icons/IconTimer.svelte",
+      "description": "surface, 378 bytes"
+    }
+  ],
+  "file_count": 5,
+  "subdirectories": [],
+  "code_analysis": {
+    "IconHome.svelte": {
+      "language": "svelte",
+      "lines": 7,
+      "uses_runes": [
+        "$props"
+      ],
+      "imports": [],
+      "invokes": [],
+      "navigations": [],
+      "uses_window_location": false,
+      "has_style_block": false
+    },
+    "IconInsights.svelte": {
+      "language": "svelte",
+      "lines": 10,
+      "uses_runes": [
+        "$props"
+      ],
+      "imports": [],
+      "invokes": [],
+      "navigations": [],
+      "uses_window_location": false,
+      "has_style_block": false
+    },
+    "Icons.svelte": {
+      "language": "svelte",
+      "lines": 32,
+      "uses_runes": [
+        "$derived",
+        "$props"
+      ],
+      "imports": [
+        "./IconHome.svelte",
+        "./IconInsights.svelte",
+        "./IconSettings.svelte",
+        "./IconTimer.svelte"
+      ],
+      "invokes": [],
+      "navigations": [],
+      "uses_window_location": false,
+      "has_style_block": false
+    },
+    "IconSettings.svelte": {
+      "language": "svelte",
+      "lines": 8,
+      "uses_runes": [
+        "$props"
+      ],
+      "imports": [],
+      "invokes": [],
+      "navigations": [],
+      "uses_window_location": false,
+      "has_style_block": false
+    },
+    "IconTimer.svelte": {
+      "language": "svelte",
+      "lines": 9,
+      "uses_runes": [
+        "$props"
+      ],
+      "imports": [],
+      "invokes": [],
+      "navigations": [],
+      "uses_window_location": false,
+      "has_style_block": false
+    }
+  },
+  "package_folders_excluded": [],
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address."
+}

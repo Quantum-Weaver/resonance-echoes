@@ -1,0 +1,92 @@
+{
+  "folder_name": "stores",
+  "folder_path": "src/lib/stores",
+  "description": "4 files, 0 subfolders",
+  "scan_timestamp": "2026-08-03T16:44:24.198975 | in sovereign time",
+  "files": [
+    {
+      "path": "src/lib/stores/echo.svelte.ts",
+      "description": "typescript, 7,542 bytes"
+    },
+    {
+      "path": "src/lib/stores/theme.svelte.ts",
+      "description": "typescript, 1,050 bytes"
+    },
+    {
+      "path": "src/lib/stores/timer.svelte.ts",
+      "description": "typescript, 7,403 bytes"
+    },
+    {
+      "path": "src/lib/stores/ui.svelte.ts",
+      "description": "Cross-component UI signals that don't belong to any domain store."
+    }
+  ],
+  "file_count": 4,
+  "subdirectories": [],
+  "code_analysis": {
+    "echo.svelte.ts": {
+      "language": "typescript",
+      "lines": 222,
+      "exported_functions": [],
+      "exported_consts": [
+        "echoStore"
+      ],
+      "types": [],
+      "imports": [
+        "$app/environment",
+        "$lib/types/types",
+        "@tauri-apps/plugin-sql"
+      ],
+      "invokes": [],
+      "uses_window_location": false
+    },
+    "theme.svelte.ts": {
+      "language": "typescript",
+      "lines": 43,
+      "exported_functions": [],
+      "exported_consts": [
+        "themeStore"
+      ],
+      "types": [],
+      "imports": [
+        "$lib/theme/theme",
+        "$lib/types/types"
+      ],
+      "invokes": [],
+      "uses_window_location": false
+    },
+    "timer.svelte.ts": {
+      "language": "typescript",
+      "lines": 239,
+      "exported_functions": [],
+      "exported_consts": [
+        "prefersReducedMotion",
+        "timerStore"
+      ],
+      "types": [
+        "TimerMode",
+        "ChimeId"
+      ],
+      "imports": [
+        "$app/environment"
+      ],
+      "invokes": [],
+      "uses_window_location": false
+    },
+    "ui.svelte.ts": {
+      "language": "typescript",
+      "lines": 12,
+      "exported_functions": [],
+      "exported_consts": [
+        "uiStore"
+      ],
+      "types": [],
+      "imports": [],
+      "invokes": [],
+      "uses_window_location": false
+    }
+  },
+  "package_folders_excluded": [],
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address."
+}

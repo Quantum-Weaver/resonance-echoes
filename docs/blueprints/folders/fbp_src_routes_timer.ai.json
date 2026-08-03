@@ -1,0 +1,35 @@
+{
+  "folder_name": "timer",
+  "folder_path": "src/routes/timer",
+  "description": "1 files, 0 subfolders",
+  "scan_timestamp": "2026-08-03T16:44:24.229041 | in sovereign time",
+  "files": [
+    {
+      "path": "src/routes/timer/+page.svelte",
+      "description": "surface, 11,499 bytes"
+    }
+  ],
+  "file_count": 1,
+  "subdirectories": [],
+  "code_analysis": {
+    "+page.svelte": {
+      "language": "svelte",
+      "lines": 510,
+      "uses_runes": [
+        "$derived",
+        "$state"
+      ],
+      "imports": [
+        "$lib/components/TimerVisualization.svelte",
+        "$lib/stores/timer.svelte"
+      ],
+      "invokes": [],
+      "navigations": [],
+      "uses_window_location": false,
+      "has_style_block": true
+    }
+  },
+  "package_folders_excluded": [],
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address."
+}

@@ -1,0 +1,35 @@
+{
+  "folder_name": "theme",
+  "folder_path": "src/lib/theme",
+  "description": "1 files, 0 subfolders",
+  "scan_timestamp": "2026-08-03T16:44:24.215698 | in sovereign time",
+  "files": [
+    {
+      "path": "src/lib/theme/theme.ts",
+      "description": "typescript, 2,062 bytes"
+    }
+  ],
+  "file_count": 1,
+  "subdirectories": [],
+  "code_analysis": {
+    "theme.ts": {
+      "language": "typescript",
+      "lines": 64,
+      "exported_functions": [],
+      "exported_consts": [
+        "PRESET_THEMES",
+        "getThemeColors"
+      ],
+      "types": [],
+      "imports": [
+        "$lib/cosmic",
+        "$lib/types/types"
+      ],
+      "invokes": [],
+      "uses_window_location": false
+    }
+  },
+  "package_folders_excluded": [],
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address."
+}

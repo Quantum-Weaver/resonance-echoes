@@ -1,0 +1,56 @@
+{
+  "folder_name": "docs",
+  "folder_path": "docs",
+  "description": "the voiced documents \u2014 checklist, feature board, release, screens",
+  "scan_timestamp": "2026-08-03T16:44:24.167515 | in sovereign time",
+  "files": [
+    {
+      "path": "docs/BUILD-SEQUENCE.md",
+      "description": "BUILD SEQUENCE"
+    },
+    {
+      "path": "docs/CHECKLIST.md",
+      "description": "RESONANCE ECHOES"
+    },
+    {
+      "path": "docs/CLAUDE-CONTEXT.md",
+      "description": "CLAUDE CONTEXT"
+    },
+    {
+      "path": "docs/CONTRIBUTING.md",
+      "description": "CONTRIBUTING"
+    },
+    {
+      "path": "docs/FEATURE-BOARD.md",
+      "description": "ECHOES"
+    },
+    {
+      "path": "docs/GALAXY-LISTING.md",
+      "description": "Echoes"
+    },
+    {
+      "path": "docs/PLAY-TRACK.md",
+      "description": "Echoes"
+    },
+    {
+      "path": "docs/RELEASE.md",
+      "description": "Resonance Echoes"
+    },
+    {
+      "path": "docs/RESONANCE-GRAMMAR.md",
+      "description": "THE RESONANCE GRAMMAR"
+    },
+    {
+      "path": "docs/SCREEN-INVENTORY.md",
+      "description": "SCREEN INVENTORY"
+    }
+  ],
+  "file_count": 10,
+  "subdirectories": [
+    "docs/blueprints"
+  ],
+  "code_analysis": {},
+  "package_folders_excluded": [],
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address."
+}

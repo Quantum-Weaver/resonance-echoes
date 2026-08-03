@@ -1,0 +1,81 @@
+{
+  "folder_name": "resonance-echoes",
+  "folder_path": ".",
+  "description": "Resonance Echoes \u2014 a sovereign journal for logging anything with feeling",
+  "scan_timestamp": "2026-08-03T16:44:24.161861 | in sovereign time",
+  "files": [
+    {
+      "path": ".gitignore",
+      "description": "file, 1,659 bytes"
+    },
+    {
+      "path": "CLAUDE.md",
+      "description": "CLAUDE.md"
+    },
+    {
+      "path": "HANDS.md",
+      "description": "The Hands"
+    },
+    {
+      "path": "helper.md",
+      "description": "document, 1,046 bytes"
+    },
+    {
+      "path": "LICENSE",
+      "description": "file, 1,092 bytes"
+    },
+    {
+      "path": "package-lock.json",
+      "description": "data, 86,541 bytes"
+    },
+    {
+      "path": "package.json",
+      "description": "data, 1,096 bytes"
+    },
+    {
+      "path": "PHILOSOPHY.md",
+      "description": "THE RESONANCE LICENSE"
+    },
+    {
+      "path": "PRIVACY.md",
+      "description": "AudHDities Sanctuary"
+    },
+    {
+      "path": "README.md",
+      "description": "\u227d\u0f0f\u227c Resonance Echoes"
+    },
+    {
+      "path": "svelte.config.js",
+      "description": "Tauri doesn't have a Node.js server to do proper SSR"
+    },
+    {
+      "path": "tsconfig.json",
+      "description": "data, 694 bytes"
+    },
+    {
+      "path": "vite.config.js",
+      "description": "file, 873 bytes"
+    }
+  ],
+  "file_count": 13,
+  "subdirectories": [
+    ".cargo",
+    "docs",
+    "release",
+    "reports",
+    "screenshots",
+    "src",
+    "src-tauri",
+    "static",
+    "tools"
+  ],
+  "code_analysis": {},
+  "package_folders_excluded": [
+    ".git",
+    ".svelte-kit",
+    "build",
+    "node_modules"
+  ],
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address."
+}

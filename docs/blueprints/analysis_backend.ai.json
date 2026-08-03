@@ -1,0 +1,31 @@
+{
+  "analysis": "backend",
+  "scan_timestamp": "2026-08-03T16:44:25.771818 | in sovereign time",
+  "description": "the backend \u2014 Tauri commands and the schema's shape (names only)",
+  "tauri_commands": [
+    {
+      "command": "greet",
+      "file": "src-tauri/src/lib.rs"
+    }
+  ],
+  "command_count": 1,
+  "tables": [
+    {
+      "table": "echoes",
+      "file": "src-tauri/src/lib.rs"
+    },
+    {
+      "table": "echoes",
+      "file": "src-tauri/src/lib.rs"
+    },
+    {
+      "table": "echoes",
+      "file": "src-tauri/src/lib.rs"
+    }
+  ],
+  "migration_versions": [
+    "1",
+    "2",
+    "3"
+  ]
+}

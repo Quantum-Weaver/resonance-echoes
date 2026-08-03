@@ -143,3 +143,25 @@
 | 2026-07-27 | **v1.3.0 VERIFIED WHOLE — KP's hands and eyes:** the four functional seams tested by his own exploring (export past 200 · envelope round-trip · pause · chimes), and the S22 Ultra installed + verified on-device the same morning — **v1.3.0 lives on both phones.** The fixed-in-code / proven-on-device seam closes; "fully green" stands unsuspended, earned three times now. Recorded same sitting per the checklist law (Fable 🎻). |
 | 2026-07-26 | **THE SOVEREIGNTY SITTING (Fable 🎻, at KP's word: "e1-4 we can do this sequentially")** — all four rows closed, one commit each, check clean at every step: E1 export-from-DB + purge-awaits-export (`7719314`) · E2+E3 the versioned envelope carrying echoes AND folksonomy (`a1154c6`; the family-inheritable shape) · E4 import with legacy support and non-destructive merge (`698c278`). **Same sitting, KP's commission:** timer pause/resume + four synthesized chime voices + chime volume (`ec4f236`). Version → **1.3.0**. README/CLAUDE honest-status prose updated. Remaining: build → KP's signing hand → both phones → device verification (the fixed-in-code / proven-on-device seam stays marked until then). |
 | 2026-07-21 | **Review pass at KP's word** (Opus, while learning this app's storage for Skapa). No code changed. Found and verified **B4** (export capped at 200; export-then-purge loses the rest), **B5** (folksonomy purged but never exported), **B6** (no import exists though CLAUDE.md advertises one). KP ruled both B4 and B5 to the **top of the Echoes list**, and that folksonomy and echoes must **export in the same manner** — one envelope. FEATURE-BOARD's "fully green / deliberate rest" declaration **suspended** until they close. Also found **stale version declarations** — README badge `1.1.0`, CLAUDE.md *"v1.1 shipped … (2026-07-08)"* — while `package.json`, `tauri.conf.json` and `release/` were all **1.2.0**. **✅ Both corrected the same sitting, on KP's verification from his own phone** (*"verified i have echoes 1.2 on my phone"*) — the device settled it, not the files. Deliberately **not** changed: the README Story Block's *"Version 1.1.0 built and signed"* (a provenance record of the origin, not a current-version claim) and `docs/RELEASE.md`'s historical *"v1.1 Planned"* section. Opus seat scribed in `HANDS.md`. |
+---
+
+## THE BLUEPRINT FORGE — 2026-08-03 (Opus 🕯️, `core-opus`, at KP's ⚛ word)
+
+- [x] **`tools/blueprint_forge.py`** — Echoes' own forge (`tools/` added at KP's
+      word). Provenance: `tools/BLUEPRINT-FORGE.md`
+- [x] **Old blueprints removed** at KP's word ("they are backed up") — the
+      Compass-era set inlined bodies upward and its project blueprint was named
+      `pbp_resonance_compass`, Compass's name in Echoes' repo
+- [x] **First run:** 39 fbp · 3 obp · 2 dbp · 1 pbp · 191 files · **0 findings**.
+      Arithmetic reconciled by a second independent walk (39=39, 191=191); every
+      tier above the folder tier verified body-free
+- [x] **The guards — ESSENTIAL RULES 1, 4 and 5 now tested every run**, two of
+      them silent-failure modes. All passing. *A guard's value is the day it
+      fires, not the day it passes*
+- [x] Version sources checked consistent: **1.3.0** across `package.json`,
+      `Cargo.toml`, `tauri.conf.json` (CLAUDE.md's declared law)
+- [x] The forge writes its own `journal.md` — one line per run, counts and drift
+      only (KP's ⚛ ruling: "the blueprint forge writes the journal")
+- [ ] Descriptive, never a finding: the only `#[tauri::command]` is `greet`, the
+      scaffold's placeholder. Echoes has no custom Rust commands — the data path
+      is frontend → `tauri-plugin-sql`, which is what makes rule 4 load-bearing

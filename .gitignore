@@ -52,3 +52,4 @@ helper.md
 generate_blueprint.py
 # Release artifacts (signed builds live on disk + device, never in git)
 release/
+tools/

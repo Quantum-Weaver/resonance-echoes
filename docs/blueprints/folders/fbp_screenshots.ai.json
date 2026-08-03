@@ -1,0 +1,58 @@
+{
+  "folder_name": "screenshots",
+  "folder_path": "screenshots",
+  "description": "11 files, 0 subfolders",
+  "scan_timestamp": "2026-08-03T16:44:24.174240 | in sovereign time",
+  "files": [
+    {
+      "path": "screenshots/echoes-01.jpg",
+      "description": "image, 346,132 bytes"
+    },
+    {
+      "path": "screenshots/echoes-02.jpg",
+      "description": "image, 359,037 bytes"
+    },
+    {
+      "path": "screenshots/echoes-03.jpg",
+      "description": "image, 230,917 bytes"
+    },
+    {
+      "path": "screenshots/echoes-04.jpg",
+      "description": "image, 320,928 bytes"
+    },
+    {
+      "path": "screenshots/echoes-05.jpg",
+      "description": "image, 287,564 bytes"
+    },
+    {
+      "path": "screenshots/echoes-06.jpg",
+      "description": "image, 221,394 bytes"
+    },
+    {
+      "path": "screenshots/echoes-07.jpg",
+      "description": "image, 250,472 bytes"
+    },
+    {
+      "path": "screenshots/echoes-08.jpg",
+      "description": "image, 176,941 bytes"
+    },
+    {
+      "path": "screenshots/echoes-09.jpg",
+      "description": "image, 163,421 bytes"
+    },
+    {
+      "path": "screenshots/echoes-10.jpg",
+      "description": "image, 165,189 bytes"
+    },
+    {
+      "path": "screenshots/echoes-11.jpg",
+      "description": "image, 136,660 bytes"
+    }
+  ],
+  "file_count": 11,
+  "subdirectories": [],
+  "code_analysis": {},
+  "package_folders_excluded": [],
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address."
+}

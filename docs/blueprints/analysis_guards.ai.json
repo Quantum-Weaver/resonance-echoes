@@ -1,0 +1,42 @@
+{
+  "analysis": "guards",
+  "scan_timestamp": "2026-08-03T16:44:25.772590 | in sovereign time",
+  "description": "Echoes' ESSENTIAL RULES, tested \u2014 a regression guard",
+  "note": "Every guard passing is the expected state. The value is the day one does not, on a release that would otherwise ship and fail with no error.",
+  "total": 3,
+  "all_passing": true,
+  "guards": [
+    {
+      "rule": 1,
+      "law": "navigation uses goto(), never window.location.href",
+      "silent_failure": false,
+      "passing": true,
+      "found": "none"
+    },
+    {
+      "rule": 4,
+      "law": "capabilities/default.json needs ALL FOUR explicit sql:allow-* entries; sql:default alone grants ZERO operation access",
+      "silent_failure": true,
+      "passing": true,
+      "address": "src-tauri/capabilities/default.json",
+      "capabilities_file": {
+        "present": true,
+        "address": "src-tauri/capabilities/default.json"
+      },
+      "required": [
+        "sql:allow-close",
+        "sql:allow-execute",
+        "sql:allow-load",
+        "sql:allow-select"
+      ],
+      "missing": "none"
+    },
+    {
+      "rule": 5,
+      "law": "no emoji or non-ASCII in SQL DEFAULT values \u2014 silent JNI failure",
+      "silent_failure": true,
+      "passing": true,
+      "found": "none"
+    }
+  ]
+}

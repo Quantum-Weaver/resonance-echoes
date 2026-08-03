@@ -1,0 +1,36 @@
+{
+  "folder_name": "types",
+  "folder_path": "src/lib/types",
+  "description": "1 files, 0 subfolders",
+  "scan_timestamp": "2026-08-03T16:44:24.217205 | in sovereign time",
+  "files": [
+    {
+      "path": "src/lib/types/types.ts",
+      "description": "Theme customization"
+    }
+  ],
+  "file_count": 1,
+  "subdirectories": [],
+  "code_analysis": {
+    "types.ts": {
+      "language": "typescript",
+      "lines": 40,
+      "exported_functions": [],
+      "exported_consts": [],
+      "types": [
+        "ThemeConfig",
+        "Echo",
+        "Sense",
+        "Subcategory"
+      ],
+      "imports": [
+        "$lib/data/emojis"
+      ],
+      "invokes": [],
+      "uses_window_location": false
+    }
+  },
+  "package_folders_excluded": [],
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address."
+}

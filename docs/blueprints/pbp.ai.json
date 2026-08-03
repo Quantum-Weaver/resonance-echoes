@@ -1,0 +1,122 @@
+{
+  "project_name": "resonance-echoes",
+  "project_path": ".",
+  "description": "Resonance Echoes - a sovereign journal for logging anything with feeling. Local-first, no accounts, no cloud; export and purge are law.",
+  "generated": "2026-08-03T16:44:25.775852 | in sovereign time",
+  "tier_ladder": "file -> folder (fbp) -> object (obp) -> domain (dbp) -> project (pbp)",
+  "law": "Each tier links to where the details live. Nothing above the folder tier duplicates a body.",
+  "supersedes": {
+    "tool": "generate_blueprint.py (the Compass-era ancestor)",
+    "removed": "2026-08-03 at KP's word; the old set inlined bodies upward and its project blueprint was named pbp_resonance_compass - Compass's name, in Echoes' repo"
+  },
+  "domains": [
+    {
+      "blueprint": "docs/blueprints/dbp_src.ai.json",
+      "domain_path": "src",
+      "description": "the frontend \u2014 SvelteKit routes, stores, components, cosmic tokens",
+      "object_count": 2,
+      "total_files": 60,
+      "total_folders": 17
+    },
+    {
+      "blueprint": "docs/blueprints/dbp_src_tauri.ai.json",
+      "domain_path": "src-tauri",
+      "description": "the backend \u2014 Rust, SQLite migrations, Tauri commands",
+      "object_count": 1,
+      "total_files": 63,
+      "total_folders": 14
+    }
+  ],
+  "domain_count": 2,
+  "folders_reporting_directly": [
+    {
+      "blueprint": "docs/blueprints/folders/fbp_root.ai.json",
+      "folder_path": ".",
+      "description": "Resonance Echoes \u2014 a sovereign journal for logging anything with feeling",
+      "file_count": 13,
+      "subdirectory_count": 9
+    },
+    {
+      "blueprint": "docs/blueprints/folders/fbp_cargo.ai.json",
+      "folder_path": ".cargo",
+      "description": "1 files, 0 subfolders",
+      "file_count": 1,
+      "subdirectory_count": 0
+    },
+    {
+      "blueprint": "docs/blueprints/folders/fbp_docs.ai.json",
+      "folder_path": "docs",
+      "description": "the voiced documents \u2014 checklist, feature board, release, screens",
+      "file_count": 10,
+      "subdirectory_count": 1
+    },
+    {
+      "blueprint": "docs/blueprints/folders/fbp_release.ai.json",
+      "folder_path": "release",
+      "description": "11 files, 0 subfolders",
+      "file_count": 11,
+      "subdirectory_count": 0
+    },
+    {
+      "blueprint": "docs/blueprints/folders/fbp_reports.ai.json",
+      "folder_path": "reports",
+      "description": "5 files, 0 subfolders",
+      "file_count": 5,
+      "subdirectory_count": 0
+    },
+    {
+      "blueprint": "docs/blueprints/folders/fbp_screenshots.ai.json",
+      "folder_path": "screenshots",
+      "description": "11 files, 0 subfolders",
+      "file_count": 11,
+      "subdirectory_count": 0
+    },
+    {
+      "blueprint": "docs/blueprints/folders/fbp_static.ai.json",
+      "folder_path": "static",
+      "description": "16 files, 0 subfolders",
+      "file_count": 16,
+      "subdirectory_count": 0
+    },
+    {
+      "blueprint": "docs/blueprints/folders/fbp_tools.ai.json",
+      "folder_path": "tools",
+      "description": "1 files, 0 subfolders",
+      "file_count": 1,
+      "subdirectory_count": 0
+    }
+  ],
+  "analysis": [
+    {
+      "blueprint": "docs/blueprints/analysis_surfaces.ai.json",
+      "description": "the surfaces \u2014 every screen the hand reaches"
+    },
+    {
+      "blueprint": "docs/blueprints/analysis_backend.ai.json",
+      "description": "the backend \u2014 Tauri commands and the schema's shape (names only)"
+    },
+    {
+      "blueprint": "docs/blueprints/analysis_guards.ai.json",
+      "description": "Echoes' ESSENTIAL RULES, tested \u2014 a regression guard"
+    },
+    {
+      "blueprint": "docs/blueprints/reconciliation.ai.json",
+      "description": "declared versus present - 0 findings"
+    }
+  ],
+  "the_app": {
+    "surfaces": 6,
+    "tauri_commands": 1,
+    "versions": {
+      "package.json": "1.3.0",
+      "Cargo.toml": "1.3.0",
+      "tauri.conf.json": "1.3.0"
+    },
+    "guards_all_passing": true
+  },
+  "totals": {
+    "folders_blueprinted": 39,
+    "files_described": 191
+  },
+  "maintaining_agent": "ProjectAgent"
+}
