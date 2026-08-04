@@ -2,7 +2,7 @@
   "folder_name": "screenshots",
   "folder_path": "screenshots",
   "description": "11 files, 0 subfolders",
-  "scan_timestamp": "2026-08-03T16:44:24.174240 | in sovereign time",
+  "scan_timestamp": "2026-08-04T11:09:37.385544 | in sovereign time",
   "files": [
     {
       "path": "screenshots/echoes-01.jpg",
@@ -51,8 +51,108 @@
   ],
   "file_count": 11,
   "subdirectories": [],
-  "code_analysis": {},
-  "package_folders_excluded": [],
+  "code_analysis": {
+    "echoes-01.jpg": {
+      "language": "content-file",
+      "format": "jpg",
+      "name": "echoes-01.jpg",
+      "location": "screenshots",
+      "bytes": 346132,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    },
+    "echoes-02.jpg": {
+      "language": "content-file",
+      "format": "jpg",
+      "name": "echoes-02.jpg",
+      "location": "screenshots",
+      "bytes": 359037,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    },
+    "echoes-03.jpg": {
+      "language": "content-file",
+      "format": "jpg",
+      "name": "echoes-03.jpg",
+      "location": "screenshots",
+      "bytes": 230917,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    },
+    "echoes-04.jpg": {
+      "language": "content-file",
+      "format": "jpg",
+      "name": "echoes-04.jpg",
+      "location": "screenshots",
+      "bytes": 320928,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    },
+    "echoes-05.jpg": {
+      "language": "content-file",
+      "format": "jpg",
+      "name": "echoes-05.jpg",
+      "location": "screenshots",
+      "bytes": 287564,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    },
+    "echoes-06.jpg": {
+      "language": "content-file",
+      "format": "jpg",
+      "name": "echoes-06.jpg",
+      "location": "screenshots",
+      "bytes": 221394,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    },
+    "echoes-07.jpg": {
+      "language": "content-file",
+      "format": "jpg",
+      "name": "echoes-07.jpg",
+      "location": "screenshots",
+      "bytes": 250472,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    },
+    "echoes-08.jpg": {
+      "language": "content-file",
+      "format": "jpg",
+      "name": "echoes-08.jpg",
+      "location": "screenshots",
+      "bytes": 176941,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    },
+    "echoes-09.jpg": {
+      "language": "content-file",
+      "format": "jpg",
+      "name": "echoes-09.jpg",
+      "location": "screenshots",
+      "bytes": 163421,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    },
+    "echoes-10.jpg": {
+      "language": "content-file",
+      "format": "jpg",
+      "name": "echoes-10.jpg",
+      "location": "screenshots",
+      "bytes": 165189,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    },
+    "echoes-11.jpg": {
+      "language": "content-file",
+      "format": "jpg",
+      "name": "echoes-11.jpg",
+      "location": "screenshots",
+      "bytes": 136660,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    }
+  },
   "maintaining_agent": "FolderAgent",
-  "note": "The details live here. Upper tiers link to this address."
+  "folders_not_walked": [],
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

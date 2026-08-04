@@ -2,7 +2,7 @@
   "folder_name": "icons",
   "folder_path": "src/lib/components/icons",
   "description": "5 files, 0 subfolders",
-  "scan_timestamp": "2026-08-03T16:44:24.186406 | in sovereign time",
+  "scan_timestamp": "2026-08-04T11:09:37.397286 | in sovereign time",
   "files": [
     {
       "path": "src/lib/components/icons/IconHome.svelte",
@@ -34,10 +34,7 @@
       "uses_runes": [
         "$props"
       ],
-      "imports": [],
-      "invokes": [],
-      "navigations": [],
-      "uses_window_location": false,
+      "fetch_calls": [],
       "has_style_block": false
     },
     "IconInsights.svelte": {
@@ -46,10 +43,7 @@
       "uses_runes": [
         "$props"
       ],
-      "imports": [],
-      "invokes": [],
-      "navigations": [],
-      "uses_window_location": false,
+      "fetch_calls": [],
       "has_style_block": false
     },
     "Icons.svelte": {
@@ -59,15 +53,7 @@
         "$derived",
         "$props"
       ],
-      "imports": [
-        "./IconHome.svelte",
-        "./IconInsights.svelte",
-        "./IconSettings.svelte",
-        "./IconTimer.svelte"
-      ],
-      "invokes": [],
-      "navigations": [],
-      "uses_window_location": false,
+      "fetch_calls": [],
       "has_style_block": false
     },
     "IconSettings.svelte": {
@@ -76,10 +62,7 @@
       "uses_runes": [
         "$props"
       ],
-      "imports": [],
-      "invokes": [],
-      "navigations": [],
-      "uses_window_location": false,
+      "fetch_calls": [],
       "has_style_block": false
     },
     "IconTimer.svelte": {
@@ -88,14 +71,11 @@
       "uses_runes": [
         "$props"
       ],
-      "imports": [],
-      "invokes": [],
-      "navigations": [],
-      "uses_window_location": false,
+      "fetch_calls": [],
       "has_style_block": false
     }
   },
-  "package_folders_excluded": [],
   "maintaining_agent": "FolderAgent",
-  "note": "The details live here. Upper tiers link to this address."
+  "folders_not_walked": [],
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

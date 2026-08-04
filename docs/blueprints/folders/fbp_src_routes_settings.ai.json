@@ -2,7 +2,7 @@
   "folder_name": "settings",
   "folder_path": "src/routes/settings",
   "description": "1 files, 0 subfolders",
-  "scan_timestamp": "2026-08-03T16:44:24.227576 | in sovereign time",
+  "scan_timestamp": "2026-08-04T11:09:37.439715 | in sovereign time",
   "files": [
     {
       "path": "src/routes/settings/+page.svelte",
@@ -19,20 +19,11 @@
         "$derived",
         "$state"
       ],
-      "imports": [
-        "$lib/stores/echo.svelte",
-        "$lib/stores/theme.svelte",
-        "$lib/theme/theme",
-        "@tauri-apps/api/app",
-        "@tauri-apps/plugin-opener"
-      ],
-      "invokes": [],
-      "navigations": [],
-      "uses_window_location": false,
+      "fetch_calls": [],
       "has_style_block": true
     }
   },
-  "package_folders_excluded": [],
   "maintaining_agent": "FolderAgent",
-  "note": "The details live here. Upper tiers link to this address."
+  "folders_not_walked": [],
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

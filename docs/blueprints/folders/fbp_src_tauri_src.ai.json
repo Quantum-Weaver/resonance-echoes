@@ -2,7 +2,7 @@
   "folder_name": "src",
   "folder_path": "src-tauri/src",
   "description": "2 files, 0 subfolders",
-  "scan_timestamp": "2026-08-03T16:44:24.270560 | in sovereign time",
+  "scan_timestamp": "2026-08-04T11:09:37.473928 | in sovereign time",
   "files": [
     {
       "path": "src-tauri/src/lib.rs",
@@ -19,37 +19,23 @@
     "lib.rs": {
       "language": "rust",
       "lines": 81,
-      "tauri_commands": [
-        "greet"
-      ],
-      "public_fns": [
+      "pub_fns": [
         "run"
       ],
-      "tables_created": [
-        "echoes",
-        "echoes",
-        "echoes"
-      ],
-      "migration_versions": [
-        "1",
-        "2",
-        "3"
-      ],
-      "sql_default_count": 10,
-      "non_ascii_defaults": []
+      "structs": [],
+      "tauri_commands": 1,
+      "uses_unsafe": false
     },
     "main.rs": {
       "language": "rust",
       "lines": 7,
-      "tauri_commands": [],
-      "public_fns": [],
-      "tables_created": [],
-      "migration_versions": [],
-      "sql_default_count": 0,
-      "non_ascii_defaults": []
+      "pub_fns": [],
+      "structs": [],
+      "tauri_commands": 0,
+      "uses_unsafe": false
     }
   },
-  "package_folders_excluded": [],
   "maintaining_agent": "FolderAgent",
-  "note": "The details live here. Upper tiers link to this address."
+  "folders_not_walked": [],
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

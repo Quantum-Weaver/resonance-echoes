@@ -2,11 +2,11 @@
   "folder_name": "styles",
   "folder_path": "src/lib/styles",
   "description": "1 files, 1 subfolders",
-  "scan_timestamp": "2026-08-03T16:44:24.200717 | in sovereign time",
+  "scan_timestamp": "2026-08-04T11:09:37.417096 | in sovereign time",
   "files": [
     {
       "path": "src/lib/styles/custom_overrides.css",
-      "description": "styles/custom-overrides.css"
+      "description": "stylesheet, 1,728 bytes"
     }
   ],
   "file_count": 1,
@@ -18,11 +18,12 @@
       "language": "css",
       "lines": 52,
       "classes_defined": 4,
+      "animations": [],
       "custom_properties": 1,
-      "z_indexes": []
+      "imports": []
     }
   },
-  "package_folders_excluded": [],
   "maintaining_agent": "FolderAgent",
-  "note": "The details live here. Upper tiers link to this address."
+  "folders_not_walked": [],
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

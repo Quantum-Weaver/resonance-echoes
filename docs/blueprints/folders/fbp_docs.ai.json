@@ -1,8 +1,8 @@
 {
   "folder_name": "docs",
   "folder_path": "docs",
-  "description": "the voiced documents \u2014 checklist, feature board, release, screens",
-  "scan_timestamp": "2026-08-03T16:44:24.167515 | in sovereign time",
+  "description": "10 files, 0 subfolders",
+  "scan_timestamp": "2026-08-04T11:09:37.377908 | in sovereign time",
   "files": [
     {
       "path": "docs/BUILD-SEQUENCE.md",
@@ -46,11 +46,294 @@
     }
   ],
   "file_count": 10,
-  "subdirectories": [
-    "docs/blueprints"
-  ],
-  "code_analysis": {},
-  "package_folders_excluded": [],
+  "subdirectories": [],
+  "code_analysis": {
+    "BUILD-SEQUENCE.md": {
+      "language": "markdown",
+      "lines": 75,
+      "words": 427,
+      "heading_count": 8,
+      "headings": [
+        "BUILD SEQUENCE \u2014 Resonance Echoes",
+        "Phase 0: Shell",
+        "Phase 1: The Echo",
+        "Phase 2: Browse & Filter",
+        "Phase 3: Gentle Insights",
+        "Phase 4: Onboarding",
+        "Phase 5: Data Sovereignty",
+        "Phase 6: Mobile Ship"
+      ],
+      "links_external": 0,
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "code_fences": 0,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "CHECKLIST.md": {
+      "language": "markdown",
+      "lines": 168,
+      "words": 2381,
+      "heading_count": 16,
+      "headings": [
+        "RESONANCE ECHOES \u2014 MASTER CHECKLIST",
+        "LEGEND",
+        "PHASE STATUS",
+        "Phase 0: Shell \u2705",
+        "Phase 1: The Echo \u2705",
+        "Phase 2: Browse & Filter \u2705",
+        "Phase 3: Gentle Insights \u2705",
+        "Phase 4: Onboarding \u2705",
+        "Phase 5: Data Sovereignty \u2705",
+        "Phase 6: Mobile Ship \u2705",
+        "v1.1: Accessibility & Sovereignty \u2705",
+        "v1.2.0: The Timer That Sounds \u2705 (2026-07-18)",
+        "v1.3.0: Sovereignty Whole + The Timer That Waits \u2705 (2026-07-26 built and signed \u00b7 2026-07-27 verified whole on both phones)",
+        "KNOWN BUGS",
+        "SESSION LOG",
+        "THE BLUEPRINT FORGE \u2014 2026-08-03 (Opus \ud83d\udd6f\ufe0f, `core-opus`, at KP's \u269b word)"
+      ],
+      "links_external": 0,
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "code_fences": 0,
+      "table_rows": 25,
+      "checkboxes": {
+        "open": 1,
+        "done": 80
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "CLAUDE-CONTEXT.md": {
+      "language": "markdown",
+      "lines": 77,
+      "words": 402,
+      "heading_count": 11,
+      "headings": [
+        "CLAUDE CONTEXT \u2014 Resonance Echoes",
+        "Naming",
+        "The Senses",
+        "The ComfortBar",
+        "Key Patterns",
+        "Differences from Compass",
+        "Android Build Notes",
+        "SQLite ACL Permissions (CRITICAL)",
+        "Storage Permissions",
+        "Known Silent Failure Modes",
+        "Debugging on Android"
+      ],
+      "links_external": 0,
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "code_fences": 2,
+      "table_rows": 6,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "CONTRIBUTING.md": {
+      "language": "markdown",
+      "lines": 21,
+      "words": 100,
+      "heading_count": 5,
+      "headings": [
+        "CONTRIBUTING \u2014 Resonance Echoes",
+        "Methodology",
+        "Branch Strategy",
+        "Build Protocol",
+        "Philosophy"
+      ],
+      "links_external": 0,
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "code_fences": 0,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "FEATURE-BOARD.md": {
+      "language": "markdown",
+      "lines": 64,
+      "words": 546,
+      "heading_count": 6,
+      "headings": [
+        "ECHOES \u2014 THE FEATURE BOARD",
+        "\u2705 CLOSED IN CODE \u2014 2026-07-26, sequentially at KP's word (\"e1-4 we can do this sequentially\")",
+        "\ud83c\udf90 The timer grew, same sitting (KP's commission, 2026-07-26) \u2014 `ec4f236`",
+        "Maintenance \u2014 \u2705 ALL CLOSED 2026-07-19 (the day Echoes finished)",
+        "Relations (features that arrive FROM elsewhere)",
+        "Deliberate rest"
+      ],
+      "links_external": 0,
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "code_fences": 0,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 8
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "GALAXY-LISTING.md": {
+      "language": "markdown",
+      "lines": 65,
+      "words": 417,
+      "heading_count": 9,
+      "headings": [
+        "Echoes \u2014 Galaxy Store listing pack",
+        "App name",
+        "Short description (Galaxy allows ~80 chars)",
+        "Full description",
+        "Category",
+        "Content rating guidance",
+        "Data safety answers (transcribe)",
+        "Assets",
+        "Tags/keywords"
+      ],
+      "links_external": 0,
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "code_fences": 0,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "PLAY-TRACK.md": {
+      "language": "markdown",
+      "lines": 67,
+      "words": 575,
+      "heading_count": 6,
+      "headings": [
+        "Echoes \u2014 Google Play test track",
+        "Standards check \u2014 verified against the repo, 2026-07-27",
+        "v1.3.0 \u2014 the upload pack (KP's hands)",
+        "Release notes \u2014 paste-ready (under Play's 500-char limit)",
+        "The icon \u2014 two doors, both open",
+        "Track log"
+      ],
+      "links_external": 0,
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "code_fences": 1,
+      "table_rows": 14,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "RELEASE.md": {
+      "language": "markdown",
+      "lines": 114,
+      "words": 536,
+      "heading_count": 9,
+      "headings": [
+        "Resonance Echoes \u2014 Release Notes",
+        "v1.3.0 \u2014 2026-07-26 \u00b7 Sovereignty Whole + The Timer That Waits",
+        "v1.0.0 \u2014 2026-06-28",
+        "What's in v1.0.0",
+        "System Requirements",
+        "Build",
+        "Debug APK",
+        "Release APK (unsigned)",
+        "v1.1 Planned"
+      ],
+      "links_external": 0,
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "code_fences": 3,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "RESONANCE-GRAMMAR.md": {
+      "language": "markdown",
+      "lines": 192,
+      "words": 0,
+      "heading_count": 18,
+      "headings": [
+        "THE RESONANCE GRAMMAR",
+        "1. WHAT THIS IS",
+        "2. CORE PRINCIPLES",
+        "3. THE VOCABULARY: ATOMS",
+        "3.1 Atom Structure",
+        "3.2 Example Atom: \"Resonance\"",
+        "3.3 Atom Categories",
+        "4. THE SYNTAX: MOLECULES",
+        "4.1 Molecule Structure",
+        "4.2 Example Molecule: \"MoodEvent\"",
+        "5. THE ORGANIZATION: CATEGORIES",
+        "6. THE FOLKSONOMY",
+        "6.1 Emoji Definition Structure",
+        "6.2 The Folksonomy Principle",
+        "7. THE SOVEREIGNTY GUARANTEES",
+        "8. IMPLEMENTATIONS",
+        "9. VERSIONING",
+        "10. GOVERNANCE"
+      ],
+      "links_external": 0,
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "code_fences": 1,
+      "table_rows": 46,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "SCREEN-INVENTORY.md": {
+      "language": "markdown",
+      "lines": 28,
+      "words": 217,
+      "heading_count": 4,
+      "headings": [
+        "SCREEN INVENTORY \u2014 Resonance Echoes",
+        "Built (6 screens \u2014 all shipped)",
+        "Components (living, `src/lib/components/`)",
+        "Planned"
+      ],
+      "links_external": 0,
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "code_fences": 0,
+      "table_rows": 15,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    }
+  },
   "maintaining_agent": "FolderAgent",
-  "note": "The details live here. Upper tiers link to this address."
+  "folders_not_walked": [
+    "blueprints"
+  ],
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

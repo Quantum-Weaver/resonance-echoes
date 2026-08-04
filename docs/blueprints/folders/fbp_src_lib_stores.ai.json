@@ -2,7 +2,7 @@
   "folder_name": "stores",
   "folder_path": "src/lib/stores",
   "description": "4 files, 0 subfolders",
-  "scan_timestamp": "2026-08-03T16:44:24.198975 | in sovereign time",
+  "scan_timestamp": "2026-08-04T11:09:37.415462 | in sovereign time",
   "files": [
     {
       "path": "src/lib/stores/echo.svelte.ts",
@@ -18,7 +18,7 @@
     },
     {
       "path": "src/lib/stores/ui.svelte.ts",
-      "description": "Cross-component UI signals that don't belong to any domain store."
+      "description": "Cross-component UI signals that don't belong to any domain store"
     }
   ],
   "file_count": 4,
@@ -31,14 +31,12 @@
       "exported_consts": [
         "echoStore"
       ],
+      "interfaces": [],
       "types": [],
-      "imports": [
-        "$app/environment",
-        "$lib/types/types",
-        "@tauri-apps/plugin-sql"
-      ],
-      "invokes": [],
-      "uses_window_location": false
+      "imports_node": [],
+      "spawns_process": false,
+      "writes_files": false,
+      "env_names_read": []
     },
     "theme.svelte.ts": {
       "language": "typescript",
@@ -47,13 +45,12 @@
       "exported_consts": [
         "themeStore"
       ],
+      "interfaces": [],
       "types": [],
-      "imports": [
-        "$lib/theme/theme",
-        "$lib/types/types"
-      ],
-      "invokes": [],
-      "uses_window_location": false
+      "imports_node": [],
+      "spawns_process": false,
+      "writes_files": false,
+      "env_names_read": []
     },
     "timer.svelte.ts": {
       "language": "typescript",
@@ -63,15 +60,15 @@
         "prefersReducedMotion",
         "timerStore"
       ],
+      "interfaces": [],
       "types": [
         "TimerMode",
         "ChimeId"
       ],
-      "imports": [
-        "$app/environment"
-      ],
-      "invokes": [],
-      "uses_window_location": false
+      "imports_node": [],
+      "spawns_process": false,
+      "writes_files": false,
+      "env_names_read": []
     },
     "ui.svelte.ts": {
       "language": "typescript",
@@ -80,13 +77,15 @@
       "exported_consts": [
         "uiStore"
       ],
+      "interfaces": [],
       "types": [],
-      "imports": [],
-      "invokes": [],
-      "uses_window_location": false
+      "imports_node": [],
+      "spawns_process": false,
+      "writes_files": false,
+      "env_names_read": []
     }
   },
-  "package_folders_excluded": [],
   "maintaining_agent": "FolderAgent",
-  "note": "The details live here. Upper tiers link to this address."
+  "folders_not_walked": [],
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

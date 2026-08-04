@@ -2,7 +2,7 @@
   "folder_name": "types",
   "folder_path": "src/lib/types",
   "description": "1 files, 0 subfolders",
-  "scan_timestamp": "2026-08-03T16:44:24.217205 | in sovereign time",
+  "scan_timestamp": "2026-08-04T11:09:37.430155 | in sovereign time",
   "files": [
     {
       "path": "src/lib/types/types.ts",
@@ -17,20 +17,20 @@
       "lines": 40,
       "exported_functions": [],
       "exported_consts": [],
-      "types": [
+      "interfaces": [
         "ThemeConfig",
         "Echo",
         "Sense",
         "Subcategory"
       ],
-      "imports": [
-        "$lib/data/emojis"
-      ],
-      "invokes": [],
-      "uses_window_location": false
+      "types": [],
+      "imports_node": [],
+      "spawns_process": false,
+      "writes_files": false,
+      "env_names_read": []
     }
   },
-  "package_folders_excluded": [],
   "maintaining_agent": "FolderAgent",
-  "note": "The details live here. Upper tiers link to this address."
+  "folders_not_walked": [],
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }
