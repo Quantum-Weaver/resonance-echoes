@@ -2,7 +2,7 @@
   "project_name": "resonance-echoes",
   "project_path": "C:\\_superposition\\resonance-echoes",
   "description": "A sovereign journal for logging anything with feeling",
-  "generated": "2026-08-04T11:09:37.519984 | in sovereign time",
+  "generated": "2026-08-04T19:11:53.305985 | in sovereign time",
   "tier_ladder": "file -> folder (fbp) -> object (obp) -> domain (dbp) -> project (pbp)",
   "law": "Each tier links to where the details live. Nothing above the folder tier duplicates a body.",
   "domains": [
@@ -103,6 +103,7 @@
       "dist",
       "env",
       "gen",
+      "mimirs-well",
       "node_modules",
       "out",
       "target",

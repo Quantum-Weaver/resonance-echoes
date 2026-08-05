@@ -2,7 +2,7 @@
   "folder_name": "resonance-echoes",
   "folder_path": ".",
   "description": "A sovereign journal for logging anything with feeling",
-  "scan_timestamp": "2026-08-04T11:09:37.368071 | in sovereign time",
+  "scan_timestamp": "2026-08-04T19:11:52.546531 | in sovereign time",
   "files": [
     {
       "path": ".gitignore",
@@ -18,7 +18,7 @@
     },
     {
       "path": "helper.md",
-      "description": "document, 1,046 bytes"
+      "description": "Save is fixed"
     },
     {
       "path": "LICENSE",
@@ -81,8 +81,10 @@
         "CURRENT STATE"
       ],
       "links_external": 0,
+      "links_site_absolute": [],
       "links_internal": [],
       "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
       "code_fences": 1,
       "table_rows": 0,
       "checkboxes": {
@@ -108,13 +110,16 @@
         "Sonnet"
       ],
       "links_external": 1,
+      "links_site_absolute": [],
       "links_internal": [
         {
           "target": "PHILOSOPHY.md",
-          "resolves": true
+          "resolves": true,
+          "outside_checkout": false
         }
       ],
       "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
       "code_fences": 0,
       "table_rows": 0,
       "checkboxes": {
@@ -134,8 +139,10 @@
         "TEST"
       ],
       "links_external": 0,
+      "links_site_absolute": [],
       "links_internal": [],
       "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
       "code_fences": 2,
       "table_rows": 8,
       "checkboxes": {
@@ -199,8 +206,10 @@
         "ACKNOWLEDGMENT"
       ],
       "links_external": 0,
+      "links_site_absolute": [],
       "links_internal": [],
       "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
       "code_fences": 0,
       "table_rows": 0,
       "checkboxes": {
@@ -229,8 +238,10 @@
         "Contact"
       ],
       "links_external": 0,
+      "links_site_absolute": [],
       "links_internal": [],
       "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
       "code_fences": 0,
       "table_rows": 0,
       "checkboxes": {
@@ -261,29 +272,36 @@
         "LICENSE"
       ],
       "links_external": 6,
+      "links_site_absolute": [],
       "links_internal": [
         {
           "target": "docs/CONTRIBUTING.md",
-          "resolves": true
+          "resolves": true,
+          "outside_checkout": false
         },
         {
           "target": "docs/BUILD-SEQUENCE.md",
-          "resolves": true
+          "resolves": true,
+          "outside_checkout": false
         },
         {
           "target": "HANDS.md",
-          "resolves": true
+          "resolves": true,
+          "outside_checkout": false
         },
         {
           "target": "LICENSE",
-          "resolves": true
+          "resolves": true,
+          "outside_checkout": false
         },
         {
           "target": "PHILOSOPHY.md",
-          "resolves": true
+          "resolves": true,
+          "outside_checkout": false
         }
       ],
       "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
       "code_fences": 4,
       "table_rows": 0,
       "checkboxes": {
