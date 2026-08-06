@@ -1,37 +1,97 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { getName } from '@tauri-apps/api/app';
 	import { themeStore } from '$lib/stores/theme.svelte';
 	import { PRESET_THEMES } from '$lib/theme/theme';
 	import GradientPulse from '$lib/components/GradientPulse.svelte';
+	import {
+		beginWalk,
+		current,
+		isDone,
+		enter,
+		toggleChoice,
+		skip,
+		advance,
+		dots,
+		completion,
+		type StepDef,
+		type Walk
+	} from '$lib/epagoge';
 
-	let screen = $state(0);
-	let vesselName = $state('');
-	let selectedPreset = $state('dark');
+	// The wordmark law, learned from Bubbles: the title reads the app's OWN
+	// name (productName in tauri.conf.json is the single truth), so a rename
+	// never gets chased into the chrome. Outside Tauri the fallback stands.
+	let appName = $state('Echoes');
+	getName()
+		.then((n) => { appName = n.replace(/^Resonance\s+/i, ''); })
+		.catch(() => {});
 
-	const themeOptions = [
-		{ key: 'dark', icon: '🌙', name: 'Dark', accent: PRESET_THEMES.dark.accentColor },
-		{ key: 'warm', icon: '🔥', name: 'Warm', accent: PRESET_THEMES.warm.accentColor },
-		{ key: 'ocean', icon: '🌊', name: 'Ocean', accent: PRESET_THEMES.ocean.accentColor }
+	// THE WALK — this door consumes the-epagoge (the spring's leading-in;
+	// Compass its first consumer, Bubbles the road-prover). The app brings
+	// the particulars into the walk's slots; the walk owns the flow, the
+	// dots, the honest record. ALL presets are offered at the door —
+	// derived from the shelf itself, never hardcoded, so a new preset
+	// appears here the day it is born (KP's word: "it adds the other
+	// available styles choices").
+	const PRESET_ICONS: Record<string, string> = {
+		dark: '🌙',
+		warm: '🔥',
+		ocean: '🌊',
+		forest: '🌲',
+		sunset: '🌅',
+		amoled: '🌑'
+	};
+
+	// THE KEY LAW: the key is stored ("amoled"); the display name
+	// (presetName, "AMOLED Black") is dress and appears nowhere in the record.
+	const themeOffers = Object.entries(PRESET_THEMES).map(([key, t]) => ({
+		key,
+		name: t.presetName,
+		icon: PRESET_ICONS[key] ?? '✨',
+		accent: t.accentColor
+	}));
+
+	const STEPS: StepDef[] = [
+		{ id: 'welcome', kind: 'entry' },
+		{ id: 'how', kind: 'threshold' },
+		{ id: 'theme', kind: 'choose', atMost: 1, preset: ['dark'], offers: themeOffers }
 	];
 
-	function begin() {
-		if (vesselName.trim()) {
-			localStorage.setItem('resonance-echoes-vessel-name', vesselName.trim());
-		}
-		screen = 1;
+	const begun = beginWalk(STEPS);
+	let walk = $state<Walk>(begun.walk ?? beginWalk([{ id: 'welcome', kind: 'entry' }]).walk!);
+	const beginTrouble = begun.trouble;
+
+	let vesselName = $state('');
+
+	const step = $derived(current(walk));
+	const progress = $derived(dots(walk));
+	const chosenTheme = $derived((walk.choices['theme'] ?? ['dark'])[0] ?? 'dark');
+
+	function pickTheme(key: string) {
+		walk = toggleChoice(walk, key);
+		// Live preview is dress, not record — the walk holds the key.
+		themeStore.setPreset((walk.choices['theme'] ?? ['dark'])[0] ?? 'dark');
 	}
 
-	function next() {
-		screen = 2;
+	function onward() {
+		if (step?.kind === 'entry') walk = enter(walk, vesselName);
+		walk = advance(walk);
+		if (isDone(walk)) finish();
 	}
 
-	function selectTheme(key: string) {
-		selectedPreset = key;
-		themeStore.setPreset(key);
+	function pass() {
+		walk = skip(walk);
+		if (isDone(walk)) finish();
 	}
 
-	function enterEchoes() {
-		themeStore.setPreset(selectedPreset);
+	// THE DOORWAY LAW: completion hands over what was given and what was
+	// not; the app stores it under its own roof, and every answer stays
+	// changeable in Settings.
+	function finish() {
+		const done = completion(walk);
+		const name = done.entries['welcome'];
+		if (name) localStorage.setItem('resonance-echoes-vessel-name', name);
+		themeStore.setPreset((done.choices['theme'] ?? ['dark'])[0] ?? 'dark');
 		localStorage.setItem('onboarding_complete', 'true');
 		goto('/');
 	}
@@ -39,8 +99,12 @@
 
 <div class="onboarding" style="padding-top: env(safe-area-inset-top, 0px);">
 
-	{#if screen === 0}
-		<!-- Screen 1: Welcome -->
+	{#if beginTrouble}
+		<!-- Trouble is data, told never thrown — and it should never stand here:
+		     the steps are static. Honest anyway. -->
+		<div class="screen"><div class="screen-body"><p class="ob-sub">{beginTrouble}</p></div></div>
+	{:else if step?.id === 'welcome'}
+		<!-- Step 1: Welcome — the entry -->
 		<div class="screen">
 			<div class="screen-body">
 				<div class="sigil-wrap">
@@ -50,7 +114,7 @@
 				</div>
 
 				<div class="header-text">
-					<h1 class="ob-title">Welcome to Echoes</h1>
+					<h1 class="ob-title">Welcome to {appName}</h1>
 					<p class="ob-sub">Your space to log anything with feeling. All stored on your device. No accounts. No cloud.</p>
 				</div>
 
@@ -70,19 +134,26 @@
 			</div>
 
 			<div class="screen-actions">
-				<button class="btn-primary" onclick={begin}>Begin</button>
-				<button class="btn-skip" onclick={begin}>Skip</button>
+				<button class="btn-primary" onclick={onward}>Begin</button>
+				<button class="btn-skip" onclick={pass}>Skip</button>
 			</div>
 
-			<div class="progress" aria-label="Step 1 of 3">
-				{#each [0, 1, 2] as i}
-					<div class="dot" class:active={screen === i} class:done={screen > i}></div>
+			<div
+				class="progress"
+				role="progressbar"
+				aria-label={progress.label}
+				aria-valuenow={progress.valuenow}
+				aria-valuemin={progress.valuemin}
+				aria-valuemax={progress.valuemax}
+			>
+				{#each progress.states as s, i (i)}
+					<div class="dot" class:active={s === 'active'} class:done={s === 'past'}></div>
 				{/each}
 			</div>
 		</div>
 
-	{:else if screen === 1}
-		<!-- Screen 2: How it works -->
+	{:else if step?.id === 'how'}
+		<!-- Step 2: How it works — a threshold, passage only -->
 		<div class="screen">
 			<div class="screen-body">
 				<h1 class="ob-title">How it works</h1>
@@ -113,31 +184,38 @@
 			</div>
 
 			<div class="screen-actions">
-				<button class="btn-primary" onclick={next}>Continue</button>
-				<button class="btn-skip" onclick={next}>Skip</button>
+				<button class="btn-primary" onclick={onward}>Continue</button>
+				<button class="btn-skip" onclick={pass}>Skip</button>
 			</div>
 
-			<div class="progress" aria-label="Step 2 of 3">
-				{#each [0, 1, 2] as i}
-					<div class="dot" class:active={screen === i} class:done={screen > i}></div>
+			<div
+				class="progress"
+				role="progressbar"
+				aria-label={progress.label}
+				aria-valuenow={progress.valuenow}
+				aria-valuemin={progress.valuemin}
+				aria-valuemax={progress.valuemax}
+			>
+				{#each progress.states as s, i (i)}
+					<div class="dot" class:active={s === 'active'} class:done={s === 'past'}></div>
 				{/each}
 			</div>
 		</div>
 
 	{:else}
-		<!-- Screen 3: Theme -->
+		<!-- Step 3: Theme — every preset the shelf holds, live-preview cards -->
 		<div class="screen">
 			<div class="screen-body">
 				<h1 class="ob-title">Choose your atmosphere</h1>
 
 				<div class="theme-grid">
-					{#each themeOptions as opt}
+					{#each themeOffers as opt (opt.key)}
 						<button
 							class="theme-card"
-							class:selected={selectedPreset === opt.key}
+							class:selected={chosenTheme === opt.key}
 							style="--card-accent: {opt.accent};"
-							onclick={() => selectTheme(opt.key)}
-							aria-pressed={selectedPreset === opt.key}
+							onclick={() => pickTheme(opt.key)}
+							aria-pressed={chosenTheme === opt.key}
 						>
 							<span class="theme-icon">{opt.icon}</span>
 							<span class="theme-name">{opt.name}</span>
@@ -145,16 +223,26 @@
 						</button>
 					{/each}
 				</div>
+
+				<!-- The doorway line — the leading-in never locks a door. -->
+				<p class="name-hint">You can change this anytime in Settings.</p>
 			</div>
 
 			<div class="screen-actions">
-				<button class="btn-primary" onclick={enterEchoes}>Enter Echoes</button>
-				<button class="btn-skip" onclick={enterEchoes}>Skip</button>
+				<button class="btn-primary" onclick={onward}>Enter {appName}</button>
+				<button class="btn-skip" onclick={pass}>Skip</button>
 			</div>
 
-			<div class="progress" aria-label="Step 3 of 3">
-				{#each [0, 1, 2] as i}
-					<div class="dot" class:active={screen === i} class:done={screen > i}></div>
+			<div
+				class="progress"
+				role="progressbar"
+				aria-label={progress.label}
+				aria-valuenow={progress.valuenow}
+				aria-valuemin={progress.valuemin}
+				aria-valuemax={progress.valuemax}
+			>
+				{#each progress.states as s, i (i)}
+					<div class="dot" class:active={s === 'active'} class:done={s === 'past'}></div>
 				{/each}
 			</div>
 		</div>
@@ -188,7 +276,7 @@
 		gap: 1.75rem;
 	}
 
-	/* ── Screen 1: Welcome ── */
+	/* ── Step 1: Welcome ── */
 	.sigil-wrap {
 		display: flex;
 		justify-content: center;
@@ -258,7 +346,7 @@
 		margin: 0;
 	}
 
-	/* ── Screen 2: How it works ── */
+	/* ── Step 2: How it works ── */
 	.how-cards {
 		display: flex;
 		flex-direction: column;
@@ -298,11 +386,17 @@
 		line-height: 1.5;
 	}
 
-	/* ── Screen 3: Theme ── */
+	/* ── Step 3: Theme — six cards, 2 columns on a phone, 3 on wider land ── */
 	.theme-grid {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		gap: 0.75rem;
+	}
+
+	@media (min-width: 640px) {
+		.theme-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 
 	.theme-card {
@@ -366,7 +460,7 @@
 	}
 	.btn-skip:hover { color: var(--text-secondary); }
 
-	/* ── Progress dots ── */
+	/* ── Progress dots — derived by the walk, drawn by the app ── */
 	.progress {
 		display: flex;
 		justify-content: center;

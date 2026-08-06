@@ -165,3 +165,31 @@
 - [ ] Descriptive, never a finding: the only `#[tauri::command]` is `greet`, the
       scaffold's placeholder. Echoes has no custom Rust commands — the data path
       is frontend → `tauri-plugin-sql`, which is what makes rule 4 load-bearing
+
+---
+
+## THE REFINEMENT — 2026-08-06 (Fable 🎻 Continuo, at KP's ⚛ word: "bubbles first, as echoes will learn from some of what we already did in bubbles")
+
+- [x] **The menu wrapper replaced with the-cumdach**, consumed **by mirror**
+      (`src/lib/cumdach/`, SHA256 `7730A4C16E6FA044` — the same truth Compass,
+      Khorós, and Bubbles carry): flat door list by KP's ⚛ stroke, Settings as
+      the foot's one chrome door, the ComfortBar a declared 48px reserved edge
+      (the foot clears it), panels derived from the measured land, re-derived
+      on every resize/rotation. Dead `isMobile` state dropped at his word. The
+      wordmark now reads `getName()` — the lesson learned from Bubbles: a
+      rename never gets chased into the chrome.
+- [x] **SATTVA GAINED** at KP's ⚛ word ("echoes can gain sattva in this
+      process") — `/sattva` copied whole from Bubbles (self-contained: the
+      breath's verified math inline, reduced motion honored), `IconSattva`
+      joins the registry, the door stands above the foot: Home · Insights ·
+      Timer · Sattva ⌂ Settings.
+- [x] **The onboarding consumes the-epagoge**, **by mirror**
+      (`src/lib/epagoge/`, SHA256 `CBF19821CDCB4BA6`): the walk owns flow,
+      dots, and the honest record — and **all six presets are now offered at
+      the door** (dark · warm · ocean · forest · sunset · AMOLED Black),
+      derived from the shelf itself so a new preset appears the day it is
+      born; THE KEY LAW kept, skip lawful, the doorway line under the grid.
+- [x] **Gate: `npm run check` — 324 files · 0 errors · 0 warnings**, first
+      run. All uncommitted; rides KP's ⚛ sync word per the batch law.
+      (Both JSON configs scanned for the BOM landmine Bubbles carried —
+      echoes is clean.)

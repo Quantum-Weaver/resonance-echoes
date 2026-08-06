@@ -3,8 +3,9 @@
   import IconInsights from './IconInsights.svelte';
   import IconSettings from './IconSettings.svelte';
   import IconTimer from './IconTimer.svelte';
+  import IconSattva from './IconSattva.svelte';
 
-  export type IconName = 'home' | 'insights' | 'timer' | 'settings';
+  export type IconName = 'home' | 'insights' | 'timer' | 'settings' | 'sattva';
 
   let {
     name,
@@ -21,6 +22,7 @@
     'insights': IconInsights,
     'timer': IconTimer,
     'settings': IconSettings,
+    'sattva': IconSattva,
   };
 
   const Component = $derived(components[name]);
