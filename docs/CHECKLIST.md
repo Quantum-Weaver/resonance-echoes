@@ -193,3 +193,20 @@
       run. All uncommitted; rides KP's ⚛ sync word per the batch law.
       (Both JSON configs scanned for the BOM landmine Bubbles carried —
       echoes is clean.)
+
+---
+
+## ECHOES-SKY — 2026-08-08 (Fable 🎻 Continuo, at KP's ⚛ word: "echoes-sky"; the ruling from the Hearth's communications sitting: "this is echoes, tied into the sky facts")
+
+- [x] **the-sky consumed by mirror from the spring** (`src/lib/sky/`, SHA256
+      `E877BE1D66649548` — awen's `tools/the-sky` is the single editable
+      truth; one truth, three homes now: awen · hearth · echoes).
+      Compute-only by law: facts, never meanings.
+- [x] **Every echo wears its moment's sky — DERIVED, never stored:** the
+      timeline's cards carry a muted sky line (moon emoji + phase · the
+      wheel's next turning) computed from each echo's own timestamp.
+      Zero migration; **retroactive for every echo ever logged**; cached
+      per day so a long timeline stays light. What a moment's sky means
+      stays the vessel's own.
+- [x] **Gate: `npm run check` — 325 files · 0 errors · 0 warnings**, first
+      run. Uncommitted; rides KP's ⚛ sync word.

@@ -2,6 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { echoStore } from '$lib/stores/echo.svelte';
 	import { SENSES } from '$lib/data/senses';
+	import { readSky } from '$lib/sky';
 
 	// --- Filter state ---
 	let searchInput = $state('');
@@ -133,6 +134,27 @@
 		} catch {
 			quickLogging = false;
 		}
+	}
+
+	// The moment's sky — DERIVED from the echo's own timestamp, never
+	// stored (KP's ruling at the Hearth's communications sitting: "this is
+	// echoes, tied into the sky facts"). Facts only, compute-only by law —
+	// what a moment's sky means is the vessel's own. Retroactive for every
+	// echo ever logged; cached per day so a long timeline stays light.
+	const skyCache = new Map<string, string>();
+	function skyLine(timestamp: number): string {
+		const key = new Date(timestamp).toDateString();
+		let line = skyCache.get(key);
+		if (!line) {
+			const sky = readSky(new Date(timestamp));
+			const turn =
+				sky.season.next.daysUntil === 0
+					? `${sky.season.next.name} today`
+					: `${sky.season.next.name} in ${sky.season.next.daysUntil}d`;
+			line = `${sky.moon.emoji} ${sky.moon.phase} · ${turn}`;
+			skyCache.set(key, line);
+		}
+		return line;
 	}
 
 	function relativeTime(timestamp: number): string {
@@ -276,6 +298,7 @@
 						<div class="echo-meta">
 							<span class="sense-badge">{sense.emoji} {sense.name}{echo.subcategory ? ` · ${echo.subcategory}` : ''}</span>
 						</div>
+						<div class="sky-line">{skyLine(echo.timestamp)}</div>
 						<div class="echo-intensity">
 							{#each [1, 2, 3, 4, 5] as n}
 								<div class="dot" class:filled={n <= echo.intensity}></div>
@@ -559,6 +582,12 @@
 		display: flex;
 		gap: 0.25rem;
 		margin-top: 0.1rem;
+	}
+
+	.sky-line {
+		font-size: 0.68rem;
+		color: var(--text-muted);
+		opacity: 0.85;
 	}
 
 	.dot {
