@@ -47,6 +47,7 @@ No audio engine, no visualizer, no playlists — see "Differences from Compass" 
 4. Android: `capabilities/default.json` needs all four explicit `sql:allow-*` entries — `sql:default` alone grants zero operation access
 5. Android: no emoji or non-ASCII in SQL DEFAULT values (silent JNI failure)
 6. "Not Sure" is a valid answer everywhere — no forced categorization, ever
+7. Android: **16 KB page alignment** (Play requirement, Android 15+) — `.cargo/config.toml` at the repo root carries the linker flags, and **any mother-copy birth must take `.cargo/` along**; canon: `resonance-standards/docs/ANDROID-16KB-PAGES.md`
 
 Full patterns and known silent-failure modes: `docs/CLAUDE-CONTEXT.md`.
 
