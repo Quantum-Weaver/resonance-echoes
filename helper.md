@@ -10,7 +10,7 @@ npm run tauri android build
 ```
 
 Then sign and install:
-
+keytool -genkey -v -keystore resoance-echoes.keystore -alias echoes -keyalg RSA -keysize 2048 -validity 10000
 ```powershell
 & "C:\Users\audhd\AppData\Local\Android\Sdk\build-tools\37.0.0\apksigner.bat" sign --ks resonance-echoes.keystore --ks-key-alias resonance-echoes --out resonance-echoes-v1.0.0.apk src-tauri\gen\android\app\build\outputs\apk\universal\release\app-universal-release-unsigned.apk
 
