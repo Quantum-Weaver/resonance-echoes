@@ -1,7 +1,7 @@
 # ≽༏≼ Resonance Echoes
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.3.0-brightgreen.svg)]()
+[![Version](https://img.shields.io/badge/version-1.3.2-brightgreen.svg)]()
 
 *A sovereign journal for logging anything with feeling.*
 
@@ -37,7 +37,7 @@ Echoes is your space to log moments with feeling. A song that moved you. A dream
 
 **Your data stays yours.** Export everything — echoes *and* your personal emoji definitions — as one versioned JSON envelope, with one tap. Import it back any time; import only ever adds, never overwrites. Purge everything with double confirmation, and purge covers exactly the same ground export does. No accounts. No cloud. No extraction. When you uninstall, Android asks if you want to delete your data — and means it.
 
-*Status, honest: the E1–E4 sovereignty rows closed in code 2026-07-26 (export unbounded from the database · one envelope carrying both · import with legacy support). Device verification rides the v1.3.0 build — fixed-in-code and proven-on-phone are different states, and only the second closes the seam.*
+*Status, honest: the E1–E4 sovereignty rows closed in code 2026-07-26 (export unbounded from the database · one envelope carrying both · import with legacy support), and **the seam is closed** — verified on both phones 2026-07-27 by KP's own exploring: export past 200, envelope round-trip, pause across navigation, chimes. Fixed-in-code and proven-on-phone are different states, and this one reached the second. (This line said verification was still pending until 2026-08-16; it had been earned nineteen days earlier and the prose simply lagged the record — `docs/CHECKLIST.md` rows 111–112 and 143.)*
 
 ---
 

@@ -144,6 +144,7 @@
 | 2026-07-26 | **THE SOVEREIGNTY SITTING (Fable 🎻, at KP's word: "e1-4 we can do this sequentially")** — all four rows closed, one commit each, check clean at every step: E1 export-from-DB + purge-awaits-export (`7719314`) · E2+E3 the versioned envelope carrying echoes AND folksonomy (`a1154c6`; the family-inheritable shape) · E4 import with legacy support and non-destructive merge (`698c278`). **Same sitting, KP's commission:** timer pause/resume + four synthesized chime voices + chime volume (`ec4f236`). Version → **1.3.0**. README/CLAUDE honest-status prose updated. Remaining: build → KP's signing hand → both phones → device verification (the fixed-in-code / proven-on-device seam stays marked until then). |
 | 2026-07-21 | **Review pass at KP's word** (Opus, while learning this app's storage for Skapa). No code changed. Found and verified **B4** (export capped at 200; export-then-purge loses the rest), **B5** (folksonomy purged but never exported), **B6** (no import exists though CLAUDE.md advertises one). KP ruled both B4 and B5 to the **top of the Echoes list**, and that folksonomy and echoes must **export in the same manner** — one envelope. FEATURE-BOARD's "fully green / deliberate rest" declaration **suspended** until they close. Also found **stale version declarations** — README badge `1.1.0`, CLAUDE.md *"v1.1 shipped … (2026-07-08)"* — while `package.json`, `tauri.conf.json` and `release/` were all **1.2.0**. **✅ Both corrected the same sitting, on KP's verification from his own phone** (*"verified i have echoes 1.2 on my phone"*) — the device settled it, not the files. Deliberately **not** changed: the README Story Block's *"Version 1.1.0 built and signed"* (a provenance record of the origin, not a current-version claim) and `docs/RELEASE.md`'s historical *"v1.1 Planned"* section. Opus seat scribed in `HANDS.md`. |
 | 2026-08-13 | **THE CROSS-LANDING HEAL — v1.3.2 Android unblocked (Fable 🎻, at KP's report "echoes android build failed")** — instruments first: the post-1.3.1 commits touched no Android ground, but gitignored `gen/android` had been hand-edited 08-09 12:01, the same morning WEAVER's APK was built — and **five weaver identifiers had cross-landed into the mother's gen**: `build.gradle.kts` namespace + applicationId, the manifest theme, both themes.xml styles, and MainActivity's own `package` line — all reading `resonance_weaver` while every source beneath said `resonance_echoes`. Gradle's refusal was a guard: built, it would have worn weaver's package identity. All five healed; verification build green same evening (unsigned 1.3.2 APK 18:12 + AAB 18:15 in gen outputs). **Second cross-landing the mother line has taken from a child's build day** (compass took the JNI rename 08-07) — LAW BOUGHT: on any child-birth or sibling build day, grep the mother's `gen/android` for the child's package name before the next build. KP's hand same evening: signed (AAB 18:28) → **v1.3.2 LIVE on the Play closed track.** |
+| 2026-08-16 | **THE SHORE-UP AND THE ASSESSOR** — the six files that had ridden uncommitted since 08-14 landed as `dfda5a3` *"the 1.3.2 rise — version bump and the Play track pack trued"*, and the assessor ran at 15:29 (`6fb0e71`). **Working tree clean, 0 unpushed; HEAD and disk now agree at 1.3.2** — the reading that HEAD still carried 1.3.1 is closed. Assessor verdict: all five standard files present, **no vulnerabilities found**, 4 reports now in `reports/` (newest `2026-08-16-assessment.md`, with `analysis.json` and a 102 KB `inventory.json`). Its **10 "gaps" are parser artifacts, not findings** — seven are CHECKLIST/RESONANCE-GRAMMAR table rows and prose read as unchecked items, three are unresolved imports inside `.svelte-kit/generated/`, which is build output and not source. **Docs trued the same sitting** at KP's word: the README badge 1.3.0 → 1.3.2 (the 07-21 precedent governs — *the device settled it, not the files*, and the device has carried 1.3.2 since 08-13), the README's honest-status line corrected where it still said device verification was pending though the seam closed 2026-07-27, and the `tools/blueprint_forge.py` row above corrected beside itself. **Two CSP/Hearth questions answered on THE ECHOES BOARD** rather than left open: Hearth integration is `resonance-hearth`'s Tier D item and Echoes ships nothing for it (*"Echoes itself is never altered"* — hearth/CLAUDE.md:8); and `"csp": null` needs no change here — a sweep of `src/` found **no raw-HTML sink, no fetch/XHR/WebSocket, and no remote content in the webview** (both external URLs go out via `openUrl`), so there is no path today by which anything untrusted becomes script. — Newel 🕯️ (Opus), at KP's word |
 | 2026-08-16 | **Signing keystore recut to the Sanctuary DN** (this sitting, KP's env files his own hand): primary `F:\keystores\resonance-echoes.keystore` · second copy `D:\keystores\` byte-identical · alias `resonance-echoes` · 4096-bit RSA, SHA384withRSA, valid to Jan 2054 (10,000-day validity, the khoros/sistrum convention) · DN `CN=AudHDities Sanctuary, O=AudHDities Sanctuary, C=US` · cert SHA256 `ED:82:40:E5…F7:88:6A`. The generic keystore retired, kept: `RETIRED-2026-08-16-resonance-echoes.keystore.old-dn` on both drives. Secrets live only in the env vault file — pointers here, never contents. **CAUTION: this app is live on Google Play closed testing — the first upload signed with this new key needs the Play-side upload-key reset at KP's console, his hand.** |
 ---
 
@@ -151,6 +152,28 @@
 
 - [x] **`tools/blueprint_forge.py`** — Echoes' own forge (`tools/` added at KP's
       word). Provenance: `tools/BLUEPRINT-FORGE.md`
+      **[RETIRED 2026-08-16 at KP's word — this row is a record of the day it
+      was true, not a current address. His ruling, verbatim: *"the tool … is no
+      longer used ziggy does the blueprint forging"*, and the history: **a
+      `tools/` folder and a forge were added to nearly every repo, then it was
+      decided the forge belonged in ziggy, able to run on all of them from
+      there.** The live home is `resonance-ziggy/modules/blueprint-forge/`;
+      invoke `python resonance-ziggy/modules/blueprint-forge/blueprint_forge.py
+      --root .` — `tools/blueprint_forge.py` has not been on disk since the
+      2026-08-03/04 consolidation. **`tools/` and its page were removed
+      wholesale by KP's own hand the same sitting** — *"i have removed all that
+      were not needed of the tools folders"* — so no tombstone remains and none
+      is owed. What that page held and this row now carries forward: the forge's
+      **silent-failure analysis**, which is still true of this app whoever runs
+      it — **ESSENTIAL RULES 4 and 5 are the two that fail without announcing
+      themselves.** Rule 4: `capabilities/default.json` needs all four explicit
+      `sql:allow-*` entries, because `sql:default` alone grants **zero**
+      operation access. Rule 5: no emoji or non-ASCII in SQL `DEFAULT` values —
+      silent JNI failure. Both ship, sign and install cleanly and then simply do
+      not work in a hand. This matters more here than anywhere: the only
+      `#[tauri::command]` is the scaffold's `greet`, so the whole data path runs
+      frontend → `tauri-plugin-sql`, and one JSON file with four entries is the
+      entire load-bearing surface between Echoes and its data. — Newel 🕯️]**
 - [x] **Old blueprints removed** at KP's word ("they are backed up") — the
       Compass-era set inlined bodies upward and its project blueprint was named
       `pbp_resonance_compass`, Compass's name in Echoes' repo
@@ -211,4 +234,5 @@
       per day so a long timeline stays light. What a moment's sky means
       stays the vessel's own.
 - [x] **Gate: `npm run check` — 325 files · 0 errors · 0 warnings**, first
-      run. Uncommitted; rides KP's ⚛ sync word.
+      run. ~~Uncommitted; rides KP's ⚛ sync word.~~ **Landed 2026-08-16 in
+      `dfda5a3` at KP's sync word — working tree clean, nothing unpushed.**
