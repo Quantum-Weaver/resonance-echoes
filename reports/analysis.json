@@ -1,6 +1,6 @@
 {
   "project": "resonance-echoes",
-  "analyzed_at": "2026-07-04T20:40:01.427839+00:00",
+  "analyzed_at": "2026-08-16T20:29:43.331410+00:00",
   "standards_compliance": {
     "readme": true,
     "license": true,
@@ -8,40 +8,36 @@
     "claude_md": true,
     "gitignore": true
   },
-  "vulnerabilities": [
-    {
-      "severity": "high",
-      "issue": "Keystore/credential file committed: resonance-echoes.keystore"
-    }
-  ],
+  "vulnerabilities": [],
   "gaps": [
     "Marked incomplete in docs/CHECKLIST.md: - \u2b1c Pending",
     "Marked incomplete in docs/CHECKLIST.md: | 2026-06-28 | Phase 0 complete. ComfortBar, Sidebar, GradientPulse, theme store, senses data, icon set. npm run check: ",
     "Marked incomplete in docs/CHECKLIST.md: | 2026-06-28 | Phase 1 complete. echoStore (Svelte 5 $state + SQLite), Echo interface updated, DB migration v2, /add for",
+    "Unchecked checklist item in docs/CHECKLIST.md: Descriptive, never a finding: the only `#[tauri::command]` is `greet`, the",
     "Marked incomplete in docs/RESONANCE-GRAMMAR.md: you are becomes visible \u2014 not built, not generated, but illuminated.*",
     "Possibly broken import in .svelte-kit/generated/client/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file",
     "Possibly broken import in .svelte-kit/generated/client-optimized/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file",
     "Possibly broken import in .svelte-kit/generated/server/internal.js: '../../../node_modules/@sveltejs/kit/src/runtime/shared-server.js' does not resolve to a known file",
-    "11 file(s) over 100KB were flagged by the reader and not fully read by the analyzer: .svelte-kit/output/client/tauri.svg, .svelte-kit/output/server/index.js, release/resonance-echoes-v1.0.0.apk.idsig, src-tauri/Cargo.lock, src-tauri/gen/schemas/acl-manifests.json, src-tauri/gen/schemas/android-schema.json, src-tauri/gen/schemas/desktop-schema.json, src-tauri/gen/schemas/mobile-schema.json, src-tauri/gen/schemas/windows-schema.json, src-tauri/icons/icon.icns, static/tauri.svg",
+    "20 file(s) over 100KB were flagged by the reader and not fully read by the analyzer: .svelte-kit/output/client/tauri.svg, .svelte-kit/output/server/index.js, release/Resonance Echoes_1.1.0_x64_en-US.msi, release/Resonance Echoes_1.2.0_x64_en-US.msi, release/Resonance Echoes_1.3.0_x64_en-US.msi, release/Resonance Echoes_1.3.1_x64_en-US.msi, release/Resonance Echoes_1.3.2_x64_en-US.msi, release/resonance-echoes-v1.1.0.apk.idsig, release/resonance-echoes-v1.2.0.apk.idsig, release/resonance-echoes-v1.3.0.apk.idsig, release/resonance-echoes-v1.3.1.apk.idsig, release/resonance-echoes-v1.3.2.apk.idsig, src-tauri/Cargo.lock, src-tauri/gen/schemas/acl-manifests.json, src-tauri/gen/schemas/android-schema.json, src-tauri/gen/schemas/desktop-schema.json, src-tauri/gen/schemas/mobile-schema.json, src-tauri/gen/schemas/windows-schema.json, src-tauri/icons/icon.icns, static/tauri.svg",
     "No CI/CD configuration found"
   ],
   "test_readiness": "0 test file(s) found. Detected framework(s): jest.",
   "recommendations": [
     {
       "priority": 1,
-      "action": "Fix vulnerability: Keystore/credential file committed: resonance-echoes.keystore"
-    },
-    {
-      "priority": 2,
       "action": "Marked incomplete in docs/CHECKLIST.md: - \u2b1c Pending"
     },
     {
-      "priority": 3,
+      "priority": 2,
       "action": "Marked incomplete in docs/CHECKLIST.md: | 2026-06-28 | Phase 0 complete. ComfortBar, Sidebar, GradientPulse, theme store, senses data, icon set. npm run check: "
     },
     {
-      "priority": 4,
+      "priority": 3,
       "action": "Marked incomplete in docs/CHECKLIST.md: | 2026-06-28 | Phase 1 complete. echoStore (Svelte 5 $state + SQLite), Echo interface updated, DB migration v2, /add for"
+    },
+    {
+      "priority": 4,
+      "action": "Unchecked checklist item in docs/CHECKLIST.md: Descriptive, never a finding: the only `#[tauri::command]` is `greet`, the"
     },
     {
       "priority": 5,
@@ -61,7 +57,7 @@
     },
     {
       "priority": 9,
-      "action": "11 file(s) over 100KB were flagged by the reader and not fully read by the analyzer: .svelte-kit/output/client/tauri.svg, .svelte-kit/output/server/index.js, release/resonance-echoes-v1.0.0.apk.idsig, src-tauri/Cargo.lock, src-tauri/gen/schemas/acl-manifests.json, src-tauri/gen/schemas/android-schema.json, src-tauri/gen/schemas/desktop-schema.json, src-tauri/gen/schemas/mobile-schema.json, src-tauri/gen/schemas/windows-schema.json, src-tauri/icons/icon.icns, static/tauri.svg"
+      "action": "20 file(s) over 100KB were flagged by the reader and not fully read by the analyzer: .svelte-kit/output/client/tauri.svg, .svelte-kit/output/server/index.js, release/Resonance Echoes_1.1.0_x64_en-US.msi, release/Resonance Echoes_1.2.0_x64_en-US.msi, release/Resonance Echoes_1.3.0_x64_en-US.msi, release/Resonance Echoes_1.3.1_x64_en-US.msi, release/Resonance Echoes_1.3.2_x64_en-US.msi, release/resonance-echoes-v1.1.0.apk.idsig, release/resonance-echoes-v1.2.0.apk.idsig, release/resonance-echoes-v1.3.0.apk.idsig, release/resonance-echoes-v1.3.1.apk.idsig, release/resonance-echoes-v1.3.2.apk.idsig, src-tauri/Cargo.lock, src-tauri/gen/schemas/acl-manifests.json, src-tauri/gen/schemas/android-schema.json, src-tauri/gen/schemas/desktop-schema.json, src-tauri/gen/schemas/mobile-schema.json, src-tauri/gen/schemas/windows-schema.json, src-tauri/icons/icon.icns, static/tauri.svg"
     },
     {
       "priority": 10,
