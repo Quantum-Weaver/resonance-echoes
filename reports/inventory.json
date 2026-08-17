@@ -1,7 +1,7 @@
 {
   "project": "resonance-echoes",
-  "scanned_at": "2026-08-16T20:29:43.037380+00:00",
-  "total_files": 498,
+  "scanned_at": "2026-08-17T22:21:27.010917+00:00",
+  "total_files": 499,
   "files": [
     {
       "path": ".cargo/config.toml",
@@ -21,7 +21,7 @@
       "path": ".gitignore",
       "type": "config",
       "language": "unknown",
-      "lines": 55,
+      "lines": 63,
       "description": ".gitignore"
     },
     {
@@ -1430,7 +1430,7 @@
       "path": "docs/CHECKLIST.md",
       "type": "doc",
       "language": "markdown",
-      "lines": 214,
+      "lines": 238,
       "description": "RESONANCE ECHOES \u2014 MASTER CHECKLIST"
     },
     {
@@ -1752,17 +1752,24 @@
       "description": "Resonance Echoes \u2014 Assessment Report"
     },
     {
+      "path": "reports/2026-08-16-assessment.md",
+      "type": "doc",
+      "language": "markdown",
+      "lines": 47,
+      "description": "Resonance Echoes \u2014 Assessment Report"
+    },
+    {
       "path": "reports/analysis.json",
       "type": "config",
       "language": "json",
-      "lines": 79,
+      "lines": 75,
       "description": "Analysis"
     },
     {
       "path": "reports/inventory.json",
       "type": "config",
       "language": "json",
-      "lines": 2605,
+      "lines": 3558,
       "description": "Inventory"
     },
     {
@@ -1958,14 +1965,14 @@
       "path": "src/lib/cosmic/effects.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 493,
+      "lines": 636,
       "description": "============================================================================"
     },
     {
       "path": "src/lib/cosmic/index.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 369,
+      "lines": 425,
       "description": "====================================================="
     },
     {
@@ -1986,14 +1993,21 @@
       "path": "src/lib/cosmic/motion.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 845,
+      "lines": 855,
       "description": "============================================================================"
     },
     {
       "path": "src/lib/cosmic/positioning.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 683,
+      "lines": 871,
+      "description": "============================================================================"
+    },
+    {
+      "path": "src/lib/cosmic/solids.ts",
+      "type": "source",
+      "language": "typescript",
+      "lines": 503,
       "description": "============================================================================"
     },
     {
@@ -3489,13 +3503,6 @@
       "description": "Tauri doesn't have a Node.js server to do proper SSR"
     },
     {
-      "path": "tools/BLUEPRINT-FORGE.md",
-      "type": "doc",
-      "language": "markdown",
-      "lines": 61,
-      "description": "blueprint_forge.py \u2014 Echoes'"
-    },
-    {
       "path": "tsconfig.json",
       "type": "config",
       "language": "json",
@@ -3512,7 +3519,7 @@
   ],
   "by_type": {
     "config": 77,
-    "source": 223,
+    "source": 224,
     "binary": 133,
     "unknown": 40,
     "doc": 25
@@ -3521,7 +3528,7 @@
     "toml": 3,
     "json": 68,
     "unknown": 179,
-    "typescript": 32,
+    "typescript": 33,
     "javascript": 103,
     "svelte": 19,
     "css": 39,

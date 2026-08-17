@@ -1,6 +1,6 @@
 {
   "project": "resonance-echoes",
-  "analyzed_at": "2026-08-16T20:29:43.331410+00:00",
+  "analyzed_at": "2026-08-17T22:21:27.324128+00:00",
   "standards_compliance": {
     "readme": true,
     "license": true,
@@ -13,8 +13,10 @@
     "Marked incomplete in docs/CHECKLIST.md: - \u2b1c Pending",
     "Marked incomplete in docs/CHECKLIST.md: | 2026-06-28 | Phase 0 complete. ComfortBar, Sidebar, GradientPulse, theme store, senses data, icon set. npm run check: ",
     "Marked incomplete in docs/CHECKLIST.md: | 2026-06-28 | Phase 1 complete. echoStore (Svelte 5 $state + SQLite), Echo interface updated, DB migration v2, /add for",
+    "Marked incomplete in docs/CHECKLIST.md: | 2026-08-16 | **THE SHORE-UP AND THE ASSESSOR** \u2014 the six files that had ridden uncommitted since 08-14 landed as `dfda",
     "Unchecked checklist item in docs/CHECKLIST.md: Descriptive, never a finding: the only `#[tauri::command]` is `greet`, the",
     "Marked incomplete in docs/RESONANCE-GRAMMAR.md: you are becomes visible \u2014 not built, not generated, but illuminated.*",
+    "Marked incomplete in README.md: *Status, honest: the E1\u2013E4 sovereignty rows closed in code 2026-07-26 (export unbounded from the database \u00b7 one envelope",
     "Possibly broken import in .svelte-kit/generated/client/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file",
     "Possibly broken import in .svelte-kit/generated/client-optimized/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file",
     "Possibly broken import in .svelte-kit/generated/server/internal.js: '../../../node_modules/@sveltejs/kit/src/runtime/shared-server.js' does not resolve to a known file",
@@ -37,31 +39,31 @@
     },
     {
       "priority": 4,
-      "action": "Unchecked checklist item in docs/CHECKLIST.md: Descriptive, never a finding: the only `#[tauri::command]` is `greet`, the"
+      "action": "Marked incomplete in docs/CHECKLIST.md: | 2026-08-16 | **THE SHORE-UP AND THE ASSESSOR** \u2014 the six files that had ridden uncommitted since 08-14 landed as `dfda"
     },
     {
       "priority": 5,
-      "action": "Marked incomplete in docs/RESONANCE-GRAMMAR.md: you are becomes visible \u2014 not built, not generated, but illuminated.*"
+      "action": "Unchecked checklist item in docs/CHECKLIST.md: Descriptive, never a finding: the only `#[tauri::command]` is `greet`, the"
     },
     {
       "priority": 6,
-      "action": "Possibly broken import in .svelte-kit/generated/client/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file"
+      "action": "Marked incomplete in docs/RESONANCE-GRAMMAR.md: you are becomes visible \u2014 not built, not generated, but illuminated.*"
     },
     {
       "priority": 7,
-      "action": "Possibly broken import in .svelte-kit/generated/client-optimized/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file"
+      "action": "Marked incomplete in README.md: *Status, honest: the E1\u2013E4 sovereignty rows closed in code 2026-07-26 (export unbounded from the database \u00b7 one envelope"
     },
     {
       "priority": 8,
-      "action": "Possibly broken import in .svelte-kit/generated/server/internal.js: '../../../node_modules/@sveltejs/kit/src/runtime/shared-server.js' does not resolve to a known file"
+      "action": "Possibly broken import in .svelte-kit/generated/client/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file"
     },
     {
       "priority": 9,
-      "action": "20 file(s) over 100KB were flagged by the reader and not fully read by the analyzer: .svelte-kit/output/client/tauri.svg, .svelte-kit/output/server/index.js, release/Resonance Echoes_1.1.0_x64_en-US.msi, release/Resonance Echoes_1.2.0_x64_en-US.msi, release/Resonance Echoes_1.3.0_x64_en-US.msi, release/Resonance Echoes_1.3.1_x64_en-US.msi, release/Resonance Echoes_1.3.2_x64_en-US.msi, release/resonance-echoes-v1.1.0.apk.idsig, release/resonance-echoes-v1.2.0.apk.idsig, release/resonance-echoes-v1.3.0.apk.idsig, release/resonance-echoes-v1.3.1.apk.idsig, release/resonance-echoes-v1.3.2.apk.idsig, src-tauri/Cargo.lock, src-tauri/gen/schemas/acl-manifests.json, src-tauri/gen/schemas/android-schema.json, src-tauri/gen/schemas/desktop-schema.json, src-tauri/gen/schemas/mobile-schema.json, src-tauri/gen/schemas/windows-schema.json, src-tauri/icons/icon.icns, static/tauri.svg"
+      "action": "Possibly broken import in .svelte-kit/generated/client-optimized/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file"
     },
     {
       "priority": 10,
-      "action": "No CI/CD configuration found"
+      "action": "Possibly broken import in .svelte-kit/generated/server/internal.js: '../../../node_modules/@sveltejs/kit/src/runtime/shared-server.js' does not resolve to a known file"
     },
     {
       "priority": 11,
