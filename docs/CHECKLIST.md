@@ -236,3 +236,9 @@
 - [x] **Gate: `npm run check` — 325 files · 0 errors · 0 warnings**, first
       run. ~~Uncommitted; rides KP's ⚛ sync word.~~ **Landed 2026-08-16 in
       `dfda5a3` at KP's sync word — working tree clean, nothing unpushed.**
+
+---
+
+## STANDARDS + HANDS CHECK — 2026-08-19 (a hand of the Promenade lamp's signing fleet, claude-fable-5)
+
+- [x] 2026-08-19 · standards checked (gaps: 1 — CLAUDE.md holds no §Standards declaration; README.md §Development Standards carries it) · HANDS.md already signed (Fable 🎻, Claude Fable 5, 2026-07-09; Opus 2026-07-21 and Sonnet 2026-07-20 beside) · a hand of the Promenade lamp's signing fleet, claude-fable-5 · rides the ⚛ sync word.
