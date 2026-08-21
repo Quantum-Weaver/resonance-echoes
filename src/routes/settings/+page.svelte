@@ -52,6 +52,12 @@
 		{ key: 'amoled' as const, label: '⚫ AMOLED' }
 	];
 
+	const tintLevels = [
+		{ key: 'off' as const, label: 'Off' },
+		{ key: 'subtle' as const, label: 'Subtle' },
+		{ key: 'full' as const, label: 'Full' }
+	];
+
 	const fontSizes = [
 		{ key: 'small' as const, label: 'Small' },
 		{ key: 'medium' as const, label: 'Medium' },
@@ -243,6 +249,19 @@
 						class="font-btn"
 						class:active={themeStore.config.mode === key}
 						onclick={() => themeStore.setMode(key)}
+					>{label}</button>
+				{/each}
+			</div>
+		</div>
+
+		<div class="font-row">
+			<span class="font-label">Background tint</span>
+			<div class="font-btns" role="group" aria-label="Background tint">
+				{#each tintLevels as { key, label }}
+					<button
+						class="font-btn"
+						class:active={themeStore.config.tint === key}
+						onclick={() => themeStore.setTint(key)}
 					>{label}</button>
 				{/each}
 			</div>

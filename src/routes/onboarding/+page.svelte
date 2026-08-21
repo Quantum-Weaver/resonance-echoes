@@ -109,7 +109,7 @@
 			<div class="screen-body">
 				<div class="sigil-wrap">
 					<GradientPulse pulse={true}>
-						<div class="sigil">🧭</div>
+						<div class="sigil">🎻</div>
 					</GradientPulse>
 				</div>
 

@@ -22,7 +22,7 @@ KP tests every phase before merge.
 **Pricing: FREE everywhere, forever** — one-way and intentional. The public
 listing waits to publish **simultaneously with Compass**, only after the rebuilt
 AudHDities site is live (the Launch Sequence gate). Store pack:
-`docs/PLAY-TRACK.md` + the `play-track` skill.
+`docs/listings/PLAY-TRACK.md` + the `play-track` skill.
 
 **The law bought 2026-08-13** (`docs/CHECKLIST.md`, the evening it was paid for):
 on any child-birth or sibling build day, grep the mother's `gen/android` for the
@@ -41,13 +41,12 @@ rename 08-07, five `resonance_weaver` identifiers 08-09. Ritual: `child-builds`.
 7. Android: **16 KB page alignment** (Play requirement, Android 15+) — `.cargo/config.toml` at the repo root carries the linker flags, and **any mother-copy birth must take `.cargo/` along**
 
 4 · 5 · 7 are silent-failure wards and stay at the door; their canon is the
-`android-tauri` skill. Full patterns: `docs/CLAUDE-CONTEXT.md`.
+`android-tauri` skill.
 
 ## Structure
 
 The forge's map: `docs/blueprints/pbp.ai.json` — regenerate, never hand-draw a
-tree here. No audio engine, no visualizer, no playlists — see "Differences from
-Compass" in `docs/CLAUDE-CONTEXT.md`.
+tree here. No audio engine, no visualizer, no playlists.
 
 ## Tools
 

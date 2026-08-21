@@ -108,7 +108,7 @@ src/
 └── app.css
 ```
 
-See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for the build methodology and [BUILD-SEQUENCE.md](docs/BUILD-SEQUENCE.md) for the phase-by-phase development history.
+See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for the build methodology. The phase-by-phase development history rests at [docs/archive/BUILD-SEQUENCE-2026-08-21.md](docs/archive/BUILD-SEQUENCE-2026-08-21.md) — retired 2026-08-21, the build being done.
 
 **Who builds this:** a named collaboration of human and AI voices — see [HANDS.md](HANDS.md) (**The Hands**), each voice credited with its own scribed notes. Every commit's `Co-authored-by` trailers name the specific voices that shaped it.
 
