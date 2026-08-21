@@ -1,7 +1,7 @@
 {
   "project": "resonance-echoes",
-  "scanned_at": "2026-08-17T22:21:27.010917+00:00",
-  "total_files": 499,
+  "scanned_at": "2026-08-21T20:31:05.659033+00:00",
+  "total_files": 561,
   "files": [
     {
       "path": ".cargo/config.toml",
@@ -9,6 +9,13 @@
       "language": "toml",
       "lines": 11,
       "description": "Android 16 KB memory-page-size support (Play requirement for Android 15+"
+    },
+    {
+      "path": ".claude/CLAUDE.md",
+      "type": "doc",
+      "language": "markdown",
+      "lines": 8,
+      "description": "CLAUDE.md -- house commit rule"
     },
     {
       "path": ".claude/settings.json",
@@ -28,7 +35,7 @@
       "path": ".svelte-kit/ambient.d.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 410,
+      "lines": 414,
       "description": "this file is generated \u2014 do not edit it"
     },
     {
@@ -235,7 +242,7 @@
       "description": "Manifest"
     },
     {
-      "path": ".svelte-kit/output/client/_app/immutable/assets/0.8OtJJUfI.css",
+      "path": ".svelte-kit/output/client/_app/immutable/assets/0.DL8Lm351.css",
       "type": "source",
       "language": "css",
       "lines": 1,
@@ -291,20 +298,6 @@
       "description": "8.BOz1HCTp"
     },
     {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/1h3k4WWk.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "1h3k4WWk"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/480PmIL4.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "480PmIL4"
-    },
-    {
       "path": ".svelte-kit/output/client/_app/immutable/chunks/B8yTE34F.js",
       "type": "source",
       "language": "javascript",
@@ -340,6 +333,13 @@
       "description": "BlvAj882"
     },
     {
+      "path": ".svelte-kit/output/client/_app/immutable/chunks/BLY_w1MW.js",
+      "type": "source",
+      "language": "javascript",
+      "lines": 1,
+      "description": "BLY w1MW"
+    },
+    {
       "path": ".svelte-kit/output/client/_app/immutable/chunks/BoFxrMlB.js",
       "type": "source",
       "language": "javascript",
@@ -354,11 +354,11 @@
       "description": "C10jexfp"
     },
     {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/CFFvf9k9.js",
+      "path": ".svelte-kit/output/client/_app/immutable/chunks/C3M-z_3T.js",
       "type": "source",
       "language": "javascript",
       "lines": 1,
-      "description": "CFFvf9k9"
+      "description": "C3M z 3T"
     },
     {
       "path": ".svelte-kit/output/client/_app/immutable/chunks/CrnUg9ix.js",
@@ -366,6 +366,20 @@
       "language": "javascript",
       "lines": 1,
       "description": "CrnUg9ix"
+    },
+    {
+      "path": ".svelte-kit/output/client/_app/immutable/chunks/D2WfBm_X.js",
+      "type": "source",
+      "language": "javascript",
+      "lines": 1,
+      "description": "D2WfBm X"
+    },
+    {
+      "path": ".svelte-kit/output/client/_app/immutable/chunks/D3MIrZMC.js",
+      "type": "source",
+      "language": "javascript",
+      "lines": 1,
+      "description": "D3MIrZMC"
     },
     {
       "path": ".svelte-kit/output/client/_app/immutable/chunks/D8lrM397.js",
@@ -403,13 +417,6 @@
       "description": "DpqyHFNn"
     },
     {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/DyFiohGk.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "DyFiohGk"
-    },
-    {
       "path": ".svelte-kit/output/client/_app/immutable/chunks/F0dJ0Lpd.js",
       "type": "source",
       "language": "javascript",
@@ -438,46 +445,46 @@
       "description": "WbPk3Yxo"
     },
     {
-      "path": ".svelte-kit/output/client/_app/immutable/entry/app.CLwWvDEY.js",
+      "path": ".svelte-kit/output/client/_app/immutable/entry/app.Cp4KK31j.js",
       "type": "source",
       "language": "javascript",
       "lines": 2,
-      "description": "App.CLwWvDEY"
+      "description": "App.Cp4KK31j"
     },
     {
-      "path": ".svelte-kit/output/client/_app/immutable/entry/start.B85M_v0P.js",
+      "path": ".svelte-kit/output/client/_app/immutable/entry/start.B_H5DZkU.js",
       "type": "source",
       "language": "javascript",
       "lines": 1,
-      "description": "Start.B85M v0P"
+      "description": "Start.B H5DZkU"
     },
     {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/0.DtCX6p1q.js",
+      "path": ".svelte-kit/output/client/_app/immutable/nodes/0.BLCgpQAw.js",
       "type": "source",
       "language": "javascript",
       "lines": 9,
-      "description": "0.DtCX6p1q"
+      "description": "0.BLCgpQAw"
     },
     {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/1.Dw5BnZVz.js",
+      "path": ".svelte-kit/output/client/_app/immutable/nodes/1.CPBfQAPX.js",
       "type": "source",
       "language": "javascript",
       "lines": 1,
-      "description": "1.Dw5BnZVz"
+      "description": "1.CPBfQAPX"
     },
     {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/2.CK27LtEz.js",
+      "path": ".svelte-kit/output/client/_app/immutable/nodes/2.BsmJ8K6H.js",
       "type": "source",
       "language": "javascript",
       "lines": 1,
-      "description": "2.CK27LtEz"
+      "description": "2.BsmJ8K6H"
     },
     {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/3.BxsoH0Xc.js",
+      "path": ".svelte-kit/output/client/_app/immutable/nodes/3.102mltIk.js",
       "type": "source",
       "language": "javascript",
       "lines": 1,
-      "description": "3.BxsoH0Xc"
+      "description": "3.102mltIk"
     },
     {
       "path": ".svelte-kit/output/client/_app/immutable/nodes/4.0EXUMv6q.js",
@@ -487,32 +494,32 @@
       "description": "4.0EXUMv6q"
     },
     {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/5.7V2rqFAz.js",
+      "path": ".svelte-kit/output/client/_app/immutable/nodes/5.w_Lzg6cQ.js",
       "type": "source",
       "language": "javascript",
       "lines": 1,
-      "description": "5.7V2rqFAz"
+      "description": "5.w Lzg6cQ"
     },
     {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/6.DZM2KSFv.js",
+      "path": ".svelte-kit/output/client/_app/immutable/nodes/6.DhI1e0EB.js",
       "type": "source",
       "language": "javascript",
       "lines": 1,
-      "description": "6.DZM2KSFv"
+      "description": "6.DhI1e0EB"
     },
     {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/7.B_II1dUl.js",
+      "path": ".svelte-kit/output/client/_app/immutable/nodes/7.DfFUNJnD.js",
       "type": "source",
       "language": "javascript",
       "lines": 1,
-      "description": "7.B II1dUl"
+      "description": "7.DfFUNJnD"
     },
     {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/8.BJgRI-dB.js",
+      "path": ".svelte-kit/output/client/_app/immutable/nodes/8.CsHNZEis.js",
       "type": "source",
       "language": "javascript",
       "lines": 1,
-      "description": "8.BJgRI dB"
+      "description": "8.CsHNZEis"
     },
     {
       "path": ".svelte-kit/output/client/_app/version.json",
@@ -642,7 +649,7 @@
       "description": "Manifest"
     },
     {
-      "path": ".svelte-kit/output/server/_app/immutable/assets/_layout.CTo9F_5h.css",
+      "path": ".svelte-kit/output/server/_app/immutable/assets/_layout.ByXaPGTZ.css",
       "type": "source",
       "language": "css",
       "lines": 1,
@@ -761,13 +768,6 @@
       "description": "Index3"
     },
     {
-      "path": ".svelte-kit/output/server/chunks/interactivity.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 307,
-      "description": "0px"
-    },
-    {
       "path": ".svelte-kit/output/server/chunks/internal.js",
       "type": "source",
       "language": "javascript",
@@ -796,6 +796,13 @@
       "description": "Server"
     },
     {
+      "path": ".svelte-kit/output/server/chunks/solids.js",
+      "type": "source",
+      "language": "javascript",
+      "lines": 505,
+      "description": "0px"
+    },
+    {
       "path": ".svelte-kit/output/server/chunks/state.svelte.js",
       "type": "source",
       "language": "javascript",
@@ -806,7 +813,7 @@
       "path": ".svelte-kit/output/server/chunks/theme.js",
       "type": "source",
       "language": "javascript",
-      "lines": 87,
+      "lines": 96,
       "description": "============================================================================"
     },
     {
@@ -841,7 +848,7 @@
       "path": ".svelte-kit/output/server/entries/pages/_layout.svelte.js",
       "type": "source",
       "language": "javascript",
-      "lines": 256,
+      "lines": 265,
       "description": "Layout.svelte"
     },
     {
@@ -890,7 +897,7 @@
       "path": ".svelte-kit/output/server/entries/pages/settings/_page.svelte.js",
       "type": "source",
       "language": "javascript",
-      "lines": 116,
+      "lines": 127,
       "description": "Page.svelte"
     },
     {
@@ -1073,372 +1080,743 @@
       "path": "CLAUDE.md",
       "type": "doc",
       "language": "markdown",
-      "lines": 60,
+      "lines": 96,
       "description": "CLAUDE.md \u2014 Resonance Echoes"
     },
     {
-      "path": "docs/blueprints/analysis_sovereignty.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 26,
-      "description": "Analysis sovereignty.ai"
-    },
-    {
-      "path": "docs/blueprints/dbp_src.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 36,
-      "description": "Dbp src.ai"
-    },
-    {
-      "path": "docs/blueprints/dbp_src_tauri.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 50,
-      "description": "Dbp src tauri.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_cargo.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 27,
-      "description": "Fbp cargo.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_docs.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 359,
-      "description": "Fbp docs.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_reports.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 158,
-      "description": "Fbp reports.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_root.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 343,
-      "description": "Fbp root.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_screenshots.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 158,
-      "description": "Fbp screenshots.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 54,
-      "description": "Fbp src.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_lib.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 21,
-      "description": "Fbp src lib.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_lib_components.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 75,
-      "description": "Fbp src lib components.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_lib_components_icons.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 81,
-      "description": "Fbp src lib components icons.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_lib_cosmic.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 490,
-      "description": "Fbp src lib cosmic.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_lib_data.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 56,
-      "description": "Fbp src lib data.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_lib_stores.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 91,
-      "description": "Fbp src lib stores.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_lib_styles.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 29,
-      "description": "Fbp src lib styles.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_lib_styles_generated.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 307,
-      "description": "Fbp src lib styles generated.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_lib_theme.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 34,
-      "description": "Fbp src lib theme.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_lib_types.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 36,
-      "description": "Fbp src lib types.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_routes.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 69,
-      "description": "Fbp src routes.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_routes_add.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 30,
-      "description": "Fbp src routes add.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_routes_insights.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 29,
-      "description": "Fbp src routes insights.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_routes_onboarding.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 28,
-      "description": "Fbp src routes onboarding.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_routes_settings.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 29,
-      "description": "Fbp src routes settings.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_routes_timer.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 29,
-      "description": "Fbp src routes timer.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_tauri.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 78,
-      "description": "Fbp src tauri.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_tauri_capabilities.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 33,
-      "description": "Fbp src tauri capabilities.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_tauri_cargo.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 27,
-      "description": "Fbp src tauri cargo.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_tauri_icons.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 247,
-      "description": "Fbp src tauri icons.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_tauri_icons_android.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 21,
-      "description": "Fbp src tauri icons android.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_tauri_icons_android_mipmap_anydpi_v26.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 18,
-      "description": "Fbp src tauri icons android mipmap anydpi v26.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_tauri_icons_android_mipmap_hdpi.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 54,
-      "description": "Fbp src tauri icons android mipmap hdpi.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_tauri_icons_android_mipmap_mdpi.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 54,
-      "description": "Fbp src tauri icons android mipmap mdpi.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_tauri_icons_android_mipmap_xhdpi.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 54,
-      "description": "Fbp src tauri icons android mipmap xhdpi.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_tauri_icons_android_mipmap_xxhdpi.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 54,
-      "description": "Fbp src tauri icons android mipmap xxhdpi.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_tauri_icons_android_mipmap_xxxhdpi.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 54,
-      "description": "Fbp src tauri icons android mipmap xxxhdpi.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_tauri_icons_android_values.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 18,
-      "description": "Fbp src tauri icons android values.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_tauri_icons_ios.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 249,
-      "description": "Fbp src tauri icons ios.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_src_tauri_src.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 41,
-      "description": "Fbp src tauri src.ai"
-    },
-    {
-      "path": "docs/blueprints/folders/fbp_static.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 214,
-      "description": "Fbp static.ai"
-    },
-    {
-      "path": "docs/blueprints/journal.md",
-      "type": "doc",
-      "language": "markdown",
-      "lines": 9,
-      "description": "blueprint-forge journal \u2014 resonance-echoes"
-    },
-    {
-      "path": "docs/blueprints/obp_src_lib.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 82,
-      "description": "Obp src lib.ai"
-    },
-    {
-      "path": "docs/blueprints/obp_src_routes.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 54,
-      "description": "Obp src routes.ai"
-    },
-    {
-      "path": "docs/blueprints/obp_src_tauri_capabilities.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 19,
-      "description": "Obp src tauri capabilities.ai"
-    },
-    {
-      "path": "docs/blueprints/obp_src_tauri_cargo.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 19,
-      "description": "Obp src tauri cargo.ai"
-    },
-    {
-      "path": "docs/blueprints/obp_src_tauri_icons.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 82,
-      "description": "Obp src tauri icons.ai"
-    },
-    {
-      "path": "docs/blueprints/obp_src_tauri_src.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 19,
-      "description": "Obp src tauri src.ai"
-    },
-    {
-      "path": "docs/blueprints/pbp.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 131,
-      "description": "Pbp.ai"
-    },
-    {
-      "path": "docs/blueprints/reconciliation.ai.json",
-      "type": "config",
-      "language": "json",
-      "lines": 9,
-      "description": "Reconciliation.ai"
-    },
-    {
-      "path": "docs/BUILD-SEQUENCE.md",
+      "path": "docs/archive/BUILD-SEQUENCE-2026-08-21.md",
       "type": "doc",
       "language": "markdown",
       "lines": 75,
       "description": "BUILD SEQUENCE \u2014 Resonance Echoes"
     },
     {
-      "path": "docs/CHECKLIST.md",
-      "type": "doc",
-      "language": "markdown",
-      "lines": 238,
-      "description": "RESONANCE ECHOES \u2014 MASTER CHECKLIST"
-    },
-    {
-      "path": "docs/CLAUDE-CONTEXT.md",
+      "path": "docs/archive/CLAUDE-CONTEXT-2026-08-21.md",
       "type": "doc",
       "language": "markdown",
       "lines": 77,
       "description": "CLAUDE CONTEXT \u2014 Resonance Echoes"
+    },
+    {
+      "path": "docs/archive/FEATURE-BOARD-2026-08-21.md",
+      "type": "doc",
+      "language": "markdown",
+      "lines": 63,
+      "description": "ECHOES \u2014 THE FEATURE BOARD"
+    },
+    {
+      "path": "docs/archive/helper-2026-08-21.md",
+      "type": "doc",
+      "language": "markdown",
+      "lines": 35,
+      "description": "REBUILD"
+    },
+    {
+      "path": "docs/archive/RETIRED.md",
+      "type": "doc",
+      "language": "markdown",
+      "lines": 12,
+      "description": "RETIRED \u2014 what left the live docs, and where it rests"
+    },
+    {
+      "path": "docs/archive/SCREEN-INVENTORY-2026-08-21.md",
+      "type": "doc",
+      "language": "markdown",
+      "lines": 27,
+      "description": "SCREEN INVENTORY \u2014 Resonance Echoes"
+    },
+    {
+      "path": "docs/blueprints/echoes/.cargo/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 30,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/.claude/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 59,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/analysis_sovereignty.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 22,
+      "description": "Analysis sovereignty.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/docs/archive/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 200,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/docs/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 216,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/docs/listings/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 181,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/docs/obp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 36,
+      "description": "Obp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 381,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/journal.md",
+      "type": "doc",
+      "language": "markdown",
+      "lines": 10,
+      "description": "blueprint-forge journal \u2014 resonance-echoes"
+    },
+    {
+      "path": "docs/blueprints/echoes/pbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 192,
+      "description": "Pbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/reconciliation.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 12,
+      "description": "Reconciliation.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/reports/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 225,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/screenshots/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 161,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/dbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 39,
+      "description": "Dbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 57,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/lib/components/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 79,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/lib/components/icons/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 97,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/lib/cosmic/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 552,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/lib/cumdach/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 75,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/lib/data/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 59,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/lib/epagoge/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 82,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/lib/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 27,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/lib/obp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 106,
+      "description": "Obp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/lib/sky/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 80,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/lib/stores/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 94,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/lib/styles/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 32,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/lib/styles/generated/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 310,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/lib/theme/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 41,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/lib/types/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 41,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/routes/add/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 33,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/routes/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 73,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/routes/insights/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 32,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/routes/obp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 64,
+      "description": "Obp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/routes/onboarding/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 32,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/routes/sattva/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 31,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/routes/settings/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 32,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src/routes/timer/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 32,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/.cargo/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 30,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/.cargo/obp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 22,
+      "description": "Obp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/capabilities/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 36,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/capabilities/obp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 22,
+      "description": "Obp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/dbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 60,
+      "description": "Dbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 87,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 51,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 18,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/assets/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 39,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 26,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/java/com/audhd/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 18,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/java/com/audhd/resonance_echoes/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 29,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/java/com/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 18,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/java/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 18,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/jniLibs/arm64-v8a/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 21,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/jniLibs/armeabi-v7a/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 21,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/jniLibs/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 21,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/jniLibs/x86/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 21,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/jniLibs/x86_64/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 21,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/res/drawable/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 21,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/res/drawable-v24/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 21,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/res/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 29,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/res/layout/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 21,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/res/mipmap-anydpi-v26/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 21,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/res/mipmap-hdpi/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 57,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/res/mipmap-mdpi/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 57,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/res/mipmap-xhdpi/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 57,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/res/mipmap-xxhdpi/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 57,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/res/mipmap-xxxhdpi/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 57,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/res/values/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 33,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/res/values-night/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 21,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/res/xml/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 21,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/buildSrc/.kotlin/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 18,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/buildSrc/.kotlin/sessions/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 16,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/buildSrc/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 39,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/buildSrc/src/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 18,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/buildSrc/src/main/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 18,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/buildSrc/src/main/java/com/audhd/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 18,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/buildSrc/src/main/java/com/audhd/resonance_echoes/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 18,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/buildSrc/src/main/java/com/audhd/resonance_echoes/kotlin/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 25,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/buildSrc/src/main/java/com/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 18,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/buildSrc/src/main/java/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 18,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 68,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/gradle/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 18,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/android/gradle/wrapper/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 25,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 26,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/gen/obp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 295,
+      "description": "Obp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/icons/android/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 24,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/icons/android/mipmap-anydpi-v26/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 21,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/icons/android/mipmap-hdpi/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 57,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/icons/android/mipmap-mdpi/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 57,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/icons/android/mipmap-xhdpi/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 57,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/icons/android/mipmap-xxhdpi/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 57,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/icons/android/mipmap-xxxhdpi/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 57,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/icons/android/values/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 21,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/icons/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 237,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/icons/ios/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 252,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/icons/obp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 85,
+      "description": "Obp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/src/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 44,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/src-tauri/src/obp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 22,
+      "description": "Obp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/static/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 217,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/CHECKLIST.md",
+      "type": "doc",
+      "language": "markdown",
+      "lines": 246,
+      "description": "RESONANCE ECHOES \u2014 MASTER CHECKLIST"
     },
     {
       "path": "docs/CONTRIBUTING.md",
@@ -1448,25 +1826,39 @@
       "description": "CONTRIBUTING \u2014 Resonance Echoes"
     },
     {
-      "path": "docs/FEATURE-BOARD.md",
+      "path": "docs/listings/AUDHDITIES-LISTING.md",
       "type": "doc",
       "language": "markdown",
-      "lines": 63,
-      "description": "ECHOES \u2014 THE FEATURE BOARD"
+      "lines": 122,
+      "description": "Echoes \u2014 AudHDities storefront pack"
     },
     {
-      "path": "docs/GALAXY-LISTING.md",
+      "path": "docs/listings/GALAXY-LISTING.md",
       "type": "doc",
       "language": "markdown",
       "lines": 64,
       "description": "Echoes \u2014 Galaxy Store listing pack"
     },
     {
-      "path": "docs/PLAY-TRACK.md",
+      "path": "docs/listings/MSSTORE-LISTING.md",
       "type": "doc",
       "language": "markdown",
-      "lines": 67,
+      "lines": 126,
+      "description": "Echoes \u2014 Microsoft Store listing pack"
+    },
+    {
+      "path": "docs/listings/PLAY-TRACK.md",
+      "type": "doc",
+      "language": "markdown",
+      "lines": 154,
       "description": "Echoes \u2014 Google Play test track"
+    },
+    {
+      "path": "docs/listings/README.md",
+      "type": "doc",
+      "language": "markdown",
+      "lines": 28,
+      "description": "listings \u2014 one pack per storefront"
     },
     {
       "path": "docs/RELEASE.md",
@@ -1483,11 +1875,18 @@
       "description": "THE RESONANCE GRAMMAR"
     },
     {
-      "path": "docs/SCREEN-INVENTORY.md",
+      "path": "docs/STORY-BLOCK.md",
       "type": "doc",
       "language": "markdown",
-      "lines": 27,
-      "description": "SCREEN INVENTORY \u2014 Resonance Echoes"
+      "lines": 94,
+      "description": "Story Block \u2014 Resonance Echoes"
+    },
+    {
+      "path": "HANDOFF.md",
+      "type": "doc",
+      "language": "markdown",
+      "lines": 37,
+      "description": "HANDOFF \u2014 resonance-echoes"
     },
     {
       "path": "HANDS.md",
@@ -1495,13 +1894,6 @@
       "language": "markdown",
       "lines": 82,
       "description": "The Hands \u2014 who builds this, and how"
-    },
-    {
-      "path": "helper.md",
-      "type": "doc",
-      "language": "markdown",
-      "lines": 35,
-      "description": "REBUILD"
     },
     {
       "path": "LICENSE",
@@ -1542,7 +1934,7 @@
       "path": "README.md",
       "type": "doc",
       "language": "markdown",
-      "lines": 180,
+      "lines": 152,
       "description": "\u227d\u0f0f\u227c Resonance Echoes"
     },
     {
@@ -1619,6 +2011,21 @@
       "large": true,
       "size_kb": 23532.0,
       "description": "Resonance Echoes 1.3.2 x64 en US"
+    },
+    {
+      "path": "release/Resonance Echoes_1.4.0_x64-setup.exe",
+      "type": "binary",
+      "language": "unknown",
+      "size_kb": 22487.8,
+      "description": "Resonance Echoes 1.4.0 x64 setup"
+    },
+    {
+      "path": "release/Resonance Echoes_1.4.0_x64_en-US.msi",
+      "type": "unknown",
+      "language": "unknown",
+      "large": true,
+      "size_kb": 23536.0,
+      "description": "Resonance Echoes 1.4.0 x64 en US"
     },
     {
       "path": "release/resonance-echoes-v1.1.0.aab",
@@ -1731,6 +2138,28 @@
       "description": "Resonance echoes v1.3.2.apk"
     },
     {
+      "path": "release/resonance-echoes-v1.4.0.aab",
+      "type": "binary",
+      "language": "unknown",
+      "size_kb": 95818.27,
+      "description": "Resonance echoes v1.4.0"
+    },
+    {
+      "path": "release/resonance-echoes-v1.4.0.apk",
+      "type": "binary",
+      "language": "unknown",
+      "size_kb": 115473.94,
+      "description": "Resonance echoes v1.4.0"
+    },
+    {
+      "path": "release/resonance-echoes-v1.4.0.apk.idsig",
+      "type": "unknown",
+      "language": "unknown",
+      "large": true,
+      "size_kb": 918.5,
+      "description": "Resonance echoes v1.4.0.apk"
+    },
+    {
       "path": "reports/2026-06-30-assessment-manual.md",
       "type": "doc",
       "language": "markdown",
@@ -1759,17 +2188,25 @@
       "description": "Resonance Echoes \u2014 Assessment Report"
     },
     {
+      "path": "reports/2026-08-17-assessment.md",
+      "type": "doc",
+      "language": "markdown",
+      "lines": 49,
+      "description": "Resonance Echoes \u2014 Assessment Report"
+    },
+    {
       "path": "reports/analysis.json",
       "type": "config",
       "language": "json",
-      "lines": 75,
+      "lines": 77,
       "description": "Analysis"
     },
     {
       "path": "reports/inventory.json",
       "type": "config",
       "language": "json",
-      "lines": 3558,
+      "large": true,
+      "size_kb": 100.12,
       "description": "Inventory"
     },
     {
@@ -1867,7 +2304,7 @@
       "path": "src/lib/components/ComfortBar.svelte",
       "type": "source",
       "language": "svelte",
-      "lines": 207,
+      "lines": 247,
       "description": "ComfortBar"
     },
     {
@@ -1923,7 +2360,7 @@
       "path": "src/lib/components/Sidebar.svelte",
       "type": "source",
       "language": "svelte",
-      "lines": 363,
+      "lines": 342,
       "description": "Sidebar"
     },
     {
@@ -2021,7 +2458,7 @@
       "path": "src/lib/cumdach/index.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 223,
+      "lines": 265,
       "description": "the-cumdach \u2014 the book-shrine, pure."
     },
     {
@@ -2084,8 +2521,8 @@
       "path": "src/lib/stores/theme.svelte.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 42,
-      "description": "Theme.svelte"
+      "lines": 58,
+      "description": "Merged over the default, never cast blind: a config saved before a"
     },
     {
       "path": "src/lib/stores/timer.svelte.ts",
@@ -2098,7 +2535,7 @@
       "path": "src/lib/stores/ui.svelte.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 11,
+      "lines": 19,
       "description": "Cross-component UI signals that don't belong to any domain store."
     },
     {
@@ -2259,14 +2696,14 @@
       "path": "src/lib/theme/theme.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 64,
+      "lines": 126,
       "description": "Theme"
     },
     {
       "path": "src/lib/types/types.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 39,
+      "lines": 46,
       "description": "Theme customization"
     },
     {
@@ -2322,7 +2759,7 @@
       "path": "src/routes/settings/+page.svelte",
       "type": "source",
       "language": "svelte",
-      "lines": 754,
+      "lines": 773,
       "description": "+page"
     },
     {
@@ -2435,7 +2872,7 @@
       "path": "src-tauri/gen/android/.gradle/8.14.3/fileHashes/resourceHashesCache.bin",
       "type": "binary",
       "language": "unknown",
-      "size_kb": 24.21,
+      "size_kb": 24.24,
       "description": "ResourceHashesCache"
     },
     {
@@ -2610,28 +3047,28 @@
       "path": "src-tauri/gen/android/app/src/main/jniLibs/arm64-v8a/libresonance_echoes_lib.so",
       "type": "binary",
       "language": "unknown",
-      "size_kb": 0.0,
+      "size_kb": 28342.58,
       "description": "Libresonance echoes lib"
     },
     {
       "path": "src-tauri/gen/android/app/src/main/jniLibs/armeabi-v7a/libresonance_echoes_lib.so",
       "type": "binary",
       "language": "unknown",
-      "size_kb": 0.0,
+      "size_kb": 25604.96,
       "description": "Libresonance echoes lib"
     },
     {
       "path": "src-tauri/gen/android/app/src/main/jniLibs/x86/libresonance_echoes_lib.so",
       "type": "binary",
       "language": "unknown",
-      "size_kb": 0.0,
+      "size_kb": 29549.81,
       "description": "Libresonance echoes lib"
     },
     {
       "path": "src-tauri/gen/android/app/src/main/jniLibs/x86_64/libresonance_echoes_lib.so",
       "type": "binary",
       "language": "unknown",
-      "size_kb": 0.0,
+      "size_kb": 28877.16,
       "description": "Libresonance echoes lib"
     },
     {
@@ -3518,21 +3955,21 @@
     }
   ],
   "by_type": {
-    "config": 77,
+    "config": 126,
+    "doc": 33,
     "source": 224,
-    "binary": 133,
-    "unknown": 40,
-    "doc": 25
+    "binary": 136,
+    "unknown": 42
   },
   "by_language": {
     "toml": 3,
-    "json": 68,
-    "unknown": 179,
+    "markdown": 33,
+    "json": 117,
+    "unknown": 184,
     "typescript": 33,
     "javascript": 103,
     "svelte": 19,
     "css": 39,
-    "markdown": 25,
     "html": 1,
     "rust": 3,
     "xml": 13,
@@ -3548,11 +3985,14 @@
     "release/Resonance Echoes_1.3.0_x64_en-US.msi",
     "release/Resonance Echoes_1.3.1_x64_en-US.msi",
     "release/Resonance Echoes_1.3.2_x64_en-US.msi",
+    "release/Resonance Echoes_1.4.0_x64_en-US.msi",
     "release/resonance-echoes-v1.1.0.apk.idsig",
     "release/resonance-echoes-v1.2.0.apk.idsig",
     "release/resonance-echoes-v1.3.0.apk.idsig",
     "release/resonance-echoes-v1.3.1.apk.idsig",
     "release/resonance-echoes-v1.3.2.apk.idsig",
+    "release/resonance-echoes-v1.4.0.apk.idsig",
+    "reports/inventory.json",
     "src-tauri/Cargo.lock",
     "src-tauri/gen/schemas/acl-manifests.json",
     "src-tauri/gen/schemas/android-schema.json",

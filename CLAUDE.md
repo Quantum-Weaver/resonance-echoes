@@ -45,7 +45,7 @@ rename 08-07, five `resonance_weaver` identifiers 08-09. Ritual: `child-builds`.
 
 ## Structure
 
-The forge's map: `docs/blueprints/pbp.ai.json` — regenerate, never hand-draw a
+The forge's map: `docs/blueprints/echoes/pbp.ai.json` — regenerate, never hand-draw a
 tree here. No audio engine, no visualizer, no playlists.
 
 ## Tools
