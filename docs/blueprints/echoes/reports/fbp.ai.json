@@ -1,0 +1,225 @@
+{
+  "tier": "folder",
+  "folder_name": "reports",
+  "folder_path": "reports",
+  "self": "echoes/reports/fbp.ai.json",
+  "parent": "echoes/pbp.ai.json",
+  "description": "7 files, 0 subfolders",
+  "files": [
+    {
+      "path": "reports/2026-06-30-assessment-manual.md",
+      "description": "Resonance Echoes"
+    },
+    {
+      "path": "reports/2026-06-30-assessment.md",
+      "description": "Resonance Echoes"
+    },
+    {
+      "path": "reports/2026-07-04-assessment.md",
+      "description": "Resonance Echoes"
+    },
+    {
+      "path": "reports/2026-08-16-assessment.md",
+      "description": "Resonance Echoes"
+    },
+    {
+      "path": "reports/2026-08-17-assessment.md",
+      "description": "Resonance Echoes"
+    },
+    {
+      "path": "reports/analysis.json",
+      "description": "data, 5,124 bytes"
+    },
+    {
+      "path": "reports/inventory.json",
+      "description": "data, 102,519 bytes"
+    }
+  ],
+  "file_count": 7,
+  "subdirectories": [],
+  "code_analysis": {
+    "2026-06-30-assessment-manual.md": {
+      "language": "markdown",
+      "lines": 160,
+      "words": 2814,
+      "heading_count": 13,
+      "headings": [
+        "Resonance Echoes \u2014 Repository Assessment",
+        "1. WHAT EXISTS",
+        "Root",
+        "docs/",
+        "src-tauri/ (Rust / Tauri backend)",
+        "src/ (SvelteKit frontend)",
+        "static/",
+        "Generated/build directories (present locally, correctly gitignored from tracking *going forward*)",
+        "2. WHAT'S MISSING",
+        "3. GAPS \u2014 stated vs. actual",
+        "4. VULNERABILITIES",
+        "5. TEST READINESS",
+        "6. RECOMMENDATIONS (priority-ordered)"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 69,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "2026-06-30-assessment.md": {
+      "language": "markdown",
+      "lines": 41,
+      "words": 330,
+      "heading_count": 7,
+      "headings": [
+        "Resonance Echoes \u2014 Assessment Report",
+        "Summary",
+        "Standards Compliance",
+        "Vulnerabilities",
+        "Gaps",
+        "Test Readiness",
+        "Recommendations"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 7,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "2026-07-04-assessment.md": {
+      "language": "markdown",
+      "lines": 47,
+      "words": 431,
+      "heading_count": 7,
+      "headings": [
+        "Resonance Echoes \u2014 Assessment Report",
+        "Summary",
+        "Standards Compliance",
+        "Vulnerabilities",
+        "Gaps",
+        "Test Readiness",
+        "Recommendations"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 7,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "2026-08-16-assessment.md": {
+      "language": "markdown",
+      "lines": 48,
+      "words": 478,
+      "heading_count": 7,
+      "headings": [
+        "Resonance Echoes \u2014 Assessment Report",
+        "Summary",
+        "Standards Compliance",
+        "Vulnerabilities",
+        "Gaps",
+        "Test Readiness",
+        "Recommendations"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 7,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "2026-08-17-assessment.md": {
+      "language": "markdown",
+      "lines": 50,
+      "words": 529,
+      "heading_count": 7,
+      "headings": [
+        "Resonance Echoes \u2014 Assessment Report",
+        "Summary",
+        "Standards Compliance",
+        "Vulnerabilities",
+        "Gaps",
+        "Test Readiness",
+        "Recommendations"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 7,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "analysis.json": {
+      "language": "json",
+      "lines": 77,
+      "valid": true,
+      "root": "object",
+      "top_level_keys": [
+        "analyzed_at",
+        "gaps",
+        "project",
+        "recommendations",
+        "standards_compliance",
+        "test_readiness",
+        "vulnerabilities"
+      ],
+      "key_count": 7
+    },
+    "inventory.json": {
+      "language": "json",
+      "lines": 3565,
+      "valid": true,
+      "root": "object",
+      "top_level_keys": [
+        "by_language",
+        "by_type",
+        "files",
+        "large_files",
+        "project",
+        "scanned_at",
+        "secrets_flagged",
+        "total_files"
+      ],
+      "key_count": 8
+    }
+  },
+  "folders_not_walked": [],
+  "scan_timestamp": "2026-08-21T15:19:31.753059 | in sovereign time",
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
+}

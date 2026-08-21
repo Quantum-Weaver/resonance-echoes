@@ -1,0 +1,36 @@
+{
+  "tier": "object",
+  "object_name": "docs",
+  "object_path": "docs",
+  "self": "echoes/docs/obp.ai.json",
+  "parent": "echoes/pbp.ai.json",
+  "description": "5 files, 2 subfolders",
+  "folders": [
+    {
+      "blueprint": "echoes/docs/fbp.ai.json",
+      "folder_path": "docs",
+      "description": "5 files, 2 subfolders",
+      "file_count": 5,
+      "subdirectory_count": 2
+    },
+    {
+      "blueprint": "echoes/docs/archive/fbp.ai.json",
+      "folder_path": "docs/archive",
+      "description": "6 files, 0 subfolders",
+      "file_count": 6,
+      "subdirectory_count": 0
+    },
+    {
+      "blueprint": "echoes/docs/listings/fbp.ai.json",
+      "folder_path": "docs/listings",
+      "description": "Raised 2026-08-21 at KP's word: \"lets create docs/listings folder to organize",
+      "file_count": 5,
+      "subdirectory_count": 0
+    }
+  ],
+  "folder_count": 3,
+  "total_files": 16,
+  "integration_timestamp": "2026-08-21T15:19:31.961929 | in sovereign time",
+  "maintaining_agent": "ObjectAgent",
+  "note": "Links only. Every folder's details live at its own address."
+}

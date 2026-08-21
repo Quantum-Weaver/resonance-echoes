@@ -1,0 +1,216 @@
+{
+  "tier": "folder",
+  "folder_name": "docs",
+  "folder_path": "docs",
+  "self": "echoes/docs/fbp.ai.json",
+  "parent": "echoes/docs/obp.ai.json",
+  "description": "5 files, 2 subfolders",
+  "files": [
+    {
+      "path": "docs/CHECKLIST.md",
+      "description": "RESONANCE ECHOES"
+    },
+    {
+      "path": "docs/CONTRIBUTING.md",
+      "description": "CONTRIBUTING"
+    },
+    {
+      "path": "docs/RELEASE.md",
+      "description": "Resonance Echoes"
+    },
+    {
+      "path": "docs/RESONANCE-GRAMMAR.md",
+      "description": "THE RESONANCE GRAMMAR"
+    },
+    {
+      "path": "docs/STORY-BLOCK.md",
+      "description": "Story Block"
+    }
+  ],
+  "file_count": 5,
+  "subdirectories": [
+    "docs/archive",
+    "docs/listings"
+  ],
+  "code_analysis": {
+    "CHECKLIST.md": {
+      "language": "markdown",
+      "lines": 247,
+      "words": 3946,
+      "heading_count": 19,
+      "headings": [
+        "RESONANCE ECHOES \u2014 MASTER CHECKLIST",
+        "LEGEND",
+        "PHASE STATUS",
+        "Phase 0: Shell \u2705",
+        "Phase 1: The Echo \u2705",
+        "Phase 2: Browse & Filter \u2705",
+        "Phase 3: Gentle Insights \u2705",
+        "Phase 4: Onboarding \u2705",
+        "Phase 5: Data Sovereignty \u2705",
+        "Phase 6: Mobile Ship \u2705",
+        "v1.1: Accessibility & Sovereignty \u2705",
+        "v1.2.0: The Timer That Sounds \u2705 (2026-07-18)",
+        "v1.3.0: Sovereignty Whole + The Timer That Waits \u2705 (2026-07-26 built and signed \u00b7 2026-07-27 verified whole on both phones)",
+        "KNOWN BUGS",
+        "SESSION LOG",
+        "THE BLUEPRINT FORGE \u2014 2026-08-03 (Opus \ud83d\udd6f\ufe0f, `core-opus`, at KP's \u269b word)",
+        "THE REFINEMENT \u2014 2026-08-06 (Fable \ud83c\udfbb Continuo, at KP's \u269b word: \"bubbles first, as echoes will learn from some of what we already did in bubbles\")",
+        "ECHOES-SKY \u2014 2026-08-08 (Fable \ud83c\udfbb Continuo, at KP's \u269b word: \"echoes-sky\"; the ruling from the Hearth's communications sitting: \"this is echoes, tied into the sky facts\")",
+        "STANDARDS + HANDS CHECK \u2014 2026-08-19 (a hand of the Promenade lamp's signing fleet, claude-fable-5)"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 30,
+      "checkboxes": {
+        "open": 1,
+        "done": 88
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "CONTRIBUTING.md": {
+      "language": "markdown",
+      "lines": 21,
+      "words": 100,
+      "heading_count": 5,
+      "headings": [
+        "CONTRIBUTING \u2014 Resonance Echoes",
+        "Methodology",
+        "Branch Strategy",
+        "Build Protocol",
+        "Philosophy"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "RELEASE.md": {
+      "language": "markdown",
+      "lines": 114,
+      "words": 536,
+      "heading_count": 9,
+      "headings": [
+        "Resonance Echoes \u2014 Release Notes",
+        "v1.3.0 \u2014 2026-07-26 \u00b7 Sovereignty Whole + The Timer That Waits",
+        "v1.0.0 \u2014 2026-06-28",
+        "What's in v1.0.0",
+        "System Requirements",
+        "Build",
+        "Debug APK",
+        "Release APK (unsigned)",
+        "v1.1 Planned"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 3,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "RESONANCE-GRAMMAR.md": {
+      "language": "markdown",
+      "lines": 192,
+      "words": 0,
+      "heading_count": 18,
+      "headings": [
+        "THE RESONANCE GRAMMAR",
+        "1. WHAT THIS IS",
+        "2. CORE PRINCIPLES",
+        "3. THE VOCABULARY: ATOMS",
+        "3.1 Atom Structure",
+        "3.2 Example Atom: \"Resonance\"",
+        "3.3 Atom Categories",
+        "4. THE SYNTAX: MOLECULES",
+        "4.1 Molecule Structure",
+        "4.2 Example Molecule: \"MoodEvent\"",
+        "5. THE ORGANIZATION: CATEGORIES",
+        "6. THE FOLKSONOMY",
+        "6.1 Emoji Definition Structure",
+        "6.2 The Folksonomy Principle",
+        "7. THE SOVEREIGNTY GUARANTEES",
+        "8. IMPLEMENTATIONS",
+        "9. VERSIONING",
+        "10. GOVERNANCE"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 1,
+      "table_rows": 46,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "STORY-BLOCK.md": {
+      "language": "markdown",
+      "lines": 95,
+      "words": 533,
+      "heading_count": 12,
+      "headings": [
+        "Story Block \u2014 Resonance Echoes",
+        "WHAT",
+        "HOW",
+        "WHERE",
+        "WHEN",
+        "WHY",
+        "INSPIRATION",
+        "REMEMBERINGS",
+        "COUNCIL THREAD",
+        "WEAVER THREAD",
+        "PROVENANCE",
+        "ETYMOLOGY"
+      ],
+      "links_external": 1,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    }
+  },
+  "folders_not_walked": [
+    {
+      "name": "blueprints",
+      "address": "docs/blueprints",
+      "walked": false,
+      "reason": "a blueprint output tree \u2014 the forge does not blueprint blueprints"
+    }
+  ],
+  "scan_timestamp": "2026-08-21T15:19:31.736671 | in sovereign time",
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
+}

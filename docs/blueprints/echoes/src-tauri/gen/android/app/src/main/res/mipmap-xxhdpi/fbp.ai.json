@@ -1,0 +1,57 @@
+{
+  "tier": "folder",
+  "folder_name": "mipmap-xxhdpi",
+  "folder_path": "src-tauri/gen/android/app/src/main/res/mipmap-xxhdpi",
+  "self": "echoes/src-tauri/gen/android/app/src/main/res/mipmap-xxhdpi/fbp.ai.json",
+  "parent": "echoes/src-tauri/gen/obp.ai.json",
+  "description": "3 files, 0 subfolders",
+  "files": [
+    {
+      "path": "src-tauri/gen/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "description": "image, 27,718 bytes"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "description": "image, 139,784 bytes"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+      "description": "image, 26,840 bytes"
+    }
+  ],
+  "file_count": 3,
+  "subdirectories": [],
+  "code_analysis": {
+    "ic_launcher.png": {
+      "language": "content-file",
+      "format": "png",
+      "name": "ic_launcher.png",
+      "location": "src-tauri/gen/android/app/src/main/res/mipmap-xxhdpi",
+      "bytes": 27718,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    },
+    "ic_launcher_foreground.png": {
+      "language": "content-file",
+      "format": "png",
+      "name": "ic_launcher_foreground.png",
+      "location": "src-tauri/gen/android/app/src/main/res/mipmap-xxhdpi",
+      "bytes": 139784,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    },
+    "ic_launcher_round.png": {
+      "language": "content-file",
+      "format": "png",
+      "name": "ic_launcher_round.png",
+      "location": "src-tauri/gen/android/app/src/main/res/mipmap-xxhdpi",
+      "bytes": 26840,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    }
+  },
+  "folders_not_walked": [],
+  "scan_timestamp": "2026-08-21T15:19:31.884754 | in sovereign time",
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
+}

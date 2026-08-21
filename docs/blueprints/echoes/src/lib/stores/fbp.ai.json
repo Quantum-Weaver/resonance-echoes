@@ -1,0 +1,94 @@
+{
+  "tier": "folder",
+  "folder_name": "stores",
+  "folder_path": "src/lib/stores",
+  "self": "echoes/src/lib/stores/fbp.ai.json",
+  "parent": "echoes/src/lib/obp.ai.json",
+  "description": "4 files, 0 subfolders",
+  "files": [
+    {
+      "path": "src/lib/stores/echo.svelte.ts",
+      "description": "typescript, 7,542 bytes"
+    },
+    {
+      "path": "src/lib/stores/theme.svelte.ts",
+      "description": "typescript, 1,639 bytes"
+    },
+    {
+      "path": "src/lib/stores/timer.svelte.ts",
+      "description": "typescript, 7,641 bytes"
+    },
+    {
+      "path": "src/lib/stores/ui.svelte.ts",
+      "description": "Cross-component UI signals that don't belong to any domain store"
+    }
+  ],
+  "file_count": 4,
+  "subdirectories": [],
+  "code_analysis": {
+    "echo.svelte.ts": {
+      "language": "typescript",
+      "lines": 222,
+      "exported_functions": [],
+      "exported_consts": [
+        "echoStore"
+      ],
+      "interfaces": [],
+      "types": [],
+      "imports_node": [],
+      "spawns_process": false,
+      "writes_files": false,
+      "env_names_read": []
+    },
+    "theme.svelte.ts": {
+      "language": "typescript",
+      "lines": 59,
+      "exported_functions": [],
+      "exported_consts": [
+        "themeStore"
+      ],
+      "interfaces": [],
+      "types": [],
+      "imports_node": [],
+      "spawns_process": false,
+      "writes_files": false,
+      "env_names_read": []
+    },
+    "timer.svelte.ts": {
+      "language": "typescript",
+      "lines": 239,
+      "exported_functions": [],
+      "exported_consts": [
+        "prefersReducedMotion",
+        "timerStore"
+      ],
+      "interfaces": [],
+      "types": [
+        "TimerMode",
+        "ChimeId"
+      ],
+      "imports_node": [],
+      "spawns_process": false,
+      "writes_files": false,
+      "env_names_read": []
+    },
+    "ui.svelte.ts": {
+      "language": "typescript",
+      "lines": 20,
+      "exported_functions": [],
+      "exported_consts": [
+        "uiStore"
+      ],
+      "interfaces": [],
+      "types": [],
+      "imports_node": [],
+      "spawns_process": false,
+      "writes_files": false,
+      "env_names_read": []
+    }
+  },
+  "folders_not_walked": [],
+  "scan_timestamp": "2026-08-21T15:19:31.797033 | in sovereign time",
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
+}

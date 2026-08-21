@@ -1,0 +1,57 @@
+{
+  "tier": "folder",
+  "folder_name": "mipmap-mdpi",
+  "folder_path": "src-tauri/gen/android/app/src/main/res/mipmap-mdpi",
+  "self": "echoes/src-tauri/gen/android/app/src/main/res/mipmap-mdpi/fbp.ai.json",
+  "parent": "echoes/src-tauri/gen/obp.ai.json",
+  "description": "3 files, 0 subfolders",
+  "files": [
+    {
+      "path": "src-tauri/gen/android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "description": "image, 4,064 bytes"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+      "description": "image, 22,309 bytes"
+    },
+    {
+      "path": "src-tauri/gen/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+      "description": "image, 4,117 bytes"
+    }
+  ],
+  "file_count": 3,
+  "subdirectories": [],
+  "code_analysis": {
+    "ic_launcher.png": {
+      "language": "content-file",
+      "format": "png",
+      "name": "ic_launcher.png",
+      "location": "src-tauri/gen/android/app/src/main/res/mipmap-mdpi",
+      "bytes": 4064,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    },
+    "ic_launcher_foreground.png": {
+      "language": "content-file",
+      "format": "png",
+      "name": "ic_launcher_foreground.png",
+      "location": "src-tauri/gen/android/app/src/main/res/mipmap-mdpi",
+      "bytes": 22309,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    },
+    "ic_launcher_round.png": {
+      "language": "content-file",
+      "format": "png",
+      "name": "ic_launcher_round.png",
+      "location": "src-tauri/gen/android/app/src/main/res/mipmap-mdpi",
+      "bytes": 4117,
+      "opened": false,
+      "law": "Name and location only. The file is never opened."
+    }
+  },
+  "folders_not_walked": [],
+  "scan_timestamp": "2026-08-21T15:19:31.880932 | in sovereign time",
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
+}

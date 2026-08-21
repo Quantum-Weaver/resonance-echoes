@@ -1,0 +1,12 @@
+{
+  "tier": "analysis",
+  "report": "declared versus present",
+  "self": "echoes/reconciliation.ai.json",
+  "parent": "echoes/pbp.ai.json",
+  "law": "Findings are REPORTED, never repaired. A voiced file is corrected by a hand.",
+  "total_findings": 0,
+  "by_kind": {},
+  "findings": [],
+  "note": "Zero findings is a real result, not an empty section.",
+  "scan_timestamp": "2026-08-21T15:19:31.988119 | in sovereign time"
+}

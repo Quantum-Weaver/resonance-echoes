@@ -1,0 +1,200 @@
+{
+  "tier": "folder",
+  "folder_name": "archive",
+  "folder_path": "docs/archive",
+  "self": "echoes/docs/archive/fbp.ai.json",
+  "parent": "echoes/docs/obp.ai.json",
+  "description": "6 files, 0 subfolders",
+  "files": [
+    {
+      "path": "docs/archive/BUILD-SEQUENCE-2026-08-21.md",
+      "description": "BUILD SEQUENCE"
+    },
+    {
+      "path": "docs/archive/CLAUDE-CONTEXT-2026-08-21.md",
+      "description": "CLAUDE CONTEXT"
+    },
+    {
+      "path": "docs/archive/FEATURE-BOARD-2026-08-21.md",
+      "description": "ECHOES"
+    },
+    {
+      "path": "docs/archive/helper-2026-08-21.md",
+      "description": "Save is fixed"
+    },
+    {
+      "path": "docs/archive/RETIRED.md",
+      "description": "RETIRED"
+    },
+    {
+      "path": "docs/archive/SCREEN-INVENTORY-2026-08-21.md",
+      "description": "SCREEN INVENTORY"
+    }
+  ],
+  "file_count": 6,
+  "subdirectories": [],
+  "code_analysis": {
+    "BUILD-SEQUENCE-2026-08-21.md": {
+      "language": "markdown",
+      "lines": 75,
+      "words": 427,
+      "heading_count": 8,
+      "headings": [
+        "BUILD SEQUENCE \u2014 Resonance Echoes",
+        "Phase 0: Shell",
+        "Phase 1: The Echo",
+        "Phase 2: Browse & Filter",
+        "Phase 3: Gentle Insights",
+        "Phase 4: Onboarding",
+        "Phase 5: Data Sovereignty",
+        "Phase 6: Mobile Ship"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "CLAUDE-CONTEXT-2026-08-21.md": {
+      "language": "markdown",
+      "lines": 77,
+      "words": 402,
+      "heading_count": 11,
+      "headings": [
+        "CLAUDE CONTEXT \u2014 Resonance Echoes",
+        "Naming",
+        "The Senses",
+        "The ComfortBar",
+        "Key Patterns",
+        "Differences from Compass",
+        "Android Build Notes",
+        "SQLite ACL Permissions (CRITICAL)",
+        "Storage Permissions",
+        "Known Silent Failure Modes",
+        "Debugging on Android"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 2,
+      "table_rows": 6,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "FEATURE-BOARD-2026-08-21.md": {
+      "language": "markdown",
+      "lines": 64,
+      "words": 546,
+      "heading_count": 6,
+      "headings": [
+        "ECHOES \u2014 THE FEATURE BOARD",
+        "\u2705 CLOSED IN CODE \u2014 2026-07-26, sequentially at KP's word (\"e1-4 we can do this sequentially\")",
+        "\ud83c\udf90 The timer grew, same sitting (KP's commission, 2026-07-26) \u2014 `ec4f236`",
+        "Maintenance \u2014 \u2705 ALL CLOSED 2026-07-19 (the day Echoes finished)",
+        "Relations (features that arrive FROM elsewhere)",
+        "Deliberate rest"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 8
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "helper-2026-08-21.md": {
+      "language": "markdown",
+      "lines": 35,
+      "words": 122,
+      "heading_count": 2,
+      "headings": [
+        "REBUILD",
+        "TEST"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 2,
+      "table_rows": 8,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "RETIRED.md": {
+      "language": "markdown",
+      "lines": 13,
+      "words": 147,
+      "heading_count": 1,
+      "headings": [
+        "RETIRED \u2014 what left the live docs, and where it rests"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 7,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "SCREEN-INVENTORY-2026-08-21.md": {
+      "language": "markdown",
+      "lines": 28,
+      "words": 217,
+      "heading_count": 4,
+      "headings": [
+        "SCREEN INVENTORY \u2014 Resonance Echoes",
+        "Built (6 screens \u2014 all shipped)",
+        "Components (living, `src/lib/components/`)",
+        "Planned"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 15,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    }
+  },
+  "folders_not_walked": [],
+  "scan_timestamp": "2026-08-21T15:19:31.741034 | in sovereign time",
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
+}

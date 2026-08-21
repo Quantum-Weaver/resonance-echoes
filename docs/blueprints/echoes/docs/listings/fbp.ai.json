@@ -1,0 +1,181 @@
+{
+  "tier": "folder",
+  "folder_name": "listings",
+  "folder_path": "docs/listings",
+  "self": "echoes/docs/listings/fbp.ai.json",
+  "parent": "echoes/docs/obp.ai.json",
+  "description": "Raised 2026-08-21 at KP's word: \"lets create docs/listings folder to organize",
+  "files": [
+    {
+      "path": "docs/listings/AUDHDITIES-LISTING.md",
+      "description": "Echoes"
+    },
+    {
+      "path": "docs/listings/GALAXY-LISTING.md",
+      "description": "Echoes"
+    },
+    {
+      "path": "docs/listings/MSSTORE-LISTING.md",
+      "description": "Echoes"
+    },
+    {
+      "path": "docs/listings/PLAY-TRACK.md",
+      "description": "Echoes"
+    },
+    {
+      "path": "docs/listings/README.md",
+      "description": "listings"
+    }
+  ],
+  "file_count": 5,
+  "subdirectories": [],
+  "code_analysis": {
+    "AUDHDITIES-LISTING.md": {
+      "language": "markdown",
+      "lines": 123,
+      "words": 867,
+      "heading_count": 8,
+      "headings": [
+        "Echoes \u2014 AudHDities storefront pack",
+        "What ships here",
+        "The two disclosures no other storefront will ask for",
+        "Checksums \u2014 publish them",
+        "Copy for the page",
+        "Privacy",
+        "What this page owes that a store does not",
+        "Track log"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 1,
+      "table_rows": 8,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "GALAXY-LISTING.md": {
+      "language": "markdown",
+      "lines": 65,
+      "words": 417,
+      "heading_count": 9,
+      "headings": [
+        "Echoes \u2014 Galaxy Store listing pack",
+        "App name",
+        "Short description (Galaxy allows ~80 chars)",
+        "Full description",
+        "Category",
+        "Content rating guidance",
+        "Data safety answers (transcribe)",
+        "Assets",
+        "Tags/keywords"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "MSSTORE-LISTING.md": {
+      "language": "markdown",
+      "lines": 127,
+      "words": 862,
+      "heading_count": 12,
+      "headings": [
+        "Echoes \u2014 Microsoft Store listing pack",
+        "The artifact",
+        "App name",
+        "Short description",
+        "Full description",
+        "Category",
+        "Pricing",
+        "Age rating",
+        "Privacy",
+        "Assets",
+        "Account ground \u2014 KP's hands only",
+        "Track log"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 7,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "PLAY-TRACK.md": {
+      "language": "markdown",
+      "lines": 155,
+      "words": 1385,
+      "heading_count": 8,
+      "headings": [
+        "Echoes \u2014 Google Play test track",
+        "\u26d4 READ FIRST \u2014 do the key reset BEFORE you upload v1.4.0",
+        "The reset, in order",
+        "Standards check \u2014 verified against the repo, 2026-08-21",
+        "v1.4.0 \u2014 the upload pack (KP's hands)",
+        "Release notes \u2014 paste-ready (under Play's 500-char limit)",
+        "The icon \u2014 two doors, both open",
+        "Track log"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 2,
+      "table_rows": 21,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "README.md": {
+      "language": "markdown",
+      "lines": 29,
+      "words": 256,
+      "heading_count": 1,
+      "headings": [
+        "listings \u2014 one pack per storefront"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 6,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    }
+  },
+  "folders_not_walked": [],
+  "scan_timestamp": "2026-08-21T15:19:31.745722 | in sovereign time",
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
+}

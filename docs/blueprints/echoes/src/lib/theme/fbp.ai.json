@@ -1,0 +1,41 @@
+{
+  "tier": "folder",
+  "folder_name": "theme",
+  "folder_path": "src/lib/theme",
+  "self": "echoes/src/lib/theme/fbp.ai.json",
+  "parent": "echoes/src/lib/obp.ai.json",
+  "description": "1 files, 0 subfolders",
+  "files": [
+    {
+      "path": "src/lib/theme/theme.ts",
+      "description": "typescript, 5,167 bytes"
+    }
+  ],
+  "file_count": 1,
+  "subdirectories": [],
+  "code_analysis": {
+    "theme.ts": {
+      "language": "typescript",
+      "lines": 127,
+      "exported_functions": [],
+      "exported_consts": [
+        "PRESET_THEMES",
+        "DEFAULT_THEME",
+        "TINT_LEVELS",
+        "getThemeColors"
+      ],
+      "interfaces": [
+        "ThemePreset"
+      ],
+      "types": [],
+      "imports_node": [],
+      "spawns_process": false,
+      "writes_files": false,
+      "env_names_read": []
+    }
+  },
+  "folders_not_walked": [],
+  "scan_timestamp": "2026-08-21T15:19:31.812073 | in sovereign time",
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
+}
