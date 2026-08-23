@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { themeStore } from '$lib/stores/theme.svelte';
 	import { echoStore } from '$lib/stores/echo.svelte';
-	import { PRESET_THEMES } from '$lib/theme/theme';
+	import { PRESET_THEMES, presetSwatch } from '$lib/theme/theme';
 	import { openUrl } from '@tauri-apps/plugin-opener';
 	import { getVersion } from '@tauri-apps/api/app';
 
@@ -29,14 +29,21 @@
 
 	// ── Theme section ──────────────────────────────────────────────────────────
 
-	const themeOptions = [
-		{ key: 'dark', icon: '🌙', name: 'Dark', accent: PRESET_THEMES.dark.accentColor },
-		{ key: 'warm', icon: '🔥', name: 'Warm', accent: PRESET_THEMES.warm.accentColor },
-		{ key: 'ocean', icon: '🌊', name: 'Ocean', accent: PRESET_THEMES.ocean.accentColor },
-		{ key: 'forest', icon: '🌲', name: 'Forest', accent: PRESET_THEMES.forest.accentColor },
-		{ key: 'sunset', icon: '🌅', name: 'Sunset', accent: PRESET_THEMES.sunset.accentColor },
-		{ key: 'amoled', icon: '⚫', name: 'AMOLED', accent: PRESET_THEMES.amoled.accentColor }
-	];
+	// Every preset the shelf holds — derived, never hardcoded, so a new preset
+	// appears here the day it is born (the law the onboarding walk already keeps;
+	// Rose, Rainbow and Progress Pride arrived this way 2026-08-22 at KP's word).
+	// The six founding faces are this app's own dress; the shelf's icon stands in
+	// for any it does not name, and a flag preset shows its stripes as the swatch.
+	const PRESET_ICONS: Record<string, string> = {
+		dark: '🌙', warm: '🔥', ocean: '🌊', forest: '🌲', sunset: '🌅', amoled: '⚫'
+	};
+	const themeOptions = Object.entries(PRESET_THEMES).map(([key, t]) => ({
+		key,
+		icon: PRESET_ICONS[key] ?? t.icon ?? '✨',
+		name: key === 'amoled' ? 'AMOLED' : t.presetName,
+		accent: t.accentColor,
+		swatch: presetSwatch(t)
+	}));
 
 	// Matched on presetName, not accent — Dark and AMOLED share an accent color.
 	const activePreset = $derived.by(() => {
@@ -236,7 +243,7 @@
 				>
 					<span class="theme-icon">{opt.icon}</span>
 					<span class="theme-name">{opt.name}</span>
-					<div class="theme-swatch" style="background: {opt.accent};"></div>
+					<div class="theme-swatch" style="background: {opt.swatch};"></div>
 				</button>
 			{/each}
 		</div>

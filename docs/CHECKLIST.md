@@ -244,3 +244,9 @@
 ## STANDARDS + HANDS CHECK — 2026-08-19 (a hand of the Promenade lamp's signing fleet, claude-fable-5)
 
 - [x] 2026-08-19 · standards checked (gaps: 1 — CLAUDE.md holds no §Standards declaration; README.md §Development Standards carries it) · HANDS.md already signed (Fable 🎻, Claude Fable 5, 2026-07-09; Opus 2026-07-21 and Sonnet 2026-07-20 beside) · a hand of the Promenade lamp's signing fleet, claude-fable-5 · rides the ⚛ sync word.
+
+## ROSE · RAINBOW · PROGRESS PRIDE — 2026-08-22 (Fable 🎻, claude-fable-5, at KP's word)
+
+- [x] This body already carried the fix (`87c4218`, 2026-08-21 — the hamburger into the ComfortBar; presets as colour identities; the tint dial); at KP's word that day's fix was applied at the origin (`resonance-awen/standalone/theme/theme.ts`) and passed to every cumdach consumer — thirteen realms, each with its own CHECKLIST row.
+- [x] Same sitting, KP's word (*"there is a rose color in the sirens onboarding and settings we should bring into the cosmic design system and we should include a rainbow and inclusive pride themes in our settings as well in our epagoge onboarding walk"* · *"rainbow and progressive pride themes colors already exist, only the rose does not"*): `sirens.rose` · `sirens.deep` entered cosmic (`resonance-ziggy/modules/cosmic/constants/colors.ts`; distribution run, this mirror refreshed, hash-verified); `src/lib/theme/theme.ts` took the origin's body — ROSE · RAINBOW · PROGRESS PRIDE join `PRESET_THEMES` with `icon`, `stripes` and `presetSwatch()`; the Settings theme cards now DERIVE from the table like the onboarding walk already did (the six founding faces kept as this app's dress), and both show a flag preset's stripes as its swatch.
+- [x] Gate `npm run check` **326 files · 0 errors · 0 warnings**. Nothing committed — rides the ⚛ sync word.

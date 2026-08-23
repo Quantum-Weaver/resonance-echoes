@@ -18,19 +18,84 @@ export interface ThemePreset {
   accentColor: string;
   presetName: string;
   mode?: ThemeConfig['mode'];
+  /** The face a card wears for it - dress a consumer may override. */
+  icon?: string;
+  /**
+   * A FLAG, when the preset is one: its stripes in order, for the card's
+   * swatch (see `presetSwatch`). `accentColor` stays ONE colour - the stripe
+   * the UI leans on wherever a single colour is needed (borders, focus rings,
+   * the wordmark, the background tint) - because `--accent` is consumed as a
+   * plain colour across the family. Added 2026-08-22 at KP's word: "include a
+   * rainbow and inclusive pride themes in our settings as well in our epagoge
+   * onboarding walk."
+   */
+  stripes?: readonly string[];
 }
 
 export const PRESET_THEMES: Record<string, ThemePreset> = {
-  dark: { accentColor: QUANTUM_COLORS['quantum.purple'], presetName: 'Dark' },
-  warm: { accentColor: QUANTUM_COLORS['hearth.gold'], presetName: 'Warm' },
-  ocean: { accentColor: QUANTUM_COLORS['cosmic.blue'], presetName: 'Ocean' },
-  forest: { accentColor: QUANTUM_COLORS['sanctuary.green'], presetName: 'Forest' },
-  sunset: { accentColor: QUANTUM_COLORS['fire.base'], presetName: 'Sunset' },
+  dark: { accentColor: QUANTUM_COLORS['quantum.purple'], presetName: 'Dark', icon: '🌙' },
+  warm: { accentColor: QUANTUM_COLORS['hearth.gold'], presetName: 'Warm', icon: '🔥' },
+  ocean: { accentColor: QUANTUM_COLORS['cosmic.blue'], presetName: 'Ocean', icon: '🌊' },
+  forest: { accentColor: QUANTUM_COLORS['sanctuary.green'], presetName: 'Forest', icon: '🌲' },
+  sunset: { accentColor: QUANTUM_COLORS['fire.base'], presetName: 'Sunset', icon: '🌅' },
   amoled: {
     accentColor: QUANTUM_COLORS['quantum.purple'],
     presetName: 'AMOLED Black',
+    icon: '⚫',
     mode: 'amoled',
   },
+  // Sirens' founding rose - "an app someone opens on a hard day" - brought into
+  // cosmic as `sirens.rose` 2026-08-22 at KP's word, and offered to every realm.
+  rose: { accentColor: QUANTUM_COLORS['sirens.rose'], presetName: 'Rose', icon: '🌹' },
+  // THE PRIDE FLAGS - cosmic's own pride.* tokens, in each flag's own order.
+  // Rainbow leans on the hot pink that was the FIRST stripe of the first flag
+  // (1978) and reads on both grounds; Progress Pride leans on the trans pink
+  // the house already wears for Pride (Lantern, TJDPoetry's palette).
+  rainbow: {
+    accentColor: QUANTUM_COLORS['pride.pink'],
+    presetName: 'Rainbow',
+    icon: '🌈',
+    stripes: [
+      QUANTUM_COLORS['pride.red'],
+      QUANTUM_COLORS['pride.orange'],
+      QUANTUM_COLORS['pride.yellow'],
+      QUANTUM_COLORS['pride.green'],
+      QUANTUM_COLORS['pride.blue'],
+      QUANTUM_COLORS['pride.purple'],
+    ],
+  },
+  pride: {
+    accentColor: QUANTUM_COLORS['pride.transPink'],
+    presetName: 'Progress Pride',
+    icon: '🏳️‍🌈',
+    stripes: [
+      QUANTUM_COLORS['pride.white'],
+      QUANTUM_COLORS['pride.transPink'],
+      QUANTUM_COLORS['pride.lightBlue'],
+      QUANTUM_COLORS['pride.brown'],
+      QUANTUM_COLORS['pride.black'],
+      QUANTUM_COLORS['pride.red'],
+      QUANTUM_COLORS['pride.orange'],
+      QUANTUM_COLORS['pride.yellow'],
+      QUANTUM_COLORS['pride.green'],
+      QUANTUM_COLORS['pride.blue'],
+      QUANTUM_COLORS['pride.purple'],
+    ],
+  },
+};
+
+/**
+ * The swatch a card shows for a preset: the flag's stripes, hard-edged, when it
+ * is a flag; the plain accent otherwise. One place, so every card agrees.
+ */
+export const presetSwatch = (preset: ThemePreset): string => {
+  const s = preset.stripes;
+  if (!s || s.length === 0) return preset.accentColor;
+  const n = s.length;
+  const stops = s
+    .map((c, i) => `${c} ${((i / n) * 100).toFixed(2)}% ${(((i + 1) / n) * 100).toFixed(2)}%`)
+    .join(', ');
+  return `linear-gradient(90deg, ${stops})`;
 };
 
 /** What a reader gets before they have chosen anything. */
