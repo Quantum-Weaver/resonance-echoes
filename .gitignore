@@ -57,7 +57,7 @@ generate_blueprint.py
 # Release artifacts (signed builds live on disk + device, never in git)
 release/
 
-# src-tauri/gen/ is DELIBERATELY NOT IGNORED (2026-08-16, KP's word). Tauri's own
-# src-tauri/.gitignore covers /target and /gen/schemas, and tauri android init
-# writes gitignores inside gen/android for build/, .gradle/ and keystore.properties.
-# gen/android is hand-edited ground; ignoring it hid two cross-landings from git.
+# src-tauri/gen/ is deliberately NOT ignored. Tauri's own src-tauri/.gitignore
+# covers /target and /gen/schemas, and tauri android init writes gitignores
+# inside gen/android for build/, .gradle/ and keystore.properties.
+# gen/android gets hand-edited, and ignoring it hid two cross-landings from git.
