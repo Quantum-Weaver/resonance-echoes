@@ -3,7 +3,6 @@ import { browser } from '$app/environment';
 import type { Echo } from '$lib/types/types';
 
 // Personal emoji definitions — the folksonomy layer of the Resonance Grammar.
-// Same key convention as Compass so the pattern is defined once, everywhere.
 const PERSONAL_DEF_PREFIX = 'emoji_def_';
 
 let db: Database | null = null;
@@ -118,11 +117,7 @@ async function addEcho(echo: Omit<Echo, 'id' | 'createdAt'>) {
 }
 
 async function getAllEchoes(): Promise<Echo[]> {
-	// E1 (B4) fix: export must NEVER serialise the loaded page — `echoes`
-	// only ever holds one page (LIMIT 200), while Settings shows the true
-	// COUNT(*). This walks the database itself, unbounded, so the file
-	// carries everything the count promises. Throws rather than returning
-	// [] — a silent partial export is the exact wound this closes.
+	// Walks the database itself, unbounded — never `echoes`, which only ever holds one page (LIMIT 200).
 	if (!db) throw new Error('Database not ready — nothing was exported');
 	const rows = await db.select<Record<string, unknown>[]>(
 		'SELECT * FROM echoes ORDER BY timestamp DESC'
@@ -131,10 +126,7 @@ async function getAllEchoes(): Promise<Echo[]> {
 }
 
 async function importEchoes(incoming: Echo[]): Promise<{ added: number; skipped: number }> {
-	// E4 (B6): the other half of the round-trip. NON-DESTRUCTIVE by law —
-	// INSERT OR IGNORE keyed on id, so importing on top of live data can
-	// only ever add; nothing existing is touched. Throws on a null db for
-	// the same reason everything here does: silence is the worse failure.
+	// NON-DESTRUCTIVE by law — INSERT OR IGNORE keyed on id, so an import can only ever add.
 	if (!db) throw new Error('Database not ready — nothing was imported');
 	let added = 0;
 	let skipped = 0;
@@ -191,8 +183,7 @@ async function updateEcho(id: string, updates: Partial<Omit<Echo, 'id' | 'create
 }
 
 async function purgeAll() {
-	// Throws instead of returning silently so the purge UI can tell the vessel
-	// when nothing was actually deleted (Compass pattern).
+	// Throws instead of returning silently so the purge UI can report a failure.
 	if (!db) throw new Error('Database not ready — nothing was purged');
 	await db.execute('DELETE FROM echoes');
 	echoes = [];

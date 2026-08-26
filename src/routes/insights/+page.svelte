@@ -6,7 +6,7 @@
 
 	const echoes = $derived(echoStore.echoes);
 
-	// ── Your Dictionary (folksonomy editor, Compass pattern) ──────────────────
+	// Your Dictionary (folksonomy editor)
 
 	let selectedDictEmoji = $state<string | null>(null);
 	let editingPersonalDef = $state('');
@@ -31,7 +31,7 @@
 		return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 	}
 
-	// ── 1. Top Emojis ──────────────────────────────────────────────────────────
+	// 1. Top Emojis
 
 	const topEmojis = $derived.by(() => {
 		const counts: Record<string, number> = {};
@@ -50,7 +50,7 @@
 		return `${(1.2 + (count / maxCount) * 1.8).toFixed(2)}rem`;
 	}
 
-	// ── 2. By Sense ────────────────────────────────────────────────────────────
+	// 2. By Sense
 
 	const bySense = $derived.by(() => {
 		const counts: Record<string, number> = {};
@@ -65,7 +65,7 @@
 
 	const topSense = $derived(bySense.find(s => s.count > 0) ?? null);
 
-	// ── 3. Streak ──────────────────────────────────────────────────────────────
+	// 3. Streak
 
 	const streak = $derived.by(() => {
 		if (echoes.length === 0) return 0;
@@ -90,7 +90,7 @@
 		return count;
 	});
 
-	// ── 4. Time of Day ─────────────────────────────────────────────────────────
+	// 4. Time of Day
 
 	type TODKey = 'morning' | 'afternoon' | 'evening' | 'night';
 
@@ -133,7 +133,7 @@
 		return `You often log in the ${dominant}.`;
 	});
 
-	// ── 5. Recent Mood ─────────────────────────────────────────────────────────
+	// 5. Recent Mood
 
 	function dayLabel(date: Date, index: number): string {
 		if (index === 0) return 'Today';
@@ -160,11 +160,11 @@
 
 	const hasThisWeek = $derived(recentMood.some(d => d.count > 0));
 
-	// ── Not Sure count (Feature 4) ─────────────────────────────────────────────
+	// Not Sure count (Feature 4)
 
 	const notSureCount = $derived(echoes.filter((e) => e.sense === 'not_sure').length);
 
-	// ── 6. Intensity Trend ─────────────────────────────────────────────────────
+	// 6. Intensity Trend
 
 	const intensityTrend = $derived.by((): 'increasing' | 'decreasing' | 'stable' | 'insufficient' => {
 		const now = Date.now();
@@ -183,7 +183,7 @@
 		return 'stable';
 	});
 
-	// ── 7. Patterns (Feature 5) ─────────────────────────────────────────────────
+	// 7. Patterns (Feature 5)
 
 	interface PatternEntry {
 		senseId: string;
@@ -366,8 +366,7 @@
 		</div>
 		{/if}
 
-		<!-- 8. Your Dictionary — the folksonomy layer (Compass pattern):
-		     the Sanctuary defines each emoji once; the vessel may redefine it. -->
+		<!-- 8. Your Dictionary -->
 		<div class="card">
 			<div class="card-label">Your dictionary</div>
 			<div class="dict-grid">
@@ -479,7 +478,7 @@
 		line-height: 1.5;
 	}
 
-	/* ── 1. Emoji Cloud ── */
+	/* 1. Emoji Cloud */
 	.emoji-cloud {
 		display: flex;
 		flex-wrap: wrap;
@@ -495,7 +494,7 @@
 	}
 	.cloud-emoji:hover { transform: scale(1.15); }
 
-	/* ── 2. Sense List ── */
+	/* 2. Sense List */
 	.sense-list {
 		display: flex;
 		flex-direction: column;
@@ -521,7 +520,7 @@
 		text-align: right;
 	}
 
-	/* ── 3. Streak ── */
+	/* 3. Streak */
 	.streak-display {
 		display: flex;
 		align-items: baseline;
@@ -540,7 +539,7 @@
 		color: var(--text-secondary);
 	}
 
-	/* ── 4. Time of Day ── */
+	/* 4. Time of Day */
 	.tod-grid {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
@@ -571,7 +570,7 @@
 	}
 	.tod-lbl { font-size: 0.6rem; color: var(--text-muted); text-align: center; }
 
-	/* ── 5. Recent Mood ── */
+	/* 5. Recent Mood */
 	.mood-row {
 		display: grid;
 		grid-template-columns: repeat(7, 1fr);
@@ -601,7 +600,7 @@
 		white-space: nowrap;
 	}
 
-	/* ── 8. Your Dictionary (Compass pattern) ── */
+	/* 8. Your Dictionary */
 	/* Single-row carousel — all emojis reachable by horizontal scroll */
 	.dict-grid {
 		display: flex;

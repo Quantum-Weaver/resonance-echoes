@@ -27,13 +27,8 @@
 	let appVersion = $state('');
 	getVersion().then((v) => (appVersion = v)).catch(() => (appVersion = ''));
 
-	// ── Theme section ──────────────────────────────────────────────────────────
+	// Theme section
 
-	// Every preset the shelf holds — derived, never hardcoded, so a new preset
-	// appears here the day it is born (the law the onboarding walk already keeps;
-	// Rose, Rainbow and Progress Pride arrived this way 2026-08-22 at KP's word).
-	// The six founding faces are this app's own dress; the shelf's icon stands in
-	// for any it does not name, and a flag preset shows its stripes as the swatch.
 	const PRESET_ICONS: Record<string, string> = {
 		dark: '🌙', warm: '🔥', ocean: '🌊', forest: '🌲', sunset: '🌅', amoled: '⚫'
 	};
@@ -71,25 +66,15 @@
 		{ key: 'large' as const, label: 'Large' }
 	];
 
-	// ── Data Sovereignty section ────────────────────────────────────────────────
+	// Data Sovereignty section
 
 	const echoCount = $derived(echoStore.totalCount);
 
-	// purgeState controls the double-confirmation flow for both purge paths
 	let purgeState = $state<'idle' | 'confirm1' | 'confirm2'>('idle');
 	let pendingExport = $state(false);
 	let showUninstallGuide = $state(false);
 
 	async function exportData() {
-		// E1 (B4): straight from the database — never the loaded page.
-		// E2+E3 (B5): ONE versioned envelope carrying BOTH the echoes and the
-		// folksonomy — KP's ruling, one breath: "we need folksonomy and echoes
-		// to export in the same manner." Purge and export now cover exactly
-		// the same ground, and the counts are written on the envelope so a
-		// vessel can see at a glance that the file carries what the app shows.
-		// This shape is the family's to inherit (schema-versioned,
-		// app-namespaced): envelope/envelopeVersion identify the format,
-		// `app` namespaces the payload, `data` carries the app's tables.
 		const allEchoes = await echoStore.getAllEchoes();
 		const folksonomy = { ...echoStore.personalDefinitions };
 		const payload = {
@@ -114,7 +99,7 @@
 		URL.revokeObjectURL(url);
 	}
 
-	// ── Import (E4/B6) — the other half of the round-trip ────────────────────
+	// Import (E4/B6) — the other half of the round-trip
 	let importInput = $state<HTMLInputElement | null>(null);
 	let importReport = $state<string | null>(null);
 	let importError = $state<string | null>(null);
@@ -144,8 +129,7 @@
 			let echoesIn: unknown[] = [];
 			let folkIn: Record<string, unknown> = {};
 			if (Array.isArray(parsed)) {
-				// Legacy bare-array export (pre-envelope, ≤ v1.2.0) — still honored:
-				// a vessel's old backup must never be told it's worthless.
+				// Legacy bare-array export (pre-envelope) is still honored.
 				echoesIn = parsed;
 			} else if (parsed?.envelope === 'resonance-export' && parsed?.data) {
 				if (parsed.app !== 'resonance-echoes') {
@@ -165,8 +149,7 @@
 			>[0];
 			const malformed = echoesIn.length - valid.length;
 			const { added, skipped } = await echoStore.importEchoes(valid);
-			// Folksonomy merges non-destructively too: an existing definition is
-			// the vessel's current mind and is never overwritten by an older file.
+			// Folksonomy merges non-destructively: an existing definition is never overwritten by an older file.
 			let defsAdded = 0;
 			let defsKept = 0;
 			for (const [emoji, def] of Object.entries(folkIn)) {
@@ -206,16 +189,12 @@
 	async function executePurge() {
 		purgeError = null;
 		try {
-			// Awaited: the export must be complete IN HAND before anything
-			// deletes — export-then-purge may never destroy the remainder (E1).
+			// Awaited: the export must be complete before anything deletes.
 			if (pendingExport) await exportData();
 			await echoStore.purgeAll();
-			// Clear everything, not a curated list — future keys must not
-			// survive a purge by omission (Compass pattern).
+			// Clear everything, not a curated list: future keys must not survive a purge by omission.
 			localStorage.clear();
 		} catch (err) {
-			// Stay on the confirm step and say what failed — a silent purge
-			// rejection looks like 'purge never purges'.
 			purgeError = err instanceof Error ? err.message : String(err);
 			return;
 		}
@@ -228,7 +207,7 @@
 		<h1 class="settings-title">Settings</h1>
 	</header>
 
-	<!-- ── Section 1: Theme ── -->
+	<!-- Section 1: Theme -->
 	<section class="section">
 		<h2 class="section-title">Theme</h2>
 
@@ -288,7 +267,7 @@
 		</div>
 	</section>
 
-	<!-- ── Section 2: Data Sovereignty ── -->
+	<!-- Section 2: Data Sovereignty -->
 	<section class="section">
 		<h2 class="section-title">Data Sovereignty</h2>
 
@@ -392,7 +371,7 @@
 		</div>
 	</section>
 
-	<!-- ── Section 3: About ── -->
+	<!-- Section 3: About -->
 	<section class="section">
 		<h2 class="section-title">About</h2>
 
@@ -450,7 +429,7 @@
 		margin: 0;
 	}
 
-	/* ── Theme ── */
+	/* Theme */
 	.theme-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -516,7 +495,7 @@
 		background: color-mix(in srgb, var(--accent) 12%, transparent);
 	}
 
-	/* ── Data Sovereignty ── */
+	/* Data Sovereignty */
 	.echo-count {
 		font-size: 0.875rem;
 		color: var(--text-muted);
@@ -685,7 +664,7 @@
 		justify-content: flex-end;
 	}
 
-	/* ── About ── */
+	/* About */
 	.about-card {
 		background: var(--bg-surface);
 		border: 1px solid var(--border-color);
@@ -731,7 +710,7 @@
 		line-height: 1.5;
 	}
 
-	/* ── Uninstall Guide ── */
+	/* Uninstall Guide */
 	.uninstall-section {
 		padding-top: 0.75rem;
 		border-top: 1px solid var(--border-color);

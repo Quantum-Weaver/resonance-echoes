@@ -1,12 +1,5 @@
 import { browser } from '$app/environment';
 
-// Ported from Compass's timer store (2026-07-18) with one deliberate
-// difference, per KP's Landscape-board note: "echoes should get a timer like
-// compass that can also sound off when done not just silence, since a song
-// will not be playing in echoes." Compass fades music and pauses at expiry;
-// Echoes has no music, so completion is AUDIBLE by design — a gentle chime
-// that repeats a few times until dismissed, with an opt-out toggle.
-
 export type TimerMode = 'sand' | 'breathing' | 'dissolve' | 'flower' | 'metatron' | 'cycle' | 'numeric';
 
 const MODE_ORDER: TimerMode[] = ['sand', 'breathing', 'dissolve', 'flower', 'metatron', 'cycle', 'numeric'];
@@ -19,13 +12,11 @@ const SOUND_KEY = 'resonance-echoes-timer-sound';
 const CHIME_KEY = 'resonance-echoes-timer-chime';
 const VOLUME_KEY = 'resonance-echoes-timer-volume';
 
-// Chime options (KP's ask, 2026-07-26). All synthesized — no audio assets,
-// nothing fetched — and all built on the same sensory-friendly philosophy
-// as the original: gentle attack, long decay, never a buzzer.
+// Chime options — all synthesized, no audio assets.
 export type ChimeId = 'rise' | 'bell' | 'drop' | 'pulse';
 type ChimeNote = { freq: number; at: number; peak: number; decay: number };
 const CHIME_DEFS: Record<ChimeId, ChimeNote[]> = {
-	// The original three-note rise (C5–E5–G5) — the default, unchanged.
+	// The original three-note rise (C5–E5–G5) — the default.
 	rise: [
 		{ freq: 523.25, at: 0, peak: 0.18, decay: 1.4 },
 		{ freq: 659.25, at: 0.35, peak: 0.18, decay: 1.4 },
@@ -36,7 +27,7 @@ const CHIME_DEFS: Record<ChimeId, ChimeNote[]> = {
 		{ freq: 329.63, at: 0, peak: 0.22, decay: 2.2 },
 		{ freq: 659.25, at: 0, peak: 0.06, decay: 1.6 },
 	],
-	// A soft descent (G5→C5) — arrival rather than alert.
+	// A soft descent (G5→C5).
 	drop: [
 		{ freq: 783.99, at: 0, peak: 0.16, decay: 1.6 },
 		{ freq: 523.25, at: 0.4, peak: 0.16, decay: 1.8 },
@@ -70,16 +61,13 @@ let chime = $state<ChimeId>(loadChime());
 let chimeVolume = $state(loadVolume());
 let mode = $state<TimerMode>(prefersReducedMotion ? 'numeric' : 'sand');
 
-// Module state (not component-local) so the timer survives navigating away
-// from /timer — same reasoning as Compass: a page-local interval would
-// orphan on unmount or stack a duplicate on revisit.
+// Module state (not component-local) so the timer survives navigating away from /timer.
 let tickInterval: ReturnType<typeof setInterval> | null = null;
 let chimeTimeout: ReturnType<typeof setTimeout> | null = null;
 let chimeCount = 0;
 let audioCtx: AudioContext | null = null;
 
-// Created/resumed inside start() — a user gesture — so the Android WebView
-// permits playback later when the timer completes unattended.
+// Created/resumed inside start() — a user gesture — so the Android WebView permits playback later.
 function ensureAudio(): AudioContext | null {
 	if (!browser || !soundOn) return null;
 	try {
@@ -87,15 +75,13 @@ function ensureAudio(): AudioContext | null {
 		if (audioCtx.state === 'suspended') void audioCtx.resume();
 		return audioCtx;
 	} catch {
-		return null; // no audio available — the visual completion state still shows
+		return null;
 	}
 }
 
-// Plays the selected chime at the selected volume. Each note is a sine
-// bell with a gentle attack and long decay — sensory-friendly on purpose:
-// no buzzer, at any setting.
+// Plays the selected chime at the selected volume.
 function playChime() {
-	if (chimeVolume <= 0) return; // volume zero is a chosen silence
+	if (chimeVolume <= 0) return;
 	const ctx = ensureAudio();
 	if (!ctx) return;
 	for (const n of CHIME_DEFS[chime]) {
@@ -157,8 +143,6 @@ function start(minutes: number) {
 }
 
 function pause() {
-	// The sand holds still; nothing is lost. Pause keeps the remaining time
-	// exactly where it stood — no drift, no penalty for stepping away.
 	if (!isRunning || isPaused) return;
 	isPaused = true;
 	if (tickInterval) clearInterval(tickInterval);
@@ -197,7 +181,7 @@ function setSoundOn(v: boolean) {
 function setChime(id: ChimeId) {
 	chime = id;
 	if (browser) localStorage.setItem(CHIME_KEY, id);
-	playChime(); // preview inside the tap that chose it — hear before trusting
+	playChime(); // preview inside the tap that chose it
 }
 
 function setChimeVolume(v: number) {

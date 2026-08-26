@@ -136,11 +136,7 @@
 		}
 	}
 
-	// The moment's sky — DERIVED from the echo's own timestamp, never
-	// stored (KP's ruling at the Hearth's communications sitting: "this is
-	// echoes, tied into the sky facts"). Facts only, compute-only by law —
-	// what a moment's sky means is the vessel's own. Retroactive for every
-	// echo ever logged; cached per day so a long timeline stays light.
+	// The moment's sky — derived from the echo's own timestamp, never stored; cached per day.
 	const skyCache = new Map<string, string>();
 	function skyLine(timestamp: number): string {
 		const key = new Date(timestamp).toDateString();

@@ -32,7 +32,6 @@
 
 	const greeting = $derived(`${getGreeting()}, ${vesselName}`);
 
-	// Live, not a stale placeholder (Compass pattern: the panel reflects real state).
 	const statsLine = $derived.by(() => {
 		const n = echoStore.totalCount;
 		if (n === 0) return 'No echoes yet — your journey begins here.';
@@ -44,7 +43,6 @@
 	});
 
 	function onQuickAdd() {
-		// Phase 1 will wire this to the echo form
 		goto('/add');
 	}
 
@@ -67,10 +65,6 @@
 		</div>
 	{:else}
 		<div class="comfort-bar__minimized">
-			<!-- The navigation toggle. It lives in the bar rather than floating above
-			     it, because a floating button in this corner buried three things at
-			     once (2026-08-21). Inside the bar it shares the bar's own layer and
-			     can cover nothing. -->
 			<button
 				class="comfort-bar__nav"
 				onclick={() => uiStore.toggleNav()}
@@ -99,9 +93,7 @@
 		border-top: 1px solid var(--border-color);
 		padding-bottom: env(safe-area-inset-bottom, 0px);
 		transition: background-color 0.2s ease;
-		/* Own compositor layer: large relayouts elsewhere could leave a stale
-		   painted copy of this fixed bar in the Android WebView (the "ghost
-		   bar" artifact seen in Compass before the same fix). */
+		/* Own compositor layer — prevents a stale painted copy of this fixed bar in the Android WebView. */
 		transform: translateZ(0);
 	}
 
@@ -137,8 +129,7 @@
 	}
 
 	.comfort-bar__greeting-btn {
-		/* Takes the slack so the nav button and the + keep their corners, and
-		   a long greeting truncates instead of shoving them. */
+		/* Takes the slack so a long greeting truncates instead of shoving the buttons. */
 		flex: 1;
 		min-width: 0;
 		overflow: hidden;

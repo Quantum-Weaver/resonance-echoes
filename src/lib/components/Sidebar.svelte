@@ -9,25 +9,16 @@
 	import { derive, rederive, wear, type Menu, type Shrine, type Door } from '$lib/cumdach';
 	import { QUANTUM_COLORS } from '$lib/cosmic';
 
-	// The wordmark law, learned from Bubbles: the chrome reads the app's OWN
-	// name (productName in tauri.conf.json is the single truth), so a rename
-	// never gets chased into the chrome. Outside Tauri the fallback stands.
+	// The chrome reads the app's OWN name (productName in tauri.conf.json); outside Tauri the fallback stands.
 	let appName = $state('Echoes');
 	getName()
 		.then((n) => { appName = n.replace(/^Resonance\s+/i, ''); })
 		.catch(() => {});
 
-	// Default-collapsed on every platform (Compass pattern): the content is the
-	// destination, the nav is a drawer — even on desktop. The open flag lives in
-	// uiStore because the control that toggles it is in the ComfortBar (2026-08-21).
+	// Default-collapsed on every platform; the open flag lives in uiStore, toggled from the ComfortBar.
 	const open = $derived(uiStore.navOpen);
 
-	// THE SHRINE — the sidebar consumes the-cumdach (the spring's navigation
-	// shell; Compass proved it, Bubbles walked this road first and Echoes
-	// learns from it). The app declares the particulars — a FLAT door list
-	// and the Settings foot, by KP's ⚛ stroke: no hats until the realm grows
-	// rooms; the arithmetic handles growth — and the panels are DERIVED from
-	// the screen's own measure, never arranged by opinion.
+	// THE SHRINE
 	type EchoesDoor = Door & { href: string; icon: IconName };
 
 	const door = (id: string, href: string, icon: IconName, label: string): EchoesDoor => ({
@@ -47,9 +38,7 @@
 		foot: { door: door('settings', '/settings', 'settings', 'Settings') },
 	};
 
-	// The shrine's costs in this app's own pixels (the 44px calm floor lives
-	// inside the door cost, gap included; over-reserving errs safe), and the
-	// faces — cosmic's colors, the app's emoji; words always ride underneath.
+	// The shrine's costs in this app's own pixels, and the faces — cosmic's colors, the app's emoji.
 	const COSTS = { door: 48, head: 64, switchButton: 58, switchColumns: 2 };
 	const PALETTE = {
 		colors: [
@@ -60,10 +49,7 @@
 		],
 		emojis: ['📖', '✨', '🌿', '🌀'],
 	};
-	// The ComfortBar (48px, fixed, z-index 110) is a declared edge, honored by
-	// arithmetic — an INPUT, never a CSS-only mend. It is the ONLY edge again:
-	// the floating hamburger that used to claim bottom 56–101px moved inside the
-	// bar on 2026-08-21, so nothing else paints over the sidebar's foot.
+	// The ComfortBar (48px, fixed, z-index 110) is a declared edge, honored by arithmetic — an INPUT, never a CSS-only mend.
 	const RESERVED = 48;
 
 	let land = $state({ height: 900, reserved: RESERVED });
@@ -73,9 +59,7 @@
 		land = { height: window.innerHeight, reserved: RESERVED };
 	}
 
-	// DYNAMICS ALWAYS RE-DERIVE — any new land (rotation, resize, a phone's
-	// keyboard) re-runs the pure formula; the worn panel survives by its
-	// place when it still exists.
+	// DYNAMICS ALWAYS RE-DERIVE — any new land re-runs the pure formula.
 	$effect(() => {
 		const l = land;
 		shrine = rederive(
@@ -95,7 +79,6 @@
 	const wornDoors = $derived((wornPanel?.doors ?? []) as EchoesDoor[]);
 	const footDoor = MENU.foot.door as EchoesDoor;
 
-	// The vessel opened the ComfortBar panel — they want to see it, not the nav.
 	$effect(() => {
 		if (uiStore.comfortBarExpanded) uiStore.setNavOpen(false);
 	});
@@ -112,15 +95,7 @@
 	}
 </script>
 
-<!-- The toggle lives in the ComfortBar (see ComfortBar.svelte). It used to
-     float here at bottom:56px/left:1rem, z-index 120 — the same band and the
-     same column as this drawer's own Settings foot AND the expanded bar's
-     stats line, with .quick-log-fab holding the opposite corner. Three layers,
-     one column; removing the floating button was the only mend that freed all
-     three. -->
-
-<!-- Backdrop — dismisses the sidebar on outside interaction whenever it's open,
-     desktop or mobile, since the ComfortBar toggle is always visible on both. -->
+<!-- Backdrop — dismisses the sidebar on outside interaction whenever it's open. -->
 {#if open}
 	<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 	<div
@@ -134,15 +109,11 @@
 <!-- Sidebar panel -->
 <nav class="sidebar" class:open aria-label="Main navigation">
 	<div class="sidebar__header">
-		<!-- cosmic-sparkle-text adds the animated glow; the scoped accent color
-		     below outranks its light-gray color so light mode stays readable. -->
+		<!-- The scoped accent color outranks cosmic-sparkle-text's light-gray so light mode stays readable. -->
 		<span class="sidebar__wordmark cosmic-sparkle-text">{appName}</span>
 	</div>
 
-	<!-- The switch — derived, never arranged. Faces wear color + emoji (THE
-	     FACE LAW), the words always ride underneath; the worn panel holds
-	     until tapped again. At one panel, no switch is derived at all —
-	     which is this menu's everyday truth at four doors. -->
+	<!-- The switch — derived, never arranged; the worn panel holds until tapped again. -->
 	{#if shrine.switchShown}
 		<div
 			class="mode-switch"
@@ -198,8 +169,7 @@
 		position: fixed;
 		inset: 0;
 		z-index: 49;
-		/* Transparent (Compass pattern): dismissal surface, not a dimmer —
-		   the drawer is small and the content should stay readable. */
+		/* Transparent: a dismissal surface, not a dimmer. */
 		background-color: transparent;
 	}
 
@@ -219,11 +189,7 @@
 		display: flex;
 		flex-direction: column;
 		overflow-y: auto;
-		/* The ComfortBar (48px, fixed, z-index 110) always paints over the
-		   sidebar (50) — the foot must clear it or Settings is buried
-		   (Compass's desktop-walk lesson, inherited with the shrine). Must stay
-		   equal to RESERVED in the script above: one edge, declared once,
-		   honored twice. */
+		/* Clears the fixed 48px ComfortBar — must stay equal to RESERVED in the script above. */
 		padding-bottom: calc(48px + env(safe-area-inset-bottom, 0px));
 	}
 
