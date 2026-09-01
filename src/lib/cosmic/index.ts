@@ -1,4 +1,11 @@
+// ============================================================================
+// COSMIC CONSTANTS - SINGLE SOURCE OF TRUTH
+// Quantum design system exports - all values derived from core constants
+// ============================================================================
+
+// ============================================================================
 // COLORS - Core color system
+// ============================================================================
 export {
   QUANTUM_COLORS,
   COUNCIL_COLORS,
@@ -19,7 +26,9 @@ export type {
   DomainColorKey,
 } from './colors';
 
+// ============================================================================
 // DIMENSIONS - Spacing, breakpoints, sizes, radii
+// ============================================================================
 export {
   BASE_UNIT,
   SCALE_MULTIPLIERS,
@@ -62,7 +71,9 @@ export type {
   RadiusKey,
 } from './dimensions';
 
+// ============================================================================
 // POSITIONING - Viewport, parallax, zoom, camera, coordinates
+// ============================================================================
 export {
   VIEWPORT_ANCHORS,
   PARALLAX_LAYERS,
@@ -118,7 +129,9 @@ export type {
   SceneSequenceKey,
 } from './positioning';
 
+// ============================================================================
 // MOTION - Durations, easings, keyframes, animations
+// ============================================================================
 export {
   durations as DURATIONS,
   easing as EASING,
@@ -166,7 +179,9 @@ export type {
   RefugePhaseKey,
 } from './motion';
 
+// ============================================================================
 // TYPOGRAPHY - Font families, sizes, domain/entity styles
+// ============================================================================
 export {
   FONT_FAMILIES,
   TEXT_SIZES,
@@ -205,7 +220,9 @@ export type {
   TypographyStyleConfig,
 } from './typography';
 
+// ============================================================================
 // CONSCIOUSNESS - User tiers, beam intensity, vessel capacity
+// ============================================================================
 export {
   CONSCIOUSNESS_LEVELS,
   TIER_TO_BEAM_INTENSITY,
@@ -250,7 +267,9 @@ export type {
   ElementalConsciousnessKey as ElementalConsciousnessKeyType,
 } from './consciousness';
 
+// ============================================================================
 // ATTENTION — the Bird-Wisdom Spectrum
+// ============================================================================
 export {
   ATTENTION_MODES,
   ATTENTION_MODE_NAMES,
@@ -271,7 +290,9 @@ export type {
   DeityVoiceKey as DeityVoiceKeyType,
 } from './attention';
 
+// ============================================================================
 // INTERACTIVITY — the user's own hand
+// ============================================================================
 export {
   SELF_PAUSE_TRIGGER,
   ESCORT_TRANSITION,
@@ -290,7 +311,9 @@ export type {
   ReflectionPrimitiveType,
 } from './interactivity';
 
+// ============================================================================
 // EFFECTS - Gradients, glows, shadows, backdrops, holographic, presence
+// ============================================================================
 export {
   GRADIENTS,
   QUANTUM_GRADIENTS,
@@ -335,7 +358,11 @@ export type {
   StonePaletteKey,
 } from './effects';
 
+// ============================================================================
 // SOLIDS — the dimensional vocabulary
+// ============================================================================
+// Polyhedra as vertices and faces, and the honest answer to a side count that
+// no fair solid can carry.
 
 export {
   PLATONIC_SOLIDS,

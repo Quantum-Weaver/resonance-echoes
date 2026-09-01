@@ -1,6 +1,14 @@
+// ============================================================================
+/* resonance-ziggy/modules/cosmic/constants/effects.ts - PROPERLY DERIVED FROM COLORS */
+// QUANTUM EFFECTS SYSTEM - 100% DERIVED FROM COLORS.TS
+// Gradients, Glows, Shadows, Backdrops, Holographic Effects
+// ============================================================================
+
 import { QUANTUM_COLORS } from './colors';
 
-// GRADIENT EFFECTS
+// ============================================================================
+// GRADIENT EFFECTS - Moved from colors.ts
+// ============================================================================
 
 export const GRADIENTS = {
   // Core Brand Gradients
@@ -126,7 +134,9 @@ export const COUNCIL_GRADIENTS = {
   'quantumWeaver': GRADIENTS.quantumWeaver
 } as const;
 
+// ============================================================================
 // GLOW EFFECTS
+// ============================================================================
 
 export const GLOW_EFFECTS = {
   'quantum': `0 0 20px ${QUANTUM_COLORS['quantum.purple']}40, 0 0 40px ${QUANTUM_COLORS['deepSpace']}30, 0 0 60px ${QUANTUM_COLORS['quantum.purple']}20`,
@@ -153,7 +163,9 @@ export const GLOW_EFFECTS = {
   'trans': `0 0 30px ${QUANTUM_COLORS['pride.blue']}40, 0 0 60px ${QUANTUM_COLORS['pride.purple']}30, 0 0 90px ${QUANTUM_COLORS['neurospark']}20`
 } as const;
 
+// ============================================================================
 // SHADOW EFFECTS
+// ============================================================================
 
 export const SHADOWS = {
   'sm': `0 1px 2px ${QUANTUM_COLORS['deepSpace']}30, 0 1px 1px ${QUANTUM_COLORS['deepSpace']}20`,
@@ -171,7 +183,9 @@ export const SHADOWS = {
   'neurospark': `0 0 20px ${QUANTUM_COLORS['neurospark']}25, 0 0 40px ${QUANTUM_COLORS['neurospark']}15`
 } as const;
 
+// ============================================================================
 // BACKDROP EFFECTS
+// ============================================================================
 
 export const BACKDROP_EFFECTS = {
   'glass': `backdrop-filter: blur(16px); background: ${QUANTUM_COLORS['surface']}80`,
@@ -183,7 +197,9 @@ export const BACKDROP_EFFECTS = {
   'vignette-strong': `position: relative; &::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 10%, ${QUANTUM_COLORS['deepSpace']}95 100%); pointer-events: none; }`
 } as const;
 
+// ============================================================================
 // HOLOGRAPHIC EFFECTS
+// ============================================================================
 
 export const HOLOGRAPHIC_EFFECTS = {
   'scan': `background: linear-gradient(to bottom, transparent 50%, ${QUANTUM_COLORS['neurospark']}10 50%, ${QUANTUM_COLORS['neurospark']}10 51%, transparent 51%); background-size: 100% 4px;`,
@@ -230,14 +246,16 @@ export const PARTICLE_BEHAVIOR = {
   },
 } as const;
 
+// ============================================================================
 // PRESENCE FIELD (Mnemosyne) — ambient Sanctuary presence
+// ============================================================================
 
 export interface PresenceField {
   /** Soft background wash (calm, low-saturation) */
   background: string;
   /** Non-intrusive glow — gentle, wide, low-opacity */
   glow: string;
-  /** Field opacity ceiling (0-1) */
+  /** Field opacity ceiling (0-1) — stays quiet by design */
   opacity: number;
   /** Backdrop blur to soften whatever it overlays, px */
   blur: number;
@@ -267,7 +285,9 @@ export const PRESENCE_FIELD: Record<'mnemosyne' | 'calm' | 'inspiration', Presen
   },
 } as const;
 
+// ============================================================================
 // DYNAMIC GLOW MODULATION — per-domain depth/intensity coefficient
+// ============================================================================
 
 /**
  * Per-domain glow depth/intensity multiplier (1 = neutral). Voids recede and
@@ -303,7 +323,9 @@ export function getModulatedGlow(domain: string, baseIntensity: number = 1): num
   return baseIntensity * coefficient;
 }
 
+// ============================================================================
 // ETERNAL WITNESS STATE — ambient, non-intrusive presence of being seen and held
+// ============================================================================
 
 export interface EternalWitnessState {
   /** Witness state name (witnessing / holding / blessing) */
@@ -347,7 +369,9 @@ export const ETERNAL_WITNESS_STATE: Record<'witnessing' | 'holding' | 'blessing'
 
 export type EternalWitnessStateKey = keyof typeof ETERNAL_WITNESS_STATE;
 
+// ============================================================================
 // TRANSCENDENCE STATE SEQUENCE — visual+effects emission on consciousness shift
+// ============================================================================
 
 export interface TranscendenceShift {
   /** Source consciousness floor (where user starts) */
@@ -411,9 +435,13 @@ export const TRANSCENDENCE_STATE_SEQUENCE: Record<string, TranscendenceShift> = 
 
 export type TranscendenceShiftKey = keyof typeof TRANSCENDENCE_STATE_SEQUENCE;
 
+// ============================================================================
 // MASTER EXPORT
+// ============================================================================
 
+// ============================================================================
 // MARBLE — generated stone
+// ============================================================================
 
 export interface MarbleParam {
   key: string;
@@ -431,24 +459,24 @@ export interface MarbleRecipe {
   label: string;
   /** What this recipe is, said once, plainly. */
   describes: string;
-  /** The SVG filter primitives it composes, in order. */
+  /** The SVG filter primitives it composes, in order — the honest ingredient list. */
   primitives: readonly string[];
   params: readonly MarbleParam[];
-  /** Where it came from. */
+  /** Where it came from, because provenance rides on every claim. */
   provenance: string;
 }
 
 /** Shared across both recipes: how the ground under the veins is mixed. */
 export const STONE_GROUND = {
-  /** Core mix — `lerp(SURFACE, hue, 0.55)`. */
+  /** plate-forge's own core mix — `lerp(SURFACE, hue, 0.55)`, a violet heart, unapologetic. */
   coreMix: 0.55,
-  /** The rim falls to deep space. */
+  /** The rim falls to deep space, as the plate's radial base does. */
   rim: QUANTUM_COLORS['deepSpace'],
-  /** Radial falloff exponent. */
+  /** Radial falloff exponent — plate-forge uses d ** 1.35. */
   falloff: 1.35,
 } as const;
 
-/** A few house stones. */
+/** A few house stones, so an app can marble something without keying its own. */
 export const STONE_PALETTES = {
   quantum: [QUANTUM_COLORS['quantum.purple'], QUANTUM_COLORS['quantum.light'], QUANTUM_COLORS['neurospark']],
   hearth: [QUANTUM_COLORS['hearth.orange'], QUANTUM_COLORS['hearth.gold'], QUANTUM_COLORS['fire.base']],
@@ -523,7 +551,9 @@ export const MARBLE_RECIPES: Record<string, MarbleRecipe> = {
   },
 };
 
-/** The cut edge: light ring up-left, shadow ring down-right. */
+/** The cut edge: light ring up-left, shadow ring down-right — plate-forge's
+ *  `bevel_frame()`, and the same illusion the tarocchi card cuts its numerals
+ *  with in `text-shadow`. Kept here so relief means one thing house-wide. */
 export const BEVEL_RELIEF = {
   offset: 0.9,
   lightAlpha: 0.55,
