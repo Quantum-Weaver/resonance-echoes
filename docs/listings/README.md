@@ -7,7 +7,7 @@ these are the drafts.***
 
 | storefront | pack | state |
 |---|---|---|
-| Google Play | `PLAY-TRACK.md` | closed track live since 2026-08-13 |
+| Google Play | `PLAY-TRACK.md` | closed track live since 2026-08-13; Console: Closed testing, Aug 23, 2026 (KP's paste 09-01) |
 | Samsung Galaxy | `GALAXY-LISTING.md` | pack drafted; the Seller Portal awaited a business address, now in hand |
 | Microsoft Store | `MSSTORE-LISTING.md` | pack founded 2026-08-21; no submission made |
 | AudHDities (ours) | `AUDHDITIES-LISTING.md` | pack founded 2026-08-21; waits on the site rebuild — it IS the gate |

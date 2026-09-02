@@ -100,7 +100,7 @@ device, not a diagnostic tool, not therapy. A journal that takes emoji seriously
 
 Collects nothing. Shares nothing. All data local to the device; export is
 user-initiated; deletion is built in and complete. The policy stands at
-`PRIVACY.md` in the repo and is the same document declared to Play and Galaxy —
+`https://audhdities.com/apps/privacy` and is the same document declared to Play and Galaxy —
 **one published promise, one address**.
 
 ## What this page owes that a store does not

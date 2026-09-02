@@ -50,7 +50,7 @@ No UGC shared, no ads, no purchases, no data collection → Everyone.
 Collects: nothing · Shares: nothing · Security: all data local to
 device; export is user-initiated to user storage; full deletion built
 in (purge). Privacy policy URL (public, verified):
-https://github.com/Quantum-Weaver/resonance-echoes/blob/main/PRIVACY.md
+https://audhdities.com/apps/privacy
 
 ## Assets
 Icon: gold-band Echoes set (already in app; 512×512 from

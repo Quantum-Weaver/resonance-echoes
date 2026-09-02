@@ -1,7 +1,7 @@
 # ≽༏≼ Resonance Echoes
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.3.2-brightgreen.svg)]()
+[![Version](https://img.shields.io/badge/version-1.4.1-brightgreen.svg)]()
 
 *A sovereign journal for logging anything with feeling.*
 

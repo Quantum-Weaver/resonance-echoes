@@ -102,7 +102,7 @@ facts rather than transcribing a rating from another store.*
 - All data local to the device; export is user-initiated to user storage; full
   deletion built in (purge).
 - Privacy policy URL (public, live, and already declared to two other
-  storefronts): `https://github.com/Quantum-Weaver/resonance-echoes/blob/main/PRIVACY.md`
+  storefronts): `https://audhdities.com/apps/privacy`
 
 ## Assets
 
