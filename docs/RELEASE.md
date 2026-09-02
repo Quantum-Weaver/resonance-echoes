@@ -25,7 +25,7 @@
 
 *(v1.2.0, 2026-07-18 — the timer that sounds, 16 KB flags, cosmic
 mirror. v1.1.x — accessibility & sovereignty, cello-sigil rebuild.
-The full ledger lives in CHECKLIST.md.)*
+The checklist that held the full ledger was retired in KP's 2026-08-25 cleanup, under his ruling that no checklist docs exist, and stands in git history; the realm's open items and plans live in the base — `python C:/_superposition/resonance-progenatrix/progenatrix.py recall --realm resonance-echoes`.)*
 
 ---
 
