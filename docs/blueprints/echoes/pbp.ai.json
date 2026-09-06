@@ -3,7 +3,7 @@
   "project_name": "resonance-echoes",
   "project_short_name": "echoes",
   "project_repo": "resonance-echoes",
-  "project_path": "C:\\_superposition\\resonance-echoes",
+  "project_path": "../resonance-echoes",
   "self": "echoes/pbp.ai.json",
   "parent": null,
   "description": "A sovereign journal for logging anything with feeling",
@@ -185,7 +185,7 @@
     "gitignored_note": "Read from the repo's own .gitignore files \u2014 the top-level ones one by one, the deeper ones in a single batched `git check-ignore`. Named and counted, never described, never opened.",
     "reparse_points_not_followed": [],
     "reparse_note": "Junctions and symlinks are named, never entered. Following one would pull an external ground into this repo's count, or loop on a self-junction.",
-    "own_output": "C:\\_superposition\\resonance-echoes\\docs\\blueprints"
+    "own_output": "docs/blueprints"
   },
   "generated": "2026-08-21T15:19:31.988803 | in sovereign time",
   "maintaining_agent": "ProjectAgent"
