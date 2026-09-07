@@ -8,15 +8,7 @@
   "files": [
     {
       "path": ".gitignore",
-      "description": "ignore rules, 2,048 bytes"
-    },
-    {
-      "path": "CLAUDE.md",
-      "description": "CLAUDE.md"
-    },
-    {
-      "path": "HANDOFF.md",
-      "description": "HANDOFF"
+      "description": "ignore rules, 2,023 bytes"
     },
     {
       "path": "HANDS.md",
@@ -48,7 +40,7 @@
     },
     {
       "path": "svelte.config.js",
-      "description": "Tauri doesn't have a Node.js server to do proper SSR"
+      "description": "See: https://svelte.dev/docs/kit/single-page-apps"
     },
     {
       "path": "tsconfig.json",
@@ -59,10 +51,11 @@
       "description": "script, 873 bytes"
     }
   ],
-  "file_count": 13,
+  "file_count": 11,
   "subdirectories": [
     ".cargo",
     ".claude",
+    ".journals",
     "docs",
     "reports",
     "screenshots",
@@ -71,59 +64,6 @@
     "static"
   ],
   "code_analysis": {
-    "CLAUDE.md": {
-      "language": "markdown",
-      "lines": 97,
-      "words": 631,
-      "heading_count": 7,
-      "headings": [
-        "CLAUDE.md \u2014 Resonance Echoes",
-        "Essential rules",
-        "Structure",
-        "Tools",
-        "People",
-        "Standards",
-        "The forge and the link tender"
-      ],
-      "links_external": 1,
-      "links_site_absolute": [],
-      "links_internal": [],
-      "links_internal_unresolved": [],
-      "links_internal_outside_checkout": [],
-      "code_fences": 0,
-      "table_rows": 0,
-      "checkboxes": {
-        "open": 0,
-        "done": 0
-      },
-      "has_story_block": false,
-      "declares_mirror_class": false
-    },
-    "HANDOFF.md": {
-      "language": "markdown",
-      "lines": 38,
-      "words": 225,
-      "heading_count": 4,
-      "headings": [
-        "HANDOFF \u2014 resonance-echoes",
-        "Where it stands",
-        "What waits, and whose",
-        "Read before you touch this repo"
-      ],
-      "links_external": 0,
-      "links_site_absolute": [],
-      "links_internal": [],
-      "links_internal_unresolved": [],
-      "links_internal_outside_checkout": [],
-      "code_fences": 1,
-      "table_rows": 6,
-      "checkboxes": {
-        "open": 0,
-        "done": 0
-      },
-      "has_story_block": false,
-      "declares_mirror_class": false
-    },
     "HANDS.md": {
       "language": "markdown",
       "lines": 83,
@@ -261,7 +201,7 @@
     "README.md": {
       "language": "markdown",
       "lines": 153,
-      "words": 761,
+      "words": 800,
       "heading_count": 13,
       "headings": [
         "\u227d\u0f0f\u227c Resonance Echoes",
@@ -325,7 +265,7 @@
     },
     "svelte.config.js": {
       "language": "node",
-      "lines": 19,
+      "lines": 17,
       "functions": [],
       "commands": []
     },
@@ -350,12 +290,6 @@
       "reason": "package-class tree (dependency or build output) \u2014 not counted, because counting it means walking it"
     },
     {
-      "name": ".svelte-kit",
-      "address": ".svelte-kit",
-      "walked": false,
-      "reason": "package-class tree (dependency or build output) \u2014 not counted, because counting it means walking it"
-    },
-    {
       "name": "build",
       "address": "build",
       "walked": false,
@@ -370,12 +304,12 @@
     {
       "name": "release",
       "address": "release",
-      "files_on_disk": 30,
+      "files_on_disk": 5,
       "walked": false,
       "reason": "gitignored by this repo's own .gitignore \u2014 named and counted, never described, never opened"
     }
   ],
-  "scan_timestamp": "2026-08-21T15:19:31.724893 | in sovereign time",
+  "scan_timestamp": "2026-09-07T14:02:46.207210 | in sovereign time",
   "maintaining_agent": "FolderAgent",
   "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

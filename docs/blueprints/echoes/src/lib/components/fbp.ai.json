@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "src/lib/components/ComfortBar.svelte",
-      "description": "surface, 6,104 bytes"
+      "description": "surface, 5,568 bytes"
     },
     {
       "path": "src/lib/components/GradientPulse.svelte",
@@ -16,11 +16,11 @@
     },
     {
       "path": "src/lib/components/Sidebar.svelte",
-      "description": "surface, 10,022 bytes"
+      "description": "surface, 7,837 bytes"
     },
     {
       "path": "src/lib/components/TimerVisualization.svelte",
-      "description": "surface, 18,223 bytes"
+      "description": "surface, 17,475 bytes"
     }
   ],
   "file_count": 4,
@@ -30,7 +30,7 @@
   "code_analysis": {
     "ComfortBar.svelte": {
       "language": "svelte",
-      "lines": 248,
+      "lines": 239,
       "uses_runes": [
         "$derived",
         "$effect",
@@ -50,7 +50,7 @@
     },
     "Sidebar.svelte": {
       "language": "svelte",
-      "lines": 343,
+      "lines": 309,
       "uses_runes": [
         "$derived",
         "$effect",
@@ -61,7 +61,7 @@
     },
     "TimerVisualization.svelte": {
       "language": "svelte",
-      "lines": 599,
+      "lines": 597,
       "uses_runes": [
         "$derived",
         "$effect",
@@ -73,7 +73,7 @@
     }
   },
   "folders_not_walked": [],
-  "scan_timestamp": "2026-08-21T15:19:31.766184 | in sovereign time",
+  "scan_timestamp": "2026-09-07T14:02:46.245545 | in sovereign time",
   "maintaining_agent": "FolderAgent",
   "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

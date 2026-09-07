@@ -1,0 +1,123 @@
+{
+  "tier": "folder",
+  "folder_name": "realm",
+  "folder_path": ".journals/realm",
+  "self": "echoes/.journals/realm/fbp.ai.json",
+  "parent": "echoes/.journals/obp.ai.json",
+  "description": "4 files, 0 subfolders",
+  "files": [
+    {
+      "path": ".journals/realm/2026-09-01-the-checklist-pointers-and-the-pack-retold-as-1-4-1.md",
+      "description": "2026-09-01"
+    },
+    {
+      "path": ".journals/realm/2026-09-01-the-consoles-truth-in-the-track-log.md",
+      "description": "2026-09-01"
+    },
+    {
+      "path": ".journals/realm/2026-09-01-the-privacy-url-is-the-single-page.md",
+      "description": "2026-09-01"
+    },
+    {
+      "path": ".journals/realm/2026-09-06-old-house-paths-in-prose-made-relative.md",
+      "description": "Old-house paths in prose made relative"
+    }
+  ],
+  "file_count": 4,
+  "subdirectories": [],
+  "code_analysis": {
+    "2026-09-01-the-checklist-pointers-and-the-pack-retold-as-1-4-1.md": {
+      "language": "markdown",
+      "lines": 8,
+      "words": 165,
+      "heading_count": 1,
+      "headings": [
+        "2026-09-01 \u2014 the checklist pointers re-pointed; the Play pack retold as 1.4.1"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "2026-09-01-the-consoles-truth-in-the-track-log.md": {
+      "language": "markdown",
+      "lines": 12,
+      "words": 260,
+      "heading_count": 1,
+      "headings": [
+        "2026-09-01 \u2014 the Console's truth stood over the track log"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "2026-09-01-the-privacy-url-is-the-single-page.md": {
+      "language": "markdown",
+      "lines": 16,
+      "words": 310,
+      "heading_count": 2,
+      "headings": [
+        "2026-09-01 \u2014 the privacy policy URL is the single page",
+        "2026-09-01 (later) \u2014 the surveyed citations re-pointed"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    },
+    "2026-09-06-old-house-paths-in-prose-made-relative.md": {
+      "language": "markdown",
+      "lines": 11,
+      "words": 36,
+      "heading_count": 1,
+      "headings": [
+        "Old-house paths in prose made relative"
+      ],
+      "links_external": 0,
+      "links_site_absolute": [],
+      "links_internal": [],
+      "links_internal_unresolved": [],
+      "links_internal_outside_checkout": [],
+      "code_fences": 0,
+      "table_rows": 0,
+      "checkboxes": {
+        "open": 0,
+        "done": 0
+      },
+      "has_story_block": false,
+      "declares_mirror_class": false
+    }
+  },
+  "folders_not_walked": [],
+  "scan_timestamp": "2026-09-07T14:02:46.215510 | in sovereign time",
+  "maintaining_agent": "FolderAgent",
+  "note": "The details live here. Upper tiers link to this address; they do not copy this body."
+}

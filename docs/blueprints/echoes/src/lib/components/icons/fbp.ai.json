@@ -12,7 +12,7 @@
     },
     {
       "path": "src/lib/components/icons/IconInsights.svelte",
-      "description": "surface, 539 bytes"
+      "description": "surface, 449 bytes"
     },
     {
       "path": "src/lib/components/icons/Icons.svelte",
@@ -45,7 +45,7 @@
     },
     "IconInsights.svelte": {
       "language": "svelte",
-      "lines": 10,
+      "lines": 9,
       "uses_runes": [
         "$props"
       ],
@@ -91,7 +91,7 @@
     }
   },
   "folders_not_walked": [],
-  "scan_timestamp": "2026-08-21T15:19:31.769402 | in sovereign time",
+  "scan_timestamp": "2026-09-07T14:02:46.248592 | in sovereign time",
   "maintaining_agent": "FolderAgent",
   "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

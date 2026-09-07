@@ -8,15 +8,15 @@
   "files": [
     {
       "path": "src/routes/+layout.svelte",
-      "description": "surface, 2,301 bytes"
+      "description": "surface, 2,201 bytes"
     },
     {
       "path": "src/routes/+layout.ts",
-      "description": "Tauri doesn't have a Node.js server to do proper SSR"
+      "description": "Tauri has no Node.js server for SSR"
     },
     {
       "path": "src/routes/+page.svelte",
-      "description": "surface, 17,272 bytes"
+      "description": "surface, 17,006 bytes"
     }
   ],
   "file_count": 3,
@@ -31,7 +31,7 @@
   "code_analysis": {
     "+layout.svelte": {
       "language": "svelte",
-      "lines": 88,
+      "lines": 86,
       "uses_runes": [
         "$derived",
         "$effect",
@@ -42,7 +42,7 @@
     },
     "+layout.ts": {
       "language": "typescript",
-      "lines": 6,
+      "lines": 3,
       "exported_functions": [],
       "exported_consts": [
         "ssr"
@@ -56,7 +56,7 @@
     },
     "+page.svelte": {
       "language": "svelte",
-      "lines": 680,
+      "lines": 676,
       "uses_runes": [
         "$derived",
         "$effect",
@@ -67,7 +67,7 @@
     }
   },
   "folders_not_walked": [],
-  "scan_timestamp": "2026-08-21T15:19:31.817912 | in sovereign time",
+  "scan_timestamp": "2026-09-07T14:02:46.291439 | in sovereign time",
   "maintaining_agent": "FolderAgent",
   "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

@@ -8,15 +8,15 @@
   "files": [
     {
       "path": "src/lib/stores/echo.svelte.ts",
-      "description": "typescript, 7,542 bytes"
+      "description": "typescript, 6,955 bytes"
     },
     {
       "path": "src/lib/stores/theme.svelte.ts",
-      "description": "typescript, 1,639 bytes"
+      "description": "typescript, 1,587 bytes"
     },
     {
       "path": "src/lib/stores/timer.svelte.ts",
-      "description": "typescript, 7,641 bytes"
+      "description": "typescript, 6,420 bytes"
     },
     {
       "path": "src/lib/stores/ui.svelte.ts",
@@ -28,7 +28,7 @@
   "code_analysis": {
     "echo.svelte.ts": {
       "language": "typescript",
-      "lines": 222,
+      "lines": 213,
       "exported_functions": [],
       "exported_consts": [
         "echoStore"
@@ -42,7 +42,7 @@
     },
     "theme.svelte.ts": {
       "language": "typescript",
-      "lines": 59,
+      "lines": 58,
       "exported_functions": [],
       "exported_consts": [
         "themeStore"
@@ -56,7 +56,7 @@
     },
     "timer.svelte.ts": {
       "language": "typescript",
-      "lines": 239,
+      "lines": 223,
       "exported_functions": [],
       "exported_consts": [
         "prefersReducedMotion",
@@ -74,7 +74,7 @@
     },
     "ui.svelte.ts": {
       "language": "typescript",
-      "lines": 20,
+      "lines": 16,
       "exported_functions": [],
       "exported_consts": [
         "uiStore"
@@ -88,7 +88,7 @@
     }
   },
   "folders_not_walked": [],
-  "scan_timestamp": "2026-08-21T15:19:31.797033 | in sovereign time",
+  "scan_timestamp": "2026-09-07T14:02:46.272138 | in sovereign time",
   "maintaining_agent": "FolderAgent",
   "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }
