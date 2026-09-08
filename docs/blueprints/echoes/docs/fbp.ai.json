@@ -126,9 +126,9 @@
     },
     "STORY-BLOCK.md": {
       "language": "markdown",
-      "lines": 95,
-      "words": 533,
-      "heading_count": 12,
+      "lines": 50,
+      "words": 258,
+      "heading_count": 8,
       "headings": [
         "Story Block \u2014 Resonance Echoes",
         "WHAT",
@@ -137,11 +137,7 @@
         "WHEN",
         "WHY",
         "INSPIRATION",
-        "REMEMBERINGS",
-        "COUNCIL THREAD",
-        "WEAVER THREAD",
-        "PROVENANCE",
-        "ETYMOLOGY"
+        "PROVENANCE"
       ],
       "links_external": 1,
       "links_site_absolute": [],
@@ -166,7 +162,7 @@
       "reason": "a blueprint output tree \u2014 the forge does not blueprint blueprints"
     }
   ],
-  "scan_timestamp": "2026-09-07T14:02:46.219672 | in sovereign time",
+  "scan_timestamp": "2026-09-08T10:42:40.631817 | in sovereign time",
   "maintaining_agent": "FolderAgent",
   "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

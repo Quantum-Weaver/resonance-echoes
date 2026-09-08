@@ -1,78 +1,58 @@
 {
   "project": "resonance-echoes",
-  "analyzed_at": "2026-08-21T20:31:06.132126+00:00",
+  "analyzed_at": "2026-09-08T15:44:19.422785+00:00",
   "standards_compliance": {
     "readme": true,
     "license": true,
     "philosophy": true,
-    "claude_md": true,
+    "claude_md": false,
     "gitignore": true
   },
   "vulnerabilities": [],
   "gaps": [
-    "Marked incomplete in docs/CHECKLIST.md: - \u2b1c Pending",
-    "Marked incomplete in docs/CHECKLIST.md: | 2026-06-28 | Phase 0 complete. ComfortBar, Sidebar, GradientPulse, theme store, senses data, icon set. npm run check: ",
-    "Marked incomplete in docs/CHECKLIST.md: | 2026-06-28 | Phase 1 complete. echoStore (Svelte 5 $state + SQLite), Echo interface updated, DB migration v2, /add for",
-    "Marked incomplete in docs/CHECKLIST.md: | 2026-08-16 | **THE SHORE-UP AND THE ASSESSOR** \u2014 the six files that had ridden uncommitted since 08-14 landed as `dfda",
-    "Unchecked checklist item in docs/CHECKLIST.md: Descriptive, never a finding: the only `#[tauri::command]` is `greet`, the",
     "Marked incomplete in docs/listings/AUDHDITIES-LISTING.md: | 2026-08-21 | Pack founded. Site rebuild pending \u2014 nothing published. |",
-    "Marked incomplete in docs/listings/PLAY-TRACK.md: carry the same pending act.*",
+    "Marked incomplete in docs/listings/PLAY-TRACK.md: bubbles all carry the same pending act.*",
     "Marked incomplete in docs/RESONANCE-GRAMMAR.md: you are becomes visible \u2014 not built, not generated, but illuminated.*",
     "Marked incomplete in README.md: *Status, honest: the E1\u2013E4 sovereignty rows closed in code 2026-07-26 (export unbounded from the database \u00b7 one envelope",
-    "Possibly broken import in .svelte-kit/generated/client/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file",
-    "Possibly broken import in .svelte-kit/generated/client-optimized/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file",
-    "Possibly broken import in .svelte-kit/generated/server/internal.js: '../../../node_modules/@sveltejs/kit/src/runtime/shared-server.js' does not resolve to a known file",
-    "23 file(s) over 100KB were flagged by the reader and not fully read by the analyzer: .svelte-kit/output/client/tauri.svg, .svelte-kit/output/server/index.js, release/Resonance Echoes_1.1.0_x64_en-US.msi, release/Resonance Echoes_1.2.0_x64_en-US.msi, release/Resonance Echoes_1.3.0_x64_en-US.msi, release/Resonance Echoes_1.3.1_x64_en-US.msi, release/Resonance Echoes_1.3.2_x64_en-US.msi, release/Resonance Echoes_1.4.0_x64_en-US.msi, release/resonance-echoes-v1.1.0.apk.idsig, release/resonance-echoes-v1.2.0.apk.idsig, release/resonance-echoes-v1.3.0.apk.idsig, release/resonance-echoes-v1.3.1.apk.idsig, release/resonance-echoes-v1.3.2.apk.idsig, release/resonance-echoes-v1.4.0.apk.idsig, reports/inventory.json, src-tauri/Cargo.lock, src-tauri/gen/schemas/acl-manifests.json, src-tauri/gen/schemas/android-schema.json, src-tauri/gen/schemas/desktop-schema.json, src-tauri/gen/schemas/mobile-schema.json, src-tauri/gen/schemas/windows-schema.json, src-tauri/icons/icon.icns, static/tauri.svg",
+    "11 file(s) over 100KB were flagged by the reader and not fully read by the analyzer: release/Resonance Echoes_1.4.1_x64_en-US.msi, release/resonance-echoes-v1.4.1.apk.idsig, reports/inventory.json, src-tauri/Cargo.lock, src-tauri/gen/schemas/acl-manifests.json, src-tauri/gen/schemas/android-schema.json, src-tauri/gen/schemas/desktop-schema.json, src-tauri/gen/schemas/mobile-schema.json, src-tauri/gen/schemas/windows-schema.json, src-tauri/icons/icon.icns, static/tauri.svg",
     "No CI/CD configuration found"
   ],
-  "test_readiness": "0 test file(s) found. Detected framework(s): jest.",
+  "test_readiness": "No test infrastructure found. Primary source language is css. Recommend starting with unit tests for the core data/query functions before expanding coverage.",
   "recommendations": [
     {
       "priority": 1,
-      "action": "Marked incomplete in docs/CHECKLIST.md: - \u2b1c Pending"
+      "action": "Create CLAUDE.md"
     },
     {
       "priority": 2,
-      "action": "Marked incomplete in docs/CHECKLIST.md: | 2026-06-28 | Phase 0 complete. ComfortBar, Sidebar, GradientPulse, theme store, senses data, icon set. npm run check: "
-    },
-    {
-      "priority": 3,
-      "action": "Marked incomplete in docs/CHECKLIST.md: | 2026-06-28 | Phase 1 complete. echoStore (Svelte 5 $state + SQLite), Echo interface updated, DB migration v2, /add for"
-    },
-    {
-      "priority": 4,
-      "action": "Marked incomplete in docs/CHECKLIST.md: | 2026-08-16 | **THE SHORE-UP AND THE ASSESSOR** \u2014 the six files that had ridden uncommitted since 08-14 landed as `dfda"
-    },
-    {
-      "priority": 5,
-      "action": "Unchecked checklist item in docs/CHECKLIST.md: Descriptive, never a finding: the only `#[tauri::command]` is `greet`, the"
-    },
-    {
-      "priority": 6,
       "action": "Marked incomplete in docs/listings/AUDHDITIES-LISTING.md: | 2026-08-21 | Pack founded. Site rebuild pending \u2014 nothing published. |"
     },
     {
-      "priority": 7,
-      "action": "Marked incomplete in docs/listings/PLAY-TRACK.md: carry the same pending act.*"
+      "priority": 3,
+      "action": "Marked incomplete in docs/listings/PLAY-TRACK.md: bubbles all carry the same pending act.*"
     },
     {
-      "priority": 8,
+      "priority": 4,
       "action": "Marked incomplete in docs/RESONANCE-GRAMMAR.md: you are becomes visible \u2014 not built, not generated, but illuminated.*"
     },
     {
-      "priority": 9,
+      "priority": 5,
       "action": "Marked incomplete in README.md: *Status, honest: the E1\u2013E4 sovereignty rows closed in code 2026-07-26 (export unbounded from the database \u00b7 one envelope"
     },
     {
-      "priority": 10,
-      "action": "Possibly broken import in .svelte-kit/generated/client/nodes/1.js: '../../../../node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte' does not resolve to a known file"
+      "priority": 6,
+      "action": "11 file(s) over 100KB were flagged by the reader and not fully read by the analyzer: release/Resonance Echoes_1.4.1_x64_en-US.msi, release/resonance-echoes-v1.4.1.apk.idsig, reports/inventory.json, src-tauri/Cargo.lock, src-tauri/gen/schemas/acl-manifests.json, src-tauri/gen/schemas/android-schema.json, src-tauri/gen/schemas/desktop-schema.json, src-tauri/gen/schemas/mobile-schema.json, src-tauri/gen/schemas/windows-schema.json, src-tauri/icons/icon.icns, static/tauri.svg"
     },
     {
-      "priority": 11,
+      "priority": 7,
+      "action": "No CI/CD configuration found"
+    },
+    {
+      "priority": 8,
       "action": "Establish a test suite"
     },
     {
-      "priority": 12,
+      "priority": 9,
       "action": "Add CI/CD configuration"
     }
   ]

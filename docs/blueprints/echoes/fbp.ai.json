@@ -201,7 +201,7 @@
     "README.md": {
       "language": "markdown",
       "lines": 153,
-      "words": 800,
+      "words": 801,
       "heading_count": 13,
       "headings": [
         "\u227d\u0f0f\u227c Resonance Echoes",
@@ -309,7 +309,7 @@
       "reason": "gitignored by this repo's own .gitignore \u2014 named and counted, never described, never opened"
     }
   ],
-  "scan_timestamp": "2026-09-07T14:02:46.207210 | in sovereign time",
+  "scan_timestamp": "2026-09-08T10:42:40.625380 | in sovereign time",
   "maintaining_agent": "FolderAgent",
   "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

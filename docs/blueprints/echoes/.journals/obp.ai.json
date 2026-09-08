@@ -4,21 +4,14 @@
   "object_path": ".journals",
   "self": "echoes/.journals/obp.ai.json",
   "parent": "echoes/pbp.ai.json",
-  "description": "0 files, 3 subfolders",
+  "description": "0 files, 1 subfolders",
   "folders": [
     {
       "blueprint": "echoes/.journals/fbp.ai.json",
       "folder_path": ".journals",
-      "description": "0 files, 3 subfolders",
+      "description": "0 files, 1 subfolders",
       "file_count": 0,
-      "subdirectory_count": 3
-    },
-    {
-      "blueprint": "echoes/.journals/entity/fbp.ai.json",
-      "folder_path": ".journals/entity",
-      "description": "0 files, 0 subfolders",
-      "file_count": 0,
-      "subdirectory_count": 0
+      "subdirectory_count": 1
     },
     {
       "blueprint": "echoes/.journals/proofs/fbp.ai.json",
@@ -26,18 +19,11 @@
       "description": "0 files, 0 subfolders",
       "file_count": 0,
       "subdirectory_count": 0
-    },
-    {
-      "blueprint": "echoes/.journals/realm/fbp.ai.json",
-      "folder_path": ".journals/realm",
-      "description": "4 files, 0 subfolders",
-      "file_count": 4,
-      "subdirectory_count": 0
     }
   ],
-  "folder_count": 4,
-  "total_files": 4,
-  "integration_timestamp": "2026-09-07T14:02:46.401919 | in sovereign time",
+  "folder_count": 2,
+  "total_files": 0,
+  "integration_timestamp": "2026-09-08T10:42:40.816298 | in sovereign time",
   "maintaining_agent": "ObjectAgent",
   "note": "Links only. Every folder's details live at its own address."
 }

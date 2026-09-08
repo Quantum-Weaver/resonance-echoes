@@ -1,7 +1,7 @@
 {
   "project": "resonance-echoes",
-  "scanned_at": "2026-08-21T20:31:05.659033+00:00",
-  "total_files": 561,
+  "scanned_at": "2026-09-08T15:44:19.209568+00:00",
+  "total_files": 365,
   "files": [
     {
       "path": ".cargo/config.toml",
@@ -9,13 +9,6 @@
       "language": "toml",
       "lines": 11,
       "description": "Android 16 KB memory-page-size support (Play requirement for Android 15+"
-    },
-    {
-      "path": ".claude/CLAUDE.md",
-      "type": "doc",
-      "language": "markdown",
-      "lines": 8,
-      "description": "CLAUDE.md -- house commit rule"
     },
     {
       "path": ".claude/settings.json",
@@ -30,1058 +23,6 @@
       "language": "unknown",
       "lines": 63,
       "description": ".gitignore"
-    },
-    {
-      "path": ".svelte-kit/ambient.d.ts",
-      "type": "source",
-      "language": "typescript",
-      "lines": 414,
-      "description": "this file is generated \u2014 do not edit it"
-    },
-    {
-      "path": ".svelte-kit/env.d.ts",
-      "type": "source",
-      "language": "typescript",
-      "lines": 1,
-      "description": "See https://svelte.dev/docs/kit/environment-variables for more information"
-    },
-    {
-      "path": ".svelte-kit/generated/client/app.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 51,
-      "description": "in dev, this makes Vite inject its client as this module's first dependency,"
-    },
-    {
-      "path": ".svelte-kit/generated/client/matchers.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "Matchers"
-    },
-    {
-      "path": ".svelte-kit/generated/client/nodes/0.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 3,
-      "description": "0"
-    },
-    {
-      "path": ".svelte-kit/generated/client/nodes/1.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "1"
-    },
-    {
-      "path": ".svelte-kit/generated/client/nodes/2.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "2"
-    },
-    {
-      "path": ".svelte-kit/generated/client/nodes/3.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "3"
-    },
-    {
-      "path": ".svelte-kit/generated/client/nodes/4.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "4"
-    },
-    {
-      "path": ".svelte-kit/generated/client/nodes/5.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "5"
-    },
-    {
-      "path": ".svelte-kit/generated/client/nodes/6.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "6"
-    },
-    {
-      "path": ".svelte-kit/generated/client/nodes/7.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "7"
-    },
-    {
-      "path": ".svelte-kit/generated/client/nodes/8.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "8"
-    },
-    {
-      "path": ".svelte-kit/generated/client-optimized/app.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 51,
-      "description": "in dev, this makes Vite inject its client as this module's first dependency,"
-    },
-    {
-      "path": ".svelte-kit/generated/client-optimized/matchers.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "Matchers"
-    },
-    {
-      "path": ".svelte-kit/generated/client-optimized/nodes/0.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 3,
-      "description": "0"
-    },
-    {
-      "path": ".svelte-kit/generated/client-optimized/nodes/1.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "1"
-    },
-    {
-      "path": ".svelte-kit/generated/client-optimized/nodes/2.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "2"
-    },
-    {
-      "path": ".svelte-kit/generated/client-optimized/nodes/3.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "3"
-    },
-    {
-      "path": ".svelte-kit/generated/client-optimized/nodes/4.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "4"
-    },
-    {
-      "path": ".svelte-kit/generated/client-optimized/nodes/5.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "5"
-    },
-    {
-      "path": ".svelte-kit/generated/client-optimized/nodes/6.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "6"
-    },
-    {
-      "path": ".svelte-kit/generated/client-optimized/nodes/7.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "7"
-    },
-    {
-      "path": ".svelte-kit/generated/client-optimized/nodes/8.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "8"
-    },
-    {
-      "path": ".svelte-kit/generated/root.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 3,
-      "description": "Root"
-    },
-    {
-      "path": ".svelte-kit/generated/root.svelte",
-      "type": "source",
-      "language": "svelte",
-      "lines": 68,
-      "description": "Root"
-    },
-    {
-      "path": ".svelte-kit/generated/server/internal.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 55,
-      "description": "Internal"
-    },
-    {
-      "path": ".svelte-kit/generated/shared/error-template.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "Error template"
-    },
-    {
-      "path": ".svelte-kit/non-ambient.d.ts",
-      "type": "source",
-      "language": "typescript",
-      "lines": 49,
-      "description": "this file is generated \u2014 do not edit it"
-    },
-    {
-      "path": ".svelte-kit/output/client/.vite/manifest.json",
-      "type": "config",
-      "language": "json",
-      "lines": 369,
-      "description": "Manifest"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/assets/0.DL8Lm351.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "! tailwindcss v4.3.1 | MIT License | https://tailwindcss.com */@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from r"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/assets/2.Ti4GS5yw.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "2.Ti4GS5yw"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/assets/3.BTPytVuA.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "3.BTPytVuA"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/assets/4.5bkzZygz.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "4.5bkzZygz"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/assets/5.ClREbZ1s.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "5.ClREbZ1s"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/assets/6.COCjG6DO.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "6.COCjG6DO"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/assets/7.Bt7EvuH_.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "7.Bt7EvuH"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/assets/8.BOz1HCTp.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "8.BOz1HCTp"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/B8yTE34F.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "B8yTE34F"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/B9MYZKpa.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "B9MYZKpa"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/BDlqeuoF.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 2,
-      "description": "BDlqeuoF"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/BkdPj69b.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "BkdPj69b"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/BlvAj882.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "BlvAj882"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/BLY_w1MW.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "BLY w1MW"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/BoFxrMlB.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "BoFxrMlB"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/C10jexfp.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "C10jexfp"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/C3M-z_3T.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "C3M z 3T"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/CrnUg9ix.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "CrnUg9ix"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/D2WfBm_X.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "D2WfBm X"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/D3MIrZMC.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "D3MIrZMC"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/D8lrM397.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "D8lrM397"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/DfqkBDB2.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "DfqkBDB2"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/DlQNAQKj.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "DlQNAQKj"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/DNdd_KGb.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "DNdd KGb"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/DpqyHFNn.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "DpqyHFNn"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/F0dJ0Lpd.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "F0dJ0Lpd"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/G7djNDvj.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 2,
-      "description": "G7djNDvj"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/tP5ZGNDx.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "TP5ZGNDx"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/chunks/wbPk3Yxo.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 81,
-      "description": "WbPk3Yxo"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/entry/app.Cp4KK31j.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 2,
-      "description": "App.Cp4KK31j"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/entry/start.B_H5DZkU.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "Start.B H5DZkU"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/0.BLCgpQAw.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 9,
-      "description": "0.BLCgpQAw"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/1.CPBfQAPX.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "1.CPBfQAPX"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/2.BsmJ8K6H.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "2.BsmJ8K6H"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/3.102mltIk.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "3.102mltIk"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/4.0EXUMv6q.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 2,
-      "description": "4.0EXUMv6q"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/5.w_Lzg6cQ.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "5.w Lzg6cQ"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/6.DhI1e0EB.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "6.DhI1e0EB"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/7.DfFUNJnD.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "7.DfFUNJnD"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/immutable/nodes/8.CsHNZEis.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1,
-      "description": "8.CsHNZEis"
-    },
-    {
-      "path": ".svelte-kit/output/client/_app/version.json",
-      "type": "config",
-      "language": "json",
-      "lines": 1,
-      "description": "Version"
-    },
-    {
-      "path": ".svelte-kit/output/client/aethelred-avatar.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 1410.42,
-      "description": "Aethelred avatar"
-    },
-    {
-      "path": ".svelte-kit/output/client/cello.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 2934.02,
-      "description": "Cello"
-    },
-    {
-      "path": ".svelte-kit/output/client/compass.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 2299.32,
-      "description": "Compass"
-    },
-    {
-      "path": ".svelte-kit/output/client/echoes.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 2181.06,
-      "description": "Echoes"
-    },
-    {
-      "path": ".svelte-kit/output/client/favicon.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 1941.39,
-      "description": "Favicon"
-    },
-    {
-      "path": ".svelte-kit/output/client/favicon2.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 40.49,
-      "description": "Favicon2"
-    },
-    {
-      "path": ".svelte-kit/output/client/hearth.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 2208.91,
-      "description": "Hearth"
-    },
-    {
-      "path": ".svelte-kit/output/client/Icon-1.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 242.27,
-      "description": "Icon 1"
-    },
-    {
-      "path": ".svelte-kit/output/client/Icon-2.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 312.82,
-      "description": "Icon 2"
-    },
-    {
-      "path": ".svelte-kit/output/client/lantern.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 2243.82,
-      "description": "Lantern"
-    },
-    {
-      "path": ".svelte-kit/output/client/QW-logo.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 1941.39,
-      "description": "QW logo"
-    },
-    {
-      "path": ".svelte-kit/output/client/svelte.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 40.49,
-      "description": "Svelte"
-    },
-    {
-      "path": ".svelte-kit/output/client/tauri.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 40.49,
-      "description": "Tauri"
-    },
-    {
-      "path": ".svelte-kit/output/client/tauri.svg",
-      "type": "unknown",
-      "language": "unknown",
-      "large": true,
-      "size_kb": 116.78,
-      "description": "Tauri"
-    },
-    {
-      "path": ".svelte-kit/output/client/thread.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 3872.19,
-      "description": "Thread"
-    },
-    {
-      "path": ".svelte-kit/output/client/vite.png",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 40.49,
-      "description": "Vite"
-    },
-    {
-      "path": ".svelte-kit/output/server/.vite/manifest.json",
-      "type": "config",
-      "language": "json",
-      "lines": 313,
-      "description": "Manifest"
-    },
-    {
-      "path": ".svelte-kit/output/server/_app/immutable/assets/_layout.ByXaPGTZ.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "! tailwindcss v4.3.1 | MIT License | https://tailwindcss.com */@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from r"
-    },
-    {
-      "path": ".svelte-kit/output/server/_app/immutable/assets/_page.5bkzZygz.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "Page.5bkzZygz"
-    },
-    {
-      "path": ".svelte-kit/output/server/_app/immutable/assets/_page.BOz1HCTp.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "Page.BOz1HCTp"
-    },
-    {
-      "path": ".svelte-kit/output/server/_app/immutable/assets/_page.Bt7EvuH_.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "Page.Bt7EvuH"
-    },
-    {
-      "path": ".svelte-kit/output/server/_app/immutable/assets/_page.BTPytVuA.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "Page.BTPytVuA"
-    },
-    {
-      "path": ".svelte-kit/output/server/_app/immutable/assets/_page.CyjfJZRf.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "Page.CyjfJZRf"
-    },
-    {
-      "path": ".svelte-kit/output/server/_app/immutable/assets/_page.Ti4GS5yw.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "Page.Ti4GS5yw"
-    },
-    {
-      "path": ".svelte-kit/output/server/_app/immutable/assets/_page.z7dAmhFl.css",
-      "type": "source",
-      "language": "css",
-      "lines": 1,
-      "description": "Page.z7dAmhFl"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/client.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 24,
-      "description": "eslint-disable-next-line @typescript-eslint/require-await"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/echo.svelte.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 15,
-      "description": "Echo.svelte"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/emojis.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 89,
-      "description": "Emojis"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/exports.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 174,
-      "description": "Exports"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/false.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 4,
-      "description": "False"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/index-server.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 9,
-      "description": "Index server"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/index.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1288,
-      "description": "Index"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/index2.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 21,
-      "description": "Index2"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/index3.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 59,
-      "description": "Index3"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/internal.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 135,
-      "description": "Internal"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/root.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 2968,
-      "description": "Root"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/senses.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 99,
-      "description": "Senses"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/server.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 34,
-      "description": "Server"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/solids.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 505,
-      "description": "0px"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/state.svelte.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 19,
-      "description": "State.svelte"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/theme.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 96,
-      "description": "============================================================================"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/theme.svelte.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 11,
-      "description": "Theme.svelte"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/utils.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1005,
-      "description": "Utils"
-    },
-    {
-      "path": ".svelte-kit/output/server/chunks/utils2.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 41,
-      "description": "Utils2"
-    },
-    {
-      "path": ".svelte-kit/output/server/entries/fallbacks/error.svelte.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 11,
-      "description": "Error.svelte"
-    },
-    {
-      "path": ".svelte-kit/output/server/entries/pages/_layout.svelte.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 265,
-      "description": "Layout.svelte"
-    },
-    {
-      "path": ".svelte-kit/output/server/entries/pages/_layout.ts.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 4,
-      "description": "Layout.ts"
-    },
-    {
-      "path": ".svelte-kit/output/server/entries/pages/_page.svelte.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 313,
-      "description": "Page.svelte"
-    },
-    {
-      "path": ".svelte-kit/output/server/entries/pages/add/_page.svelte.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 129,
-      "description": "Page.svelte"
-    },
-    {
-      "path": ".svelte-kit/output/server/entries/pages/insights/_page.svelte.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 287,
-      "description": "Page.svelte"
-    },
-    {
-      "path": ".svelte-kit/output/server/entries/pages/onboarding/_page.svelte.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 148,
-      "description": "Page.svelte"
-    },
-    {
-      "path": ".svelte-kit/output/server/entries/pages/sattva/_page.svelte.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 91,
-      "description": "Page.svelte"
-    },
-    {
-      "path": ".svelte-kit/output/server/entries/pages/settings/_page.svelte.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 127,
-      "description": "Page.svelte"
-    },
-    {
-      "path": ".svelte-kit/output/server/entries/pages/timer/_page.svelte.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 194,
-      "description": "Page.svelte"
-    },
-    {
-      "path": ".svelte-kit/output/server/env.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 13,
-      "description": "Env"
-    },
-    {
-      "path": ".svelte-kit/output/server/index.js",
-      "type": "source",
-      "language": "javascript",
-      "large": true,
-      "size_kb": 127.73,
-      "description": "Index"
-    },
-    {
-      "path": ".svelte-kit/output/server/internal.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 14,
-      "description": "Internal"
-    },
-    {
-      "path": ".svelte-kit/output/server/manifest-full.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 87,
-      "description": "Manifest full"
-    },
-    {
-      "path": ".svelte-kit/output/server/manifest.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 87,
-      "description": "Manifest"
-    },
-    {
-      "path": ".svelte-kit/output/server/nodes/0.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 10,
-      "description": "0"
-    },
-    {
-      "path": ".svelte-kit/output/server/nodes/1.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 6,
-      "description": "1"
-    },
-    {
-      "path": ".svelte-kit/output/server/nodes/2.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 6,
-      "description": "2"
-    },
-    {
-      "path": ".svelte-kit/output/server/nodes/3.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 6,
-      "description": "3"
-    },
-    {
-      "path": ".svelte-kit/output/server/nodes/4.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 6,
-      "description": "4"
-    },
-    {
-      "path": ".svelte-kit/output/server/nodes/5.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 6,
-      "description": "5"
-    },
-    {
-      "path": ".svelte-kit/output/server/nodes/6.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 6,
-      "description": "6"
-    },
-    {
-      "path": ".svelte-kit/output/server/nodes/7.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 6,
-      "description": "7"
-    },
-    {
-      "path": ".svelte-kit/output/server/nodes/8.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 6,
-      "description": "8"
-    },
-    {
-      "path": ".svelte-kit/output/server/remote-entry.js",
-      "type": "source",
-      "language": "javascript",
-      "lines": 1164,
-      "description": "Remote entry"
-    },
-    {
-      "path": ".svelte-kit/tsconfig.json",
-      "type": "config",
-      "language": "json",
-      "lines": 56,
-      "description": "Tsconfig"
-    },
-    {
-      "path": ".svelte-kit/types/route_meta_data.json",
-      "type": "config",
-      "language": "json",
-      "lines": 24,
-      "description": "Route meta data"
-    },
-    {
-      "path": ".svelte-kit/types/src/routes/$types.d.ts",
-      "type": "source",
-      "language": "typescript",
-      "lines": 25,
-      "description": "$types.d"
-    },
-    {
-      "path": ".svelte-kit/types/src/routes/add/$types.d.ts",
-      "type": "source",
-      "language": "typescript",
-      "lines": 17,
-      "description": "$types.d"
-    },
-    {
-      "path": ".svelte-kit/types/src/routes/insights/$types.d.ts",
-      "type": "source",
-      "language": "typescript",
-      "lines": 17,
-      "description": "$types.d"
-    },
-    {
-      "path": ".svelte-kit/types/src/routes/onboarding/$types.d.ts",
-      "type": "source",
-      "language": "typescript",
-      "lines": 17,
-      "description": "$types.d"
-    },
-    {
-      "path": ".svelte-kit/types/src/routes/sattva/$types.d.ts",
-      "type": "source",
-      "language": "typescript",
-      "lines": 17,
-      "description": "$types.d"
-    },
-    {
-      "path": ".svelte-kit/types/src/routes/settings/$types.d.ts",
-      "type": "source",
-      "language": "typescript",
-      "lines": 17,
-      "description": "$types.d"
-    },
-    {
-      "path": ".svelte-kit/types/src/routes/timer/$types.d.ts",
-      "type": "source",
-      "language": "typescript",
-      "lines": 17,
-      "description": "$types.d"
-    },
-    {
-      "path": "CLAUDE.md",
-      "type": "doc",
-      "language": "markdown",
-      "lines": 96,
-      "description": "CLAUDE.md \u2014 Resonance Echoes"
     },
     {
       "path": "docs/archive/BUILD-SEQUENCE-2026-08-21.md",
@@ -1136,7 +77,42 @@
       "path": "docs/blueprints/echoes/.claude/fbp.ai.json",
       "type": "config",
       "language": "json",
-      "lines": 59,
+      "lines": 33,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/.journals/entity/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 16,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/.journals/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 18,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/.journals/obp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 29,
+      "description": "Obp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/.journals/proofs/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 16,
+      "description": "Fbp.ai"
+    },
+    {
+      "path": "docs/blueprints/echoes/.journals/realm/fbp.ai.json",
+      "type": "config",
+      "language": "json",
+      "lines": 123,
       "description": "Fbp.ai"
     },
     {
@@ -1157,7 +133,7 @@
       "path": "docs/blueprints/echoes/docs/fbp.ai.json",
       "type": "config",
       "language": "json",
-      "lines": 216,
+      "lines": 168,
       "description": "Fbp.ai"
     },
     {
@@ -1178,21 +154,21 @@
       "path": "docs/blueprints/echoes/fbp.ai.json",
       "type": "config",
       "language": "json",
-      "lines": 381,
+      "lines": 315,
       "description": "Fbp.ai"
     },
     {
       "path": "docs/blueprints/echoes/journal.md",
       "type": "doc",
       "language": "markdown",
-      "lines": 10,
+      "lines": 12,
       "description": "blueprint-forge journal \u2014 resonance-echoes"
     },
     {
       "path": "docs/blueprints/echoes/pbp.ai.json",
       "type": "config",
       "language": "json",
-      "lines": 192,
+      "lines": 169,
       "description": "Pbp.ai"
     },
     {
@@ -1206,7 +182,7 @@
       "path": "docs/blueprints/echoes/reports/fbp.ai.json",
       "type": "config",
       "language": "json",
-      "lines": 225,
+      "lines": 257,
       "description": "Fbp.ai"
     },
     {
@@ -1318,7 +294,7 @@
       "path": "docs/blueprints/echoes/src/lib/theme/fbp.ai.json",
       "type": "config",
       "language": "json",
-      "lines": 41,
+      "lines": 42,
       "description": "Fbp.ai"
     },
     {
@@ -1430,7 +406,7 @@
       "path": "docs/blueprints/echoes/src-tauri/gen/android/app/fbp.ai.json",
       "type": "config",
       "language": "json",
-      "lines": 51,
+      "lines": 43,
       "description": "Fbp.ai"
     },
     {
@@ -1486,14 +462,14 @@
       "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/jniLibs/arm64-v8a/fbp.ai.json",
       "type": "config",
       "language": "json",
-      "lines": 21,
+      "lines": 16,
       "description": "Fbp.ai"
     },
     {
       "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/jniLibs/armeabi-v7a/fbp.ai.json",
       "type": "config",
       "language": "json",
-      "lines": 21,
+      "lines": 16,
       "description": "Fbp.ai"
     },
     {
@@ -1507,14 +483,14 @@
       "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/jniLibs/x86/fbp.ai.json",
       "type": "config",
       "language": "json",
-      "lines": 21,
+      "lines": 16,
       "description": "Fbp.ai"
     },
     {
       "path": "docs/blueprints/echoes/src-tauri/gen/android/app/src/main/jniLibs/x86_64/fbp.ai.json",
       "type": "config",
       "language": "json",
-      "lines": 21,
+      "lines": 16,
       "description": "Fbp.ai"
     },
     {
@@ -1626,7 +602,7 @@
       "path": "docs/blueprints/echoes/src-tauri/gen/android/buildSrc/fbp.ai.json",
       "type": "config",
       "language": "json",
-      "lines": 39,
+      "lines": 24,
       "description": "Fbp.ai"
     },
     {
@@ -1682,7 +658,7 @@
       "path": "docs/blueprints/echoes/src-tauri/gen/android/fbp.ai.json",
       "type": "config",
       "language": "json",
-      "lines": 68,
+      "lines": 53,
       "description": "Fbp.ai"
     },
     {
@@ -1812,13 +788,6 @@
       "description": "Fbp.ai"
     },
     {
-      "path": "docs/CHECKLIST.md",
-      "type": "doc",
-      "language": "markdown",
-      "lines": 246,
-      "description": "RESONANCE ECHOES \u2014 MASTER CHECKLIST"
-    },
-    {
       "path": "docs/CONTRIBUTING.md",
       "type": "doc",
       "language": "markdown",
@@ -1850,7 +819,7 @@
       "path": "docs/listings/PLAY-TRACK.md",
       "type": "doc",
       "language": "markdown",
-      "lines": 154,
+      "lines": 170,
       "description": "Echoes \u2014 Google Play test track"
     },
     {
@@ -1878,15 +847,8 @@
       "path": "docs/STORY-BLOCK.md",
       "type": "doc",
       "language": "markdown",
-      "lines": 94,
+      "lines": 49,
       "description": "Story Block \u2014 Resonance Echoes"
-    },
-    {
-      "path": "HANDOFF.md",
-      "type": "doc",
-      "language": "markdown",
-      "lines": 37,
-      "description": "HANDOFF \u2014 resonance-echoes"
     },
     {
       "path": "HANDS.md",
@@ -1938,226 +900,41 @@
       "description": "\u227d\u0f0f\u227c Resonance Echoes"
     },
     {
-      "path": "release/Resonance Echoes_1.1.0_x64-setup.exe",
+      "path": "release/Resonance Echoes_1.4.1_x64-setup.exe",
       "type": "binary",
       "language": "unknown",
-      "size_kb": 13485.97,
-      "description": "Resonance Echoes 1.1.0 x64 setup"
+      "size_kb": 22501.99,
+      "description": "Resonance Echoes 1.4.1 x64 setup"
     },
     {
-      "path": "release/Resonance Echoes_1.1.0_x64_en-US.msi",
-      "type": "unknown",
-      "language": "unknown",
-      "large": true,
-      "size_kb": 14552.0,
-      "description": "Resonance Echoes 1.1.0 x64 en US"
-    },
-    {
-      "path": "release/Resonance Echoes_1.2.0_x64-setup.exe",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 22478.86,
-      "description": "Resonance Echoes 1.2.0 x64 setup"
-    },
-    {
-      "path": "release/Resonance Echoes_1.2.0_x64_en-US.msi",
-      "type": "unknown",
-      "language": "unknown",
-      "large": true,
-      "size_kb": 23524.0,
-      "description": "Resonance Echoes 1.2.0 x64 en US"
-    },
-    {
-      "path": "release/Resonance Echoes_1.3.0_x64-setup.exe",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 22473.76,
-      "description": "Resonance Echoes 1.3.0 x64 setup"
-    },
-    {
-      "path": "release/Resonance Echoes_1.3.0_x64_en-US.msi",
-      "type": "unknown",
-      "language": "unknown",
-      "large": true,
-      "size_kb": 23528.0,
-      "description": "Resonance Echoes 1.3.0 x64 en US"
-    },
-    {
-      "path": "release/Resonance Echoes_1.3.1_x64-setup.exe",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 22486.92,
-      "description": "Resonance Echoes 1.3.1 x64 setup"
-    },
-    {
-      "path": "release/Resonance Echoes_1.3.1_x64_en-US.msi",
-      "type": "unknown",
-      "language": "unknown",
-      "large": true,
-      "size_kb": 23532.0,
-      "description": "Resonance Echoes 1.3.1 x64 en US"
-    },
-    {
-      "path": "release/Resonance Echoes_1.3.2_x64-setup.exe",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 22490.03,
-      "description": "Resonance Echoes 1.3.2 x64 setup"
-    },
-    {
-      "path": "release/Resonance Echoes_1.3.2_x64_en-US.msi",
-      "type": "unknown",
-      "language": "unknown",
-      "large": true,
-      "size_kb": 23532.0,
-      "description": "Resonance Echoes 1.3.2 x64 en US"
-    },
-    {
-      "path": "release/Resonance Echoes_1.4.0_x64-setup.exe",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 22487.8,
-      "description": "Resonance Echoes 1.4.0 x64 setup"
-    },
-    {
-      "path": "release/Resonance Echoes_1.4.0_x64_en-US.msi",
+      "path": "release/Resonance Echoes_1.4.1_x64_en-US.msi",
       "type": "unknown",
       "language": "unknown",
       "large": true,
       "size_kb": 23536.0,
-      "description": "Resonance Echoes 1.4.0 x64 en US"
+      "description": "Resonance Echoes 1.4.1 x64 en US"
     },
     {
-      "path": "release/resonance-echoes-v1.1.0.aab",
+      "path": "release/resonance-echoes-v1.4.1.aab",
       "type": "binary",
       "language": "unknown",
-      "size_kb": 59972.8,
-      "description": "Resonance echoes v1.1.0"
+      "size_kb": 95816.92,
+      "description": "Resonance echoes v1.4.1"
     },
     {
-      "path": "release/resonance-echoes-v1.1.0.apk",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 79653.94,
-      "description": "Resonance echoes v1.1.0"
-    },
-    {
-      "path": "release/resonance-echoes-v1.1.0.apk.idsig",
-      "type": "unknown",
-      "language": "unknown",
-      "large": true,
-      "size_kb": 637.58,
-      "description": "Resonance echoes v1.1.0.apk"
-    },
-    {
-      "path": "release/resonance-echoes-v1.2.0.aab",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 95763.49,
-      "description": "Resonance echoes v1.2.0"
-    },
-    {
-      "path": "release/resonance-echoes-v1.2.0.apk",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 115405.94,
-      "description": "Resonance echoes v1.2.0"
-    },
-    {
-      "path": "release/resonance-echoes-v1.2.0.apk.idsig",
-      "type": "unknown",
-      "language": "unknown",
-      "large": true,
-      "size_kb": 917.58,
-      "description": "Resonance echoes v1.2.0.apk"
-    },
-    {
-      "path": "release/resonance-echoes-v1.3.0.aab",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 95774.43,
-      "description": "Resonance echoes v1.3.0"
-    },
-    {
-      "path": "release/resonance-echoes-v1.3.0.apk",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 115437.94,
-      "description": "Resonance echoes v1.3.0"
-    },
-    {
-      "path": "release/resonance-echoes-v1.3.0.apk.idsig",
-      "type": "unknown",
-      "language": "unknown",
-      "large": true,
-      "size_kb": 917.58,
-      "description": "Resonance echoes v1.3.0.apk"
-    },
-    {
-      "path": "release/resonance-echoes-v1.3.1.aab",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 95792.63,
-      "description": "Resonance echoes v1.3.1"
-    },
-    {
-      "path": "release/resonance-echoes-v1.3.1.apk",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 115461.94,
-      "description": "Resonance echoes v1.3.1"
-    },
-    {
-      "path": "release/resonance-echoes-v1.3.1.apk.idsig",
-      "type": "unknown",
-      "language": "unknown",
-      "large": true,
-      "size_kb": 917.58,
-      "description": "Resonance echoes v1.3.1.apk"
-    },
-    {
-      "path": "release/resonance-echoes-v1.3.2.aab",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 95807.41,
-      "description": "Resonance echoes v1.3.2"
-    },
-    {
-      "path": "release/resonance-echoes-v1.3.2.apk",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 115465.94,
-      "description": "Resonance echoes v1.3.2"
-    },
-    {
-      "path": "release/resonance-echoes-v1.3.2.apk.idsig",
-      "type": "unknown",
-      "language": "unknown",
-      "large": true,
-      "size_kb": 917.58,
-      "description": "Resonance echoes v1.3.2.apk"
-    },
-    {
-      "path": "release/resonance-echoes-v1.4.0.aab",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 95818.27,
-      "description": "Resonance echoes v1.4.0"
-    },
-    {
-      "path": "release/resonance-echoes-v1.4.0.apk",
+      "path": "release/resonance-echoes-v1.4.1.apk",
       "type": "binary",
       "language": "unknown",
       "size_kb": 115473.94,
-      "description": "Resonance echoes v1.4.0"
+      "description": "Resonance echoes v1.4.1"
     },
     {
-      "path": "release/resonance-echoes-v1.4.0.apk.idsig",
+      "path": "release/resonance-echoes-v1.4.1.apk.idsig",
       "type": "unknown",
       "language": "unknown",
       "large": true,
       "size_kb": 918.5,
-      "description": "Resonance echoes v1.4.0.apk"
+      "description": "Resonance echoes v1.4.1.apk"
     },
     {
       "path": "reports/2026-06-30-assessment-manual.md",
@@ -2195,10 +972,17 @@
       "description": "Resonance Echoes \u2014 Assessment Report"
     },
     {
+      "path": "reports/2026-08-21-assessment.md",
+      "type": "doc",
+      "language": "markdown",
+      "lines": 51,
+      "description": "Resonance Echoes \u2014 Assessment Report"
+    },
+    {
       "path": "reports/analysis.json",
       "type": "config",
       "language": "json",
-      "lines": 77,
+      "lines": 79,
       "description": "Analysis"
     },
     {
@@ -2206,7 +990,7 @@
       "type": "config",
       "language": "json",
       "large": true,
-      "size_kb": 100.12,
+      "size_kb": 112.39,
       "description": "Inventory"
     },
     {
@@ -2304,7 +1088,7 @@
       "path": "src/lib/components/ComfortBar.svelte",
       "type": "source",
       "language": "svelte",
-      "lines": 247,
+      "lines": 238,
       "description": "ComfortBar"
     },
     {
@@ -2325,7 +1109,7 @@
       "path": "src/lib/components/icons/IconInsights.svelte",
       "type": "source",
       "language": "svelte",
-      "lines": 9,
+      "lines": 8,
       "description": "IconInsights"
     },
     {
@@ -2360,35 +1144,35 @@
       "path": "src/lib/components/Sidebar.svelte",
       "type": "source",
       "language": "svelte",
-      "lines": 342,
+      "lines": 308,
       "description": "Sidebar"
     },
     {
       "path": "src/lib/components/TimerVisualization.svelte",
       "type": "source",
       "language": "svelte",
-      "lines": 598,
+      "lines": 596,
       "description": "TimerVisualization"
     },
     {
       "path": "src/lib/cosmic/attention.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 287,
+      "lines": 261,
       "description": "============================================================================"
     },
     {
       "path": "src/lib/cosmic/colors.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 376,
+      "lines": 379,
       "description": "============================================================================"
     },
     {
       "path": "src/lib/cosmic/consciousness.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 587,
+      "lines": 559,
       "description": "============================================================================"
     },
     {
@@ -2402,21 +1186,21 @@
       "path": "src/lib/cosmic/effects.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 636,
+      "lines": 586,
       "description": "============================================================================"
     },
     {
       "path": "src/lib/cosmic/index.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 425,
-      "description": "====================================================="
+      "lines": 390,
+      "description": "============================================================================"
     },
     {
       "path": "src/lib/cosmic/interactivity.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 282,
+      "lines": 217,
       "description": "============================================================================"
     },
     {
@@ -2430,21 +1214,21 @@
       "path": "src/lib/cosmic/motion.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 855,
+      "lines": 821,
       "description": "============================================================================"
     },
     {
       "path": "src/lib/cosmic/positioning.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 871,
+      "lines": 844,
       "description": "============================================================================"
     },
     {
       "path": "src/lib/cosmic/solids.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 503,
+      "lines": 480,
       "description": "============================================================================"
     },
     {
@@ -2458,8 +1242,8 @@
       "path": "src/lib/cumdach/index.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 265,
-      "description": "the-cumdach \u2014 the book-shrine, pure."
+      "lines": 203,
+      "description": "Index"
     },
     {
       "path": "src/lib/cumdach/MIRROR.md",
@@ -2486,8 +1270,8 @@
       "path": "src/lib/epagoge/index.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 192,
-      "description": "the-epagoge \u2014 the leading-in, pure."
+      "lines": 169,
+      "description": "Index"
     },
     {
       "path": "src/lib/epagoge/MIRROR.md",
@@ -2500,7 +1284,7 @@
       "path": "src/lib/sky/index.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 226,
+      "lines": 217,
       "description": "The sky organs \u2014 moon-phases \u00b7 ancient-holidays \u00b7 planets-alignment."
     },
     {
@@ -2514,28 +1298,28 @@
       "path": "src/lib/stores/echo.svelte.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 221,
+      "lines": 212,
       "description": "Personal emoji definitions \u2014 the folksonomy layer of the Resonance Grammar."
     },
     {
       "path": "src/lib/stores/theme.svelte.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 58,
-      "description": "Merged over the default, never cast blind: a config saved before a"
+      "lines": 57,
+      "description": "Merged over the default so a config saved before a field existed keeps working."
     },
     {
       "path": "src/lib/stores/timer.svelte.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 238,
-      "description": "Ported from Compass's timer store (2026-07-18) with one deliberate"
+      "lines": 222,
+      "description": "Locks to numeric and hides the cycle control when the OS prefers reduced motion."
     },
     {
       "path": "src/lib/stores/ui.svelte.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 19,
+      "lines": 15,
       "description": "Cross-component UI signals that don't belong to any domain store."
     },
     {
@@ -2675,14 +1459,14 @@
       "path": "src/lib/styles/generated/typography.css",
       "type": "source",
       "language": "css",
-      "lines": 1581,
+      "lines": 1589,
       "description": "============================================================================"
     },
     {
       "path": "src/lib/styles/generated/variables.css",
       "type": "source",
       "language": "css",
-      "lines": 479,
+      "lines": 481,
       "description": "========================================================================== */"
     },
     {
@@ -2696,35 +1480,35 @@
       "path": "src/lib/theme/theme.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 126,
+      "lines": 169,
       "description": "Theme"
     },
     {
       "path": "src/lib/types/types.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 46,
+      "lines": 43,
       "description": "Theme customization"
     },
     {
       "path": "src/routes/+layout.svelte",
       "type": "source",
       "language": "svelte",
-      "lines": 87,
+      "lines": 85,
       "description": "+layout"
     },
     {
       "path": "src/routes/+layout.ts",
       "type": "source",
       "language": "typescript",
-      "lines": 5,
-      "description": "Tauri doesn't have a Node.js server to do proper SSR"
+      "lines": 2,
+      "description": "Tauri has no Node.js server for SSR \u2014 adapter-static with an index.html fallback puts the site in SPA mode."
     },
     {
       "path": "src/routes/+page.svelte",
       "type": "source",
       "language": "svelte",
-      "lines": 679,
+      "lines": 675,
       "description": "+page"
     },
     {
@@ -2738,35 +1522,35 @@
       "path": "src/routes/insights/+page.svelte",
       "type": "source",
       "language": "svelte",
-      "lines": 718,
+      "lines": 717,
       "description": "+page"
     },
     {
       "path": "src/routes/onboarding/+page.svelte",
       "type": "source",
       "language": "svelte",
-      "lines": 486,
+      "lines": 475,
       "description": "+page"
     },
     {
       "path": "src/routes/sattva/+page.svelte",
       "type": "source",
       "language": "svelte",
-      "lines": 255,
+      "lines": 233,
       "description": "+page"
     },
     {
       "path": "src/routes/settings/+page.svelte",
       "type": "source",
       "language": "svelte",
-      "lines": 773,
+      "lines": 759,
       "description": "+page"
     },
     {
       "path": "src/routes/timer/+page.svelte",
       "type": "source",
       "language": "svelte",
-      "lines": 509,
+      "lines": 508,
       "description": "+page"
     },
     {
@@ -2825,104 +1609,6 @@
       "language": "unknown",
       "lines": 20,
       "description": ".gitignore"
-    },
-    {
-      "path": "src-tauri/gen/android/.gradle/8.14.3/checksums/checksums.lock",
-      "type": "unknown",
-      "language": "unknown",
-      "lines": 2,
-      "description": "Checksums"
-    },
-    {
-      "path": "src-tauri/gen/android/.gradle/8.14.3/executionHistory/executionHistory.bin",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 5023.55,
-      "description": "ExecutionHistory"
-    },
-    {
-      "path": "src-tauri/gen/android/.gradle/8.14.3/executionHistory/executionHistory.lock",
-      "type": "unknown",
-      "language": "unknown",
-      "lines": 1,
-      "description": "ExecutionHistory"
-    },
-    {
-      "path": "src-tauri/gen/android/.gradle/8.14.3/fileChanges/last-build.bin",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 0.0,
-      "description": "Last build"
-    },
-    {
-      "path": "src-tauri/gen/android/.gradle/8.14.3/fileHashes/fileHashes.bin",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 137.14,
-      "description": "FileHashes"
-    },
-    {
-      "path": "src-tauri/gen/android/.gradle/8.14.3/fileHashes/fileHashes.lock",
-      "type": "unknown",
-      "language": "unknown",
-      "lines": 1,
-      "description": "FileHashes"
-    },
-    {
-      "path": "src-tauri/gen/android/.gradle/8.14.3/fileHashes/resourceHashesCache.bin",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 24.24,
-      "description": "ResourceHashesCache"
-    },
-    {
-      "path": "src-tauri/gen/android/.gradle/8.14.3/gc.properties",
-      "type": "unknown",
-      "language": "unknown",
-      "lines": 0,
-      "description": "Gc"
-    },
-    {
-      "path": "src-tauri/gen/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock",
-      "type": "unknown",
-      "language": "unknown",
-      "lines": 1,
-      "description": "BuildOutputCleanup"
-    },
-    {
-      "path": "src-tauri/gen/android/.gradle/buildOutputCleanup/cache.properties",
-      "type": "unknown",
-      "language": "unknown",
-      "lines": 2,
-      "description": "Cache"
-    },
-    {
-      "path": "src-tauri/gen/android/.gradle/buildOutputCleanup/outputFiles.bin",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 58.35,
-      "description": "OutputFiles"
-    },
-    {
-      "path": "src-tauri/gen/android/.gradle/file-system.probe",
-      "type": "unknown",
-      "language": "unknown",
-      "lines": 1,
-      "description": "File system"
-    },
-    {
-      "path": "src-tauri/gen/android/.gradle/noVersion/buildLogic.lock",
-      "type": "unknown",
-      "language": "unknown",
-      "lines": 1,
-      "description": "BuildLogic"
-    },
-    {
-      "path": "src-tauri/gen/android/.gradle/vcs-1/gc.properties",
-      "type": "unknown",
-      "language": "unknown",
-      "lines": 0,
-      "description": "Gc"
     },
     {
       "path": "src-tauri/gen/android/app/.gitignore",
@@ -3042,34 +1728,6 @@
       "language": "kotlin",
       "lines": 11,
       "description": "MainActivity"
-    },
-    {
-      "path": "src-tauri/gen/android/app/src/main/jniLibs/arm64-v8a/libresonance_echoes_lib.so",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 28342.58,
-      "description": "Libresonance echoes lib"
-    },
-    {
-      "path": "src-tauri/gen/android/app/src/main/jniLibs/armeabi-v7a/libresonance_echoes_lib.so",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 25604.96,
-      "description": "Libresonance echoes lib"
-    },
-    {
-      "path": "src-tauri/gen/android/app/src/main/jniLibs/x86/libresonance_echoes_lib.so",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 29549.81,
-      "description": "Libresonance echoes lib"
-    },
-    {
-      "path": "src-tauri/gen/android/app/src/main/jniLibs/x86_64/libresonance_echoes_lib.so",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 28877.16,
-      "description": "Libresonance echoes lib"
     },
     {
       "path": "src-tauri/gen/android/app/src/main/res/drawable/ic_launcher_background.xml",
@@ -3266,48 +1924,6 @@
       "language": "unknown",
       "lines": 22,
       "description": "Build.gradle"
-    },
-    {
-      "path": "src-tauri/gen/android/buildSrc/.gradle/8.14.3/executionHistory/executionHistory.bin",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 51.0,
-      "description": "ExecutionHistory"
-    },
-    {
-      "path": "src-tauri/gen/android/buildSrc/.gradle/8.14.3/executionHistory/executionHistory.lock",
-      "type": "unknown",
-      "language": "unknown",
-      "lines": 1,
-      "description": "ExecutionHistory"
-    },
-    {
-      "path": "src-tauri/gen/android/buildSrc/.gradle/buildOutputCleanup/buildOutputCleanup.lock",
-      "type": "unknown",
-      "language": "unknown",
-      "lines": 1,
-      "description": "BuildOutputCleanup"
-    },
-    {
-      "path": "src-tauri/gen/android/buildSrc/.gradle/buildOutputCleanup/cache.properties",
-      "type": "unknown",
-      "language": "unknown",
-      "lines": 2,
-      "description": "Cache"
-    },
-    {
-      "path": "src-tauri/gen/android/buildSrc/.gradle/buildOutputCleanup/outputFiles.bin",
-      "type": "binary",
-      "language": "unknown",
-      "size_kb": 18.42,
-      "description": "OutputFiles"
-    },
-    {
-      "path": "src-tauri/gen/android/buildSrc/.gradle/file-system.probe",
-      "type": "unknown",
-      "language": "unknown",
-      "lines": 1,
-      "description": "File system"
     },
     {
       "path": "src-tauri/gen/android/buildSrc/build.gradle.kts",
@@ -3936,8 +2552,8 @@
       "path": "svelte.config.js",
       "type": "source",
       "language": "javascript",
-      "lines": 18,
-      "description": "Tauri doesn't have a Node.js server to do proper SSR"
+      "lines": 16,
+      "description": "See: https://svelte.dev/docs/kit/single-page-apps"
     },
     {
       "path": "tsconfig.json",
@@ -3956,42 +2572,30 @@
   ],
   "by_type": {
     "config": 126,
-    "doc": 33,
-    "source": 224,
-    "binary": 136,
-    "unknown": 42
+    "doc": 30,
+    "unknown": 18,
+    "binary": 95,
+    "source": 96
   },
   "by_language": {
     "toml": 3,
-    "markdown": 33,
     "json": 117,
-    "unknown": 184,
-    "typescript": 33,
-    "javascript": 103,
-    "svelte": 19,
-    "css": 39,
+    "unknown": 119,
+    "markdown": 30,
+    "css": 23,
     "html": 1,
+    "svelte": 18,
+    "typescript": 23,
     "rust": 3,
     "xml": 13,
     "kotlin": 12,
-    "batch": 1
+    "batch": 1,
+    "javascript": 2
   },
   "secrets_flagged": [],
   "large_files": [
-    ".svelte-kit/output/client/tauri.svg",
-    ".svelte-kit/output/server/index.js",
-    "release/Resonance Echoes_1.1.0_x64_en-US.msi",
-    "release/Resonance Echoes_1.2.0_x64_en-US.msi",
-    "release/Resonance Echoes_1.3.0_x64_en-US.msi",
-    "release/Resonance Echoes_1.3.1_x64_en-US.msi",
-    "release/Resonance Echoes_1.3.2_x64_en-US.msi",
-    "release/Resonance Echoes_1.4.0_x64_en-US.msi",
-    "release/resonance-echoes-v1.1.0.apk.idsig",
-    "release/resonance-echoes-v1.2.0.apk.idsig",
-    "release/resonance-echoes-v1.3.0.apk.idsig",
-    "release/resonance-echoes-v1.3.1.apk.idsig",
-    "release/resonance-echoes-v1.3.2.apk.idsig",
-    "release/resonance-echoes-v1.4.0.apk.idsig",
+    "release/Resonance Echoes_1.4.1_x64_en-US.msi",
+    "release/resonance-echoes-v1.4.1.apk.idsig",
     "reports/inventory.json",
     "src-tauri/Cargo.lock",
     "src-tauri/gen/schemas/acl-manifests.json",
