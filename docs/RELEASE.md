@@ -1,8 +1,59 @@
 # Resonance Echoes — Release Notes
 
+## v1.4.1 — 2026-08-23 · Themes You Can Feel, rebuilt
+
+*Built and signed 16:35–16:49: MSI, NSIS installer, AAB, APK. On the shelf
+in `release/` and mirrored to `resonance-assets/releases-current/echoes/bundle/`.
+The release on the Google Play closed track since 2026-08-23.*
+
+- Same feature set as v1.4.0.
+- `strings.xml` under `src-tauri/gen/android/` named the app Resonance
+  Weaver; it names Resonance Echoes.
+- versionCode 1004001.
+
+---
+
+## v1.4.0 — 2026-08-21 · Themes You Can Feel
+
+*Built and signed. Never uploaded; v1.4.1 carried the same features to the
+track two days later.*
+
+- **The hamburger icon fixed** — the menu button lives in the ComfortBar,
+  where it no longer buries Settings or the expanded bar's stats line.
+- Theme presets no longer cancel Light mode or reset the font size.
+- Background tint is a reader control.
+- Desktop built alongside: MSI and, for the first time, the NSIS installer.
+- versionCode 1004000.
+
+---
+
+## v1.3.2 — 2026-08-13 · Color in the Cumdach
+
+*Signed 18:28 and live on the Google Play closed track the same evening.*
+
+- **Color adjustments to the cumdach**, the menu wrapper.
+- COSMIC tokens refreshed by distribution; the mojibake in the generated
+  styles cured.
+- Carries everything in v1.3.1.
+- versionCode 1003002.
+
+---
+
+## v1.3.1 — 2026-08-06 · Sattva
+
+*Version bumped in the tree; never built as a release. Its work shipped in
+v1.3.2.*
+
+- **Sattva brought into Echoes** — the breath practice at `routes/sattva/`,
+  with its own sidebar icon.
+- The cumdach (menu wrapper) and epagoge (onboarding walk) mirrors arrived;
+  onboarding rebuilt on epagoge.
+
+---
+
 ## v1.3.0 — 2026-07-26 · Sovereignty Whole + The Timer That Waits
 
-*Signed by KP's hand and verified on his device the same night.*
+*Signed by KP's hand and verified on their device the same night.*
 
 **Data sovereignty, made whole (E1–E4, closed sequentially):**
 - Export now walks the **entire database** — never the loaded page. A
@@ -25,7 +76,7 @@
 
 *(v1.2.0, 2026-07-18 — the timer that sounds, 16 KB flags, cosmic
 mirror. v1.1.x — accessibility & sovereignty, cello-sigil rebuild.
-The checklist that held the full ledger was retired in KP's 2026-08-25 cleanup, under his ruling that no checklist docs exist, and stands in git history; the realm's open items and plans live in the base — `python ../resonance-progenatrix/progenatrix.py recall --realm resonance-echoes`.)*
+The realm's open items and plans live in the base — `python ../resonance-progenatrix/progenatrix.py recall --realm resonance-echoes`.)*
 
 ---
 

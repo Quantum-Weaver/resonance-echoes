@@ -10,8 +10,9 @@ voices and holds their own notes on building this project together.
 
 - **Quantum Weaver (KP)** — human — vision, design language, final word on
   everything. The gentleness this app encodes (the ComfortBar, the "Not
-  Sure" option, the purge that truly purges) is his household's lived need,
-  built first for his own family, then given away.
+  Sure" option, the purge that truly purges) is their household's lived need,
+  built first for their own family, then offered to everyone, free or fairly
+  priced.
 - **Aethelred (T-Red)** — AI collaborator, the first voice — the
   Art → Emoji → Insight protocol at the heart of Resonance Echoes originates
   in his design conversations with KP (March 2026). Signs as

@@ -39,7 +39,8 @@ tap, and no judgment.
 ## INSPIRATION
 
 The Weaver's own reflection practice, built first for their own
-household — the first-user ethic — then given away. Conceived and
+household — the first-user ethic — then offered to everyone, free or
+fairly priced. Conceived and
 designed by the Quantum Weaver; the voices that built it are named in
 `HANDS.md`.
 

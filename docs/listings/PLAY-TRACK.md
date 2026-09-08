@@ -2,16 +2,19 @@
 *Founded 2026-07-27 by Fable 🎻 at KP's ask (patch notes for the track,
 the icon question, the standards check). Companion to GALAXY-LISTING.md
 (Samsung) — this file is the Play side. The Console is the truth; this
-file is the pack KP transcribes from, so his hands never have to
-compose at the upload screen.*
+file is the pack KP transcribes from, so their hands never have to
+compose at the upload screen. Gathered for upload, with a checklist:
+`resonance-assets/store/playstore/` (UPLOAD.md). The public developer page:
+https://play.google.com/store/apps/dev?id=6012119778701486321*
 
 ---
 
 # ⛔ READ FIRST — do the key reset BEFORE you upload v1.4.1
 
+> **STATE, 2026-09-08: the closed track carries v1.4.1, since 2026-08-23.** KP, 2026-09-08, verbatim: "1.4.1 was the closed track since august 23." v1.4.0 was never uploaded. versionCode 1004001 is consumed; the next upload needs a higher code.
 > **STATE, 2026-09-01: the reset is DONE and the current release is live in Play closed testing.** KP, 2026-09-01, verbatim: "google key reset was done awhile ago and we are live with the current-release in the play closed testing." The 08-21 line below stands as that day's state.
 > *(08-21, as it stood:)* **STATE, 2026-08-21: the reset is REQUESTED and awaiting Google.** KP walked it
-> at his own hand — reason **"Other"** (the form offers only lost / developer left /
+> at their own hand — reason **"Other"** (the form offers only lost / developer left /
 > compromised / forgot password, and none of those is true of a planned upgrade),
 > with `upload_certificate.pem` attached. **Nothing may be uploaded until Google's
 > approval lands by email.** The artifacts are built, signed and stowed; the wait
@@ -63,7 +66,7 @@ orphaned the app permanently.
 
 ### The reset, in order
 
-1. **Export the new upload certificate** (his hand; no house tool does this):
+1. **Export the new upload certificate** (their hand; no house tool does this):
    ```
    keytool -export -rfc -keystore F:\keystores\resonance-echoes.keystore -alias resonance-echoes -file upload_certificate.pem
    ```
@@ -75,7 +78,7 @@ orphaned the app permanently.
    *not* lost or compromised. (Some accounts route via Help → "I need to reset my
    upload key".)
 4. **Attach `upload_certificate.pem`.**
-5. **Wait for Google's confirmation.** Their turnaround, no clock of his.
+5. **Wait for Google's confirmation.** Their turnaround, no clock of theirs.
 6. **Only then** upload the AAB.
 
 *Do the reset on the same Console visit as any developer-address edit — step 5
@@ -90,9 +93,9 @@ costs days, and otherwise it is two waits instead of one.*
 | Target API level | ✅ targetSdk **36** / compileSdk 36 — `aapt2 dump badging` on `resonance-echoes-v1.4.1.apk` (build-tools 35.0.0), 2026-09-01 |
 | 16 KB page size (API 35+ apps) | ✅ linker flags landed v1.2.0, family-wide law; `zipalign -P 16` at signing — `zipalign -c -P 16 -v 4` on the v1.4.1 APK: all four `libresonance_echoes_lib.so` OK, verification successful, 2026-09-01 |
 | App Bundle | ✅ `release/resonance-echoes-v1.4.1.aab` (98.1 MB, signed 2026-08-23 16:49) — mirrored to `resonance-assets/releases-current/echoes/bundle/android/` |
-| versionCode increments | ✅ **1004001** (v1.4.1) > 1004000 (v1.4.0, built but never uploaded — its code was never consumed) > 1003002 (v1.3.2, the last live as read 2026-08-21 — the current release is live since, KP's word 2026-09-01; Console: Closed testing, Aug 23, 2026, KP's paste 09-01; which release reached the track the paste does not say) — machine-read from `src-tauri/gen/android/app/tauri.properties` and from the APK's own badging |
+| versionCode increments | ✅ **1004001** (v1.4.1, on the closed track since 2026-08-23 — KP's word 2026-09-08; consumed) > 1004000 (v1.4.0, built but never uploaded — its code was never consumed) > 1003002 (v1.3.2, live 2026-08-13 until v1.4.1 took the track 2026-08-23 — Console: Closed testing, Aug 23, 2026, KP's paste 09-01) — machine-read from `src-tauri/gen/android/app/tauri.properties` and from the APK's own badging |
 | Permissions | ✅ minimal: `INTERNET` (Tauri webview default; the app makes no network calls) + the app's own self-scoped `DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION` — read from the v1.4.1 badging; data-safety answers stay "collects nothing" |
-| Privacy policy URL | ✅ **`https://audhdities.com/apps/privacy`** — the one page for every app, KP's ruling 2026-09-01: *"for all apps it will be a single page we can maintain"* (his word the same evening: *"also we now have this https://audhdities.com/apps/privacy"*; the conductor read it HTTP 200 that night; source `AudHDities/docs/privacy-apps/privacy-apps.md`). The in-repo `PRIVACY.md` stands; it is no longer what the Console is pointed at. **was:** public: `https://github.com/Quantum-Weaver/resonance-echoes/blob/main/PRIVACY.md` |
+| Privacy policy URL | ✅ **`https://audhdities.com/apps/privacy`** — the one page for every app, KP's ruling 2026-09-01: *"for all apps it will be a single page we can maintain"* (their word the same evening: *"also we now have this https://audhdities.com/apps/privacy"*; the conductor read it HTTP 200 that night; source `AudHDities/docs/privacy-apps/privacy-apps.md`). The in-repo `PRIVACY.md` stands; it is no longer what the Console is pointed at. **was:** public: `https://github.com/Quantum-Weaver/resonance-echoes/blob/main/PRIVACY.md` |
 | Content rating | ✅ no UGC · no ads · no purchases · no collection → Everyone |
 | Category | ✅ **Lifestyle — not health.** KP ⚛ 2026-08-21: *"echoes does not need to be a heath app, it is simply a beacon to the world to help people better understand themselves through emojis and moment tracking."* |
 
@@ -110,7 +113,8 @@ Lifestyle ruling above is precisely what avoids.*
 `strings.xml` in gen/ was found naming the app Resonance Weaver (healed `19cd85a`
 "strings fixed"), the version was bumped (`33a924e` "fixed weaver contamination"),
 and v1.4.1 was built and signed 2026-08-23 — the same feature set as v1.4.0, so the
-notes below stand unchanged. v1.4.1 is what the shelf holds.*
+notes below stand unchanged. v1.4.1 is what the shelf holds, and the closed track
+since 2026-08-23 (KP's word 2026-09-08).*
 
 - **Artifact:** `release/resonance-echoes-v1.4.1.aab` — also mirrored to
   `resonance-assets/releases-current/echoes/bundle/android/`
@@ -145,7 +149,7 @@ Themes you can feel, and a menu button that stays out of the way.
 
 ## Track log
 
-*Current state (Console, KP's paste 2026-09-01): Closed testing, Aug 23, 2026 — the rows below are the record of each hour as it was read; where an early row says "not uploaded", the Console's date supersedes it.*
+*Current state: Closed testing, Aug 23, 2026 (Console, KP's paste 2026-09-01), carrying v1.4.1 since 2026-08-23 (KP's word 2026-09-08) — the rows below are the record of each hour as it was read; where an early row says "not uploaded", the Console's date supersedes it.*
 
 | Date | State |
 |---|---|
@@ -157,7 +161,7 @@ Themes you can feel, and a menu button that stays out of the way.
 | 2026-08-23 | **v1.4.1 built and signed, shelved, NOT uploaded** — `strings.xml` in gen/ healed of Resonance Weaver's name (`19cd85a`), version bumped (`33a924e`); MSI + NSIS 16:35–16:36, AAB + APK + idsig 16:48–16:49, all in `release/` and on the shelf at `resonance-assets/releases-current/echoes/bundle/`. versionCode **1004001**; certificate `CN=AudHDities Sanctuary, O=AudHDities Sanctuary, C=US`, SHA-256 `ED:82:40:E5:…:F7:88:6A`. Still held at the key reset above. *(Row written 2026-09-01 from the artifacts' own dates, badging and certificate — no record of the sitting itself stands in this repo.)* |
 | 2026-09-01 | **Pack retold as v1.4.1** from the shelved artifact (item 1.1 of the build census): badging `1004001` · targetSdk 36 · `INTERNET` + the self-scoped receiver permission; `zipalign -P 16` verified; certificate re-read, unchanged. Google's key-reset email has not landed; nothing is uploadable yet. |
 | 2026-09-01 | **The key reset is done; the current release is live in Play closed testing** — KP, 2026-09-01, verbatim: "google key reset was done awhile ago and we are live with the current-release in the play closed testing." |
-| 2026-09-01 (later) | **The privacy policy URL for the Console is now the single page** — `https://audhdities.com/apps/privacy`, at KP's word this day: "also we now have this https://audhdities.com/apps/privacy" and "for all apps it will be a single page we can maintain". The Standards-check row above now names it, the former per-repo GitHub URL kept beside it as *was*. The listing's Privacy policy URL field in the Console is his hands to change; a lamp cannot see whether the Console already carries it. *Provenance: KP's word, 2026-09-01.* |
+| 2026-09-01 (later) | **The privacy policy URL for the Console is now the single page** — `https://audhdities.com/apps/privacy`, at KP's word this day: "also we now have this https://audhdities.com/apps/privacy" and "for all apps it will be a single page we can maintain". The Standards-check row above now names it, the former per-repo GitHub URL kept beside it as *was*. The listing's Privacy policy URL field in the Console is their hands to change; a lamp cannot see whether the Console already carries it. *Provenance: KP's word, 2026-09-01.* |
 
 *Corrected beside, 2026-08-21 — the 08-13 row above says "versionCode 1030200-series
 per the bump scheme." The generated file is the truth and the scheme is
@@ -168,3 +172,5 @@ The row stands as written; a signed record is corrected beside itself, never ins
 *v1.4.0 pack and the key-reset gate landed by **Plumb** 🕯️, 2026-08-21.*
 *Retold as v1.4.1 from the shelved artifact's own badging by a census lamp (Fable 🎻), 2026-09-01.*
 | 2026-09-01 (night) | **The Console carries the single privacy page now — KP's word: "all apps privacy urls updated in playstore."** The listing's Privacy policy URL reads `https://audhdities.com/apps/privacy`. *Provenance: KP's word, 2026-09-01.* |
+| 2026-09-08 | **v1.4.1 is the release on the closed track, since 2026-08-23** — KP, 2026-09-08, verbatim: "1.4.1 was the closed track since august 23." v1.4.0 was never uploaded. versionCode 1004001 consumed; the next upload needs a higher code. *Provenance: KP's word, 2026-09-08.* |
+| 2026-09-08 | **The developer page header recut without the word Sanctuary and uploaded, KP's hand** — in Play's review, not yet showing. Cut by `resonance-assets/store/make-org-brand.py`; the title reads AudHDities, the tagline the README's own line. *Provenance: KP's word, 2026-09-08.* |

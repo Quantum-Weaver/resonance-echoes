@@ -3,14 +3,14 @@
 *Founded 2026-08-21 by **Plumb** 🕯️ · Opus (Claude), truly `claude-opus-5[1m]`,
 at KP's ⚛ word — the third storefront pack, sibling to `PLAY-TRACK.md` (Google)
 and `GALAXY-LISTING.md` (Samsung). **Partner Center is the truth**; this file is
-the pack KP transcribes from, so his hands never have to compose at the
+the pack KP transcribes from, so their hands never have to compose at the
 submission screen.*
 
 > **GATE — this is a pack, not a submission.** Echoes' public listings wait to
 > publish **simultaneously with Compass, only after the rebuilt AudHDities site
-> is live** (the Launch Sequence gate, `CLAUDE.md`). KP's word, 2026-08-21:
+> is live** (the Launch Sequence gate). KP's word, 2026-08-21:
 > *"if it is not ready, the beacons are leading no where."* Prepare freely;
-> submit at his word.
+> submit at their word.
 
 ## The artifact
 
@@ -71,9 +71,9 @@ Sovereign by architecture, not policy:
 - The purge truly purges — double-confirmed, complete, final, and it covers
   exactly the same ground export does.
 
-From the AudHDities Sanctuary: tools built for one neurodivergent family first,
-then given freely, so that no one is exploited or manipulated over something
-they love.
+From AudHDities: tools built for one neurodivergent family first, then
+offered to everyone, free or fairly priced, so that no one is exploited or
+manipulated over something they love.
 
 ## Category
 
@@ -106,6 +106,8 @@ facts rather than transcribing a rating from another store.*
 
 ## Assets
 
+Gathered for upload, with a checklist: `resonance-assets/store/microsoft/` (UPLOAD.md).
+
 Icon: gold-band Echoes set — `resonance-assets/logo-icons/`. Screenshots:
 `resonance-assets/screenshots/` — the desktop captures, not the phone ones.
 Choose: home timeline · add form (tiny state) · insights · timer visualization ·
@@ -115,12 +117,15 @@ settings/sovereignty.
 
 The publisher display name and address live in Partner Center, never in this
 file. **The house ward stands: `audhdities.com` and the Proton address only —
-never a home address.** The business address is his to enter directly.
+never a home address.** The business address is theirs to enter directly.
 
 ## Track log
 
 | Date | State |
 |---|---|
 | 2026-08-21 | Pack founded. No submission made — held at the Launch Sequence gate. |
+| 2026-09-08 | Partner Center organization account approved (KP's word: a couple of days before). Nothing published; no brand set up. |
+| 2026-09-08 | Partner Center → Legal info → Developer, KP's read: account type Company, status Active, vetting Authorized, EU Digital Services Act compliant. Sign-in is the Entra work account in the AUDHDITIES tenant, Owner role. The Store has no publisher images; logos and screenshots live in each app's Store listing. Workspace: https://partner.microsoft.com/dashboard/apps-and-games/overview. Nothing submitted yet. |
+| 2026-09-08 | Microsoft requires multifactor sign-in on the tenant by 2026-10-01 (KP's word). The path for a one-person free tenant is Entra security defaults: Entra ID → Overview → Properties → Manage security defaults → Enabled; then Authenticator registered at myprofile.microsoft.com → Security info, with a second method beside it, and one emergency-access Global Administrator account whose password lives in the keyring. audhdities.com attached to the tenant the same sitting. |
 
 — **Plumb** 🕯️

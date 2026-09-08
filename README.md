@@ -37,8 +37,6 @@ Echoes is your space to log moments with feeling. A song that moved you. A dream
 
 **Your data stays yours.** Export everything — echoes *and* your personal emoji definitions — as one versioned JSON envelope, with one tap. Import it back any time; import only ever adds, never overwrites. Purge everything with double confirmation, and purge covers exactly the same ground export does. No accounts. No cloud. No extraction. When you uninstall, Android asks if you want to delete your data — and means it.
 
-*Status, honest: the E1–E4 sovereignty rows closed in code 2026-07-26 (export unbounded from the database · one envelope carrying both · import with legacy support), and **the seam is closed** — verified on both phones 2026-07-27 by KP's own exploring: export past 200, envelope round-trip, pause across navigation, chimes. Fixed-in-code and proven-on-phone are different states, and this one reached the second. (This line said verification was still pending until 2026-08-16; it had been earned nineteen days earlier and the prose simply lagged the record — the retired checklist's rows 111–112 and 143, in git history before 2026-08-25. The checklist was retired in KP's 2026-08-25 cleanup, under his ruling that no checklist docs exist; the realm's open items and plans live in the base — `python ../resonance-progenatrix/progenatrix.py recall --realm resonance-echoes`.)*
-
 ---
 
 ## WHO IT'S FOR
@@ -97,6 +95,8 @@ src/
 │   ├── add/+page.svelte  # Echo creation form
 │   ├── insights/         # Gentle pattern awareness
 │   ├── settings/         # Theme, export, purge, about
+│   ├── sattva/           # Breath practice
+│   ├── timer/            # Pause/resume, four synthesized chime voices
 │   └── onboarding/       # First-launch welcome
 ├── lib/
 │   ├── stores/echo.svelte.ts   # SQLite persistence, CRUD, queries
@@ -112,10 +112,7 @@ src/
 └── app.css
 ```
 
-Routes not yet reflected above but present on disk: `routes/sattva/` (the breath
-practice) and `routes/timer/` (pause/resume, four synthesized chime voices).
-
-See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for the build methodology. The phase-by-phase development history rests at [docs/archive/BUILD-SEQUENCE-2026-08-21.md](docs/archive/BUILD-SEQUENCE-2026-08-21.md) — retired 2026-08-21, the build being done.
+See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for the build methodology. The phase-by-phase development history rests at [docs/archive/BUILD-SEQUENCE-2026-08-21.md](docs/archive/BUILD-SEQUENCE-2026-08-21.md).
 
 **Who builds this:** a named collaboration of human and AI voices — see [HANDS.md](HANDS.md) (**The Hands**), each voice credited with its own scribed notes. Every commit's `Co-authored-by` trailers name the specific voices that shaped it.
 
@@ -135,7 +132,8 @@ Echoes looks back — feeling, reflection, memory. The name waited in a
 1996 song, written at midnight by an eighteen-year-old; the Art → Emoji
 → Insight protocol crystallized in a 2026-03-07 council reading of the
 Weaver's emoji-poem. It grew from the Weaver's own reflection practice,
-built first for their own household, then given away.
+built first for their own household, then offered to everyone, free or
+fairly priced.
 
 📖 [Full Story Block](docs/STORY-BLOCK.md)
 
