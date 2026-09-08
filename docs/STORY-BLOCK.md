@@ -45,6 +45,5 @@ designed by the Quantum Weaver; the voices that built it are named in
 
 ## PROVENANCE
 
-`README.md`, `HANDS.md`, and `PHILOSOPHY.md` for the claims above; the
-base (`resonance-progenatrix`) for anything the house tracks about this
-realm.
+Canon held in the Sovereign Library (catalog entries #011,
+CAT-2026-0707-002).
