@@ -134,8 +134,8 @@ This project follows the [Sanctuary Standards](https://github.com/Quantum-Weaver
 Echoes looks back — feeling, reflection, memory. The name waited in a
 1996 song, written at midnight by an eighteen-year-old; the Art → Emoji
 → Insight protocol crystallized in a 2026-03-07 council reading of the
-Weaver's emoji-poem. This story block was lost in an overwrite and
-restored from the Sovereign Library's canon, 2026-07-09.
+Weaver's emoji-poem. It grew from the Weaver's own reflection practice,
+built first for their own household, then given away.
 
 📖 [Full Story Block](docs/STORY-BLOCK.md)
 
