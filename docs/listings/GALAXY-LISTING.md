@@ -80,6 +80,11 @@ the org brand copy; rerun the script to recut.*
 | Theme store profile image | 240×240, JPG only | `galaxy-theme-profile-240.jpg` |
 | Theme store banner | 656×324, JPG only | `galaxy-theme-banner-656x324.jpg` |
 | Theme store background | 1440×1200, JPG only | `galaxy-theme-background-1440x1200.jpg` |
+| Company page | URL | https://audhdities.com/apps |
+
+The company as the website states it is the controller block of
+`AudHDities/docs/privacy/privacy.md` (legal name, address, email), and every
+seller field matches it.
 
 **Brand description (transcribe):**
 Where neurodivergent minds build digital sovereignty together. Tools built
@@ -123,8 +128,11 @@ themes-only seller says so in the application.
    a D-U-N-S industry that does not match app publishing; seller-account
    fields that differ from the D-U-N-S profile; a public-domain email; a
    bank in another country or another name; the same D-U-N-S on two Seller
-   Portal accounts. Fix at the source, wait the 5–10 days, resubmit from the
-   same account.
+   Portal accounts; a D-U-N-S profile that lacks the company website URL;
+   a seller email not on the corporate domain shown on the website; a
+   website that does not present the company as the application's Comments
+   to the Person in Charge describe it. Fix at the source, wait the 5–10
+   days, resubmit from the same account.
 
 *Galaxy Themes designers are admitted separately: a portfolio of at least
 three mockups, each with six screens (Lock, Home, Messages, Dialer,
@@ -142,3 +150,4 @@ the window closes; approval opens Themes Studio and two years of publishing.*
 | 2026-09-08 | Seller Portal setup attempted twice; rejected both times. Not listed. *Provenance: KP's word, 2026-09-08.* |
 | 2026-09-08 | D-U-N-S number held. The path is the Corporate Commercial Distribution Seller Request; seller information, brand and theme-profile assets gathered in `resonance-assets/store/galaxy/`. *Provenance: KP's word, 2026-09-08.* |
 | 2026-09-08 | Branded email on audhdities.com available (Proton Plus); the Samsung account and the support email use it, so the public-domain explanation is not needed. *Provenance: KP's word, 2026-09-08.* |
+| 2026-09-09 | Corporate seller request rejected: D-U-N-S profile lacks the website URL; seller email must be on the corporate domain shown on the website; website did not present the company as the comments described it. *Provenance: Samsung's email, 2026-09-09, KP's word.* |
