@@ -61,9 +61,9 @@
     },
     "GALAXY-LISTING.md": {
       "language": "markdown",
-      "lines": 65,
-      "words": 417,
-      "heading_count": 9,
+      "lines": 154,
+      "words": 1261,
+      "heading_count": 12,
       "headings": [
         "Echoes \u2014 Galaxy Store listing pack",
         "App name",
@@ -73,7 +73,10 @@
         "Content rating guidance",
         "Data safety answers (transcribe)",
         "Assets",
-        "Tags/keywords"
+        "Seller profile and brand",
+        "Tags/keywords",
+        "Commercial seller status, in order",
+        "Track log"
       ],
       "links_external": 0,
       "links_site_absolute": [],
@@ -81,7 +84,7 @@
       "links_internal_unresolved": [],
       "links_internal_outside_checkout": [],
       "code_fences": 0,
-      "table_rows": 0,
+      "table_rows": 21,
       "checkboxes": {
         "open": 0,
         "done": 0
@@ -91,8 +94,8 @@
     },
     "MSSTORE-LISTING.md": {
       "language": "markdown",
-      "lines": 127,
-      "words": 862,
+      "lines": 132,
+      "words": 1023,
       "heading_count": 12,
       "headings": [
         "Echoes \u2014 Microsoft Store listing pack",
@@ -114,7 +117,7 @@
       "links_internal_unresolved": [],
       "links_internal_outside_checkout": [],
       "code_fences": 0,
-      "table_rows": 7,
+      "table_rows": 10,
       "checkboxes": {
         "open": 0,
         "done": 0
@@ -124,8 +127,8 @@
     },
     "PLAY-TRACK.md": {
       "language": "markdown",
-      "lines": 171,
-      "words": 2053,
+      "lines": 177,
+      "words": 2197,
       "heading_count": 8,
       "headings": [
         "Echoes \u2014 Google Play test track",
@@ -143,7 +146,7 @@
       "links_internal_unresolved": [],
       "links_internal_outside_checkout": [],
       "code_fences": 2,
-      "table_rows": 26,
+      "table_rows": 28,
       "checkboxes": {
         "open": 0,
         "done": 0
@@ -175,7 +178,7 @@
     }
   },
   "folders_not_walked": [],
-  "scan_timestamp": "2026-09-08T10:42:40.639359 | in sovereign time",
+  "scan_timestamp": "2026-09-14T16:31:13.758978 | in sovereign time",
   "maintaining_agent": "FolderAgent",
   "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

@@ -36,7 +36,7 @@
     },
     {
       "path": "README.md",
-      "description": "\u227d\u0f0f\u227c Resonance Echoes"
+      "description": "\ud83d\udd0a Resonance Echoes"
     },
     {
       "path": "svelte.config.js",
@@ -66,8 +66,8 @@
   "code_analysis": {
     "HANDS.md": {
       "language": "markdown",
-      "lines": 83,
-      "words": 846,
+      "lines": 84,
+      "words": 851,
       "heading_count": 8,
       "headings": [
         "The Hands \u2014 who builds this, and how",
@@ -200,11 +200,11 @@
     },
     "README.md": {
       "language": "markdown",
-      "lines": 153,
-      "words": 801,
+      "lines": 151,
+      "words": 650,
       "heading_count": 13,
       "headings": [
-        "\u227d\u0f0f\u227c Resonance Echoes",
+        "\ud83d\udd0a Resonance Echoes",
         "Screenshots",
         "WHAT IT IS",
         "WHO IT'S FOR",
@@ -290,6 +290,12 @@
       "reason": "package-class tree (dependency or build output) \u2014 not counted, because counting it means walking it"
     },
     {
+      "name": ".svelte-kit",
+      "address": ".svelte-kit",
+      "walked": false,
+      "reason": "package-class tree (dependency or build output) \u2014 not counted, because counting it means walking it"
+    },
+    {
       "name": "build",
       "address": "build",
       "walked": false,
@@ -309,7 +315,7 @@
       "reason": "gitignored by this repo's own .gitignore \u2014 named and counted, never described, never opened"
     }
   ],
-  "scan_timestamp": "2026-09-08T10:42:40.625380 | in sovereign time",
+  "scan_timestamp": "2026-09-14T16:31:13.734847 | in sovereign time",
   "maintaining_agent": "FolderAgent",
   "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }

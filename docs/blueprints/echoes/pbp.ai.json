@@ -33,9 +33,9 @@
     {
       "blueprint": "echoes/.journals/obp.ai.json",
       "object_path": ".journals",
-      "description": "0 files, 1 subfolders",
-      "folder_count": 2,
-      "total_files": 0
+      "description": "0 files, 2 subfolders",
+      "folder_count": 3,
+      "total_files": 1
     },
     {
       "blueprint": "echoes/docs/obp.ai.json",
@@ -70,8 +70,8 @@
     {
       "blueprint": "echoes/reports/fbp.ai.json",
       "folder_path": "reports",
-      "description": "8 files, 0 subfolders",
-      "file_count": 8,
+      "description": "9 files, 0 subfolders",
+      "file_count": 9,
       "subdirectory_count": 0
     },
     {
@@ -100,8 +100,8 @@
     }
   ],
   "totals": {
-    "folders_blueprinted": 86,
-    "files_described": 241
+    "folders_blueprinted": 87,
+    "files_described": 243
   },
   "not_walked": {
     "reason": "package-class trees, this repo's own gitignored trees at every depth, reparse points, and this tool's own output",
@@ -164,6 +164,6 @@
     "reparse_note": "Junctions and symlinks are named, never entered. Following one would pull an external ground into this repo's count, or loop on a self-junction.",
     "own_output": "docs/blueprints"
   },
-  "generated": "2026-09-08T10:42:40.857563 | in sovereign time",
+  "generated": "2026-09-14T16:31:14.338375 | in sovereign time",
   "maintaining_agent": "ProjectAgent"
 }

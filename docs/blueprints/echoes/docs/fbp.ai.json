@@ -57,11 +57,15 @@
     },
     "RELEASE.md": {
       "language": "markdown",
-      "lines": 114,
-      "words": 572,
-      "heading_count": 9,
+      "lines": 165,
+      "words": 800,
+      "heading_count": 13,
       "headings": [
         "Resonance Echoes \u2014 Release Notes",
+        "v1.4.1 \u2014 2026-08-23 \u00b7 Themes You Can Feel, rebuilt",
+        "v1.4.0 \u2014 2026-08-21 \u00b7 Themes You Can Feel",
+        "v1.3.2 \u2014 2026-08-13 \u00b7 Color in the Cumdach",
+        "v1.3.1 \u2014 2026-08-06 \u00b7 Sattva",
         "v1.3.0 \u2014 2026-07-26 \u00b7 Sovereignty Whole + The Timer That Waits",
         "v1.0.0 \u2014 2026-06-28",
         "What's in v1.0.0",
@@ -126,8 +130,8 @@
     },
     "STORY-BLOCK.md": {
       "language": "markdown",
-      "lines": 50,
-      "words": 258,
+      "lines": 51,
+      "words": 263,
       "heading_count": 8,
       "headings": [
         "Story Block \u2014 Resonance Echoes",
@@ -162,7 +166,7 @@
       "reason": "a blueprint output tree \u2014 the forge does not blueprint blueprints"
     }
   ],
-  "scan_timestamp": "2026-09-08T10:42:40.631817 | in sovereign time",
+  "scan_timestamp": "2026-09-14T16:31:13.750124 | in sovereign time",
   "maintaining_agent": "FolderAgent",
   "note": "The details live here. Upper tiers link to this address; they do not copy this body."
 }
